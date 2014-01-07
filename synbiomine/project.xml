@@ -191,6 +191,11 @@ some stuff
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
+    <source name="kegg-pathway" type="kegg-pathway">
+      <property name="src.data.dir" location="/micklem/data/ecolimine/kegg/current" />
+      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206" />
+    </source>
+
     <source name="interpro" type="interpro">
       <property name="src.data.dir" location="/micklem/data/interpro/current"/>
     </source>
