@@ -239,6 +239,13 @@
                      replacesFields="publications"
                      placement="summary"
                      types="BioEntity"/>
+
+   <reportdisplayer javaClass="org.intermine.bio.web.displayer.HomologueDisplayer"
+                     jspName="model/homologueDisplayer.jsp"
+                     replacesFields="homologues"
+                     placement="Homology"
+                     parameters="{'dataSets': ['OrthoDB data set']}"
+                     types="Gene"/>
                      
   </reportdisplayers>
 
