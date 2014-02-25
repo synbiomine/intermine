@@ -6,9 +6,9 @@
   <attribute name="meanExpr" type="java.lang.Double"/>
   <attribute name="log2FoldChnge" type="java.lang.Double"/>
   <attribute name="CV" type="java.lang.Double"/>
-  <reference name="gene" referenced-type="Gene" reverse-reference="GEOSeriesResult"/>
-  <reference name="condition" referenced-type="ExperimentCondition" reverse-reference="name"/>
-  <reference name="experiment" referenced-type="MicroArrayExperiment" reverse-reference="name"/>
+  <reference name="gene" referenced-type="Gene" reverse-reference="expressionResults"/>
+  <reference name="condition" referenced-type="ExperimentCondition" reverse-reference="results"/>
+  <reference name="experiment" referenced-type="MicroArrayExperiment"/>
   <collection name="dataSets" referenced-type="DataSet"/>
 </class>
 <class name="ExperimentCondition" is-interface="true">
@@ -16,7 +16,7 @@
   <attribute name="shortName" type="java.lang.String"/>
   <reference name="experiment" referenced-type="MicroArrayExperiment" reverse-reference="conditions"/>
   <collection name="results" referenced-type="GEOSeriesResult"  reverse-reference="condition"/>
-  <collection name="genes" referenced-type="Gene" reverse-reference="experimentCondition"/>
+  <collection name="genes" referenced-type="Gene" reverse-reference="experimentConditions"/>
 </class>
 <class name="Gene" is-interface="true">
   <collection name="expressionResults" referenced-type="GEOSeriesResult"  reverse-reference="gene"/>
