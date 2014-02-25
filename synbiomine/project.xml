@@ -31,13 +31,8 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Bacillus_subtilis_168_uid57675/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
-
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
-      <property name="src.data.file" location="/micklem/data/ecolimine/geo/current/nicolas_itemsXML.xml"/>
-    </source>
-<!--
 
     <source name="ecoli-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="511145"/>
@@ -58,7 +53,7 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Escherichia_coli_K_12_substr__MG1655_uid57779/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
     <source name="geobacillus-strC56-YS93-gff" type="synbio-gff">
@@ -80,7 +75,7 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Geobacillus_thermoglucosidasius_C56_YS93_uid48129/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
     <source name="Bacillus-anthracis-Ames-gff" type="synbio-gff">
@@ -102,7 +97,7 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Bacillus_anthracis_Ames_uid57909/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
     <source name="Bacillus-anthracis-A0248-gff" type="synbio-gff">
@@ -124,7 +119,7 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Bacillus_anthracis_A0248_uid59385/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
     <source name="Bacillus-anthracis-CDC-684-gff" type="synbio-gff">
@@ -146,7 +141,7 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Bacillus_anthracis_CDC_684_uid59303/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
     <source name="Bacillus-cereus-ATCC-14579-gff" type="synbio-gff">
@@ -168,18 +163,18 @@ some stuff
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/genbank/current/Bacillus_cereus_ATCC_14579_uid57975/"/>
       <property name="fasta.loaderClassName"
-                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
--->
+
     <source name="uniprot" type="uniprot" dump="true">
-      <property name="uniprot.organisms" value="224308"/>
+      <property name="uniprot.organisms" value="224308 511145 634956 198094 83333 592021 198094 568206 14579 226900"/>
       <property name="createinterpro" value="true"/>
       <property name="creatego" value="true"/>
       <property name="src.data.dir" location="/micklem/data/ecolimine/uniprot/current"/>
     </source>
-
+   
     <source name="uniprot-fasta" type="fasta" dump="true">
-      <property name="fasta.taxonId" value="224308"/>
+      <property name="fasta.taxonId" value="224308 511145 634956 198094 83333 592021 198094 568206 14579 226900"/>
       <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
       <property name="fasta.classAttribute" value="primaryAccession"/>
       <property name="fasta.dataSetTitle" value="UniProt data set"/>
@@ -191,6 +186,10 @@ some stuff
                 value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
     </source>
 
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
+      <property name="src.data.file" location="/micklem/data/ecolimine/geo/current/nicolas_itemsXML.xml"/>
+    </source>
+
     <source name="uniprot-keywords" type="uniprot-keywords" dump="true">
       <property name="src.data.dir" location="/micklem/data/ecolimine/uniprot/current"/>
       <property name="src.data.dir.includes" value="keywlist.xml"/>
@@ -198,7 +197,7 @@ some stuff
 
     <source name="kegg-pathway" type="kegg-pathway">
       <property name="src.data.dir" location="/micklem/data/ecolimine/kegg/current" />
-      <property name="kegg.organisms" value="224308" />
+      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900" />
     </source>
 
     <source name="interpro" type="interpro">
@@ -218,7 +217,7 @@ some stuff
       <property name="src.data.dir" location="/micklem/data/ecolimine/go-annotation/current/"/>
       <property name="ontologyPrefix" value="GO"/>
     </source>
-<!--
+
     <source name="biogrid" type="biogrid">
       <property name="src.data.dir" location="/micklem/data/biogrid/current"/>
       <property name="src.data.dir.includes" value="*psi25.xml"/>
@@ -236,11 +235,11 @@ some stuff
     <source name="orthodb" type="orthodb" dump="true">
       <property name="src.data.dir" location="/micklem/data/ecolimine/orthodb/current"/>
       <property name="orthodb.organisms" value="224308 511145 634956 198094 83333 592021 198094 568206 14579 226900"/>
-    </source>
--->
+    </source>  
+
     <source name="pubmed-gene" type="pubmed-gene" dump="true">
       <property name="src.data.dir" location="/micklem/data/pubmed/current"/>
-      <property name="pubmed.organisms" value="224308"/>
+      <property name="pubmed.organisms" value="511145 224308 634956"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
       <property name="infoFile" location="/micklem/data/pubmed/current/gene_info"/>
     </source>
@@ -253,7 +252,7 @@ some stuff
     <source name="entrez-organism" type="entrez-organism">
       <property name="src.data.file" location="build/organisms.xml"/>
     </source>
-
+ 
   </sources>
 
   <post-processing>
