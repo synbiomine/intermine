@@ -1,5 +1,0 @@
-<project name="synbio-nicolas-expr" default="default" basedir=".">
-  <description>build, test, package synbio-nicolas-expr</description>
-  
-  <import file="../../../imbuild/source.xml"/>
-</project>
