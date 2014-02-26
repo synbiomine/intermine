@@ -186,13 +186,13 @@ some stuff
                 value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
     </source>
 
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
-      <property name="src.data.file" location="/micklem/data/ecolimine/geo/current/nicolas_itemsXML.xml"/>
-    </source>
-
     <source name="uniprot-keywords" type="uniprot-keywords" dump="true">
       <property name="src.data.dir" location="/micklem/data/ecolimine/uniprot/current"/>
       <property name="src.data.dir.includes" value="keywlist.xml"/>
+    </source>
+
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
+      <property name="src.data.file" location="/SAN_synbiomine/data/geo/current/nicolas_items.xml"/>
     </source>
 
     <source name="kegg-pathway" type="kegg-pathway">

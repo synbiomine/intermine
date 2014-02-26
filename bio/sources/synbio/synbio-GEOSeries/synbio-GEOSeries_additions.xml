@@ -4,12 +4,12 @@
 <classes>
 <class name="GEOSeriesResult" is-interface="true">
   <attribute name="meanExpr" type="java.lang.Double"/>
-  <attribute name="log2FoldChnge" type="java.lang.Double"/>
+  <attribute name="log2FoldChange" type="java.lang.Double"/>
   <attribute name="CV" type="java.lang.Double"/>
   <reference name="gene" referenced-type="Gene" reverse-reference="expressionResults"/>
   <reference name="condition" referenced-type="ExperimentCondition" reverse-reference="results"/>
   <reference name="experiment" referenced-type="MicroArrayExperiment"/>
-  <collection name="dataSets" referenced-type="DataSet"/>
+  <reference name="dataSet" referenced-type="DataSet"/>
 </class>
 <class name="ExperimentCondition" is-interface="true">
   <attribute name="name" type="java.lang.String"/>
