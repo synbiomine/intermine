@@ -1,37 +1,42 @@
 <aspects>
+  <aspect name="Function">
+    <subtitle>GO, Pathways, Domains</subtitle>
+    <intro-text>
+        GO, Pathways, Domains
+    </intro-text>
+    <tile-name>model/genes.jsp</tile-name>
+    <aspect-source name="GO" url="http://www.geneontology.org/"/>
+    <aspect-source name="KEGG" url="http://www.genome.jp/kegg/ko.html"/>
+    <aspect-source name="InterPro" url="https://www.ebi.ac.uk/interpro/‎"/>
+  </aspect>
+
   <aspect name="Genomics">
     <subtitle>Genome annotation</subtitle>
-    <icon-image>model/images/genomics.gif</icon-image>
-    <large-image>model/images/genomics.gif</large-image>
     <intro-text>
-      The gene structure and other genome annotation in MalariaMine are provided by
-      a variety of curated source databases.  In most cases MalariaMine includes
-      all genome features that have chromosomal locations.
+      The gene structure and other genome annotation in SynBioMine are provided by
+      Genbank.
     </intro-text>
-    <tile-name>model/genomics.jsp</tile-name>
-    <aspect-source name="GeneDB" url="http://www.genedb.org"/>
+    <tile-name>model/genes.jsp</tile-name>
+    <aspect-source name="GenBank" url="ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/"/>
   </aspect>
-  <aspect name="Proteins">
-    <subtitle>Protein and proteomics&lt;br/&gt;data</subtitle>
-    <icon-image>model/images/proteins.png</icon-image>
-    <large-image>model/images/proteins.png</large-image>
+
+  <aspect name="Homology">
+    <subtitle>Orthologues and paralogues</subtitle>
     <intro-text>
-      Protein annotation (including family and domain annotation) from UniProt.
+      Orthologues and Paralogues.
     </intro-text>
-    <tile-name>model/proteins.jsp</tile-name>
-    <aspect-source name="UniProt" url="http://www.uniprot.org"/>
+    <tile-name>model/homology.jsp</tile-name>
+    <aspect-source name="OrthoDB" url="http://orthodb.org/"/>
   </aspect>
-  <aspect name="Interactions">
-    <subtitle>IntAct</subtitle>
-    <icon-image>model/images/interaction.gif</icon-image>
-    <large-image>model/images/interaction.gif</large-image>
-    <tile-name></tile-name>
+
+  <aspect name="Expression">
+    <subtitle></subtitle>
     <intro-text>
-      Protein-protein interactions from IntAct (PSI-MI format), genetic interactions from the BioGRID and miRNA target predictions from miRBase.
+      Gene expression data for Bacillus subtilus 168
     </intro-text>
-    <tile-name>model/interactions.jsp</tile-name>
-    <aspect-source name="IntAct" url="http://www.ebi.ac.uk/intact/"/>
-    <aspect-source name="BioGRID" url="http://www.thebiogrid.org/"/>
-    <aspect-source name="miRBase" url="http://microrna.sanger.ac.uk/targets/v4/"/>
+    <tile-name>model/expression.jsp</tile-name>
+    <aspect-source name="GEO" url="www.ncbi.nlm.nih.gov/geo/"/>
   </aspect>
+
 </aspects>
+
