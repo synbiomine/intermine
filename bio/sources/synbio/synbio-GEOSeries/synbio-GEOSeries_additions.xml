@@ -9,7 +9,7 @@
   <reference name="gene" referenced-type="Gene" reverse-reference="expressionResults"/>
   <reference name="condition" referenced-type="ExperimentCondition" reverse-reference="results"/>
   <reference name="experiment" referenced-type="MicroArrayExperiment"/>
-  <reference name="dataSet" referenced-type="DataSet"/>
+  <collection name="dataSet" referenced-type="DataSet"/>
 </class>
 <class name="ExperimentCondition" is-interface="true">
   <attribute name="name" type="java.lang.String"/>
