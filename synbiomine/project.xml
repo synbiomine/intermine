@@ -148,7 +148,7 @@
       <property name="src.data.dir.includes" value="NC_015660.gff"/>
     </source>
 
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta">
+    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta" dump="true">
       <property name="fasta.taxonId" value="634956"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
