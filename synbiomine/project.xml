@@ -73,7 +73,7 @@
     </source>
 
     <source name="Bacillus-cereus-ATCC-14579-gff" type="gff">
-      <property name="gff3.taxonId" value="14579"/>
+      <property name="gff3.taxonId" value="226900"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
       <property name="gff3.seqClsName" value="Chromosome"/>
@@ -83,7 +83,7 @@
     </source>
 
     <source name="Bacillus-cereus-ATCC-14579-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="14579"/>
+      <property name="fasta.taxonId" value="226900"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
       <property name="fasta.dataSetTitle" value="Bacillus cereus ATCC 14579 chromosome, complete genome"/>
@@ -148,7 +148,7 @@
       <property name="src.data.dir.includes" value="NC_015660.gff"/>
     </source>
 
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta" dump="true">
+    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta">
       <property name="fasta.taxonId" value="634956"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -292,7 +292,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-K-12-substr--W3110-gff" type="gff">
+    <source name="Escherichia-coli-K-12-substr--W3110-gff" type="gff" dump="true">
       <property name="gff3.taxonId" value="316407"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -321,7 +321,7 @@
       <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
     </source>
    
-    <source name="uniprot-fasta" type="fasta" dump="true">
+    <source name="uniprot-fasta" type="fasta">
       <property name="fasta.taxonId" value="1392 592021 198094 568206 226900 224308 83333 511145 634956 155864 386585 199310 405955 574521 413997 316407"/>
       <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
       <property name="fasta.classAttribute" value="primaryAccession"/>
@@ -339,15 +339,15 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
     </source>
 
-    <source name="jozefczuk-EcoliK12-GEOSeries" type="synbio-GEOSeries">
+    <source name="jozefczuk-EcoliK12-GEOSeries" type="synbio-GEOSeries" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Jozefczuk2010/current"/>
     </source>
 
-    <source name="kegg-pathway" type="kegg-pathway">
+    <source name="kegg-pathway" type="kegg-pathway" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/kegg/current" />
       <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900 155864 386585 199310 405955 574521 413997 316407" />
     </source>
@@ -360,7 +360,7 @@
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
     </source>
 
-    <source name="go" type="go">
+    <source name="go" type="go" dump="true">
       <property name="src.data.file" location="/micklem/data/go-annotation/current/gene_ontology.obo"/>
     </source>
 
