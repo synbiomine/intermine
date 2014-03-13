@@ -74,8 +74,8 @@ public class GoConverter extends BioFileConverter
     protected String termCollectionName = "goAnnotation";
     protected String annotationClassName = "GOAnnotation";
     private String gaff = "2.0";
-    private static final String DEFAULT_ANNOTATION_TYPE = "gene";
-    private static final String DEFAULT_IDENTIFIER_FIELD = "primaryIdentifier";
+    private static final String DEFAULT_ANNOTATION_TYPE = "protein";
+    private static final String DEFAULT_IDENTIFIER_FIELD = "primaryAccession";
     protected IdResolver rslv;
     private static Config defaultConfig = null;
 
