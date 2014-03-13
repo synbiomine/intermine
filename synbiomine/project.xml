@@ -339,13 +339,17 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
+    </source>
+
+    <source name="jozefczuk-EcoliK12-GEOSeries" type="synbio-GEOSeries">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Jozefczuk2010/current"/>
     </source>
 
     <source name="kegg-pathway" type="kegg-pathway">
       <property name="src.data.dir" location="/SAN_synbiomine/data/kegg/current" />
-      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900" />
+      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900 155864 386585 199310 405955 574521 413997 316407" />
     </source>
 
     <source name="interpro" type="interpro">
@@ -385,13 +389,9 @@
       <property name="orthodb.organisms" value="1392 592021 198094 568206 226900 224308 83333 511145 634956 155864 386585 199310 405955 574521 413997 316407"/>
     </source>  
 
-    <source name="jozefczuk-EcoliK12-GEOSeries" type="synbio-GEOSeries">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Jozefczuk2010/current"/>
-    </source>
-
     <source name="pubmed-gene" type="pubmed-gene" dump="true">
       <property name="src.data.dir" location="/micklem/data/pubmed/current"/>
-      <property name="pubmed.organisms" value="511145 224308 634956"/>
+      <property name="pubmed.organisms" value="1392 592021 198094 568206 226900 224308 83333 511145 634956 155864 386585 199310 405955 574521 413997 316407"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
       <property name="infoFile" location="/micklem/data/pubmed/current/gene_info"/>
     </source>

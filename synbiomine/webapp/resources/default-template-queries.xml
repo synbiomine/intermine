@@ -5,183 +5,376 @@
   <queries>
   </queries>
 <template-queries>
-<template name="Organism_Protein" title="Organism --&gt; All proteins." longDescription="Show all the proteins from a particular organism." comment="">
-  <query name="Organism_Protein" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession" longDescription="Show all the proteins from a particular organism." sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Plasmodium falciparum 3D7"/>
+<template name="All_Proteins_In_Organism_To_Publications" title="All proteins in organism --&gt; Publications." comment="Added 7May2013: ML">
+  <query name="All_Proteins_In_Organism_To_Publications" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession Protein.organism.name Protein.publications.firstAuthor Protein.publications.title Protein.publications.year Protein.publications.journal Protein.publications.volume Protein.publications.pages Protein.publications.pubMedId" longDescription="Retrieves publications for all proteins in an organism." sortOrder="Protein.primaryIdentifier asc">
+    <constraint path="Protein.organism.name" editable="true" description="Organism.name" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
   </query>
 </template>
-<template name="Gene_Protein" title="Gene --&gt; Proteins." longDescription="Show the proteins for a particular gene." comment="06.06.07 updated to work from gene class - Philip">
+<template name="DomainProtGene" title="Protein Domain --&gt; Protein(s) + Gene(s)" comment="Added 23.04.2013:ML">
+  <query name="DomainProtGene" model="genomic" view="ProteinDomain.primaryIdentifier ProteinDomain.shortName ProteinDomain.proteins.primaryIdentifier ProteinDomain.name ProteinDomain.proteins.genes.primaryIdentifier ProteinDomain.proteins.genes.secondaryIdentifier ProteinDomain.proteins.genes.symbol ProteinDomain.proteins.genes.organism.shortName" longDescription="For a given Protein Domain (currently InterPro), returns a List of Proteins containing the domain and the corresponding Gene for the Protein." sortOrder="ProteinDomain.primaryIdentifier asc" constraintLogic="A and B">
+    <constraint path="ProteinDomain.primaryIdentifier" code="A" editable="true" description="" switchable="off" op="=" value="IPR001789"/>
+    <constraint path="ProteinDomain.name" code="B" editable="true" description="" switchable="on" op="CONTAINS" value="receiver"/>
+  </query>
+</template>
+<template name="GOgenes" title="GO Term --&gt; Gene(s)" comment="Added 30Apr2013: ML">
+  <query name="GOgenes" model="genomic" view="Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace Gene.organism.name Gene.primaryIdentifier" longDescription="For a given GO annotation, returns a list of Genes annotated with this GO term" sortOrder="Gene.symbol asc">
+    <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
+    <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
+    <constraint path="Gene.goAnnotation.ontologyTerm.name" editable="true" op="CONTAINS" value="phosphorelay"/>
+  </query>
+</template>
+<template name="GeneCoord" title="Gene --&gt; Location" comment="">
+  <query name="GeneCoord" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.organism.shortName" longDescription="For a given gene (or List of Genes) returns the location co-ordinates." sortOrder="Gene.primaryIdentifier asc">
+    <constraint path="Gene" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+  </query>
+</template>
+<template name="GeneGO" title="Gene --&gt; GO Terms" comment="Added 23.04.2013:ML">
+  <query name="GeneGO" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace" longDescription="Search for GO annotations for a particular gene." sortOrder="Gene.secondaryIdentifier asc">
+    <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
+    <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
+    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli K-12"/>
+  </query>
+</template>
+<template name="GeneOrthPathw" title="Gene --&gt; Pathways + (Orthologues + Pathways)" comment="Added 17Dec2013: ML">
+  <query name="GeneOrthPathw" model="genomic" view="Gene.pathways.id Gene.pathways.name Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name Gene.homologues.homologue.pathways.identifier Gene.homologues.homologue.pathways.name Gene.homologues.homologue.pathways.dataSets.name" longDescription="For a given Gene (or List of Genes) in named organism (default: B. sub 168) returns the pathways for the organism. Additionally, returns gene orthologues in a different organism (optional constrain is 'ON' by default and set to: B. anth A0248. Can be turned off to return all strains with orthologues) and the corresponding pathways. [keywords: homologue, homolog, paralogue, paralogue, ortholog, orthologue, pathway, kegg]" sortOrder="Gene.symbol asc" constraintLogic="A and B and C">
+    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" op="=" value="B. anthracis str. A0248"/>
+    <constraint path="Gene.homologues.homologue.pathways.name" code="C" editable="true" description="" switchable="off" op="=" value="Two-component system"/>
+  </query>
+</template>
+<template name="GenePathw" title="Gene --&gt; Pathway(s)" comment="Added 17Dec2013: ML">
+  <query name="GenePathw" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" longDescription="For a given Gene (or List of Genes) show any associated Pathway(s) (Data Sources: REACTOME, KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc">
+    <constraint path="Gene" editable="true" op="LOOKUP" value="BSU30400" extraValue="B. subtilis subsp. subtilis str. 168"/>
+  </query>
+</template>
+<template name="GeneProtDomain" title="Gene --&gt; Protein + Domain(s)" comment="Added 23.04.2013:ML">
+  <query name="GeneProtDomain" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.proteins.primaryAccession Gene.proteins.proteinDomains.name Gene.proteins.proteinDomains.shortName Gene.proteins.proteinDomains.type Gene.proteins.proteinDomains.publications.pubMedId" longDescription="For a given Gene (or List of Genes) returns the proteins product (SwissProt) and InterPro Domains." sortOrder="Gene.primaryIdentifier asc">
+    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli K-12"/>
+  </query>
+</template>
+<template name="Gene_Interactions" title="Gene --&gt; Interactions" comment="">
+  <query name="Gene_Interactions" model="genomic" view="Gene.symbol Gene.interactions.gene2.symbol Gene.interactions.details.name Gene.interactions.details.role1 Gene.interactions.details.role2 Gene.interactions.details.type Gene.interactions.details.experiment.interactionDetectionMethods.name Gene.interactions.details.experiment.publication.pubMedId Gene.interactions.details.relationshipType.name Gene.interactions.details.dataSets.name" longDescription="Show all interactions for a given gene." sortOrder="Gene.symbol asc" constraintLogic="A and B">
+    <constraint path="Gene" code="A" editable="true" description="Show all interactions for gene:" op="LOOKUP" value="EG10157" extraValue="E. coli str. K-12 substr. MG1655"/>
+    <constraint path="Gene.interactions.details.type" code="B" editable="true" description="Only show interactions of type:" switchable="off" op="=" value="physical"/>
+  </query>
+</template>
+<template name="Gene_Orth" title="Gene --&gt; Orthologues" comment="Added 09Dec2013: ML">
+  <query name="Gene_Orth" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" longDescription="For a given Gene (or List of Genes) in named organism (default: B. sub 168) returns the orthologues in a different organisms (optional constrain is 'ON' by default and set to: B. anth A0248. Can be turned off to return all strains with orthologues). [keywords: homologue, homolog, paralogue, paralogue, ortholog]" sortOrder="Gene.symbol asc" constraintLogic="A and B">
+    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="B. anthracis str. A0248"/>
+  </query>
+</template>
+<template name="Gene_Pathway" title="Gene --&gt; Pathway(s)" comment="Added 7May2013: ML">
+  <query name="Gene_Pathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" longDescription="For a given Gene (or List of Genes) show any associated Pathway(s) (Data Source: REACTOME). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
+    <constraint path="Gene" editable="true" op="LOOKUP" value="EG10056" extraValue="E. coli str. K-12 substr. MG1655"/>
+  </query>
+</template>
+<template name="Gene_Protein" title="Gene --&gt; Proteins." comment="06.06.07 updated to work from gene class - Philip">
   <query name="Gene_Protein" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession" longDescription="Show the proteins for a particular gene." sortOrder="Gene.primaryIdentifier asc">
     <pathDescription pathString="Gene.proteins" description="Protein"/>
-    <constraint path="Gene" editable="true" op="LOOKUP" value="ABRA"/>
+    <constraint path="Gene" editable="true" op="LOOKUP" value="ArcA" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
-<template name="All_Proteins_In_Organism_To_Publications" title="All proteins in organism --&gt; Publications." longDescription="Show the publications for each gene in one organism. References are loaded from FlyBase for all Drosophila species, and from NCBI for D. melanogaster, C. elegans and S. cerevisiae." comment="">
-  <query name="All_Proteins_In_Organism_To_Publications" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession Protein.organism.name Protein.publications.firstAuthor Protein.publications.title Protein.publications.year Protein.publications.journal Protein.publications.volume Protein.publications.pages Protein.publications.pubMedId" sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" description="Organism.name" op="=" value="Plasmodium falciparum 3D7"/>
+<template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
+  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given Gene A (or List A of Genes) show any associated Pathway(s) in common with Gene B (or List B of Genes). Datasource: KEGG or REACTOME. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
+    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="B. anthracis str. A0248"/>
+  </query>
+</template>
+<template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
+  <query name="OrgGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" longDescription="For a given Oranism, returns a list of all genes and their chromosome locations" sortOrder="Gene.primaryIdentifier asc">
+    <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
+  </query>
+</template>
+<template name="Organism_Protein" title="Organism --&gt; All proteins." comment="Added 7May2013: ML">
+  <query name="Organism_Protein" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession" longDescription="Show all the proteins from a particular organism." sortOrder="Protein.primaryIdentifier asc">
+    <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
+  </query>
+</template>
+<template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
+  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given Pathways show any Genes associated with the Pathway(s) in a given organism (Data Source: REACTOME). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway, Reactome" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
+    <constraint path="Pathway.name" code="A" editable="true" op="=" value="SLC-mediated transmembrane transport"/>
+    <constraint path="Pathway.genes.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="E. coli str. K-12 substr. MG1655"/>
+  </query>
+</template>
+<template name="keyProtGene" title="Keyword (UniProt) --&gt; Protein + Gene" comment="Added 7May2013: ML">
+  <query name="keyProtGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" longDescription="Find Genes and Proteins that are annotated with a particular term in the description. Searches UniProt comments. Optional organism filter is ON by default. Turn off to show results for all organisms. [keywords: function, keyword, text]" sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+    <pathDescription pathString="Gene.proteins" description="Protein"/>
+    <constraint path="Gene.organism.shortName" code="A" editable="true" description="" switchable="on" op="=" value="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.proteins.comments.description" code="B" editable="true" op="CONTAINS" value="two-component"/>
+  </query>
+</template>
+<template name="pubGene" title="Publication --&gt; Gene(s)" comment="Added 01May2013: ML">
+  <query name="pubGene" model="genomic" view="Publication.firstAuthor Publication.title Publication.year Publication.journal Publication.volume Publication.pages Publication.pubMedId Publication.bioEntities.primaryIdentifier Publication.bioEntities.symbol Publication.bioEntities.organism.shortName" longDescription="For a given publication term (title word, or first author) returns genes associated with those publications (as curated by PubMed). [Keywords: article, publication, journal, paper, literature, gene, author]" sortOrder="Publication.year asc" constraintLogic="A and B and C">
+    <constraint path="Publication.bioEntities" editable="false" type="Gene"/>
+    <constraint path="Publication.title" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="two-component"/>
+    <constraint path="Publication.firstAuthor" code="B" editable="true" description="" switchable="off" op="CONTAINS" value="Katayama"/>
+    <constraint path="Publication.pubMedId" code="C" editable="true" description="" switchable="off" op="=" value="16306698"/>
   </query>
 </template>
 </template-queries>
 <tags>
-  <tag name="im:public" objectIdentifier="Gene_Protein" type="template">
+  <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection">
   </tag>
-  <tag name="im:public" objectIdentifier="Organism_Protein" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="GeneProtDomain" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="GOgenes" type="template">
   </tag>
-    <tag name="im:frontpage" objectIdentifier="Gene_Protein" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="DomainProtGene" type="template">
   </tag>
-  <tag name="im:frontpage" objectIdentifier="Organism_Protein" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="PathwayGenes" type="template">
   </tag>
-  <tag name="im:frontpage" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="keyProtGene" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="GOtermidentifier_name" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="GeneGO" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Gene_GO" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="ListPathway" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Gene_Identifiers" type="template">
+  <tag name="im:aspect:Function" objectIdentifier="GenePathw" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Gene_allGOTerms" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="GeneProtDomain" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Gene_particularGoannotation" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Organism_GoTerm_Gene" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="GeneGO" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Protein_GOterms" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template">
   </tag>
-  <tag name="im:public" objectIdentifier="Protein_GOtermsSpecificOntology" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="GeneCoord" type="template">
   </tag>
-  <tag name="im:frontpage" objectIdentifier="Protein_GOterms" type="template">
+  <tag name="im:aspect:Genes" objectIdentifier="GeneOrthPathw" type="template">
   </tag>
-  <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template">
-  </tag>
-  <tag name="im:frontpage" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
-  </tag>
-  <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene_Protein" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="GO_name_Gene" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Organism_GoTerm_Gene" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene_particularGoannotation" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene_allGOTerms" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene_GO" type="template">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.overlappingFeatures" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.genes" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosome" type="reference">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Transcript" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene.transcripts" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Gene.UTRs" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosomeLocation" type="reference">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.transcripts" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.GOTerm" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Gene" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.NcRNA" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.sequence" type="reference">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="CDS.MRNA" type="reference">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.UTR" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Transcript.gene" type="reference">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.ChromosomeBand" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Protein.genes" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Chromosome" type="class">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="MRNA.UTRs" type="collection">
-  </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.SnoRNA" type="class">
+  <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template">
   </tag>
   <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.MRNA" type="class">
   </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Transcript" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Gene" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.ChromosomeBand" type="class">
+  </tag>
   <tag name="im:aspect:Genomics" objectIdentifier="Transcript.introns" type="collection">
   </tag>
-  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.features" type="collection">
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosomeLocation" type="reference">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.GOTerm" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Organism_GoTerm_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene.UTRs" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.SnoRNA" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.NcRNA" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.UTR" type="class">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="MRNA.UTRs" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Protein.genes" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="GO_name_Gene" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.genes" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.Chromosome" type="class">
   </tag>
   <tag name="im:aspect:Genomics" objectIdentifier="org.intermine.model.bio.TFBindingSite" type="class">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="Gene_Protein" type="template">
+  <tag name="im:aspect:Genomics" objectIdentifier="CDS.MRNA" type="reference">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="Protein_GOtermsSpecificOntology" type="template">
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.sequence" type="reference">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.Protein" type="class">
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.overlappingFeatures" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.features" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_allGOTerms" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Chromosome.transcripts" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="LocatedSequenceFeature.chromosome" type="reference">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_particularGoannotation" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Transcript.gene" type="reference">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene.transcripts" type="collection">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="GeneProtDomain" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="GOgenes" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="pubGene" type="template">
+  </tag>
+  <tag name="im:aspect:Genomics" objectIdentifier="Gene_Orth" type="template">
+  </tag>
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interactions" type="template">
   </tag>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene.proteins" type="collection">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="Protein.sequence" type="reference">
+  <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.Protein" type="class">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Protein_GOtermsSpecificOntology" type="template">
   </tag>
   <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.ProteinDomain" type="class">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="CDS.polypeptides" type="collection">
-  </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.ProteinInteraction" type="class">
+  <tag name="im:aspect:Proteins" objectIdentifier="Protein.keywords" type="collection">
   </tag>
   <tag name="im:aspect:Proteins" objectIdentifier="CDS.protein" type="reference">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="ProteinInteraction.protein" type="reference">
-  </tag>
   <tag name="im:aspect:Proteins" objectIdentifier="Protein.proteinDomains" type="collection">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="CDS.polypeptides" type="collection">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Protein.sequence" type="reference">
   </tag>
   <tag name="im:aspect:Proteins" objectIdentifier="Protein.features" type="collection">
   </tag>
-  <tag name="im:aspect:Proteins" objectIdentifier="Protein.keywords" type="collection">
+  <tag name="im:aspect:Proteins" objectIdentifier="ProteinInteraction.protein" type="reference">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="DomainProtGene" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template">
+  </tag>
+  <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template">
   </tag>
   <tag name="im:converter" objectIdentifier="Protein_To_Gene_Type_Converter" type="template">
   </tag>
   <tag name="im:converter" objectIdentifier="Gene_To_Protein_Type_Converter" type="template">
   </tag>
+  <tag name="im:frontpage" objectIdentifier="Protein_GOterms" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Organism_Protein" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GeneGO" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GeneProtDomain" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="DomainProtGene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GOgenes" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="pubGene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_Interactions" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="PathwayGenes" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="keyProtGene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="Gene_Orth" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GeneCoord" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GeneOrthPathw" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="ListPathway" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="OrgGene" type="template">
+  </tag>
+  <tag name="im:frontpage" objectIdentifier="GenePathw" type="template">
+  </tag>
   <tag name="im:hidden" objectIdentifier="BioEntity.objects" type="collection">
+  </tag>
+  <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection">
   </tag>
   <tag name="im:hidden" objectIdentifier="BioEntity.subjects" type="collection">
   </tag>
   <tag name="im:hidden" objectIdentifier="BioEntity.relations" type="collection">
   </tag>
-  <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection">
+  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class">
   </tag>
   <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class">
   </tag>
-  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class">
+  <tag name="im:public" objectIdentifier="Gene_Protein" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_particularGoannotation" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_allGOTerms" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_GO" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_Protein" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_GoTerm_Gene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Protein_GOtermsSpecificOntology" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOtermidentifier_name" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Identifiers" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Protein_GOterms" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GeneGO" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GeneProtDomain" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="DomainProtGene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GOgenes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="pubGene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="PathwayGenes" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="keyProtGene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="Gene_Orth" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GeneCoord" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GeneOrthPathw" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="ListPathway" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="OrgGene" type="template">
+  </tag>
+  <tag name="im:public" objectIdentifier="GenePathw" type="template">
+  </tag>
+  <tag name="im:summary" objectIdentifier="MicroarrayOligo.transcript" type="reference">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Protein.publications" type="collection">
   </tag>
   <tag name="im:summary" objectIdentifier="Protein.comments" type="collection">
   </tag>
   <tag name="im:summary" objectIdentifier="RegulatoryRegion.gene" type="reference">
   </tag>
-  <tag name="im:summary" objectIdentifier="BioEntity.synonyms" type="collection">
-  </tag>
-  <tag name="im:summary" objectIdentifier="Gene.proteins" type="collection">
-  </tag>
-  <tag name="im:summary" objectIdentifier="MicroarrayOligo.transcript" type="reference">
-  </tag>
-  <tag name="im:summary" objectIdentifier="BioEntity.organism" type="reference">
-  </tag>
-  <tag name="im:summary" objectIdentifier="Protein.genes" type="collection">
-  </tag>
   <tag name="im:summary" objectIdentifier="BindingSite.factor" type="reference">
   </tag>
   <tag name="im:summary" objectIdentifier="Gene.publications" type="collection">
   </tag>
-  <tag name="im:summary" objectIdentifier="Protein.publications" type="collection">
+  <tag name="im:summary" objectIdentifier="BioEntity.synonyms" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="Protein.genes" type="collection">
+  </tag>
+  <tag name="im:summary" objectIdentifier="BioEntity.publications" type="collection">
   </tag>
 </tags>
 </userprofile>
