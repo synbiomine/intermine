@@ -410,7 +410,6 @@
   <post-processing>
     <post-process name="create-references"/>
     <post-process name="transfer-sequences" dump="true"/>
-    <post-process name="create-intergenic-region-features"/>
     <post-process name="create-gene-flanking-features"/>
     <post-process name="do-sources"/>
     <post-process name="summarise-objectstore"/>
