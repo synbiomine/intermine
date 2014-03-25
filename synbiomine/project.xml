@@ -401,11 +401,6 @@
       <property name="loadFullRecord" value="true"/>
     </source>
 
-   <source name="ncbi-gene" type="ncbi-gene">
-     <property name="src.data.dir" location="/micklem/data/ncbi/current/"/>
-     <property name="organisms" value="224308 511145 198094 592021 198094 568206 226900 155864 386585 199310 405955 574521 413997 316407"/>
-    </source>
-
     <source name="entrez-organism" type="entrez-organism">
       <property name="src.data.file" location="build/organisms.xml"/>
     </source>
