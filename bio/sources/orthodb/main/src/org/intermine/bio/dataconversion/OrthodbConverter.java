@@ -97,6 +97,7 @@ public class OrthodbConverter extends BioFileConverter
         this.homologueTaxonIds = new HashSet<String>(Arrays.asList(
         		StringUtil.split(homologues, " ")));
         LOG.info("Setting list of homologues to " + homologues);
+        System.out.println("orthos" + homologues);
     }
 
     /**
@@ -117,12 +118,15 @@ public class OrthodbConverter extends BioFileConverter
             7) UniProt_Description
             8) InterPro_domains
         */
-        createIDResolver();
+    	
+
+//        createIDResolver();
         String previousGroup = null;
         Set<GeneHolder> homologues = new HashSet<GeneHolder>();
 
         if (taxonIds.isEmpty()) {
             LOG.warn("orthodb.organisms property not set in project XML file, processing all data");
+        	System.out.println("orthodb.organisms property not set in project XML file, processing all data");
         }
 
         Iterator<String[]> lineIter = FormattedTextParser.parseTabDelimitedReader(reader);
@@ -151,7 +155,8 @@ public class OrthodbConverter extends BioFileConverter
             	String proteinId = bits[2];
             	String geneId = bits[3];
             	String identifier = proteinId;	// protein is default
-            	if (config.get(taxonId) != null) {
+            	String geneConfig = config.get(taxonId);
+            	if ("geneid".equalsIgnoreCase(geneConfig)) {
             		identifier = geneId;            		
             	}          
             	String resolvedIdentifier = resolveGene(identifier, taxonId);
@@ -366,16 +371,16 @@ public class OrthodbConverter extends BioFileConverter
         return evidenceRefId;
     }
     
-    private void createIDResolver() {
-        Set<String> allTaxonIds = new HashSet<String>();
-        allTaxonIds.addAll(taxonIds);
-        allTaxonIds.addAll(homologueTaxonIds);
-        if (rslv == null) {
-            rslv = IdResolverService.getIdResolverByOrganism(allTaxonIds);
-        }
-        LOG.info("Taxons in resolver:" + rslv.getTaxons());
-    }
-    
+//    private void createIDResolver() {
+//        Set<String> allTaxonIds = new HashSet<String>();
+//        allTaxonIds.addAll(taxonIds);
+//        allTaxonIds.addAll(homologueTaxonIds);
+//        if (rslv == null) {
+//            rslv = IdResolverService.getIdResolverByOrganism(allTaxonIds);
+//        }
+//        LOG.info("Taxons in resolver:" + rslv.getTaxons());
+//    }
+//    
     private String resolveGene(String identifier, String taxonId) {
         if (rslv == null || !rslv.hasTaxon(taxonId)) {
             // no id resolver available, so return the original identifier
