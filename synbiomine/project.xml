@@ -387,7 +387,11 @@
     <source name="orthodb" type="orthodb" dump="true">
       <property name="src.data.dir" location="/micklem/data/ecolimine/orthodb/current"/>
       <property name="orthodb.organisms" value="1392 592021 198094 568206 226900 224308 83333 511145 634956 155864 386585 199310 405955 574521 413997 316407"/>
-    </source>  
+    </source>
+
+    <source name="bacillus_168_promoters" type="synbio-NicolasPromoter" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
+    </source>
 
     <source name="pubmed-gene" type="pubmed-gene">
       <property name="src.data.dir" location="/micklem/data/pubmed/current"/>
