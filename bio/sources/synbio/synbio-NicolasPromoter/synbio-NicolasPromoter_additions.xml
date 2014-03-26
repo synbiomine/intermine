@@ -19,5 +19,8 @@
   <attribute name="identifier" type="java.lang.String"/>
   <collection name="promoters" referenced-type="BioEntity" reverse-reference="primaryIdentifier"/>
 </class>
+<class name="BioEntity" is-interface="true">
+  <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="identifier"/>
+</class>
 
 </classes>
