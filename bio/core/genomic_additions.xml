@@ -63,12 +63,12 @@
     <class name="PredictedSigmaFactor" is-interface="true">
   	<attribute name="identifier" type="java.lang.String"/>
   	<attribute name="probability" type="java.lang.Double"/>
-  	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="primaryIdentifier"/>
+  	<reference name="promoter" referenced-type="BioEntity" reverse-reference="primaryIdentifier"/>
     </class>
 
     <class name="SigmaBindingSite" is-interface="true">
   	<attribute name="identifier" type="java.lang.String"/>
-  	<collection name="promoters" referenced-type="NicolasPromoter" reverse-reference="primaryIdentifier"/>
+  	<collection name="promoters" referenced-type="BioEntity" reverse-reference="primaryIdentifier"/>
     </class>
 
 </classes>
