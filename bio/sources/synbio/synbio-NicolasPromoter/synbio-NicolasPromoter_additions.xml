@@ -7,8 +7,8 @@
         <attribute name="predictedCluster" type="java.lang.String"/>
         <attribute name="clusterProbability" type="java.lang.String"/>
         <attribute name="predictedSigmaProbability" type="java.lang.String"/>
-        <collection name="predictedSigmaFactor" referenced-type="PredictedSigmaFactor" reverse-reference="identifier"/>
-        <collection name="sigmaBindingSite" referenced-type="SigmaBindingSite" reverse-reference="identifier"/>
+        <collection name="predictedSigmaFactor" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
+        <collection name="sigmaBindingSite" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
 </class>
 <class name="PredictedSigmaFactor" is-interface="true">
   <attribute name="identifier" type="java.lang.String"/>
@@ -19,9 +19,10 @@
   <attribute name="identifier" type="java.lang.String"/>
   <collection name="promoters" referenced-type="BioEntity" reverse-reference="primaryIdentifier"/>
 </class>
+<!-- 
 <class name="BioEntity" is-interface="true">
   <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
   <collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
 </class>
-
+--> 
 </classes>
