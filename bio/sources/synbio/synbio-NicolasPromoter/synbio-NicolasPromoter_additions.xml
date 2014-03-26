@@ -8,7 +8,7 @@
         <attribute name="clusterProbability" type="java.lang.String"/>
         <attribute name="predictedSigmaProbability" type="java.lang.String"/>
         <collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
-        <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
+        <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoter"/>
     </class>
 
     <class name="PredictedSigmaFactor" is-interface="true">
@@ -19,6 +19,6 @@
 
     <class name="SigmaBindingSite" is-interface="true">
   	<attribute name="identifier" type="java.lang.String"/>
-  	<reference name="promoters" referenced-type="NicolasPromoter" reverse-reference="sigmaBindingSites"/>
+  	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="sigmaBindingSites"/>
     </class>
 </classes>
