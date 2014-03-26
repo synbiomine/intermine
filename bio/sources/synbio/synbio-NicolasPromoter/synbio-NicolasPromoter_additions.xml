@@ -20,7 +20,7 @@
   <collection name="promoters" referenced-type="BioEntity" reverse-reference="primaryIdentifier"/>
 </class>
 <class name="BioEntity" is-interface="true">
-  <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="identifier"/>
+  <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
 </class>
 
 </classes>
