@@ -21,6 +21,7 @@
 </class>
 <class name="BioEntity" is-interface="true">
   <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
+  <collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
 </class>
 
 </classes>
