@@ -51,4 +51,10 @@
     <class name="UTR" is-interface="true">
       <reference name="gene" referenced-type="Gene" reverse-reference="UTRs"/>
     </class>
+
+    <class name="synbio-NicolasPromoter" extends="Promoter" is-interface="true">
+      <attribute name="predictedSigmaFactor" type="java.lang.String"/>
+      <attribute name="predictedCluster" type="java.lang.String"/>
+    </class>
+
 </classes>
