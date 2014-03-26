@@ -3,26 +3,22 @@
 
 <classes>
 <!-- add any <class> elements here -->
-<class name="NicolasPromoter" extends="Promoter" is-interface="true">
+    <class name="NicolasPromoter" extends="Promoter" is-interface="true">
         <attribute name="predictedCluster" type="java.lang.String"/>
         <attribute name="clusterProbability" type="java.lang.String"/>
         <attribute name="predictedSigmaProbability" type="java.lang.String"/>
         <collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
         <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
-</class>
-<class name="PredictedSigmaFactor" is-interface="true">
-  <attribute name="identifier" type="java.lang.String"/>
-  <attribute name="probability" type="java.lang.Double"/>
-  <reference name="promoter" referenced-type="BioEntity" reverse-reference="predictedSigmaFactors"/>
-</class>
-<class name="SigmaBindingSite" is-interface="true">
-  <attribute name="identifier" type="java.lang.String"/>
-  <collection name="promoters" referenced-type="BioEntity" reverse-reference="sigmaBindingSites"/>
-</class>
-<!-- add any <class> elements here 
-    <class name="BioEntity" is-interface="true">
-  	<collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoters"/>
-	<collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
     </class>
--->
+
+    <class name="PredictedSigmaFactor" is-interface="true">
+  	<attribute name="identifier" type="java.lang.String"/>
+  	<attribute name="probability" type="java.lang.Double"/>
+  	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="predictedSigmaFactors"/>
+    </class>
+
+    <class name="SigmaBindingSite" is-interface="true">
+  	<attribute name="identifier" type="java.lang.String"/>
+  	<reference name="promoters" referenced-type="NicolasPromoter" reverse-reference="sigmaBindingSites"/>
+    </class>
 </classes>
