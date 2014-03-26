@@ -52,9 +52,13 @@
       <reference name="gene" referenced-type="Gene" reverse-reference="UTRs"/>
     </class>
 
-    <class name="NicolasPromoter" extends="Promoter" is-interface="true">
-      <attribute name="predictedSigmaFactor" type="java.lang.String"/>
-      <attribute name="predictedCluster" type="java.lang.String"/>
-    </class>
+<class name="synbio-NicolasPromoter" extends="Promoter" is-interface="true">
+        <attribute name="predictedCluster" type="java.lang.String"/>
+        <attribute name="clusterProbability" type="java.lang.String"/>
+        <attribute name="predictedSigmaProbability" type="java.lang.String"/>
+        <collection name="predictedSigmaFactor" type="java.lang.String"/>
+        <collection name="sigmaBindingSite" type="java.lang.String"/>
+</class>
+
 
 </classes>
