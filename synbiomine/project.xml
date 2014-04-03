@@ -339,7 +339,7 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries">
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
     </source>
 
