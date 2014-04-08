@@ -6,7 +6,7 @@
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
 
   <sources>
-    <source name="Bacillus-anthracis-A0248-gff" type="gff">
+    <source name="Bacillus-anthracis-A0248-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="592021"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -28,7 +28,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Bacillus-anthracis-Ames-gff" type="gff">
+    <source name="Bacillus-anthracis-Ames-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="198094"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -50,7 +50,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Bacillus-anthracis-CDC-684-gff" type="gff">
+    <source name="Bacillus-anthracis-CDC-684-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="568206"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -72,7 +72,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Bacillus-cereus-ATCC-14579-gff" type="gff">
+    <source name="Bacillus-cereus-ATCC-14579-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="226900"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -94,7 +94,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Bacillus-subtilis-168-gff" type="gff">
+    <source name="Bacillus-subtilis-168-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="224308"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -116,7 +116,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-K-12-substr--MG1655-gff" type="gff">
+    <source name="Escherichia-coli-K-12-substr--MG1655-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="511145"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -138,7 +138,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-gff" type="gff">
+    <source name="Geobacillus-thermoglucosidasius-C56-YS93-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="634956"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -160,7 +160,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-O157-H7-EDL933-gff" type="gff">
+    <source name="Escherichia-coli-O157-H7-EDL933-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="155864"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -182,7 +182,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-O157-H7-Sakai-gff" type="gff">
+    <source name="Escherichia-coli-O157-H7-Sakai-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="386585"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -204,7 +204,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-CFT073-gff" type="gff">
+    <source name="Escherichia-coli-CFT073-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="199310"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -226,7 +226,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-APEC-O1-gff" type="gff">
+    <source name="Escherichia-coli-APEC-O1-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="405955"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -248,7 +248,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-O127-H6-E2348-69-gff" type="gff">
+    <source name="Escherichia-coli-O127-H6-E2348-69-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="574521"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -270,7 +270,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-B-REL606-gff" type="gff">
+    <source name="Escherichia-coli-B-REL606-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="413997"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
@@ -292,7 +292,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-K-12-substr--W3110-gff" type="gff" dump="true">
+    <source name="Escherichia-coli-K-12-substr--W3110-gff" type="synbio-gff" dump="true">
       <property name="gff3.taxonId" value="316407"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
