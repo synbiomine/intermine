@@ -24,6 +24,7 @@ mRNA
 miRNA
 microarray_oligo
 minus_35_signal
+minus_10_signal
 natural_transposable_element
 ncRNA
 oligo
@@ -38,6 +39,7 @@ region
 regulatory_region
 repeat_region
 reverse_primer
+ribosome_entry_site
 sequence_collection
 sequence_feature
 sequence_variant
@@ -47,6 +49,7 @@ STS
 TF_binding_site
 tmRNA
 tRNA
+terminator
 three_prime_UTR
 transcript
 transposable_element
