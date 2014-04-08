@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+    <class name="NicolasPromoter" extends="Promoter" is-interface="true">
+        <attribute name="predictedCluster" type="java.lang.String"/>
+        <attribute name="clusterProbability" type="java.lang.String"/>
+        <attribute name="predictedSigmaProbability" type="java.lang.String"/>
+        <collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoter"/>
+        <collection name="sigmaBindingSites" referenced-type="SigmaBindingSite" reverse-reference="promoter"/>
+    </class>
+
+    <class name="PredictedSigmaFactor" is-interface="true">
+  	<attribute name="identifier" type="java.lang.String"/>
+  	<attribute name="probability" type="java.lang.Double"/>
+  	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="predictedSigmaFactors"/>
+    </class>
+
+    <class name="SigmaBindingSite" is-interface="true">
+  	<attribute name="identifier" type="java.lang.String"/>
+  	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="sigmaBindingSites"/>
+    </class>
+</classes>
