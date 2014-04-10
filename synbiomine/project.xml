@@ -148,7 +148,7 @@
       <property name="src.data.dir.includes" value="NC_015660.gff"/>
     </source>
 
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta" dump="true">
+    <source name="Geobacillus-thermoglucosidasius-C56-YS93-chromosome-fasta" type="fasta">
       <property name="fasta.taxonId" value="634956"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -270,7 +270,7 @@
                 value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
     </source>
 
-    <source name="Escherichia-coli-B-REL606-gff" type="synbio-gff">
+    <source name="Escherichia-coli-B-REL606-gff" type="synbio-gff" dump="true">
       <property name="gff3.taxonId" value="413997"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
