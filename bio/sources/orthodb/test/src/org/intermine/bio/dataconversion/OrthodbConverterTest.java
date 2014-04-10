@@ -26,7 +26,7 @@ public class OrthodbConverterTest extends ItemsTestCase
     OrthodbConverter converter;
     MockItemWriter itemWriter;
 
-    String taxonIds = "198094 261594 568206 260799";
+    String taxonIds = "198094 261594 568206 260799 511145";
    
     
     public OrthodbConverterTest(String arg) {
