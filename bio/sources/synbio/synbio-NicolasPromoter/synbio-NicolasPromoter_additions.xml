@@ -3,6 +3,7 @@
 
 <classes>
 <!-- add any <class> elements here -->
+<!-- 
     <class name="NicolasPromoter" extends="Promoter" is-interface="true">
         <attribute name="predictedCluster" type="java.lang.String"/>
         <attribute name="clusterProbability" type="java.lang.String"/>
@@ -21,4 +22,5 @@
   	<attribute name="identifier" type="java.lang.String"/>
   	<reference name="promoter" referenced-type="NicolasPromoter" reverse-reference="sigmaBindingSites"/>
     </class>
+ -->
 </classes>

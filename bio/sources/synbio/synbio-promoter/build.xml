@@ -1,0 +1,5 @@
+<project name="synbio-promoter" default="default" basedir=".">
+  <description>build, test, package synbio-promoter</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+</project>
