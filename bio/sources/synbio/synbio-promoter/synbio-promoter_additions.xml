@@ -30,7 +30,7 @@
     <class name="TranscriptionFactor" is-interface="true">
 	<attribute name="regulation" type="java.lang.String"/>
 	<reference name="primaryIdentifier" referenced-type="Gene"/>
-  	<collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="sigmaBindingSites"/>
+  	<collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="transcriptionFactor"/>
     </class>
     
     <class name="PromoterEvidence" is-interface="true">
