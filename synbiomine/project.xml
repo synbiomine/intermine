@@ -84,6 +84,14 @@
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
 
+    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
+    </source>
+
+    <source name="faith-EcoliK12-GEOSeries" type="synbio-GEOSeries">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Faith2007/current"/>
+    </source>
+
     <source name="interpro" type="interpro">
       <property name="src.data.dir" location="/micklem/data/interpro/current"/>
     </source>
@@ -94,6 +102,12 @@
 
     <source name="go" type="go" dump="true">
       <property name="src.data.file" location="/micklem/data/go-annotation/current/gene_ontology.obo"/>
+    </source>
+
+    <source name="go-annotation" type="go-annotation" dump="true">
+      <property name="ontologyfile" location="/micklem/data/go-annotation/current/gene_ontology.obo"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/go-annotation/current/"/>
+      <property name="ontologyPrefix" value="GO"/>
     </source>
 
     <source name="pubmed-gene" type="pubmed-gene">
