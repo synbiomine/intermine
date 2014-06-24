@@ -3,7 +3,7 @@
 
 <classes>
 <!-- add any <class> elements here -->
-    <class name="Promoter" is-interface="true">
+    <class name="Promoter" extends="SequenceFeature" is-interface="true">
 	<attribute name="primaryIdentifier" type="java.lang.String"/>
 	<attribute name="synonym" type="java.lang.String"/>
         <attribute name="predictedCluster" type="java.lang.String"/>

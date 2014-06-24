@@ -210,6 +210,9 @@ public final class FullParser
                         continue;
                     }
                 }
+
+
+
                 if (!InterMineObject.class.isAssignableFrom(refClass)) {
                     if (abortOnError) {
                         throw new IllegalArgumentException("Looking for a reference, but found a "
