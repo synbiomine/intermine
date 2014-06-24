@@ -79,12 +79,11 @@
     <source name="bdbtbs-promoters-Bsub168" type="synbio-promoter" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/DBTBS/current"/>
     </source>
-<!-- 
 
-    <source name="Nicolas2012-promoters-Bsub168" type="synbio-promoter" dump="true">
+    <source name="nicolas2012-promoters-Bsub168" type="synbio-promoter" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
--->
+
     <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
     </source>
