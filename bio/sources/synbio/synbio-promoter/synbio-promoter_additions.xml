@@ -3,7 +3,7 @@
 
 <classes>
 <!-- add any <class> elements here -->
-    <class name="SynbioPromoter" extends="Promoter" is-interface="true">
+    <class name="Promoter" is-interface="true">
 	<attribute name="primaryIdentifier" type="java.lang.String"/>
 	<attribute name="synonym" type="java.lang.String"/>
         <attribute name="predictedCluster" type="java.lang.String"/>
@@ -19,18 +19,18 @@
     <class name="PredictedSigmaFactor" is-interface="true">
   	<attribute name="identifier" type="java.lang.String"/>
   	<attribute name="probability" type="java.lang.Double"/>
-  	<collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="predictedSigmaFactors"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="predictedSigmaFactors"/>
     </class>
     
     <class name="SigmaBindingFactor" is-interface="true">
   	<reference name="primaryIdentifier" referenced-type="Gene"/>
-  	<collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="sigmaBindingFactors"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="sigmaBindingFactors"/>
     </class>
     
     <class name="TranscriptionFactor" is-interface="true">
 	<attribute name="regulation" type="java.lang.String"/>
 	<reference name="primaryIdentifier" referenced-type="Gene"/>
-  	<collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="transcriptionFactor"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="transcriptionFactor"/>
     </class>
     
     <class name="PromoterEvidence" is-interface="true">
@@ -43,6 +43,6 @@
 	    <attribute name="name" type="java.lang.String"/>
     </class>
     <class name="Gene" is-interface="true">
-	    <collection name="promoters" referenced-type="SynbioPromoter" reverse-reference="gene"/>
+	    <collection name="promoters" referenced-type="Promoter" reverse-reference="gene"/>
     </class>
 </classes>
