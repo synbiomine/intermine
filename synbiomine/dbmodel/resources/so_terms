@@ -34,7 +34,7 @@ PCR_product
 plasmid
 point_mutation
 primer
-promoter
+# promoter
 rRNA
 region
 regulatory_region
