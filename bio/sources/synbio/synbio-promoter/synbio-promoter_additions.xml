@@ -17,7 +17,7 @@
     </class>
     
     <class name="PredictedSigmaFactor" is-interface="true">
-  	<attribute name="identifier" type="java.lang.String"/>
+  	<reference name="primaryIdentifier" referenced-type="Gene"/>
   	<attribute name="probability" type="java.lang.Double"/>
   	<collection name="promoters" referenced-type="Promoter" reverse-reference="predictedSigmaFactors"/>
     </class>
