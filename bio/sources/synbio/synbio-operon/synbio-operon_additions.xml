@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+    <class name="Operon" extends="SequenceFeature" is-interface="true">
+	<attribute name="primaryIdentifier" type="java.lang.String"/>
+	<attribute name="synonym" type="java.lang.String"/>
+	<attribute name="comment" type="java.lang.String"/>
+	<collection name="genes" referenced-type="Gene" reverse-reference="operons"/>
+	<collection name="terminator" referenced-type="BacterialTerminator" reverse-reference="operon"/>
+	<collection name="evidence" referenced-type="OperonEvidence"/>
+    </class>
+    
+    <class name="BacterialTerminator" extends="SequenceFeature" is-interface="true">
+	<attribute name="primaryIdentifier" type="java.lang.String"/>
+	<attribute name="stemloop" type="java.lang.String"/>
+  	<attribute name="energy" type="java.lang.Double"/>
+	<reference name="operon" referenced-type="Operon" reverse-reference="terminator"/>
+    </class>
+    
+    <class name="OperonEvidence" is-interface="true">
+	<collection name="publications" referenced-type="Publication"/>
+	<collection name="evidenceCodes" referenced-type="OperonEvidenceCode"/>
+    </class>
+    
+    <class name="OperonEvidenceCode" is-interface="true">
+	<attribute name="abbreviation" type="java.lang.String"/>
+	<attribute name="name" type="java.lang.String"/>
+    </class>
+    
+    <class name="Gene" is-interface="true">
+	<collection name="operons" referenced-type="Operon" reverse-reference="genes"/>
+    </class>
+</classes>
