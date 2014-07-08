@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+    <class name="Promoter" extends="SequenceFeature" is-interface="true">
+	<attribute name="primaryIdentifier" type="java.lang.String"/>
+	<attribute name="synonym" type="java.lang.String"/>
+        <attribute name="predictedCluster" type="java.lang.String"/>
+        <attribute name="clusterProbability" type="java.lang.String"/>
+        <attribute name="predictedSigmaProbability" type="java.lang.String"/>
+	<reference name="gene" referenced-type="Gene" reverse-reference="promoters"/>
+	<reference name="transcriptionFactor" referenced-type="TranscriptionFactor" reverse-reference="promoters"/>
+	<collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoters"/>
+	<collection name="sigmaBindingFactors" referenced-type="SigmaBindingFactor" reverse-reference="promoters"/>
+	<collection name="evidence" referenced-type="PromoterEvidence"/>
+    </class>
+    
+    <class name="PredictedSigmaFactor" is-interface="true">
+  	<reference name="primaryIdentifier" referenced-type="Gene"/>
+  	<attribute name="probability" type="java.lang.Double"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="predictedSigmaFactors"/>
+    </class>
+    
+    <class name="SigmaBindingFactor" is-interface="true">
+  	<reference name="primaryIdentifier" referenced-type="Gene"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="sigmaBindingFactors"/>
+    </class>
+    
+    <class name="TranscriptionFactor" is-interface="true">
+	<attribute name="regulation" type="java.lang.String"/>
+	<reference name="primaryIdentifier" referenced-type="Gene"/>
+  	<collection name="promoters" referenced-type="Promoter" reverse-reference="transcriptionFactor"/>
+    </class>
+    
+    <class name="PromoterEvidence" is-interface="true">
+	<collection name="publications" referenced-type="Publication"/>
+	<collection name="evidenceCodes" referenced-type="PromoterEvidenceCode"/>
+    </class>
+    
+    <class name="PromoterEvidenceCode" is-interface="true">
+	<attribute name="abbreviation" type="java.lang.String"/>
+	<attribute name="name" type="java.lang.String"/>
+    </class>
+    
+    <class name="Operon" extends="SequenceFeature" is-interface="true">
+	<attribute name="primaryIdentifier" type="java.lang.String"/>
+	<attribute name="synonym" type="java.lang.String"/>
+	<attribute name="comment" type="java.lang.String"/>
+	<collection name="genes" referenced-type="Gene" reverse-reference="operons"/>
+	<collection name="terminator" referenced-type="BacterialTerminator" reverse-reference="operon"/>
+	<collection name="evidence" referenced-type="OperonEvidence"/>
+    </class>
+    
+    <class name="BacterialTerminator" extends="SequenceFeature" is-interface="true">
+	<attribute name="primaryIdentifier" type="java.lang.String"/>
+	<attribute name="stemloop" type="java.lang.String"/>
+  	<attribute name="energy" type="java.lang.Double"/>
+	<reference name="operon" referenced-type="Operon" reverse-reference="terminator"/>
+    </class>
+    
+    <class name="OperonEvidence" is-interface="true">
+	<collection name="publications" referenced-type="Publication"/>
+	<collection name="evidenceCodes" referenced-type="OperonEvidenceCode"/>
+    </class>
+    
+    <class name="OperonEvidenceCode" is-interface="true">
+	<attribute name="abbreviation" type="java.lang.String"/>
+	<attribute name="name" type="java.lang.String"/>
+    </class>
+    
+    <class name="Gene" is-interface="true">
+	<collection name="operons" referenced-type="Operon" reverse-reference="genes"/>
+	<collection name="promoters" referenced-type="Promoter" reverse-reference="gene"/>
+    </class>
+</classes>

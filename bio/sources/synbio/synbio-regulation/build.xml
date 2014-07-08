@@ -1,0 +1,5 @@
+<project name="synbio-regulation" default="default" basedir=".">
+  <description>build, test, package synbio-regulation</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+</project>

@@ -339,11 +339,11 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="nicolas2012-promoters-Bsub168" type="synbio-promoter" dump="true">
+    <source name="nicolas2012-promoters-Bsub168" type="synbio-regulation" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
     
-    <source name="nicolas-Bsub168-GEOSeries" type="synbio-GEOSeries" dump="true">
+    <source name="nicolas2012-GEOSeries-Bsub168" type="synbio-GEOSeries" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
     </source>
 
@@ -351,7 +351,7 @@
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Faith2007/current"/>
     </source>
 
-    <source name="bdbtbs-promoters-Bsub168" type="synbio-promoter" dump="true">
+    <source name="dbtbs-regulation-Bsub168" type="synbio-regulation" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/DBTBS/current"/>
     </source>
 
