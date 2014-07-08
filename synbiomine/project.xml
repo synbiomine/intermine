@@ -347,7 +347,7 @@
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Bsub/Nicolas2012/current"/>
     </source>
 
-    <source name="faith-EcoliK12-GEOSeries" type="synbio-GEOSeries">
+    <source name="faith-GEOSeries-EcoliK12" type="synbio-GEOSeries">
       <property name="src.data.dir" location="/SAN_synbiomine/data/geo/Ecoli/Faith2007/current"/>
     </source>
 
