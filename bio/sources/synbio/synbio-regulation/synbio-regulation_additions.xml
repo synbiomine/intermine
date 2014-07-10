@@ -10,6 +10,7 @@
         <attribute name="clusterProbability" type="java.lang.String"/>
         <attribute name="predictedSigmaProbability" type="java.lang.String"/>
 	<reference name="gene" referenced-type="Gene" reverse-reference="promoters"/>
+	<reference name="operon" referenced-type="Operon" reverse-reference="promoters"/>
 	<reference name="transcriptionFactor" referenced-type="TranscriptionFactor" reverse-reference="promoters"/>
 	<collection name="predictedSigmaFactors" referenced-type="PredictedSigmaFactor" reverse-reference="promoters"/>
 	<collection name="sigmaBindingFactors" referenced-type="SigmaBindingFactor" reverse-reference="promoters"/>
@@ -48,6 +49,7 @@
 	<attribute name="synonym" type="java.lang.String"/>
 	<attribute name="comment" type="java.lang.String"/>
 	<collection name="genes" referenced-type="Gene" reverse-reference="operons"/>
+	<collection name="promoters" referenced-type="Promoter" reverse-reference="operon"/>
 	<collection name="terminator" referenced-type="BacterialTerminator" reverse-reference="operon"/>
 	<collection name="evidence" referenced-type="OperonEvidence"/>
     </class>
