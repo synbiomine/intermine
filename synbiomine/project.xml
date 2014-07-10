@@ -339,7 +339,7 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="nicolas2012-promoters-Bsub168" type="synbio-regulation" dump="true">
+    <source name="nicolas2012-regulation-Bsub168" type="synbio-regulation" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
     
