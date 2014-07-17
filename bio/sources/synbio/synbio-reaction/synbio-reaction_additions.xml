@@ -3,31 +3,6 @@
 
 <classes>
 <!-- add any <class> elements here -->
-<class name="Reaction" is-interface="true">
-        <attribute name="identifier" type="java.lang.String"/>
-        <attribute name="name" type="java.lang.String"/>
-        <attribute name="sboterm" type="java.lang.String"/>
-        <attribute name="metacyc" type="java.lang.String"/>
-        <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
-	<collection name="reactants" referenced-type="ReactionSpecies"/>
-	<collection name="products" referenced-type="ReactionSpecies"/>
-        <collection name="kegg" referenced-type="KeggReaction"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
-</class>
-
-<class name="ReactionSpecies" is-interface="true">
-        <attribute name="shortName" type="java.lang.String"/>
-        <attribute name="identifier" type="java.lang.String"/>
-        <attribute name="metacyc" type="java.lang.String"/>
-	<attribute name="charge" type="java.lang.Double"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
-</class>
-
-<class name="Chebi" is-interface="true">
-        <attribute name="name" type="java.lang.String"/>
-        <attribute name="identifier" type="java.lang.String"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
-</class>
 
 <class name="KeggReaction" is-interface="true">
         <attribute name="name" type="java.lang.String"/>
@@ -37,11 +12,7 @@
 </class>
 
 <class name="Pathway" is-interface="true">
-	 <collection name="reactions" referenced-type="KeggReaction" reverse-reference="pathways"/>
- </class>
-
-<class name="Gene" is-interface="true">
-	 <collection name="reactions" referenced-type="KeggReaction" reverse-reference="modifiers"/>
- </class>
+	<collection name="reactions" referenced-type="KeggReaction" reverse-reference="pathways"/>
+</class>
 
 </classes>
