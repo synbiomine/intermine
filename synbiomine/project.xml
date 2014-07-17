@@ -339,6 +339,10 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
+    <source name="kegg-reactions-to-pathways" type="synbio-reaction" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/kegg-reaction/current"/>
+    </source>
+
     <source name="nicolas2012-regulation-Bsub168" type="synbio-regulation" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
@@ -357,7 +361,7 @@
 
     <source name="kegg-pathway" type="kegg-pathway" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/kegg/current" />
-      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900 155864 386585 199310 405955 574521 413997 316407" />
+      <property name="kegg.organisms" value="224308 511145 198094 592021 198094 568206 226900 155864 386585 199310 405955 574521 413997 316407 634956" />
     </source>
 
     <source name="interpro" type="interpro">
