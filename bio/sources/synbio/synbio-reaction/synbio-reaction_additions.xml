@@ -10,8 +10,8 @@
         <attribute name="sboterm" type="java.lang.String"/>
         <attribute name="metacyc" type="java.lang.String"/>
 	<attribute name="type" type="java.lang.String"/>
+	<reference name="kineticParameters" referenced-type="KineticParameters"/>
 	<collection name="reactionSpecies" referenced-type="ReactionSpecies"/>
-	<collection name="kineticParameters" referenced-type="KineticParameters"/>
         <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
         <collection name="pathways" referenced-type="Pathway" reverse-reference="reactions"/>
         <collection name="dataSets" referenced-type="DataSet"/>
