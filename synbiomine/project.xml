@@ -344,7 +344,11 @@
     </source>
 
     <source name="pathway2model-Bsub168" type="synbio-reaction" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/current"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/Bsub168/current"/>
+    </source>
+
+    <source name="pathway2model-EcoliMG1655" type="synbio-reaction" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/EcoliMG1655/current"/>
     </source>
 
     <source name="nicolas2012-regulation-Bsub168" type="synbio-regulation" dump="true">
