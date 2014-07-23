@@ -10,8 +10,9 @@
         <attribute name="sboterm" type="java.lang.String"/>
         <attribute name="metacyc" type="java.lang.String"/>
 	<attribute name="type" type="java.lang.String"/>
-        <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
 	<collection name="reactionSpecies" referenced-type="ReactionSpecies"/>
+	<collection name="kineticParameters" referenced-type="KineticParameters"/>
+        <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
         <collection name="pathways" referenced-type="Pathway" reverse-reference="reactions"/>
         <collection name="dataSets" referenced-type="DataSet"/>
 </class>
@@ -21,6 +22,14 @@
 	<attribute name="role" type="java.lang.String"/>
 	<reference name="compound" referenced-type="Compound"/>
         <collection name="dataSets" referenced-type="DataSet"/>
+</class>
+
+<class name="KineticParameters" is-interface="true">
+	<attribute name="type" type="java.lang.String"/>
+	<attribute name="lowerBound" type="java.lang.Double"/>
+	<attribute name="upperBound" type="java.lang.Double"/>
+	<attribute name="fluxValue" type="java.lang.Double"/>
+	<attribute name="objectiveCoefficient" type="java.lang.Double"/>
 </class>
 
 <class name="Compound" is-interface="true">
