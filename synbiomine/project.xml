@@ -339,18 +339,6 @@
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
-    <source name="kegg-reactions-to-pathways" type="synbio-reaction" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/kegg-reaction/current"/>
-    </source>
-
-    <source name="pathway2model-Bsub168" type="synbio-reaction" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/Bsub168/current"/>
-    </source>
-
-    <source name="pathway2model-EcoliMG1655" type="synbio-reaction" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/EcoliMG1655/current"/>
-    </source>
-
     <source name="nicolas2012-regulation-Bsub168" type="synbio-regulation" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/promoters/Bsub/Nicolas2012/current"/>
     </source>
@@ -407,6 +395,18 @@
     <source name="orthodb" type="orthodb" dump="true">
       <property name="src.data.dir" location="/micklem/data/ecolimine/orthodb/current"/>
       <property name="orthodb.organisms" value="1392 592021 198094 568206 226900 224308 83333 511145 634956 155864 386585 199310 405955 574521 413997 316407"/>
+    </source>
+
+    <source name="kegg-reactions-to-pathways" type="synbio-reaction" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/kegg-reaction/current"/>
+    </source>
+
+    <source name="pathway2model-Bsub168" type="synbio-reaction" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/Bsub168/current"/>
+    </source>
+
+    <source name="pathway2model-EcoliMG1655" type="synbio-reaction" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/EcoliMG1655/current"/>
     </source>
 
     <source name="pubmed-gene" type="pubmed-gene">
