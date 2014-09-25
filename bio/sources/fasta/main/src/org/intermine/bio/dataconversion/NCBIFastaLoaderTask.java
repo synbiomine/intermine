@@ -40,8 +40,9 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
 // New header format:  NC_000964.3
 // Pattern should match NC_digits.digit(s)
     private static final Pattern NCBI_NEW_DB_PATTERN =
-	Pattern.compile("^(\\w+\\d+\\.?(\\d+)?)\\s.*");
-//        Pattern ("^(\w+\_\d+\.?(\d+)?)?\.*");
+	Pattern.compile("^(\\w+\\d+)?(\\.?\\d+)?\\s?");
+//	Pattern.compile("^(\\w+\\d+\\.?(\\d+)?)\\s?");
+//        Pattern ("^(\w+\d+\.?(\d+)?)?\s");
 
 
 
@@ -62,7 +63,7 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
             }
         }
 	Matcher ncbiNewMatcher = NCBI_NEW_DB_PATTERN.matcher(seqIdentifier);
-	if (ncbiMatcher.matches()) {
+	if (ncbiNewMatcher.matches()) {
 	  // pattern such as U00096.2 (group(1): "U00096", group(2): ".2")
 	  if (ncbiNewMatcher.group(2) == null) {
 	      return ncbiNewMatcher.group(1);
