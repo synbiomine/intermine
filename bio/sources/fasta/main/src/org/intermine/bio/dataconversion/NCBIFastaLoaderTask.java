@@ -40,7 +40,7 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
 // New header format:  NC_000964.3
 // Pattern should match NC_digits.digit(s)
     private static final Pattern NCBI_NEW_DB_PATTERN =
-	Pattern.compile("^(\\w+\\d+\\.?(\\d+)?)\s.*");
+	Pattern.compile("^(\\w+\\d+\\.?(\\d+)?)\\s.*");
 //        Pattern ("^(\w+\_\d+\.?(\d+)?)?\.*");
 
 
