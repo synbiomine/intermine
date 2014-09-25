@@ -34,6 +34,14 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
     private static final Pattern UNIPROT_PATTERN =
         Pattern.compile("^([^\\|]+)\\|([^\\|\\s]*).*");
 
+// Update to NCBI fasta header format. Old style: gi|255767013|ref|NC_000964.3| 
+// New header format:  NC_000964.3
+// Pattern should match NC_digits.digit(s)
+    private static final Pattern NCBI_NEW_DB_PATTERN =
+//        Pattern ("^(\w+\_\d+\.?(\d+)?)?\.*");
+    Pattern.compile("^(\\w+\\_\\d+\\.?(\\d+)?)?\\.*");
+
+
     /**
      * {@inheritDoc}
      */
@@ -50,10 +58,17 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
                 return ncbiMatcher.group(3) + ncbiMatcher.group(4);
             }
         }
+	Matcher ncbiNewMatcher = NCBI_NEW_DB_PATTERN.matcher(seqIdentifier);
+        if (ncbiNewMatcher.group(2) == null) {
+            return ncbiNewMatcher.group(1);
+        } else {
+	    return ncbiNewMatcher.group(1) + ncbiNewMatcher.group(2);
+	}
         Matcher uniprotMatcher = UNIPROT_PATTERN.matcher(seqIdentifier);
         if (uniprotMatcher.matches()) {
             return uniprotMatcher.group(2);
         }
+
         throw new RuntimeException("can't parse FASTA identifier: " + seqIdentifier);
 
     }
