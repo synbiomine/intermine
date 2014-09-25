@@ -29,8 +29,10 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
     private static final Pattern NCBI_DB_PATTERN =
 //        Pattern.compile("^gi\\|([^\\|]*)\\|(gb|emb|dbj|ref)\\|([^\\|]*?)(\\.\\d+)?\\|.*");
     Pattern.compile("^gi\\|([^\\|]*)\\|(gb|emb|dbj|ref)\\|([^\\|]*?)(\\.\\d+\\.?(\\d+)?)?\\|.*");
+
     // private static final Pattern PROT_DB_PATTERN =
     //    Pattern.compile("^(ref|pir|prf)\\|([^\\|]*)\\|([^\\|]*).*");
+
     private static final Pattern UNIPROT_PATTERN =
         Pattern.compile("^([^\\|]+)\\|([^\\|\\s]*).*");
 
@@ -38,8 +40,9 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
 // New header format:  NC_000964.3
 // Pattern should match NC_digits.digit(s)
     private static final Pattern NCBI_NEW_DB_PATTERN =
+	Pattern.compile("^(\\w+\\d+\\.?(\\d+)?)?\\.*");
 //        Pattern ("^(\w+\_\d+\.?(\d+)?)?\.*");
-    Pattern.compile("^(\\w+\\_\\d+\\.?(\\d+)?)?\\.*");
+
 
 
     /**
@@ -59,10 +62,13 @@ public class NCBIFastaLoaderTask extends FastaLoaderTask
             }
         }
 	Matcher ncbiNewMatcher = NCBI_NEW_DB_PATTERN.matcher(seqIdentifier);
-        if (ncbiNewMatcher.group(2) == null) {
-            return ncbiNewMatcher.group(1);
-        } else {
-	    return ncbiNewMatcher.group(1) + ncbiNewMatcher.group(2);
+	if (ncbiMatcher.matches()) {
+	  // pattern such as U00096.2 (group(1): "U00096", group(2): ".2")
+	  if (ncbiNewMatcher.group(2) == null) {
+	      return ncbiNewMatcher.group(1);
+	  } else {
+	      return ncbiNewMatcher.group(1) + ncbiNewMatcher.group(2);
+	  }
 	}
         Matcher uniprotMatcher = UNIPROT_PATTERN.matcher(seqIdentifier);
         if (uniprotMatcher.matches()) {
