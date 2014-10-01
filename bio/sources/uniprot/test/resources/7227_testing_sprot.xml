@@ -1,159 +1,523 @@
-<uniprot xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/support/docs/uniprot.xsd">
-<entry dataset="Swiss-Prot" created="1988-01-01" modified="2008-04-29" version="93">
-<accession>Q1234</accession>
-<name>EVE_DROME</name>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/support/docs/uniprot.xsd">
+<entry dataset="Swiss-Prot" created="1988-11-01" modified="2014-07-09" version="116">
+<accession>P08874</accession>
+<name>ABRB_BACSU</name>
 <protein>
-    <recommendedName>
-      <fullName>eve's name</fullName>
-      <shortName>shortname</shortName>
-      <ecNumber>1.1.1.284</ecNumber>
-    </recommendedName>
-<alternativeName>
-<fullName>alternativeName - full</fullName>
-<shortName>alternativeName - short</shortName>
-<ecNumber>1.1.1.1</ecNumber>
-</alternativeName>
-<component>
 <recommendedName>
-<fullName>full component name</fullName>
-<shortName>short component name</shortName>
+<fullName>Transition state regulatory protein AbrB</fullName>
 </recommendedName>
-<alternativeName>
-<fullName>full component alternativeName</fullName>
-<shortName>short component alternativeName</shortName>
-<ecNumber>1.1.1.-</ecNumber>
-</alternativeName>
-</component>
 </protein>
 <gene>
-  <name type="primary">eve</name>
-  <name type="ORF">CG1111</name>
+<name type="primary">abrB</name>
+<name type="synonym">cpsX</name>
+<name type="ordered locus">BSU00370</name>
 </gene>
-<gene>
-  <name type="primary">zen</name>
-  <name type="ORF">CG2222</name>
-</gene>
-<organism key="1">
-  <dbReference type="NCBI Taxonomy" id="7227" key="2"/>
+<organism>
+<name type="scientific">Bacillus subtilis (strain 168)</name>
+<dbReference type="NCBI Taxonomy" id="224308"/>
+<lineage>
+<taxon>Bacteria</taxon>
+<taxon>Firmicutes</taxon>
+<taxon>Bacilli</taxon>
+<taxon>Bacillales</taxon>
+<taxon>Bacillaceae</taxon>
+<taxon>Bacillus</taxon>
+</lineage>
 </organism>
+<reference key="1">
+<citation type="journal article" date="1988" name="Mol. Microbiol." volume="2" first="689" last="699">
+<title>
+Structure of the gene for the transition state regulator, abrB: regulator synthesis is controlled by the spo0A sporulation gene in Bacillus subtilis.
+</title>
+<authorList>
+<person name="Perego M."/>
+<person name="Spiegelman G.B."/>
+<person name="Hoch J.A."/>
+</authorList>
+<dbReference type="PubMed" id="3145384"/>
+<dbReference type="DOI" id="10.1111/j.1365-2958.1988.tb00079.x"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+<source>
+<strain>168</strain>
+</source>
+</reference>
+<reference key="2">
+<citation type="journal article" date="1989" name="Proc. Natl. Acad. Sci. U.S.A." volume="86" first="8457" last="8461">
+<title>
+AbrB, a regulator of gene expression in Bacillus, interacts with the transcription initiation regions of a sporulation gene and an antibiotic biosynthesis gene.
+</title>
+<authorList>
+<person name="Robertson J.R."/>
+<person name="Gocht M."/>
+<person name="Marahiel M.A."/>
+<person name="Zuber P."/>
+</authorList>
+<dbReference type="PubMed" id="2554317"/>
+<dbReference type="DOI" id="10.1073/pnas.86.21.8457"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+</reference>
 <reference key="3">
-  <citation>
-    <dbReference type="PubMed" id="222222" key="6"/>
-  </citation>
+<citation type="journal article" date="1994" name="DNA Res." volume="1" first="1" last="14">
+<title>
+Systematic sequencing of the 180 kilobase region of the Bacillus subtilis chromosome containing the replication origin.
+</title>
+<authorList>
+<person name="Ogasawara N."/>
+<person name="Nakai S."/>
+<person name="Yoshikawa H."/>
+</authorList>
+<dbReference type="PubMed" id="7584024"/>
+<dbReference type="DOI" id="10.1093/dnares/1.1.1"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [GENOMIC DNA]</scope>
+<source>
+<strain>168</strain>
+</source>
+</reference>
+<reference key="4">
+<citation type="journal article" date="1997" name="Nature" volume="390" first="249" last="256">
+<title>
+The complete genome sequence of the Gram-positive bacterium Bacillus subtilis.
+</title>
+<authorList>
+<person name="Kunst F."/>
+<person name="Ogasawara N."/>
+<person name="Moszer I."/>
+<person name="Albertini A.M."/>
+<person name="Alloni G."/>
+<person name="Azevedo V."/>
+<person name="Bertero M.G."/>
+<person name="Bessieres P."/>
+<person name="Bolotin A."/>
+<person name="Borchert S."/>
+<person name="Borriss R."/>
+<person name="Boursier L."/>
+<person name="Brans A."/>
+<person name="Braun M."/>
+<person name="Brignell S.C."/>
+<person name="Bron S."/>
+<person name="Brouillet S."/>
+<person name="Bruschi C.V."/>
+<person name="Caldwell B."/>
+<person name="Capuano V."/>
+<person name="Carter N.M."/>
+<person name="Choi S.-K."/>
+<person name="Codani J.-J."/>
+<person name="Connerton I.F."/>
+<person name="Cummings N.J."/>
+<person name="Daniel R.A."/>
+<person name="Denizot F."/>
+<person name="Devine K.M."/>
+<person name="Duesterhoeft A."/>
+<person name="Ehrlich S.D."/>
+<person name="Emmerson P.T."/>
+<person name="Entian K.-D."/>
+<person name="Errington J."/>
+<person name="Fabret C."/>
+<person name="Ferrari E."/>
+<person name="Foulger D."/>
+<person name="Fritz C."/>
+<person name="Fujita M."/>
+<person name="Fujita Y."/>
+<person name="Fuma S."/>
+<person name="Galizzi A."/>
+<person name="Galleron N."/>
+<person name="Ghim S.-Y."/>
+<person name="Glaser P."/>
+<person name="Goffeau A."/>
+<person name="Golightly E.J."/>
+<person name="Grandi G."/>
+<person name="Guiseppi G."/>
+<person name="Guy B.J."/>
+<person name="Haga K."/>
+<person name="Haiech J."/>
+<person name="Harwood C.R."/>
+<person name="Henaut A."/>
+<person name="Hilbert H."/>
+<person name="Holsappel S."/>
+<person name="Hosono S."/>
+<person name="Hullo M.-F."/>
+<person name="Itaya M."/>
+<person name="Jones L.-M."/>
+<person name="Joris B."/>
+<person name="Karamata D."/>
+<person name="Kasahara Y."/>
+<person name="Klaerr-Blanchard M."/>
+<person name="Klein C."/>
+<person name="Kobayashi Y."/>
+<person name="Koetter P."/>
+<person name="Koningstein G."/>
+<person name="Krogh S."/>
+<person name="Kumano M."/>
+<person name="Kurita K."/>
+<person name="Lapidus A."/>
+<person name="Lardinois S."/>
+<person name="Lauber J."/>
+<person name="Lazarevic V."/>
+<person name="Lee S.-M."/>
+<person name="Levine A."/>
+<person name="Liu H."/>
+<person name="Masuda S."/>
+<person name="Mauel C."/>
+<person name="Medigue C."/>
+<person name="Medina N."/>
+<person name="Mellado R.P."/>
+<person name="Mizuno M."/>
+<person name="Moestl D."/>
+<person name="Nakai S."/>
+<person name="Noback M."/>
+<person name="Noone D."/>
+<person name="O'Reilly M."/>
+<person name="Ogawa K."/>
+<person name="Ogiwara A."/>
+<person name="Oudega B."/>
+<person name="Park S.-H."/>
+<person name="Parro V."/>
+<person name="Pohl T.M."/>
+<person name="Portetelle D."/>
+<person name="Porwollik S."/>
+<person name="Prescott A.M."/>
+<person name="Presecan E."/>
+<person name="Pujic P."/>
+<person name="Purnelle B."/>
+<person name="Rapoport G."/>
+<person name="Rey M."/>
+<person name="Reynolds S."/>
+<person name="Rieger M."/>
+<person name="Rivolta C."/>
+<person name="Rocha E."/>
+<person name="Roche B."/>
+<person name="Rose M."/>
+<person name="Sadaie Y."/>
+<person name="Sato T."/>
+<person name="Scanlan E."/>
+<person name="Schleich S."/>
+<person name="Schroeter R."/>
+<person name="Scoffone F."/>
+<person name="Sekiguchi J."/>
+<person name="Sekowska A."/>
+<person name="Seror S.J."/>
+<person name="Serror P."/>
+<person name="Shin B.-S."/>
+<person name="Soldo B."/>
+<person name="Sorokin A."/>
+<person name="Tacconi E."/>
+<person name="Takagi T."/>
+<person name="Takahashi H."/>
+<person name="Takemaru K."/>
+<person name="Takeuchi M."/>
+<person name="Tamakoshi A."/>
+<person name="Tanaka T."/>
+<person name="Terpstra P."/>
+<person name="Tognoni A."/>
+<person name="Tosato V."/>
+<person name="Uchiyama S."/>
+<person name="Vandenbol M."/>
+<person name="Vannier F."/>
+<person name="Vassarotti A."/>
+<person name="Viari A."/>
+<person name="Wambutt R."/>
+<person name="Wedler E."/>
+<person name="Wedler H."/>
+<person name="Weitzenegger T."/>
+<person name="Winters P."/>
+<person name="Wipat A."/>
+<person name="Yamamoto H."/>
+<person name="Yamane K."/>
+<person name="Yasumoto K."/>
+<person name="Yata K."/>
+<person name="Yoshida K."/>
+<person name="Yoshikawa H.-F."/>
+<person name="Zumstein E."/>
+<person name="Yoshikawa H."/>
+<person name="Danchin A."/>
+</authorList>
+<dbReference type="PubMed" id="9384377"/>
+<dbReference type="DOI" id="10.1038/36786"/>
+</citation>
+<scope>NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA]</scope>
+<source>
+<strain>168</strain>
+</source>
+</reference>
+<reference key="5">
+<citation type="journal article" date="1989" name="EMBO J." volume="8" first="1615" last="1621">
+<title>
+The transition state transcription regulator abrB of Bacillus subtilis is a DNA binding protein.
+</title>
+<authorList>
+<person name="Strauch M.A."/>
+<person name="Spiegelman G.B."/>
+<person name="Perego M."/>
+<person name="Johnson W.C."/>
+<person name="Burbulys D."/>
+<person name="Hoch J.A."/>
+</authorList>
+<dbReference type="PubMed" id="2504584"/>
+</citation>
+<scope>FUNCTION</scope>
+</reference>
+<reference key="6">
+<citation type="journal article" date="1991" name="FEBS Lett." volume="287" first="153" last="156">
+<title>
+Mutant analysis of interaction of the Bacillus subtilis transcription regulator AbrB with the antibiotic biosynthesis gene tycA.
+</title>
+<authorList>
+<person name="Fuerbass R."/>
+<person name="Marahiel M.A."/>
+</authorList>
+<dbReference type="PubMed" id="1908787"/>
+<dbReference type="DOI" id="10.1016/0014-5793(91)80038-5"/>
+</citation>
+<scope>CHARACTERIZATION</scope>
+<scope>MUTAGENESIS OF CYS-56</scope>
 </reference>
 <reference key="7">
-  <citation>
-    <dbReference type="PubMed" id="1111111" key="9"/>
-  </citation>
+<citation type="journal article" date="2004" name="Mol. Microbiol." volume="52" first="847" last="860">
+<title>
+Identification of AbrB-regulated genes involved in biofilm formation by Bacillus subtilis.
+</title>
+<authorList>
+<person name="Hamon M.A."/>
+<person name="Stanley N.R."/>
+<person name="Britton R.A."/>
+<person name="Grossman A.D."/>
+<person name="Lazazzera B.A."/>
+</authorList>
+<dbReference type="PubMed" id="15101989"/>
+<dbReference type="DOI" id="10.1111/j.1365-2958.2004.04023.x"/>
+</citation>
+<scope>ABRB-REGULATED GENES</scope>
 </reference>
-<comment type="subcellular location">
-  <text evidence="EC1">Nucleus.</text>
-</comment>
-<comment type="similarity">
-  <text>I'm a duplicate!</text>
-</comment>
-<comment type="similarity">
-  <text evidence="EC1 EC2">Contains 1 homeobox DNA-binding domain.</text>
-</comment>
-<comment type="alternative products">
-<event type="alternative splicing"/>
-<isoform>
-<id>Q1234-1</id>
-<name>G</name>
-<name>Long</name>
-<name>Ohsako-T</name>
-<sequence type="displayed"/>
-<note>
-C-terminal exons may be joined by a trans-splicing event. The exons are coded by the same DNA strand.
-</note>
-</isoform>
-<isoform>
-<id>Q1234-2</id>
-<name>J</name>
-<name>Ohsako-O</name>
-<sequence type="described" ref="VSP_051809 VSP_051812"/>
-</isoform>
-<isoform>
-<id>Q7KQZ4-2</id>
-<name>A</name>
-<name>Ohsako-D</name>
-<sequence type="external"/>
-</isoform>
-<isoform>
-<id>Q7KQZ4-1</id>
-<name>B</name>
-<name>C</name>
-<name>Ohsako-L</name>
-<sequence type="external"/>
-<note>
-C-terminal exons may be joined by a trans-splicing event. The exons are coded by the same DNA strand.
-</note>
-</isoform>
-
-<text>
-Some isoforms may be generated by alternative trans-splicing of exons sequentially encoded by the same DNA strand.
+<comment type="function">
+<text evidence="1">
+Ambiactive repressor and activator of the transcription of genes expressed during the transition state between vegetative growth and the onset of stationary phase and sporulation. It controls the expression of genes spovG and tycA. AbrB binds to the tycA promoter region at two A- and T-rich sites, it may be the sole repressor of tycA transcription.
 </text>
 </comment>
-<dbReference type="RefSeq" id="NP_523670.2" key="31"/>
-<dbReference type="FlyBase" id="FBgn0000002" key="40">
-  <property type="gene designation" value="eve"/>
+<comment type="similarity">
+<text>Contains 1 AbrB-like domain.</text>
+</comment>
+<comment type="similarity">
+<text>To B.subtilis Abh and SpoVT.</text>
+</comment>
+<comment type="caution">
+<text>
+It is uncertain whether Met-1 or Met-3 is the initiator.
+</text>
+</comment>
+<comment type="sequence caution">
+<conflict type="erroneous initiation">
+<sequence resource="EMBL-CDS" id="AAA22195" version="1"/>
+</conflict>
+<text>Translation N-terminally extended.</text>
+</comment>
+<comment type="sequence caution">
+<conflict type="erroneous initiation">
+<sequence resource="EMBL-CDS" id="CAA43955" version="1"/>
+</conflict>
+<text>Translation N-terminally extended.</text>
+</comment>
+<dbReference type="EMBL" id="X12820">
+<property type="protein sequence ID" value="CAA31307.1"/>
+<property type="molecule type" value="Genomic_DNA"/>
 </dbReference>
-<dbReference type="FlyBase" id="FBgn0000001" key="40">
-  <property type="gene designation" value="zen"/>
+<dbReference type="EMBL" id="M26917">
+<property type="protein sequence ID" value="AAA22195.1"/>
+<property type="status" value="ALT_INIT"/>
+<property type="molecule type" value="Genomic_DNA"/>
 </dbReference>
-<dbReference type="Go" id="GO:0000001" key="44">
-  <property type="term" value="P:cell fate determination"/>
-  <property type="evidence" value="NAS:FlyBase"/>
+<dbReference type="EMBL" id="D26185">
+<property type="protein sequence ID" value="BAA05272.1"/>
+<property type="molecule type" value="Genomic_DNA"/>
 </dbReference>
-<dbReference type="Go" id="GO:0000002" key="45">
-  <property type="term" value="P:central nervous system development"/>
-  <property type="evidence" value="NAS:FlyBase"/>
+<dbReference type="EMBL" id="X61953">
+<property type="protein sequence ID" value="CAA43955.1"/>
+<property type="status" value="ALT_INIT"/>
+<property type="molecule type" value="Genomic_DNA"/>
 </dbReference>
-<dbReference type="Go" id="GO:0000003" key="46">
-  <property type="term" value="P:cephalic furrow formation"/>
-  <property type="evidence" value="IMP:FlyBase"/>
+<dbReference type="EMBL" id="AL009126">
+<property type="protein sequence ID" value="CAB11813.1"/>
+<property type="molecule type" value="Genomic_DNA"/>
 </dbReference>
-<keyword id="KW-0001">keyword!</keyword>
-<keyword id="KW-0002">Complete proteome</keyword>
-<keyword id="KW-0003">DNA-binding</keyword>
-<dbReference type="InterPro" id="IPR001356" key="64">
-<property type="entry name" value="Homeobox"/>
+<dbReference type="PIR" id="S03096">
+<property type="entry name" value="S03096"/>
 </dbReference>
-<dbReference type="InterPro" id="IPR017970" key="65">
-<property type="entry name" value="Homeobox_CS"/>
+<dbReference type="RefSeq" id="NP_387918.1">
+<property type="nucleotide sequence ID" value="NC_000964.3"/>
 </dbReference>
+<dbReference type="PDB" id="1YFB">
+<property type="method" value="NMR"/>
+<property type="chains" value="A/B=2-53"/>
+</dbReference>
+<dbReference type="PDB" id="1YSF">
+<property type="method" value="NMR"/>
+<property type="chains" value="A/B=2-53"/>
+</dbReference>
+<dbReference type="PDB" id="1Z0R">
+<property type="method" value="NMR"/>
+<property type="chains" value="A/B=3-55"/>
+</dbReference>
+<dbReference type="PDB" id="2K1N">
+<property type="method" value="NMR"/>
+<property type="chains" value="A/B/C/D=3-57"/>
+</dbReference>
+<dbReference type="PDB" id="2RO4">
+<property type="method" value="NMR"/>
+<property type="chains" value="A/B=3-55"/>
+</dbReference>
+<dbReference type="PDBsum" id="1YFB"/>
+<dbReference type="PDBsum" id="1YSF"/>
+<dbReference type="PDBsum" id="1Z0R"/>
+<dbReference type="PDBsum" id="2K1N"/>
+<dbReference type="PDBsum" id="2RO4"/>
+<dbReference type="ProteinModelPortal" id="P08874"/>
+<dbReference type="SMR" id="P08874">
+<property type="residue range" value="3-57"/>
+</dbReference>
+<dbReference type="DIP" id="DIP-46306N"/>
+<dbReference type="STRING" id="224308.BSU00370"/>
+<dbReference type="PaxDb" id="P08874"/>
+<dbReference type="EnsemblBacteria" id="CAB11813">
+<property type="protein sequence ID" value="CAB11813"/>
+<property type="gene ID" value="BSU00370"/>
+</dbReference>
+<dbReference type="GeneID" id="937009"/>
+<dbReference type="KEGG" id="bsu:BSU00370"/>
+<dbReference type="PATRIC" id="18971545">
+<property type="gene designation" value="VBIBacSub10457_0038"/>
+</dbReference>
+<dbReference type="GenoList" id="BSU00370"/>
+<dbReference type="eggNOG" id="COG2002"/>
+<dbReference type="HOGENOM" id="HOG000197059"/>
+<dbReference type="KO" id="K06284"/>
+<dbReference type="OMA" id="GAEQIIN"/>
+<dbReference type="OrthoDB" id="EOG64JFRV"/>
+<dbReference type="PhylomeDB" id="P08874"/>
+<dbReference type="BioCyc" id="BSUB:BSU00370-MONOMER"/>
+<dbReference type="EvolutionaryTrace" id="P08874"/>
+<dbReference type="GO" id="GO:0003677">
+<property type="term" value="F:DNA binding"/>
+<property type="evidence" value="IEA:UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0043937">
+<property type="term" value="P:regulation of sporulation"/>
+<property type="evidence" value="IGI:CACAO"/>
+</dbReference>
+<dbReference type="GO" id="GO:0006355">
+<property type="term" value="P:regulation of transcription, DNA-templated"/>
+<property type="evidence" value="IEA:UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0030435">
+<property type="term" value="P:sporulation resulting in formation of a cellular spore"/>
+<property type="evidence" value="IEA:UniProtKB-KW"/>
+</dbReference>
+<dbReference type="GO" id="GO:0006351">
+<property type="term" value="P:transcription, DNA-templated"/>
+<property type="evidence" value="IEA:UniProtKB-KW"/>
+</dbReference>
+<dbReference type="InterPro" id="IPR007159">
+<property type="entry name" value="AbrB-like_dom"/>
+</dbReference>
+<dbReference type="Pfam" id="PF04014">
+<property type="entry name" value="Antitoxin-MazE"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="SMART" id="SM00966">
+<property type="entry name" value="SpoVT_AbrB"/>
+<property type="match status" value="1"/>
+</dbReference>
+<dbReference type="TIGRFAMs" id="TIGR01439">
+<property type="entry name" value="lp_hng_hel_AbrB"/>
+<property type="match status" value="1"/>
+</dbReference>
+<proteinExistence type="evidence at protein level"/>
+<keyword id="KW-0002">3D-structure</keyword>
+<keyword id="KW-0010">Activator</keyword>
+<keyword id="KW-0181">Complete proteome</keyword>
+<keyword id="KW-0238">DNA-binding</keyword>
+<keyword id="KW-1185">Reference proteome</keyword>
+<keyword id="KW-0678">Repressor</keyword>
+<keyword id="KW-0749">Sporulation</keyword>
+<keyword id="KW-0804">Transcription</keyword>
+<keyword id="KW-0805">Transcription regulation</keyword>
+<feature type="chain" description="Transition state regulatory protein AbrB" id="PRO_0000064431">
+<location>
+<begin position="1"/>
+<end position="96"/>
+</location>
+</feature>
+<feature type="domain" description="AbrB-like">
+<location>
+<begin position="10"/>
+<end position="52"/>
+</location>
+</feature>
+<feature type="mutagenesis site" description="Loss of DNA-binding activity." evidence="2">
+<original>C</original>
+<variation>Y</variation>
+<location>
+<position position="56"/>
+</location>
+</feature>
+<feature type="strand">
+<location>
+<begin position="8"/>
+<end position="11"/>
+</location>
+</feature>
+<feature type="turn">
+<location>
+<begin position="13"/>
+<end position="15"/>
+</location>
+</feature>
+<feature type="strand">
+<location>
+<begin position="17"/>
+<end position="19"/>
+</location>
+</feature>
 <feature type="helix">
 <location>
-<begin position="79"/>
-<end position="91"/>
+<begin position="22"/>
+<end position="27"/>
 </location>
 </feature>
-<feature type="don't load this feature">
+<feature type="strand">
 <location>
-<begin position="97"/>
-<end position="107"/>
+<begin position="35"/>
+<end position="41"/>
+</location>
+</feature>
+<feature type="strand">
+<location>
+<begin position="44"/>
+<end position="49"/>
 </location>
 </feature>
 <feature type="helix">
 <location>
-<begin position="111"/>
-<end position="127"/>
+<begin position="52"/>
+<end position="54"/>
 </location>
 </feature>
-<evidence key="EC1" category="curator" type="Literature" attribute="PubMed=222222" date="2010-07-01"/>
-<evidence key="EC2" category="curator" type="Literature" attribute="PubMed=1111111" date="2010-07-01"/>
-<sequence length="376" mass="39970" checksum="59058E0634B1BED0" modified="2000-12-01" version="3">
-MHGYRTYNMESHHAHHDASPVDQKPLVVDLLATQYGKPQTPPPSPNECLSSPDNSLNGSR
-GSEIPADPSVRRYRTAFTRDQLGRLEKEFYKENYVSRPRRCELAAQLNLPESTIKVWFQN
-RRMKDKRQRIAVAWPYAAVYSDPAFAASILQAAANSVGMPYPPYAPAAAAAAAAAAAVAT
-NPMMATGMPPMGMPQMPTMQMPGHSGHAGHPSPYGQYRYTPYHIPARPAPPHPAGPHMHH
-PHMMGSSATGSSYSAGAAGLLGALPSATCYTGLGVGVPKTQTPPLDLQSSSSPHSSTLSL
-SPVGSDHAKVFDRSPVAQSAPSVPAPAPLTTTSPLPAPGLLMPSAKRPASDMSPPPTTTV
-IAEPKPKLFKPYKTEA
+<evidence key="1" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="2504584"/>
+</source>
+</evidence>
+<evidence key="2" type="ECO:0000269">
+<source>
+<dbReference type="PubMed" id="1908787"/>
+</source>
+</evidence>
+<sequence length="96" mass="10773" checksum="6A964557F5590CFE" modified="1988-11-01" version="1">
+MFMKSTGIVRKVDELGRVVIPIELRRTLGIAEKDALEIYVDDEKIILKKYKPNMTCQVTG EVSDDNLKLAGGKLVLSKEGAEQIISEIQNQLQNLK
 </sequence>
 </entry>
 <copyright>
-Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
-Distributed under the Creative Commons Attribution-NoDerivs License
+Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms Distributed under the Creative Commons Attribution-NoDerivs License
 </copyright>
 </uniprot>

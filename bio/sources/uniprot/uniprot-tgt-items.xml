@@ -1,0 +1,280 @@
+<items>
+<item id="17_1" class="SOTerm">
+<attribute name="name" value="gene"/>
+<reference name="ontology" ref_id="0_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="13_1" class="GOEvidenceCode">
+<attribute name="code" value="IEA"/>
+</item>
+<item id="14_3" class="GOEvidence">
+<reference name="code" ref_id="13_1"/>
+</item>
+<item id="3_2" class="Publication">
+<attribute name="pubMedId" value="2554317"/>
+</item>
+<item id="14_4" class="GOEvidence">
+<reference name="code" ref_id="13_1"/>
+</item>
+<item id="14_5" class="GOEvidence">
+<reference name="code" ref_id="13_1"/>
+</item>
+<item id="13_2" class="GOEvidenceCode">
+<attribute name="code" value="IGI"/>
+</item>
+<item id="6_3" class="OntologyTerm">
+<attribute name="name" value="Complete proteome"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_4" class="Publication">
+<attribute name="pubMedId" value="9384377"/>
+</item>
+<item id="16_2" class="GOTerm">
+<attribute name="identifier" value="GO:0043937"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="4_2" class="Comment">
+<attribute name="description" value="Contains 1 AbrB-like domain."/>
+<attribute name="type" value="similarity"/>
+</item>
+<item id="6_11" class="OntologyTerm">
+<attribute name="name" value="domain"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="15_5" class="GOAnnotation">
+<reference name="ontologyTerm" ref_id="16_5"/>
+<reference name="subject" ref_id="12_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="evidence"><reference ref_id="14_5"/></collection>
+</item>
+<item id="6_10" class="OntologyTerm">
+<attribute name="name" value="chain"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="6_7" class="OntologyTerm">
+<attribute name="name" value="Sporulation"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_5" class="Publication">
+<attribute name="pubMedId" value="2504584"/>
+</item>
+<item id="15_1" class="GOAnnotation">
+<reference name="ontologyTerm" ref_id="16_1"/>
+<reference name="subject" ref_id="12_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="evidence"><reference ref_id="14_1"/></collection>
+</item>
+<item id="15_4" class="GOAnnotation">
+<reference name="ontologyTerm" ref_id="16_4"/>
+<reference name="subject" ref_id="12_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="evidence"><reference ref_id="14_4"/></collection>
+</item>
+<item id="3_3" class="Publication">
+<attribute name="pubMedId" value="7584024"/>
+</item>
+<item id="16_3" class="GOTerm">
+<attribute name="identifier" value="GO:0003677"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="6_1" class="OntologyTerm">
+<attribute name="name" value="3D-structure"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="7_7" class="UniProtFeature">
+<attribute name="begin" value="22"/>
+<attribute name="end" value="27"/>
+<attribute name="type" value="helix"/>
+<reference name="feature" ref_id="6_15"/>
+<reference name="protein" ref_id="8_1"/>
+</item>
+<item id="10_1" class="Organism">
+<attribute name="taxonId" value="224308"/>
+</item>
+<item id="0_2" class="Ontology">
+<attribute name="name" value="UniProtKeyword"/>
+</item>
+<item id="4_3" class="Comment">
+<attribute name="description" value="To B.subtilis Abh and SpoVT."/>
+<attribute name="type" value="similarity"/>
+</item>
+<item id="6_5" class="OntologyTerm">
+<attribute name="name" value="Reference proteome"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="14_1" class="GOEvidence">
+<reference name="code" ref_id="13_1"/>
+</item>
+<item id="1_2" class="DataSource">
+<attribute name="name" value="RefSeq"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="6_6" class="OntologyTerm">
+<attribute name="name" value="Repressor"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="18_1" class="Synonym">
+<attribute name="value" value="cpsX"/>
+<reference name="subject" ref_id="8_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="6_14" class="OntologyTerm">
+<attribute name="name" value="turn"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="5_1" class="ProteinDomain">
+<attribute name="primaryIdentifier" value="IPR007159"/>
+<attribute name="shortName" value="AbrB-like_dom"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="16_4" class="GOTerm">
+<attribute name="identifier" value="GO:0006351"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_1" class="Publication">
+<attribute name="pubMedId" value="3145384"/>
+</item>
+<item id="15_2" class="GOAnnotation">
+<reference name="ontologyTerm" ref_id="16_2"/>
+<reference name="subject" ref_id="12_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="evidence"><reference ref_id="14_2"/></collection>
+</item>
+<item id="4_5" class="Comment">
+<attribute name="description" value="Translation N-terminally extended."/>
+<attribute name="type" value="sequence caution"/>
+</item>
+<item id="6_8" class="OntologyTerm">
+<attribute name="name" value="Transcription"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="4_6" class="Comment">
+<attribute name="description" value="Translation N-terminally extended."/>
+<attribute name="type" value="sequence caution"/>
+</item>
+<item id="0_1" class="Ontology">
+<attribute name="name" value="Sequence Ontology"/>
+<attribute name="url" value="http://www.sequenceontology.org"/>
+</item>
+<item id="16_5" class="GOTerm">
+<attribute name="identifier" value="GO:0030435"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="12_1" class="Gene">
+<attribute name="primaryIdentifier" value="BSU00370"/>
+<reference name="organism" ref_id="10_1"/>
+<reference name="sequenceOntologyTerm" ref_id="17_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="goAnnotation"><reference ref_id="15_1"/><reference ref_id="15_2"/><reference ref_id="15_3"/><reference ref_id="15_4"/><reference ref_id="15_5"/></collection>
+</item>
+<item id="6_9" class="OntologyTerm">
+<attribute name="name" value="Transcription regulation"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="14_2" class="GOEvidence">
+<reference name="code" ref_id="13_2"/>
+</item>
+<item id="4_1" class="Comment">
+<attribute name="description" value="Ambiactive repressor and activator of the transcription of genes expressed during the transition state between vegetative growth and the onset of stationary phase and sporulation. It controls the expression of genes spovG and tycA. AbrB binds to the tycA promoter region at two A- and T-rich sites, it may be the sole repressor of tycA transcription."/>
+<attribute name="type" value="function"/>
+</item>
+<item id="2_1" class="DataSet">
+<attribute name="name" value="Swiss-Prot data set"/>
+<reference name="dataSource" ref_id="1_1"/>
+</item>
+<item id="9_1" class="Sequence">
+<attribute name="length" value="96"/>
+<attribute name="md5checksum" value="293d3ede80345f93f727635cc598690a"/>
+<attribute name="residues" value="MFMKSTGIVRKVDELGRVVIPIELRRTLGIAEKDALEIYVDDEKIILKKYKPNMTCQVTG EVSDDNLKLAGGKLVLSKEGAEQIISEIQNQLQNLK"/>
+</item>
+<item id="6_12" class="OntologyTerm">
+<attribute name="name" value="mutagenesis site"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="11_1" class="CrossReference">
+<attribute name="identifier" value="NP_387918.1"/>
+<reference name="source" ref_id="1_2"/>
+<reference name="subject" ref_id="8_1"/>
+</item>
+<item id="6_4" class="OntologyTerm">
+<attribute name="name" value="DNA-binding"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="15_3" class="GOAnnotation">
+<reference name="ontologyTerm" ref_id="16_3"/>
+<reference name="subject" ref_id="12_1"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="evidence"><reference ref_id="14_3"/></collection>
+</item>
+<item id="16_1" class="GOTerm">
+<attribute name="identifier" value="GO:0006355"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_6" class="Publication">
+<attribute name="pubMedId" value="1908787"/>
+</item>
+<item id="8_1" class="Protein">
+<attribute name="isFragment" value="false"/>
+<attribute name="isUniprotCanonical" value="true"/>
+<attribute name="length" value="96"/>
+<attribute name="md5checksum" value="293d3ede80345f93f727635cc598690a"/>
+<attribute name="molecularWeight" value="10773"/>
+<attribute name="name" value="Transition state regulatory protein AbrB"/>
+<attribute name="primaryAccession" value="P08874"/>
+<attribute name="primaryIdentifier" value="ABRB_BACSU"/>
+<attribute name="uniprotAccession" value="P08874"/>
+<attribute name="uniprotName" value="ABRB_BACSU"/>
+<reference name="organism" ref_id="10_1"/>
+<reference name="sequence" ref_id="9_1"/>
+<collection name="comments"><reference ref_id="4_1"/><reference ref_id="4_2"/><reference ref_id="4_3"/><reference ref_id="4_4"/><reference ref_id="4_5"/><reference ref_id="4_6"/></collection>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+<collection name="genes"><reference ref_id="12_1"/></collection>
+<collection name="keywords"><reference ref_id="6_1"/><reference ref_id="6_2"/><reference ref_id="6_3"/><reference ref_id="6_4"/><reference ref_id="6_5"/><reference ref_id="6_6"/><reference ref_id="6_7"/><reference ref_id="6_8"/><reference ref_id="6_9"/></collection>
+<collection name="proteinDomains"><reference ref_id="5_1"/></collection>
+<collection name="publications"><reference ref_id="3_1"/><reference ref_id="3_2"/><reference ref_id="3_3"/><reference ref_id="3_4"/><reference ref_id="3_5"/><reference ref_id="3_6"/><reference ref_id="3_7"/></collection>
+</item>
+<item id="1_1" class="DataSource">
+<attribute name="name" value="UniProt"/>
+</item>
+<item id="6_13" class="OntologyTerm">
+<attribute name="name" value="strand"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_7" class="Publication">
+<attribute name="pubMedId" value="15101989"/>
+</item>
+<item id="6_15" class="OntologyTerm">
+<attribute name="name" value="helix"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="4_4" class="Comment">
+<attribute name="description" value="It is uncertain whether Met-1 or Met-3 is the initiator."/>
+<attribute name="type" value="caution"/>
+</item>
+<item id="7_10" class="UniProtFeature">
+<attribute name="begin" value="52"/>
+<attribute name="end" value="54"/>
+<attribute name="type" value="helix"/>
+<reference name="feature" ref_id="6_15"/>
+<reference name="protein" ref_id="8_1"/>
+</item>
+<item id="6_2" class="OntologyTerm">
+<attribute name="name" value="Activator"/>
+<reference name="ontology" ref_id="0_2"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+</items>
