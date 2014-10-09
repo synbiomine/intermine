@@ -10,6 +10,9 @@ package org.intermine.bio.dataconversion;
  *
  */
 
+import java.util.List;
+
+import org.intermine.bio.dataconversion.GFF3RecordHandler;
 import org.intermine.bio.io.gff3.GFF3Record;
 import org.intermine.metadata.Model;
 import org.intermine.xml.full.Item;
@@ -62,8 +65,11 @@ public class SynbioGffGFF3RecordHandler extends GFF3RecordHandler
     	if ("gene".equals(type)) {
     		// do nothing for now because we think config is going to be fine
     	} else if ("CDS".equals(type)) {
-    		String primaryIdentifier = record.getAttributes().get("Name");
-    		feature.setAttribute("primaryIdentifier", primaryIdentifier);
+    		List<String> names = record.getAttributes().get("Name");
+    		if (!names.isEmpty()) {
+    			String primaryIdentifier = names.get(0);
+    			feature.setAttribute("primaryIdentifier", primaryIdentifier);
+    		}
     	}
     }
 }
