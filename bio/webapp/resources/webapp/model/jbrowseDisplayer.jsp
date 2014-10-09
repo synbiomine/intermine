@@ -19,7 +19,7 @@
     <p>Click and drag the browser to move the view.  Drag and drop tracks from left menu into the main
 	   panel to see the data. Clicking on individual features to open a report page for that feature.
 	    <br/>
-	    <strong>*</strong> denotes SNPs that are mapped to multiple genome position.
+<!--	    <strong>*</strong> denotes SNPs that are mapped to multiple genome position. -->
     <a href="${jbLink}" target="jbrowse">Centre on ${reportObject.object.symbol}</a></p>
     <iframe name="jbrowse" height="300px" width="98%" style="border: 1px solid #dfdfdf; padding: 1%" src="${jbLink}">
     </iframe>
