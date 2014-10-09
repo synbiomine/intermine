@@ -27,6 +27,7 @@ public class SynbioGffGFF3RecordHandler extends GFF3RecordHandler
      */
     public SynbioGffGFF3RecordHandler (Model model) {
         super(model);
+        refsAndCollections.put("CDS", "gene");
     }
 
     /**
@@ -48,11 +49,21 @@ public class SynbioGffGFF3RecordHandler extends GFF3RecordHandler
         //     String geneIdentifier = record.getAttributes().get("gene");
         //     gene = createItem("Gene");
         //     gene.setAttribute("primaryIdentifier", geneIdentifier);
-        //     addItem(gene);
-        //
-        // You should make sure that new Items you create are unique, i.e. by storing in a map by
-        // some identifier. 
+    	//     addItem(gene);
+    	//
+    	// You should make sure that new Items you create are unique, i.e. by storing in a map by
+    	// some identifier. 
 
+    	Item feature = getFeature();
+
+    	// going to be either gene or CDS
+    	String type = record.getType();
+
+    	if ("gene".equals(type)) {
+    		// do nothing for now because we think config is going to be fine
+    	} else if ("CDS".equals(type)) {
+    		String primaryIdentifier = record.getAttributes().get("Name");
+    		feature.setAttribute("primaryIdentifier", primaryIdentifier);
+    	}
     }
-
 }
