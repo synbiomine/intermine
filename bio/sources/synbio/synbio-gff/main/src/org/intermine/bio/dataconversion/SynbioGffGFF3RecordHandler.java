@@ -30,7 +30,7 @@ public class SynbioGffGFF3RecordHandler extends GFF3RecordHandler
      */
     public SynbioGffGFF3RecordHandler (Model model) {
         super(model);
-        refsAndCollections.put("gene", "CDS");
+        refsAndCollections.put("CDS", "gene");
     }
 
     /**
