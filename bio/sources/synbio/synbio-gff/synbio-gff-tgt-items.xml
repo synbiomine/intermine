@@ -1,7 +1,10 @@
 <items>
-<item id="8_1" class="Synonym">
-<attribute name="value" value="ECK0001"/>
-<reference name="subject" ref_id="6_1"/>
+<item id="7_2" class="Location">
+<attribute name="end" value="255"/>
+<attribute name="start" value="190"/>
+<attribute name="strand" value="1"/>
+<reference name="feature" ref_id="8_1"/>
+<reference name="locatedOn" ref_id="4_1"/>
 <collection name="dataSets"><reference ref_id="2_1"/></collection>
 </item>
 <item id="5_2" class="SOTerm">
@@ -9,22 +12,18 @@
 <reference name="ontology" ref_id="3_1"/>
 <collection name="dataSets"><reference ref_id="2_1"/></collection>
 </item>
-<item id="7_2" class="Location">
+<item id="7_1" class="Location">
 <attribute name="end" value="255"/>
 <attribute name="start" value="190"/>
 <attribute name="strand" value="1"/>
-<reference name="feature" ref_id="9_1"/>
+<reference name="feature" ref_id="6_1"/>
 <reference name="locatedOn" ref_id="4_1"/>
 <collection name="dataSets"><reference ref_id="2_1"/></collection>
 </item>
 <item id="1_1" class="DataSource">
 <attribute name="name" value="Genbank"/>
 </item>
-<item id="3_1" class="Ontology">
-<attribute name="name" value="Sequence Ontology"/>
-<attribute name="url" value="http://www.sequenceontology.org"/>
-</item>
-<item id="9_1" class="CDS">
+<item id="8_1" class="CDS">
 <attribute name="length" value="66"/>
 <attribute name="primaryIdentifier" value="NP_414542.1"/>
 <attribute name="symbol" value="NP_414542.1"/>
@@ -33,6 +32,21 @@
 <reference name="gene" ref_id="6_1"/>
 <reference name="organism" ref_id="0_1"/>
 <reference name="sequenceOntologyTerm" ref_id="5_3"/>
+<collection name="dataSets"><reference ref_id="2_1"/></collection>
+</item>
+<item id="3_1" class="Ontology">
+<attribute name="name" value="Sequence Ontology"/>
+<attribute name="url" value="http://www.sequenceontology.org"/>
+</item>
+<item id="6_1" class="Gene">
+<attribute name="length" value="66"/>
+<attribute name="primaryIdentifier" value="b0001"/>
+<attribute name="secondaryIdentifier" value="EG11277"/>
+<attribute name="symbol" value="thrL"/>
+<reference name="chromosome" ref_id="4_1"/>
+<reference name="chromosomeLocation" ref_id="7_1"/>
+<reference name="organism" ref_id="0_1"/>
+<reference name="sequenceOntologyTerm" ref_id="5_2"/>
 <collection name="dataSets"><reference ref_id="2_1"/></collection>
 </item>
 <item id="0_1" class="Organism">
@@ -47,30 +61,6 @@
 <item id="2_1" class="DataSet">
 <attribute name="name" value="Escherichia coli str. K-12 substr. MG1655 chromosome, complete genome"/>
 <reference name="dataSource" ref_id="1_1"/>
-</item>
-<item id="6_1" class="Gene">
-<attribute name="length" value="66"/>
-<attribute name="primaryIdentifier" value="EG11277"/>
-<attribute name="secondaryIdentifier" value="b0001"/>
-<attribute name="symbol" value="thrL"/>
-<reference name="chromosome" ref_id="4_1"/>
-<reference name="chromosomeLocation" ref_id="7_1"/>
-<reference name="organism" ref_id="0_1"/>
-<reference name="sequenceOntologyTerm" ref_id="5_2"/>
-<collection name="dataSets"><reference ref_id="2_1"/></collection>
-</item>
-<item id="8_2" class="Synonym">
-<attribute name="value" value="JW4367"/>
-<reference name="subject" ref_id="6_1"/>
-<collection name="dataSets"><reference ref_id="2_1"/></collection>
-</item>
-<item id="7_1" class="Location">
-<attribute name="end" value="255"/>
-<attribute name="start" value="190"/>
-<attribute name="strand" value="1"/>
-<reference name="feature" ref_id="6_1"/>
-<reference name="locatedOn" ref_id="4_1"/>
-<collection name="dataSets"><reference ref_id="2_1"/></collection>
 </item>
 <item id="5_3" class="SOTerm">
 <attribute name="name" value="CDS"/>

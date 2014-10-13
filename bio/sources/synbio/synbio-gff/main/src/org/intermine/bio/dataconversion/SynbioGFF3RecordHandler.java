@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.tools.ant.BuildException;
 import org.intermine.bio.io.gff3.GFF3Record;
 import org.intermine.metadata.Model;
 import org.intermine.xml.full.Item;
@@ -59,17 +60,18 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 		//
 		// You should make sure that new Items you create are unique, i.e. by storing in a map by
 		// some identifier. 
-
+	
 		Item feature = getFeature();
 
 		// going to be either gene or CDS
 		String type = record.getType();
-
+		
 		if ("gene".equals(type)) {
+			
+			String id = record.getId();
+			geneIdToPrimaryIdentifier.put(id, feature.getIdentifier());
+			
 			List<String> xrefs = record.getDbxrefs();
-			// where to put the locus. by default put in primary. sometimes put in secondary
-			String locusIdentifier = "primaryIdentifier";
-			String primaryIdentifier = null;
 			if (xrefs != null && !xrefs.isEmpty()) {
 				Iterator<String> it = xrefs.iterator();
 				while (it.hasNext()) {
@@ -77,10 +79,9 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 					String[] bits = xref.split(":");
 					if (bits != null && bits.length == 2) {
 						String db = bits[0];
-						primaryIdentifier = bits[1];
+						String secondaryIdentifier = bits[1];
 						if ("EcoGene".equals(db)) {
-							feature.setAttribute("primaryIdentifier", primaryIdentifier);
-							locusIdentifier = "secondaryIdentifier";
+							feature.setAttribute("secondaryIdentifier", secondaryIdentifier);
 						}
 					}
 				}
@@ -90,8 +91,12 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 			List<String> locus = record.getAttributes().get("locus_tag");
 			if (locus != null && !locus.isEmpty()) {
 				Iterator<String> it = locus.iterator();
-				primaryIdentifier = it.next();
-				feature.setAttribute(locusIdentifier, primaryIdentifier);
+				String primaryIdentifier = it.next();
+				feature.setAttribute("primaryIdentifier", primaryIdentifier);
+			} else {
+				final String errorMessage = "Could not find primary identifier for " 
+						+ record.getId();
+				throw new BuildException(errorMessage);
 			}
 
 			// name
@@ -114,11 +119,10 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 //				}
 //			}
 
-			String id = record.getId();
-			geneIdToPrimaryIdentifier.put(id, feature.getIdentifier());
+
 		} else if ("CDS".equals(type)) {
 			List<String> names = record.getAttributes().get("Name");
-			if (!names.isEmpty()) {
+			if (names != null && !names.isEmpty()) {
 				Iterator<String> it = names.iterator();
 				String primaryIdentifier = it.next(); 
 				feature.setAttribute("primaryIdentifier", primaryIdentifier);
@@ -130,6 +134,7 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 			String parentId = it.next();
 			// get the ID of the gene that was stored to the database
 			String refId = geneIdToPrimaryIdentifier.get(parentId);
+
 			feature.setReference("gene", refId);
 		}
 	}
