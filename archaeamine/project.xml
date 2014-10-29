@@ -1,0 +1,350 @@
+<project type="bio">
+  <property name="target.model" value="genomic"/>
+  <property name="source.location" location="../bio/sources/"/>
+  <property name="common.os.prefix" value="common"/>
+  <property name="intermine.properties.file" value="synbiomine.properties"/>
+  <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
+
+  <sources>
+
+    <source name="Thermococcus-sp-4557-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1042877"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus sp. 4557 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000221185.1_ASM22118v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000221185.1_ASM22118v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-sp-4557-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="1042877"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus sp. 4557 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000221185.1_ASM22118v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000221185.1_ASM22118v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Pyrolobus-fumarii-1A-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="694429"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Pyrolobus fumarii 1A genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000223395.1_ASM22339v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000223395.1_ASM22339v1_genomic.gff"/>
+    </source>
+
+    <source name="Pyrolobus-fumarii-1A-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="694429"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Pyrolobus fumarii 1A chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000223395.1_ASM22339v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000223395.1_ASM22339v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermococcus-sibiricus-MM-739-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="604354"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus sibiricus MM 739 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000022545.1_ASM2254v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000022545.1_ASM2254v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-sibiricus-MM-739-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="604354"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus sibiricus MM 739 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000022545.1_ASM2254v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000022545.1_ASM2254v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermoproteus-tenax-Kra-1-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="768679"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermoproteus tenax Kra 1 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000253055.1_ASM25305v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000253055.1_ASM25305v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermoproteus-tenax-Kra-1-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="768679"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermoproteus tenax Kra 1 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000253055.1_ASM25305v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000253055.1_ASM25305v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermococcus-kodakarensis-KOD1-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="69014"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus kodakarensis KOD1 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000009965.1_ASM996v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000009965.1_ASM996v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-kodakarensis-KOD1-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="69014"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus kodakarensis KOD1 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000009965.1_ASM996v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000009965.1_ASM996v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermococcus-onnurineus-NA1-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="523850"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus onnurineus NA1 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000018365.1_ASM1836v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000018365.1_ASM1836v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-onnurineus-NA1-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="523850"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus onnurineus NA1 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000018365.1_ASM1836v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000018365.1_ASM1836v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Methanosarcina-barkeri-str-Fusaro-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="269797"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Methanosarcina barkeri str. Fusaro genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000195895.1_ASM19589v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000195895.1_ASM19589v1_genomic.gff"/>
+    </source>
+
+    <source name="Methanosarcina-barkeri-str-Fusaro-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="269797"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Methanosarcina barkeri str. Fusaro chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000195895.1_ASM19589v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000195895.1_ASM19589v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermococcus-gammatolerans-EJ3-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="593117"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus gammatolerans EJ3 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000022365.1_ASM2236v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000022365.1_ASM2236v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-gammatolerans-EJ3-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="593117"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus gammatolerans EJ3 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000022365.1_ASM2236v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000022365.1_ASM2236v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermococcus-barophilus-MP-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="391623"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermococcus barophilus MP genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000151105.2_ASM15110v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000151105.2_ASM15110v2_genomic.gff"/>
+    </source>
+
+    <source name="Thermococcus-barophilus-MP-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="391623"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermococcus barophilus MP chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000151105.2_ASM15110v2_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000151105.2_ASM15110v2/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Methanosarcina-mazei-Go1-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="192952"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Methanosarcina mazei Go1 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000007065.1_ASM706v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000007065.1_ASM706v1_genomic.gff"/>
+    </source>
+
+    <source name="Methanosarcina-mazei-Go1-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="192952"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Methanosarcina mazei Go1 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000007065.1_ASM706v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000007065.1_ASM706v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Thermoproteus-uzoniensis-768-20-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="999630"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Thermoproteus uzoniensis 768-20 genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000193375.1_ASM19337v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000193375.1_ASM19337v1_genomic.gff"/>
+    </source>
+
+    <source name="Thermoproteus-uzoniensis-768-20-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="999630"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Thermoproteus uzoniensis 768-20 chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000193375.1_ASM19337v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000193375.1_ASM19337v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="Methanosarcina-acetivorans-C2A-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="188937"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Methanosarcina acetivorans C2A genomic features"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000007345.1_ASM734v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000007345.1_ASM734v1_genomic.gff"/>
+    </source>
+
+    <source name="Methanosarcina-acetivorans-C2A-chromosome-fasta" type="fasta">
+      <property name="fasta.taxonId" value="188937"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Methanosarcina acetivorans C2A chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000007345.1_ASM734v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="genbank/29_10_2014//GCF_000007345.1_ASM734v1/"/>
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+    </source>
+
+    <source name="uniprot" type="uniprot" dump="true">
+      <property name="uniprot.organisms" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937"/>
+      <property name="createinterpro" value="true"/>
+      <property name="creatego" value="true"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+    </source>
+   
+    <source name="uniprot-fasta" type="fasta">
+      <property name="fasta.taxonId" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
+      <property name="fasta.classAttribute" value="primaryAccession"/>
+      <property name="fasta.dataSetTitle" value="UniProt data set"/>
+      <property name="fasta.dataSourceName" value="UniProt"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+      <property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
+      <property name="fasta.sequenceType" value="protein" />
+      <property name="fasta.loaderClassName"
+                value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
+    </source>
+
+    <source name="uniprot-keywords" type="uniprot-keywords" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+      <property name="src.data.dir.includes" value="keywlist.xml"/>
+    </source>
+
+    <source name="kegg-pathway" type="kegg-pathway" dump="true">
+      <property name="src.data.dir" location="/SAN_synbiomine/data/kegg/current" />
+      <property name="kegg.organisms" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937" />
+    </source>
+
+    <source name="interpro" type="interpro">
+      <property name="src.data.dir" location="/micklem/data/interpro/current"/>
+    </source>
+
+    <source name="so" type="so">
+      <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
+    </source>
+
+    <source name="go" type="go" dump="true">
+      <property name="src.data.file" location="/micklem/data/go-annotation/current/gene_ontology.obo"/>
+    </source>
+
+    <source name="go-annotation" type="go-annotation" dump="true">
+      <property name="ontologyfile" location="/micklem/data/go-annotation/current/gene_ontology.obo"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/go-annotation/current/"/>
+      <property name="ontologyPrefix" value="GO"/>
+    </source>
+
+    <source name="pubmed-gene" type="pubmed-gene">
+      <property name="src.data.dir" location="/micklem/data/pubmed/current"/>
+      <property name="pubmed.organisms" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937"/>
+      <property name="src.data.dir.includes" value="gene2pubmed"/>
+      <property name="infoFile" location="/micklem/data/pubmed/current/gene_info"/>
+    </source>
+
+    <source name="update-publications" type="update-publications" dump="true">
+      <property name="src.data.file" location="build/publications.xml"/>
+      <property name="loadFullRecord" value="true"/>
+    </source>
+
+    <source name="entrez-organism" type="entrez-organism">
+      <property name="src.data.file" location="build/organisms.xml"/>
+    </source>
+ 
+  </sources>
+
+  <post-processing>
+    <post-process name="create-references"/>
+    <post-process name="transfer-sequences" dump="true"/>
+    <post-process name="create-gene-flanking-features"/>
+    <post-process name="do-sources"/>
+    <post-process name="summarise-objectstore"/>
+    <post-process name="create-autocomplete-index"/>
+    <post-process name="create-search-index"/>
+  </post-processing>
+
+</project>
