@@ -259,7 +259,7 @@
       <property name="src.data.dir.includes" value="GCF_000007345.1_ASM734v1_genomic.gff"/>
     </source>
 
-    <source name="Methanosarcina-acetivorans-C2A-chromosome-fasta" type="fasta">
+    <source name="Methanosarcina-acetivorans-C2A-chromosome-fasta" type="fasta" dump="true">
       <property name="fasta.taxonId" value="188937"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -275,7 +275,7 @@
       <property name="uniprot.organisms" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937"/>
       <property name="createinterpro" value="true"/>
       <property name="creatego" value="true"/>
-      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/TMP/ARCH/Test/uniprot/current"/>
     </source>
    
     <source name="uniprot-fasta" type="fasta">
@@ -284,7 +284,7 @@
       <property name="fasta.classAttribute" value="primaryAccession"/>
       <property name="fasta.dataSetTitle" value="UniProt data set"/>
       <property name="fasta.dataSourceName" value="UniProt"/>
-      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/TMP/ARCH/Test/uniprot/current"/>
       <property name="fasta.includes" value="uniprot_sprot_varsplic.fasta"/>
       <property name="fasta.sequenceType" value="protein" />
       <property name="fasta.loaderClassName"
@@ -292,12 +292,12 @@
     </source>
 
     <source name="uniprot-keywords" type="uniprot-keywords" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/uniprot/current"/>
+      <property name="src.data.dir" location="/SAN_synbiomine/data/TMP/ARCH/Test/uniprot/current"/>
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
 
     <source name="kegg-pathway" type="kegg-pathway" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/kegg/current" />
+      <property name="src.data.dir" location="/SAN_synbiomine/data/TMP/ARCH/Test/kegg/current" />
       <property name="kegg.organisms" value="1042877 694429 604354 768679 69014 523850 269797 593117 391623 192952 999630 188937" />
     </source>
 
