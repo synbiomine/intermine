@@ -123,7 +123,7 @@ public class OrthodbConverter extends BioFileConverter
 //        createIDResolver();
         String previousGroup = null;
         Set<GeneHolder> homologues = new HashSet<GeneHolder>();
-
+        geneToHomologues = new HashMap<GeneHolder, Set<GeneHolder>>();
         if (taxonIds.isEmpty()) {
             LOG.warn("orthodb.organisms property not set in project XML file, processing all data");
         	System.out.println("orthodb.organisms property not set in project XML file, processing all data");
