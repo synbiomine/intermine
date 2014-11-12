@@ -911,18 +911,13 @@
     <source name="kegg-reactions-to-pathways" type="synbio-reaction" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/kegg-reaction/current"/>
     </source>
-<!--
+
     <source name="pathway2model-Bsub168" type="synbio-reaction" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/Bsub168/current"/>
     </source>
 
     <source name="pathway2model-EcoliMG1655" type="synbio-reaction" dump="true">
       <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/EcoliMG1655/current"/>
-    </source>
-!-->
-
-    <source name="pathway2model" type="synbio-reaction" dump="true">
-      <property name="src.data.dir" location="/SAN_synbiomine/data/path2model/current"/>
     </source>
 
     <source name="pubmed-gene" type="pubmed-gene">
