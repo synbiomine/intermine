@@ -2,7 +2,7 @@
   <aspect name="Function">
     <subtitle>GO, Pathways, Domains</subtitle>
     <intro-text>
-        GO, Pathways, Domains
+        Annotations that me be used to infer function include GO, Pathways, Protein Domains
     </intro-text>
     <tile-name>model/genes.jsp</tile-name>
     <aspect-source name="GO" url="http://www.geneontology.org/"/>
@@ -10,7 +10,7 @@
     <aspect-source name="InterPro" url="https://www.ebi.ac.uk/interpro/‎"/>
   </aspect>
 
-  <aspect name="Genomics">
+  <aspect name="Genes">
     <subtitle>Genome annotation</subtitle>
     <intro-text>
       The gene structure and other genome annotation in SynBioMine are provided by
@@ -18,6 +18,15 @@
     </intro-text>
     <tile-name>model/genes.jsp</tile-name>
     <aspect-source name="GenBank" url="ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/"/>
+  </aspect>
+
+  <aspect name="Proteins">
+    <subtitle>Protein annotation</subtitle>
+    <intro-text>
+      The protein annotations in SynBioMine are provided by UniProt.
+    </intro-text>
+    <tile-name>model/genes.jsp</tile-name>
+    <aspect-source name="UniProt" url="http://www.uniprot.org/taxonomy/2/"/>
   </aspect>
 
   <aspect name="Homology">
@@ -32,7 +41,7 @@
   <aspect name="Expression">
     <subtitle></subtitle>
     <intro-text>
-      Gene expression data for Bacillus subtilus 168
+      Gene expression data for Bacillus subtilus 168 and Escherichia coli K-12 MG1655
     </intro-text>
     <tile-name>model/expression.jsp</tile-name>
     <aspect-source name="GEO" url="www.ncbi.nlm.nih.gov/geo/"/>
