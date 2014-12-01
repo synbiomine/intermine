@@ -10,7 +10,7 @@
     <aspect-source name="InterPro" url="https://www.ebi.ac.uk/interpro/‎"/>
   </aspect>
 
-  <aspect name="Genes">
+  <aspect name="Genomics">
     <subtitle>Genome annotation</subtitle>
     <intro-text>
       The gene structure and other genome annotation in SynBioMine are provided by
