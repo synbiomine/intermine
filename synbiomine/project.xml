@@ -895,6 +895,11 @@
       <property name="biogrid.organisms" value="511145 224308"/>
     </source>
 
+    <source name="psi-intact" type="psi">
+      <property name="src.data.dir" location="/micklem/data/psi/intact/current" />
+      <property name="intact.organisms" value="83333" />
+    </source>
+
     <source name="reactome" type="biopax">
       <property name="src.data.dir" location="/micklem/data/reactome/current"/>
       <property name="biopax.organisms" value="511145"/>
