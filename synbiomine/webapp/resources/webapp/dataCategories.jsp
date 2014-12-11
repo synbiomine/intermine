@@ -32,52 +32,88 @@
                <th>Version</th>
        </tr>
        <tr>
-               <td>Genome sequence and annotation</td>
-               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/">Genbank</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Genbank (Mar, 2013)</td>
+               <td>Genome sequence</td>
+               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/">NCBI Genomes</a></td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>NCBI (Nov, 2014)</td>
        </tr>
        <tr>
-               <td>Gene names and symbol</td>
-               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/Bacteria/">Genbank</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Genbank (Mar, 2013)</td>
+               <td>Gene names, symbol and annotation</td>
+               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/">RefSeq</a></td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>NCBI (Nov, 2014)</td>
        </tr>
        <tr>
                <td>Protein sequence and annotation</a></td>
                <td><a href="http://www.uniprot.org/">UniProt</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Mar, 2013</td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>Nov, 2014</td>
        </tr>
        <tr>
                <td>Protein domains</td>
                <td><a href="http://www.ebi.ac.uk/interpro/">InterPro</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Mar, 2013</td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i>, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>Nov, 2014</td>
        </tr>
        <tr>
                <td>Gene Ontology</td>
                <td><a href="http://www.uniprot.org/">UniProt</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Mar, 2013</td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>Nov, 2014</td>
        </tr>
        <tr>
                <td>Pathways</td>
-               <td><a href="http://www.reactome.org/">Reactome</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>May, 2013</td>
+               <td><a href="www.genome.jp/kegg/pathway.html">KEGG</a></td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>Nov, 2014</td>
        </tr>
        <tr>
                <td>Interactions</td>
                <td><a href="http://thebiogrid.org/">BioGRID</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Apr, 2013</td>
+               <td><i>B. subtilis</i> (168)</td>
+               <td>Aug, 2014</td>
+       </tr>
+       <tr>
+               <td>Regulatory features (promoters, operons)</td>
+               <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012: PMID: 22383849)</td>
+               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
+               <td>Mar, 2008; 2012</td>
+       </tr>
+       <tr>
+               <td>Whole-genome biomodel (Modifiers, Pathways, Reactions, Compounds)</td>
+               <td><a href="www.ebi.ac.uk/biomodels-main/path2models">Path2Model</a><a href="www.genome.jp/kegg/pathway.html">; KEGG (reactions)</a></td>
+               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Escherichia coli</i> str. K-12 substr. MG1655</td>
+               <td>Mar, 2013</td>
+       </tr>
+       <tr>
+               <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
+               <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a> (The condition-dependent transcriptome of Bacillus subtilis 168)</td>
+               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
+               <td>Aug, 2014</td>
+       </tr>
+       <tr>
+               <td>Whole-genome expression - <i>E. coli</i> K-12 MG1655</td>
+               <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a> (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
+               <td><i>Escherichia coli</i> str. K-12 substr. MG1655</td>
+               <td>Jan, 2007</td>
+       </tr>
+       <tr>
+               <td>Functional Classification</td>
+               <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus infantis</i> NRRL B-14911, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. C56-T3, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y4.1MC1, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>v4.0 - Mar, 2014</td>
+       </tr>
+       <tr>
+               <td>Orthologues</td>
+               <td><a href="http://orthodb.org/orthodb7">OrthoDB</a></td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus pumilus</i> SAFR-032, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2</td>
+               <td>v7 - Aug, 2013</td>
        </tr>
        <tr>
                <td>Publications</td>
                <td><a href="ftp://ftp.ncbi.nih.gov/gene/DATA/">NCBI PubMed (gene to PubMed id mappings)</a></td>
-               <td><i>E. coli</i> K12 (MG1655), <i>B. subtilis</i> (168)</td>
-               <td>Apr, 2013</td>
+               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus atrophaeus</i> 1942, <i>Bacillus cellulosilyticus</i> DSM 2522, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus coagulans</i> 2-6, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus megaterium</i> DSM 319, <i>Bacillus pseudofirmus</i> OF4, <i>Bacillus pseudomycoides</i> DSM 12442, <i>Bacillus pumilus</i> SAFR-032, <i>[Bacillus] selenitireducens</i> MLS10, <i>Bacillus</i> sp. 1NLA3E, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> O104:H4 str. 2011C-3493, <i>Escherichia coli</i> O157:H7 str. Sakai, <i>Escherichia coli</i> O83:H1 str. NRG 857C, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. Y412MC52, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2, <i>Geobacillus thermoglucosidasius</i> C56-YS93, <i>Geobacillus thermoleovorans</i> CCB_US3_UF5</td>
+               <td>Nov, 2014</td>
        </tr>
 </table>
 
