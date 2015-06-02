@@ -503,18 +503,23 @@ It is uncertain whether Met-1 or Met-3 is the initiator.
 <end position="54"/>
 </location>
 </feature>
-<evidence key="1" type="ECO:0000269">
-<source>
-<dbReference type="PubMed" id="2504584"/>
-</source>
-</evidence>
-<evidence key="2" type="ECO:0000269">
-<source>
-<dbReference type="PubMed" id="1908787"/>
-</source>
-</evidence>
-<sequence length="96" mass="10773" checksum="6A964557F5590CFE" modified="1988-11-01" version="1">
-MFMKSTGIVRKVDELGRVVIPIELRRTLGIAEKDALEIYVDDEKIILKKYKPNMTCQVTG EVSDDNLKLAGGKLVLSKEGAEQIISEIQNQLQNLK
+<feature type="signal peptide">
+<location>
+<begin position="111"/>
+<end position="127"/>
+</location>
+</feature>
+<evidence key="EC1" category="curator" type="Literature" attribute="PubMed=222222" date="2010-07-01"/>
+<evidence key="EC2" category="curator" type="Literature" attribute="PubMed=1111111" date="2010-07-01"/>
+<sequence length="376" mass="39970" checksum="59058E0634B1BED0" modified="2000-12-01" version="3">
+MHGYRTYNMESHHAHHDASPVDQKPLVVDLLATQYGKPQTPPPSPNECLSSPDNSLNGSR
+GSEIPADPSVRRYRTAFTRDQLGRLEKEFYKENYVSRPRRCELAAQLNLPESTIKVWFQN
+RRMKDKRQRIAVAWPYAAVYSDPAFAASILQAAANSVGMPYPPYAPAAAAAAAAAAAVAT
+NPMMATGMPPMGMPQMPTMQMPGHSGHAGHPSPYGQYRYTPYHIPARPAPPHPAGPHMHH
+PHMMGSSATGSSYSAGAAGLLGALPSATCYTGLGVGVPKTQTPPLDLQSSSSPHSSTLSL
+SPVGSDHAKVFDRSPVAQSAPSVPAPAPLTTTSPLPAPGLLMPSAKRPASDMSPPPTTTV
+IAEPKPKLFKPYKTEA
+>>>>>>> 4f54cd927d2ad9956a23c2b576da4b8cf41a3699
 </sequence>
 </entry>
 <copyright>
