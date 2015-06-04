@@ -371,19 +371,6 @@ public class OrthodbConverter extends BioFileConverter
         }
         return evidenceRefId;
     }
-<<<<<<< HEAD
-    
-//    private void createIDResolver() {
-//        Set<String> allTaxonIds = new HashSet<String>();
-//        allTaxonIds.addAll(taxonIds);
-//        allTaxonIds.addAll(homologueTaxonIds);
-//        if (rslv == null) {
-//            rslv = IdResolverService.getIdResolverByOrganism(allTaxonIds);
-//        }
-//        LOG.info("Taxons in resolver:" + rslv.getTaxons());
-//    }
-//    
-=======
 
     private void createIDResolver() {
         Set<String> allTaxonIds = new HashSet<String>();
@@ -395,7 +382,6 @@ public class OrthodbConverter extends BioFileConverter
         LOG.info("Taxons in resolver:" + rslv.getTaxons());
     }
 
->>>>>>> 4f54cd927d2ad9956a23c2b576da4b8cf41a3699
     private String resolveGene(String identifier, String taxonId) {
         if (rslv == null || !rslv.hasTaxon(taxonId)) {
             // no id resolver available, so return the original identifier
