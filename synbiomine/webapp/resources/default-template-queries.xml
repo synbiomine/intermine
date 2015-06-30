@@ -82,7 +82,7 @@
   </query>
 </template>
 <template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
-  <query name="OrgGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" longDescription="For a given Oranism, returns a list of all genes and their chromosome locations" sortOrder="Gene.primaryIdentifier asc">
+  <query name="OrgGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" longDescription="For a given Organism, returns a list of all genes and their chromosome locations" sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
