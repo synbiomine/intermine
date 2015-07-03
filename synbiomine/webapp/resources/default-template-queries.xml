@@ -272,18 +272,6 @@
   <tag name="im:aspect:Function" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="go2genesOrg" type="template"/>
 
-  <tag name="im:aspect:Genes" objectIdentifier="GeneProtDomain" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="GeneGO" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="GeneCoord" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="GeneOrthPathw" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="ChromLocation_Gene" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="geneAllProtOrg" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="go2genesOrg" type="template"/>
-
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.MRNA" type="class"/>
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.Transcript" type="class"/>
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.Gene" type="class"/>
@@ -308,6 +296,7 @@
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.sequence" type="reference"/>
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.chromosome" type="reference"/>
   <tag name="im:aspect:Genes" objectIdentifier="Transcript.gene" type="reference"/>
+
   <tag name="im:aspect:Genes" objectIdentifier="Gene_allGOTerms" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="Organism_GoTerm_Gene" type="template"/>
@@ -318,6 +307,14 @@
   <tag name="im:aspect:Genes" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="GeneGO" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="GeneCoord" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="GeneOrthPathw" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="ChromLocation_Gene" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="geneAllProtOrg" type="template"/>
+  <tag name="im:aspect:Genes" objectIdentifier="go2genesOrg" type="template"/>
   
   <tag name="im:aspect:Homology" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:aspect:Homology" objectIdentifier="geneEggnog2Orth" type="template"/>
