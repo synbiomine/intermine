@@ -289,7 +289,9 @@
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.UTR" type="class"/>
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.Chromosome" type="class"/>
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.TFBindingSite" type="class"/>
+
   <tag name="im:aspect:Genes" objectIdentifier="Transcript.introns" type="collection"/>
+  <tag name="im:aspect:Genes" objectIdentifier="Gene.flankingRegions" type="collection"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene.UTRs" type="collection"/>
   <tag name="im:aspect:Genes" objectIdentifier="MRNA.UTRs" type="collection"/>
   <tag name="im:aspect:Genes" objectIdentifier="Protein.genes" type="collection"/>
@@ -298,6 +300,7 @@
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.overlappingFeatures" type="collection"/>
   <tag name="im:aspect:Genes" objectIdentifier="Chromosome.features" type="collection"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene.transcripts" type="collection"/>
+
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.chromosomeLocation" type="reference"/>
   <tag name="im:aspect:Genes" objectIdentifier="CDS.MRNA" type="reference"/>
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.sequence" type="reference"/>
