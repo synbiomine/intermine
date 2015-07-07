@@ -253,6 +253,9 @@
 </template-queries>
 <tags>
   <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection"/>
+  <tag name="im:aspect:Expression" objectIdentifier="Gene.operons" type="collection"/>
+  <tag name="im:aspect:Expression" objectIdentifier="Gene.promoters" type="collection"/>
+
   <tag name="im:aspect:Expression" objectIdentifier="GenePromoterExpress" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="BsubDifferentExpr" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="BsubStableExpr" type="template"/>
