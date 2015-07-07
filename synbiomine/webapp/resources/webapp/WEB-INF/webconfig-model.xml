@@ -216,7 +216,7 @@
 
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.UniProtCommentsDisplayer"
                      jspName="model/uniProtCommentsDisplayer.jsp"
-                     replacesFields=""
+                     replacesFields="comments"
                      placement="summary"
                      types="Gene,Protein"/>
 

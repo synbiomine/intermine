@@ -266,6 +266,7 @@
   <tag name="im:aspect:Function" objectIdentifier="Gene.pathways" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene.reactions" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Protein.ecNumbers" type="collection"/>
+  <tag name="im:aspect:Function" objectIdentifier="BioEntity.ontologyAnnotations" type="collection"/>
 
   <tag name="im:aspect:Function" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GOgenes" type="template"/>
@@ -459,8 +460,6 @@
   <tag name="im:summary" objectIdentifier="Gene.publications" type="collection">
   </tag>
   <tag name="im:summary" objectIdentifier="BioEntity.synonyms" type="collection">
-  </tag>
-  <tag name="im:summary" objectIdentifier="Protein.genes" type="collection">
   </tag>
   <tag name="im:summary" objectIdentifier="BioEntity.publications" type="collection">
   </tag>
