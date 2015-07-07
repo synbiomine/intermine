@@ -260,6 +260,7 @@
   <tag name="im:aspect:Expression" objectIdentifier="path2reactGenes" type="template"/>
 
   <tag name="im:aspect:Function" objectIdentifier="Gene.eggNogCategories" type="collection"/>
+  <tag name="im:aspect:Function" objectIdentifier="Gene.pathways" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="DomainProtGene" type="template"/>
