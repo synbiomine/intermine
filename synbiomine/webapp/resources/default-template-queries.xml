@@ -406,6 +406,7 @@
   </tag>
 
   <tag name="im:public" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template"/>
+  <tag name="im:public" objectIdentifier="ChromLocation_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_Identifiers" type="template"/>
@@ -436,12 +437,12 @@
   <tag name="im:public" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:public" objectIdentifier="GenePromoterExpress" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_OrthologueGO" type="template"/>
+  <tag name="im:public" objectIdentifier="enz2gene" type="template"/>
   <tag name="im:public" objectIdentifier="gene2funccat" type="template"/>
   <tag name="im:public" objectIdentifier="geneAllProtOrg" type="template"/>
   <tag name="im:public" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:public" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:public" objectIdentifier="path2reactGenes" type="template"/>
-  <tag name="im:public" objectIdentifier="enz2gene" type="template"/>
 
 <!--
   <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
