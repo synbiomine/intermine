@@ -32,7 +32,7 @@
   <query name="GeneGO" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace" longDescription="Search for GO annotations for a particular gene." sortOrder="Gene.secondaryIdentifier asc">
     <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
     <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
-    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli K-12"/>
+    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
 <template name="GeneOrthPathw" title="Gene --&gt; Pathways + (Orthologues + Pathways)" comment="Added 17Dec2013: ML">
