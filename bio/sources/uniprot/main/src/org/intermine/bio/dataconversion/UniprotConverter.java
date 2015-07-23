@@ -990,6 +990,16 @@ public class UniprotConverter extends BioDirectoryConverter
             if (geneRefId == null) {
                 Item gene = createItem("Gene");
                 gene.setAttribute(uniqueIdentifierField, identifier);
+                
+                // HACK: This is a temporary hack to always fill in the secondaryIdentifier field so that
+                // we can merge genes with prokaryote GFF files where the identifier has changed
+                // (where the old_locus_tag is stuffed into that gene's secondary identifier).
+                // The alternative would be to explicitly configure the secondaryIdentifier in 
+                // uniprot_config.properties for each taxon.  However, this would not work for GFF
+                // files where the locus has not changed (and hence the secondaryIdentifier field is not populated).
+                // To save us having to analyze whether this is the case for every taxon, do this hardcode instead.
+                gene.setAttribute("secondaryIdentifier", identifier);
+                
                 gene.setReference("organism", getOrganism(taxId));
                 if (creatego) {
                     try {

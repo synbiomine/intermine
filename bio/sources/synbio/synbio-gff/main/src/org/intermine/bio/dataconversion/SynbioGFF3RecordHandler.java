@@ -71,6 +71,8 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 			String id = record.getId();
 			geneIdToPrimaryIdentifier.put(id, feature.getIdentifier());
 			
+			boolean addedSecondaryIdentifier = false;
+
 			List<String> xrefs = record.getDbxrefs();
 			if (xrefs != null && !xrefs.isEmpty()) {
 				Iterator<String> it = xrefs.iterator();
@@ -82,10 +84,20 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 						String secondaryIdentifier = bits[1];
 						if ("EcoGene".equals(db)) {
 							feature.setAttribute("secondaryIdentifier", secondaryIdentifier);
+							addedSecondaryIdentifier = true;
 						}
 					}
 				}
 			}
+
+			if (!addedSecondaryIdentifier) {
+			    List<String> locus = record.getAttributes().get("old_locus_tag");
+	            if (locus != null && !locus.isEmpty()) {
+	                Iterator<String> it = locus.iterator();
+	                String identifier = it.next();
+	                feature.setAttribute("secondaryIdentifier", identifier);
+	            }			    
+			}			
 
 			// no dbxref=EcoGene, use locus
 			List<String> locus = record.getAttributes().get("locus_tag");
