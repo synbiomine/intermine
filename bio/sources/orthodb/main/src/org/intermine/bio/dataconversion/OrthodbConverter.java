@@ -315,6 +315,10 @@ public class OrthodbConverter extends BioFileConverter
             }
             Item gene = createItem("Gene");
             gene.setAttribute(identiferType, holder.getIdentifier());
+            
+            // HACK: Always fill in secondaryIdentifier temporarily to merge with re-annotated genbank IDs
+            gene.setAttribute("secondaryIdentifier", holder.getIdentifier());
+            
             gene.setReference("organism", getOrganism(taxonId));
             refId = gene.getIdentifier();
             holder.setRefId(refId);

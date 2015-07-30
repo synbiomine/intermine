@@ -213,6 +213,10 @@ public class KeggPathwayConverter extends BioFileConverter
         if (gene == null) {
             gene = createItem("Gene");
             gene.setAttribute(config.get(organism)[1], identifier);
+            
+            // HACK: To overcome changes in genbank identifiers due to reannotation
+            gene.setAttribute("secondaryIdentifier", identifier);
+            
             gene.setReference("organism", getOrganism(taxonId));
             gene.addCollection(referenceList);
             geneItems.put(identifier, gene);
