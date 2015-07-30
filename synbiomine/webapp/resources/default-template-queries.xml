@@ -434,6 +434,7 @@
   <tag name="im:public" objectIdentifier="BsubDifferentExpr" type="template"/>
   <tag name="im:public" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:public" objectIdentifier="EggNOG2Gene" type="template"/>
+  <tag name="im:public" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:public" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:public" objectIdentifier="GenePromoterExpress" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_OrthologueGO" type="template"/>
