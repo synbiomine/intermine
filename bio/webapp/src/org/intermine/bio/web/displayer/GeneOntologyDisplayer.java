@@ -83,6 +83,28 @@ public class GeneOntologyDisplayer extends ReportDisplayer
         EVIDENCE_CODES.put("ND", "No biological Data available");
         EVIDENCE_CODES.put("IEA", "Inferred from Electronic Annotation");
         EVIDENCE_CODES.put("NR", "Not Recorded ");
+        
+        EVIDENCE_CODES.put("ECO:0000213", "combinatorial evidence used in automatic assertion");        
+        EVIDENCE_CODES.put("ECO:0000244", "combinatorial evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000247", "sequence alignment evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000250", "sequence similarity evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000255", "match to sequence model evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000256", "match to sequence model evidence used in automatic assertion");
+        EVIDENCE_CODES.put("ECO:0000266", "sequence orthology evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000269", "experimental evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000270", "expression evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000303", "non-traceable author statement used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000304", "traceable author statement used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000305", "curator inference used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000312", "imported information used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000313", "imported information used in automatic assertion");
+        EVIDENCE_CODES.put("ECO:0000314", "direct assay evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000315", "mutant phenotype evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000316", "genetic interaction evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000317", "genomic context evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000318", "biological aspect of ancestor evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000353", "physical interaction evidence used in manual assertion");
+        EVIDENCE_CODES.put("ECO:0000501", "evidence used in automatic assertion");
     }
 
 

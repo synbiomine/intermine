@@ -1233,6 +1233,11 @@ public class UniprotConverter extends BioDirectoryConverter
     // value is NAS:FlyBase
     private String getGOEvidenceCode(String value)
         throws SAXException {
+        
+        // XXX: Since December 2014, Uniprot have changed their evidence codes to refer
+        // to the evidence ontology with codes of the form ECO:<n> instead of direct
+        // codes with a reference to the source of the evidence (e.g. IEA:InterPro)
+        /*
         String[] bits = value.split(":");
         String code = "";
         if (bits == null) {
@@ -1240,6 +1245,10 @@ public class UniprotConverter extends BioDirectoryConverter
         } else {
             code = bits[0];
         }
+        */
+        
+        String code = value;
+        
         String refId = goEvidenceCodes.get(code);
         if (refId == null) {
             Item item = createItem("GOEvidenceCode");
