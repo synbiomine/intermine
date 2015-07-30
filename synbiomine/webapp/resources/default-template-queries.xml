@@ -462,8 +462,6 @@
   </tag>
   <tag name="im:summary" objectIdentifier="Gene.publications" type="collection">
   </tag>
-  <tag name="im:summary" objectIdentifier="BioEntity.synonyms" type="collection">
-  </tag>
   <tag name="im:summary" objectIdentifier="BioEntity.publications" type="collection">
   </tag>
 </tags>
