@@ -340,7 +340,7 @@ sub create_prod_db
 {
   my ($db, $user, $pass, $host, $port, $suffix) = @_;
 
-  my @params = ('-U', $user, '-h', $host, $db);
+  my @params = ('-U', $user, '-h', $host, '-T', "template0", $db);
 
   log_and_print `date`, "\n";
   log_and_print "\ncreating database: @createdb_command @params\n";
