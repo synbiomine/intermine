@@ -135,7 +135,7 @@
 <template name="geneEggnog2Orth" title="Gene [EggNOG category] --&gt; Orthologue" comment="">
   <query name="geneEggnog2Orth" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.eggNogCategories.functionalCategories.category Gene.eggNogCategories.functionalCategories.classifier Gene.eggNogCategories.functionalCategories.name Gene.eggNogCategories.genes.primaryIdentifier Gene.eggNogCategories.genes.symbol Gene.eggNogCategories.genes.organism.shortName Gene.eggNogCategories.genes.organism.taxonId" longDescription="For a given gene (or list of genes) with a given EggNOG classification, returns orthologues genes annotated with the same classification." sortOrder="Gene.primaryIdentifier asc" constraintLogic="B and A">
     <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="BSU00370" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.eggNogCategories.genes.organism.shortName" code="A" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum str. FZB42"/>
+    <constraint path="Gene.eggNogCategories.genes.organism.shortName" code="A" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum FZB42"/>
   </query>
 </template>
 <template name="EggNOG2Gene" title="Functional category [EggNOG or COG] --&gt; Gene(s)" comment="">
