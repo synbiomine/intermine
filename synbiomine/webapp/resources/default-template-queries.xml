@@ -81,7 +81,7 @@
 <template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
   <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG or REACTOME. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="B. anthracis str. A0248"/>
+    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="Any"/>
   </query>
 </template>
 <template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
