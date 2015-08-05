@@ -229,9 +229,8 @@ html, body {
 
 #boxes div.inner {
     background: #FFF;
-    min-height: 210px;
+    min-height: 270px;
     border-bottom: 1px solid #dfdfdf;
-    padding-bottom: 60px;
 }
 
 #boxes div.inner div.bottom {
