@@ -43,7 +43,7 @@
   </query>
 </template>
 <template name="GenePathw" title="Gene --&gt; Pathway(s)" comment="Added 17Dec2013: ML">
-  <query name="GenePathw" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Sources: REACTOME, KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc">
+  <query name="GenePathw" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="BSU30400" extraValue="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
@@ -68,7 +68,7 @@
   </query>
 </template>
 <template name="Gene_Pathway" title="Gene --&gt; Pathway(s)" comment="Added 7May2013: ML">
-  <query name="Gene_Pathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: REACTOME). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
+  <query name="Gene_Pathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="EG10056" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
@@ -79,7 +79,7 @@
   </query>
 </template>
 <template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
-  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG or REACTOME. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
+  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
     <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="Any"/>
   </query>
@@ -95,7 +95,7 @@
   </query>
 </template>
 <template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
-  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway, Reactome" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
+  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
     <constraint path="Pathway.name" code="A" editable="true" op="=" value="Protein export"/>
     <constraint path="Pathway.genes.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="E. coli str. K-12 substr. MG1655"/>
   </query>
