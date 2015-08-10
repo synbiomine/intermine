@@ -95,8 +95,8 @@
   </query>
 </template>
 <template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
-  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: REACTOME). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway, Reactome" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
-    <constraint path="Pathway.name" code="A" editable="true" op="=" value="SLC-mediated transmembrane transport"/>
+  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway, Reactome" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
+    <constraint path="Pathway.name" code="A" editable="true" op="=" value="Protein export"/>
     <constraint path="Pathway.genes.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
