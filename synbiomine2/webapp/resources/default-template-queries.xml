@@ -36,20 +36,20 @@
   </query>
 </template>
 <template name="GeneOrthPathw" title="Gene --&gt; Pathways + (Orthologues + Pathways)" comment="Added 17Dec2013: ML">
-  <query name="GeneOrthPathw" model="genomic" view="Gene.pathways.id Gene.pathways.name Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name Gene.homologues.homologue.pathways.identifier Gene.homologues.homologue.pathways.name Gene.homologues.homologue.pathways.dataSets.name" longDescription="For a given gene (or list of genes) in the named organism (default: B. sub 168) returns the pathways for the organism. Additionally, returns gene orthologues in a different organism (optional constrain is 'ON' by default and set to: B. anth A0248. Can be turned off to return all strains with orthologues) and the corresponding pathways. [keywords: homologue, homolog, paralogue, paralogue, ortholog, orthologue, pathway, kegg]" sortOrder="Gene.symbol asc" constraintLogic="A and B and C">
+  <query name="GeneOrthPathw" model="genomic" view="Gene.pathways.id Gene.pathways.name Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name Gene.homologues.homologue.pathways.identifier Gene.homologues.homologue.pathways.name Gene.homologues.homologue.pathways.dataSets.name" longDescription="For a given gene (or list of genes) in the named organism (default: B. sub 168) returns the pathways for the organism. Additionally, returns gene orthologues in a different organism (can be turned off to return all strains with orthologues) and the corresponding pathways. [keywords: homologue, homolog, paralogue, paralogue, ortholog, orthologue, pathway, kegg]" sortOrder="Gene.symbol asc" constraintLogic="A and B and C">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" op="=" value="B. anthracis str. A0248"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" op="=" value="B. anthracis str. Sterne"/>
     <constraint path="Gene.homologues.homologue.pathways.name" code="C" editable="true" description="" switchable="off" op="=" value="Two-component system"/>
   </query>
 </template>
 <template name="GenePathw" title="Gene --&gt; Pathway(s)" comment="Added 17Dec2013: ML">
-  <query name="GenePathw" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Sources: REACTOME, KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc">
+  <query name="GenePathw" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="BSU30400" extraValue="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
 <template name="GeneProtDomain" title="Gene --&gt; Protein + Domain(s)" comment="Added 23.04.2013:ML">
   <query name="GeneProtDomain" model="genomic" view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.proteins.primaryAccession Gene.proteins.proteinDomains.name Gene.proteins.proteinDomains.shortName Gene.proteins.proteinDomains.type Gene.proteins.proteinDomains.publications.pubMedId" longDescription="For a given gene (or list of genes) returns the proteins product (SwissProt) and InterPro domains." sortOrder="Gene.primaryIdentifier asc">
-    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli K-12"/>
+    <constraint path="Gene" editable="true" op="LOOKUP" value="arsC" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
 <!-- justincc 2015-07-02
@@ -68,7 +68,7 @@
   </query>
 </template>
 <template name="Gene_Pathway" title="Gene --&gt; Pathway(s)" comment="Added 7May2013: ML">
-  <query name="Gene_Pathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: REACTOME). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
+  <query name="Gene_Pathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: KEGG). Keywords: pathways, reaction, cascade" sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="EG10056" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
@@ -79,9 +79,9 @@
   </query>
 </template>
 <template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
-  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG or REACTOME. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
+  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="B. anthracis str. A0248"/>
+    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="Any"/>
   </query>
 </template>
 <template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
@@ -95,8 +95,8 @@
   </query>
 </template>
 <template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
-  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: REACTOME). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway, Reactome" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
-    <constraint path="Pathway.name" code="A" editable="true" op="=" value="SLC-mediated transmembrane transport"/>
+  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
+    <constraint path="Pathway.name" code="A" editable="true" op="=" value="Protein export"/>
     <constraint path="Pathway.genes.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
@@ -135,13 +135,13 @@
 <template name="geneEggnog2Orth" title="Gene [EggNOG category] --&gt; Orthologue" comment="">
   <query name="geneEggnog2Orth" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.eggNogCategories.functionalCategories.category Gene.eggNogCategories.functionalCategories.classifier Gene.eggNogCategories.functionalCategories.name Gene.eggNogCategories.genes.primaryIdentifier Gene.eggNogCategories.genes.symbol Gene.eggNogCategories.genes.organism.shortName Gene.eggNogCategories.genes.organism.taxonId" longDescription="For a given gene (or list of genes) with a given EggNOG classification, returns orthologues genes annotated with the same classification." sortOrder="Gene.primaryIdentifier asc" constraintLogic="B and A">
     <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="BSU00370" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.eggNogCategories.genes.organism.shortName" code="A" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum str. FZB42"/>
+    <constraint path="Gene.eggNogCategories.genes.organism.shortName" code="A" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum FZB42"/>
   </query>
 </template>
 <template name="EggNOG2Gene" title="Functional category [EggNOG or COG] --&gt; Gene(s)" comment="">
   <query name="EggNOG2Gene" model="genomic" view="EggNogCategory.primaryIdentifier EggNogCategory.description EggNogCategory.functionalCategories.name EggNogCategory.functionalCategories.classifier EggNogCategory.functionalCategories.category EggNogCategory.genes.primaryIdentifier EggNogCategory.genes.symbol EggNogCategory.genes.organism.shortName EggNogCategory.genes.organism.taxonId" longDescription="For a given EggNOG category, returns a list of genes (from all organisms) annotated with this category. Optional filters on COG function and Classifier, and also on Organism. [Datasource: EggNOG] Keywords: functional category, COG, function" sortOrder="EggNogCategory.primaryIdentifier asc" constraintLogic="A and B and C and D and E">
     <constraint path="EggNogCategory.description" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="AbrB"/>
-    <constraint path="EggNogCategory.genes.organism.shortName" code="B" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum str. FZB42"/>
+    <constraint path="EggNogCategory.genes.organism.shortName" code="B" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum FZB42"/>
     <constraint path="EggNogCategory.functionalCategories.category" code="C" editable="true" description="" switchable="off" op="=" value="cellular processes and signaling"/>
     <constraint path="EggNogCategory.functionalCategories.classifier" code="D" editable="true" description="" switchable="off" op="=" value="A"/>
     <constraint path="EggNogCategory.functionalCategories.name" code="E" editable="true" description="" switchable="off" op="=" value="amino acid transport and metabolism"/>
@@ -218,7 +218,7 @@
 </template>
 <template name="BsubStableExpr" title="B. subtilis genes with stable expression [Gene(s) --&gt; Promoter(s) + Expression]" comment="">
   <query name="BsubStableExpr" model="genomic" view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" longDescription="Search for genes B. subtilis genes with stable expression. For a given Bacillus subtilis gene (or list of genes) returns predicted promoters (and expression data) for conditions matching the applied filters (see below).  Searches GEO data from Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219]. Optional filters are log2 mean expression (default: ON) and log2 fold change in expression (default: OFF). Promoter sequences are derived from Nicolas et al. (2012; PMID: 22383849) and DBTBS (dbtbs.hgc.jp)" sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and C and D">
-    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaG" extraValue="B. subtilis subsp. subtilis str. 168"/>
     <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
     <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" description="Log2 fold-change [less than or equal to]" switchable="on" op="&lt;=" value="1.0"/>
     <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="D" editable="true" description="Log2 fold-change [greater than or equal to]" switchable="on" op="&gt;=" value="-1.0"/>
