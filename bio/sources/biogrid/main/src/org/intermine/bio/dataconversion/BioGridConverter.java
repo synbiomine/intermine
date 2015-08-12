@@ -120,9 +120,7 @@ public class BioGridConverter extends BioFileConverter
             }
         }
 
-        if (rslv == null) {
-            rslv = IdResolverService.getIdResolverByOrganism(taxonIds);
-        }
+        rslv = IdResolverService.getIdResolverByOrganism(taxonIds);
 
         BioGridHandler handler = new BioGridHandler();
         try {
