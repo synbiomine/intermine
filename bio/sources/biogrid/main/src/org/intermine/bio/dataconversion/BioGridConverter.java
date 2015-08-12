@@ -581,16 +581,27 @@ public class BioGridConverter extends BioFileConverter
             return itemId;
         }
 
+        /**
+         * Set gene details.
+         *
+         * @param taxonId
+         * @param ih
+         * @param identifierField
+         * @param identifierSource the source of the identifier for this gene.
+         * @param prefix
+         * @return
+         * @throws SAXException
+         */
         private boolean setGene(String taxonId, InteractorHolder ih, String identifierField,
-                                String db, String prefix) throws SAXException {
+                                String identifierSource, String prefix) throws SAXException {
 
             String identifier = null;
             String label = identifierField;
 
-            if ("shortLabel".equals(db)) {
+            if ("shortLabel".equals(identifierSource)) {
                 identifier = ih.shortLabel;
             } else {
-                identifier = ih.xrefs.get(db);
+                identifier = ih.xrefs.get(identifierSource);
             }
 
             if (StringUtils.isNotEmpty(prefix)) {
