@@ -599,7 +599,7 @@ public class BioGridConverter extends BioFileConverter
                 identifier = prefix + identifier;
             }
 
-            if (rslv != null) {
+            if (rslv.hasTaxon(taxonId)) {
                 identifier = resolveGene(taxonId, identifier);
                 label = "primaryIdentifier";
             }
@@ -671,18 +671,17 @@ public class BioGridConverter extends BioFileConverter
          * @throws ObjectStoreException
          */
         private String resolveGene(String taxonId, String identifier) {
-            String id = identifier;
-            if (rslv != null && rslv.hasTaxon(taxonId)) {
-                int resCount = rslv.countResolutions(taxonId, identifier);
-                if (resCount != 1) {
-                    LOG.info("RESOLVER: failed to resolve gene to one identifier, ignoring gene: "
-                             + identifier + " count: " + resCount + " FBgn: "
-                             + rslv.resolveId(taxonId, identifier));
-                    return null;
-                }
-                id = rslv.resolveId(taxonId, identifier).iterator().next();
+
+            int resCount = rslv.countResolutions(taxonId, identifier);
+
+            if (resCount != 1) {
+                LOG.info("RESOLVER: failed to resolve gene to one identifier, ignoring gene: "
+                         + identifier + " count: " + resCount + " FBgn: "
+                         + rslv.resolveId(taxonId, identifier));
+                return null;
             }
-            return id;
+
+            return rslv.resolveId(taxonId, identifier).iterator().next();
         }
 
         private String getOrganism(String taxonId)
