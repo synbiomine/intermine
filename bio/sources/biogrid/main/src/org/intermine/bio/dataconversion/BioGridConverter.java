@@ -587,7 +587,8 @@ public class BioGridConverter extends BioFileConverter
          * @param taxonId
          * @param ih
          * @param identifierField
-         * @param identifierSource the source of the identifier for this gene.
+         * @param identifierSource the source of the identifier for this gene.  Either "shortlabel" to denote the value
+         * of the &lt;shortLabel&gt; element or a source within an &lt;xref&gt; structure.
          * @param prefix
          * @return
          * @throws SAXException
@@ -598,7 +599,8 @@ public class BioGridConverter extends BioFileConverter
             String identifier = null;
             String label = identifierField;
 
-            if ("shortLabel".equals(identifierSource)) {
+            // readConfig() is always lower-casing the identifierSource
+            if ("shortlabel".equals(identifierSource)) {
                 identifier = ih.shortLabel;
             } else {
                 identifier = ih.xrefs.get(identifierSource);
