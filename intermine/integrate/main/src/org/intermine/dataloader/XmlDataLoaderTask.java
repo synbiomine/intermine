@@ -165,9 +165,9 @@ public class XmlDataLoaderTask extends Task
             }
         } catch (Exception e) {
             if (toRead == null) {
-                throw new BuildException("Exception in XmlDataLoaderTask", e);
+                throw new BuildException("Exception in XmlDataLoaderTask: " + e, e);
             } else {
-                throw new BuildException("Exception while reading from: " + toRead, e);
+                throw new BuildException("Exception while reading from: " + toRead + ", " + e, e);
             }
         }
     }

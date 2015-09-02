@@ -351,11 +351,11 @@ public class Item implements Comparable<Item>
     public void setAttribute(String name, String value) {
         if (value == null) {
             throw new RuntimeException("value cannot be null for attribute "
-                                       + className + "."  + name);
+                                       + className + "."  + name + ", item ID " + identifier);
         }
         if ("".equals(value)) {
             throw new RuntimeException("value cannot be an empty string for attribute "
-                                       + className + "."  + name);
+                                       + className + "."  + name + ", item ID " + identifier);
         }
         addAttribute(new Attribute(name, value));
     }
