@@ -209,7 +209,7 @@ my @psql_command = 'psql';
 my @dump_command = qw[pg_dump -F c -i];
 my @load_command = qw[pg_restore -1 -i];
 my @dropdb_command = qw[dropdb];
-my @createdb_command = (qw[createdb -E ], $db_encoding);
+my @createdb_command = (qw[createdb -E ], $db_encoding, qw[-T template0]);
 
 sub log_message
 {
