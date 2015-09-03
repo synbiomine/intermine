@@ -225,10 +225,7 @@
   </query>
 </template>
 
-<!-- justincc 2015-07-2
-  Added from synbiomine but commented out for now as it returns results but displays no rows!
-  Was also doing this in synbiomine.org
-<template name="gene2BacilRegNet" title="Gene -\-&gt; BacillusRegNet Data" comment="">
+<template name="gene2BacilRegNet" title="Gene --&gt; BacillusRegNet Data" comment="">
   <query name="gene2BacilRegNet" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.promoters.transcriptionFactor.primaryIdentifier.symbol Gene.promoters.transcriptionFactor.primaryIdentifier.primaryIdentifier Gene.promoters.transcriptionFactor.primaryIdentifier.eggNogCategories.primaryIdentifier Gene.promoters.transcriptionFactor.primaryIdentifier.eggNogCategories.description Gene.promoters.transcriptionFactor.tfFamily Gene.promoters.transcriptionFactor.regulation Gene.promoters.sigmaBindingFactors.primaryIdentifier.primaryIdentifier Gene.promoters.sigmaBindingFactors.primaryIdentifier.symbol Gene.promoters.sigmaBindingFactors.primaryIdentifier.eggNogCategories.description Gene.promoters.sigmaBindingFactors.primaryIdentifier.eggNogCategories.primaryIdentifier Gene.promoters.evidence.publications.pubMedId Gene.promoters.sequence.residues Gene.promoters.evidence.evidenceCodes.name" longDescription="For a gene or groups of genes, generates gene regulation information for use by bacillus RegNet" sortOrder="Gene.primaryIdentifier asc">
     <join path="Gene.promoters.transcriptionFactor" style="OUTER"/>
     <join path="Gene.promoters.evidence" style="OUTER"/>
@@ -249,7 +246,7 @@
     </constraint>
   </query>
 </template>
--->
+
 </template-queries>
 <tags>
   <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection"/>
@@ -260,6 +257,7 @@
   <tag name="im:aspect:Expression" objectIdentifier="BsubDifferentExpr" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="Gene2Expression" type="template"/>
+  <tag name="im:aspect:Expression" objectIdentifier="gene2BacilRegNet" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="path2reactGenes" type="template"/>
 
   <tag name="im:aspect:Function" objectIdentifier="Gene.eggNogCategories" type="collection"/>
@@ -444,6 +442,7 @@
   <tag name="im:public" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:public" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:public" objectIdentifier="path2reactGenes" type="template"/>
+  <tag name="im:public" objectIdentifier="gene2BacilRegNet" type="template"/>
 
 <!--
   <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
