@@ -1160,7 +1160,15 @@ public class ObjectStoreInterMineImpl extends ObjectStoreAbstractImpl implements
         } catch (CompletelyFalseException e) {
             return Collections.emptyList();
         }
+
         String generatedSql = sql;
+
+        if (getLogBeforeExecute()) {
+            SQLLOGGER.info("(BEFORE EXECUTE) iql: " + q + "\n"
+                    + "generated sql: " + generatedSql + "\n"
+                    + "optimised sql: " + sql);
+        }
+
         try {
             long estimatedTime = 0;
             long startOptimiseTime = System.currentTimeMillis();
@@ -1210,11 +1218,7 @@ public class ObjectStoreInterMineImpl extends ObjectStoreAbstractImpl implements
                                 + getMaxTime() + "): IQL query: " + q + ", SQL query: " + sql));
                 }
             }
-            if (getLogBeforeExecute()) {
-                SQLLOGGER.info("(BEFORE EXECUTE) iql: " + q + "\n"
-                        + "generated sql: " + generatedSql + "\n"
-                        + "optimised sql: " + sql);
-            }
+
             long preExecute = System.currentTimeMillis();
             Statement s = c.createStatement();
             registerStatement(s);
