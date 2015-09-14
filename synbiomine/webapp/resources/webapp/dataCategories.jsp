@@ -6,8 +6,6 @@
 
 <!-- dataCategories -->
 
-<c:set var="note1" value="Only genes that have been mapped to the genome have been loaded"/>
-
 <html:xhtml/>
 
 <div class="body">
