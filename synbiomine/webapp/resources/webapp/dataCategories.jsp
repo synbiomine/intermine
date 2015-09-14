@@ -105,9 +105,9 @@
        </tr>
        <tr>
                <td>Pathways</td>
-               <td><a href="www.genome.jp/kegg/pathway.html">KEGG</a></td>
-               <td>All</td>
-               <td>Release 75.0 (July 2015)</td>
+               <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
+               <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
+               <td>Version 19.1 (June 25, 2015)</td>
        </tr>
        <tr>
                <td>Interactions</td>
@@ -120,12 +120,6 @@
                <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012: PMID: 22383849)</td>
                <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
                <td>Mar, 2008; 2012</td>
-       </tr>
-       <tr>
-               <td>Whole-genome biomodel (Modifiers, Pathways, Reactions, Compounds)</td>
-               <td><a href="www.ebi.ac.uk/biomodels-main/path2models">Path2Model</a><a href="www.genome.jp/kegg/pathway.html">; KEGG (reactions)</a></td>
-               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Escherichia coli</i> str. K-12 substr. MG1655</td>
-               <td>Mar, 2013</td>
        </tr>
        <tr>
                <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
