@@ -469,6 +469,16 @@ public class DisplayConstraint
     }
 
     /**
+     * Return the LOOKUP constraint op.
+     * @return the LOOKUP constraint op
+     */
+    // TOOO do we need this?  validOps should contain correct value
+    public DisplayConstraintOption getLookupOp() {
+        ConstraintOp lookup = ConstraintOp.LOOKUP;
+        return new DisplayConstraintOption(lookup.toString(), lookup.getIndex());
+    }
+
+    /**
      * Return the autocompleter for this path if one is available.  Otherwise return null.
      * @return an autocompleter for this path or null
      */
@@ -478,6 +488,7 @@ public class DisplayConstraint
         }
         return null;
     }
+
 
     /**
      * Values to populate a dropdown for the path if possible values are available.
