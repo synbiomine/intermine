@@ -389,14 +389,14 @@
   </tag>
 -->
 
-  <tag name="im:hidden" objectIdentifier="BioEntity.objects" type="collection">
-  </tag>
-  <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection">
-  </tag>
-  <tag name="im:hidden" objectIdentifier="BioEntity.subjects" type="collection">
-  </tag>
-  <tag name="im:hidden" objectIdentifier="BioEntity.relations" type="collection">
-  </tag>
+  <tag name="im:hidden" objectIdentifier="BioEntity.objects" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="BioEntity.subjects" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="BioEntity.relations" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Promoter.evidence" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Promoter.predictedSigmaFactors" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Promoter.sigmaBindingFactors" type="collection"/>
+  
 
   <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class">
   </tag>
