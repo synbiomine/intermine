@@ -6,7 +6,7 @@
   </queries>
 <template-queries>
 
-<template name="geneAllProtOrg" title="Organism --&gt; All genes and proteins" comment="">
+<template name="geneAllProtOrg" title="Organism --&gt; Proteins + Genes" comment="">
   <query 
     name="geneAllProtOrg" 
     model="genomic" 
@@ -19,7 +19,7 @@
   </query>
 </template>
 
-<template name="DomainProtGene" title="Protein Domain --&gt; Protein(s) + Gene(s)" comment="Added 23.04.2013:ML">
+<template name="DomainProtGene" title="Protein Domain --&gt; Proteins + Genes" comment="Added 23.04.2013:ML">
   <query 
     name="DomainProtGene" 
     model="genomic" 
