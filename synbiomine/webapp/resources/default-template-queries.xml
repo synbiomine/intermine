@@ -90,12 +90,6 @@
   </query>
 </template>
 
-<template name="Gene_Protein" title="Gene --&gt; Proteins." comment="06.06.07 updated to work from gene class - Philip">
-  <query name="Gene_Protein" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession" longDescription="Show the proteins for a particular gene." sortOrder="Gene.primaryIdentifier asc">
-    <pathDescription pathString="Gene.proteins" description="Protein"/>
-    <constraint path="Gene" editable="true" op="LOOKUP" value="ArcA" extraValue="E. coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
 <template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
   <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
@@ -345,7 +339,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="LocatedSequenceFeature.chromosome" type="reference"/>
   <tag name="im:aspect:Genes" objectIdentifier="Transcript.gene" type="reference"/>
 
-  <tag name="im:aspect:Genes" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template"/>
@@ -376,7 +369,6 @@
   <tag name="im:aspect:Proteins" objectIdentifier="Protein.sequence" type="reference"/>
   <tag name="im:aspect:Proteins" objectIdentifier="ProteinInteraction.protein" type="reference"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Protein_GOtermsSpecificOntology" type="template"/>
-  <tag name="im:aspect:Proteins" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene2Enz" type="template"/>
@@ -389,7 +381,6 @@
   </tag>
 
   <tag name="im:frontpage" objectIdentifier="DomainProtGene" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_Orth" type="template"/>
@@ -441,7 +432,6 @@
   <tag name="im:public" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_Identifiers" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:public" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_allGOTerms" type="template"/>
   <tag name="im:public" objectIdentifier="Gene_particularGoannotation" type="template"/>
   <tag name="im:public" objectIdentifier="Gene2Enz" type="template"/>
