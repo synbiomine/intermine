@@ -101,11 +101,16 @@
   </query>
 </template>
 
-<template name="Organism_Protein" title="Organism --&gt; All proteins." comment="Added 7May2013: ML">
-  <query name="Organism_Protein" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession" longDescription="Show all the proteins from a particular organism." sortOrder="Protein.primaryIdentifier asc">
+<template name="Organism_Protein" title="Organism --&gt; Proteins" comment="Added 7May2013: ML">
+  <query 
+    name="Organism_Protein" 
+    model="genomic" 
+    view="Protein.primaryIdentifier Protein.primaryAccession" 
+    longDescription="For a given organism, show all proteins." sortOrder="Protein.primaryIdentifier asc">
     <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
   </query>
 </template>
+
 <template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
   <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
     <constraint path="Pathway.name" code="A" editable="true" op="=" value="Protein export"/>
