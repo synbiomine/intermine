@@ -42,13 +42,6 @@
   </query>
 </template>
 
-<template name="GeneGO" title="Gene --&gt; GO Terms" comment="Added 23.04.2013:ML">
-  <query name="GeneGO" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace" longDescription="Search for GO annotations for a particular gene." sortOrder="Gene.secondaryIdentifier asc">
-    <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
-    <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
-    <constraint path="Gene" editable="true" op="LOOKUP" value="b0400" extraValue="E. coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
 <template name="GeneOrthPathw" title="Gene --&gt; Pathways + (Orthologues + Pathways)" comment="Added 17Dec2013: ML">
   <query name="GeneOrthPathw" model="genomic" view="Gene.pathways.id Gene.pathways.name Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name Gene.homologues.homologue.pathways.identifier Gene.homologues.homologue.pathways.name Gene.homologues.homologue.pathways.dataSets.name" longDescription="For a given gene (or list of genes) in the named organism (default: B. sub 168) returns the pathways for the organism. Additionally, returns gene orthologues in a different organism (can be turned off to return all strains with orthologues) and the corresponding pathways. [keywords: homologue, homolog, paralogue, paralogue, ortholog, orthologue, pathway, kegg]" sortOrder="Gene.symbol asc" constraintLogic="A and B and C">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
@@ -319,7 +312,6 @@
   <tag name="im:aspect:Function" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="keyProtGene" type="template"/>
-  <tag name="im:aspect:Function" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="ListPathway" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="EggNOG2Gene" type="template"/>
@@ -360,7 +352,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
@@ -407,7 +398,6 @@
   <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GeneProtDomain" type="template"/>
@@ -464,7 +454,6 @@
   <tag name="im:public" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:public" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:public" objectIdentifier="GenePromoterExpress" type="template"/>
-  <tag name="im:public" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:public" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:public" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:public" objectIdentifier="GeneProtDomain" type="template"/>
