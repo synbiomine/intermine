@@ -42,11 +42,6 @@
   </query>
 </template>
 
-<template name="GeneCoord" title="Gene --&gt; Location" comment="">
-  <query name="GeneCoord" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.organism.shortName" longDescription="For a given gene (or list of genes) returns the location co-ordinates." sortOrder="Gene.primaryIdentifier asc">
-    <constraint path="Gene" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
 <template name="GeneGO" title="Gene --&gt; GO Terms" comment="Added 23.04.2013:ML">
   <query name="GeneGO" model="genomic" view="Gene.symbol Gene.secondaryIdentifier Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace" longDescription="Search for GO annotations for a particular gene." sortOrder="Gene.secondaryIdentifier asc">
     <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
@@ -367,7 +362,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="GeneCoord" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="ChromLocation_Gene" type="template"/>
@@ -413,7 +407,6 @@
   <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_GO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="GeneCoord" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GenePathw" type="template"/>
@@ -471,7 +464,6 @@
   <tag name="im:public" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:public" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:public" objectIdentifier="GenePromoterExpress" type="template"/>
-  <tag name="im:public" objectIdentifier="GeneCoord" type="template"/>
   <tag name="im:public" objectIdentifier="GeneGO" type="template"/>
   <tag name="im:public" objectIdentifier="GeneOrthPathw" type="template"/>
   <tag name="im:public" objectIdentifier="GenePathw" type="template"/>
