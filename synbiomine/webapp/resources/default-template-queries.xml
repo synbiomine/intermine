@@ -153,12 +153,6 @@
   </query>
 </template>
 
-<template name="geneEggnog2Orth" title="Gene [EggNOG category] --&gt; Orthologue" comment="">
-  <query name="geneEggnog2Orth" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.eggNogCategories.functionalCategories.category Gene.eggNogCategories.functionalCategories.classifier Gene.eggNogCategories.functionalCategories.name Gene.eggNogCategories.genes.primaryIdentifier Gene.eggNogCategories.genes.symbol Gene.eggNogCategories.genes.organism.shortName Gene.eggNogCategories.genes.organism.taxonId" longDescription="For a given gene (or list of genes) with a given EggNOG classification, returns orthologues genes annotated with the same classification." sortOrder="Gene.primaryIdentifier asc" constraintLogic="B and A">
-    <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="BSU00370" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.eggNogCategories.genes.organism.shortName" code="A" editable="true" description="" switchable="off" op="=" value="B. amyloliquefaciens subsp. plantarum FZB42"/>
-  </query>
-</template>
 <template name="EggNOG2Gene" title="Functional category [EggNOG or COG] --&gt; Gene(s)" comment="">
   <query name="EggNOG2Gene" model="genomic" view="EggNogCategory.primaryIdentifier EggNogCategory.description EggNogCategory.functionalCategories.name EggNogCategory.functionalCategories.classifier EggNogCategory.functionalCategories.category EggNogCategory.genes.primaryIdentifier EggNogCategory.genes.symbol EggNogCategory.genes.organism.shortName EggNogCategory.genes.organism.taxonId" longDescription="For a given EggNOG category, returns a list of genes (from all organisms) annotated with this category. Optional filters on COG function and Classifier, and also on Organism. [Datasource: EggNOG] Keywords: functional category, COG, function" sortOrder="EggNogCategory.primaryIdentifier asc" constraintLogic="A and B and C and D and E">
     <constraint path="EggNogCategory.description" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="AbrB"/>
@@ -355,7 +349,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="go2genesOrg" type="template"/>
   
   <tag name="im:aspect:Homology" objectIdentifier="Gene_OrthologueGO" type="template"/>
-  <tag name="im:aspect:Homology" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:aspect:Homology" objectIdentifier="EggNOG2Gene" type="template"/>
   
 <!--
@@ -404,7 +397,6 @@
   <tag name="im:frontpage" objectIdentifier="GenePromoterExpress" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="enz2gene" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:frontpage" objectIdentifier="go2genesOrg" type="template"/>
 
 <!--
@@ -454,7 +446,6 @@
   <tag name="im:public" objectIdentifier="enz2gene" type="template"/>
   <tag name="im:public" objectIdentifier="gene2BacilRegNet" type="template"/>
   <tag name="im:public" objectIdentifier="gene2funccat" type="template"/>
-  <tag name="im:public" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:public" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:public" objectIdentifier="path2reactGenes" type="template"/>
   <tag name="im:public" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
