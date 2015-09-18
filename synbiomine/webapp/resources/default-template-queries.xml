@@ -32,7 +32,7 @@
   </query>
 </template>
 
-<template name="GOgenes" title="GO Term --&gt; Gene(s)" comment="Added 30Apr2013: ML">
+<template name="GOgenes" title="GO Term --&gt; Genes" comment="Added 30Apr2013: ML">
   <query 
     name="GOgenes" 
     model="genomic" 
