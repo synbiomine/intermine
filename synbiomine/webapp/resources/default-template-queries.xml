@@ -111,12 +111,6 @@
   </query>
 </template>
 
-<template name="PathwayGenes" title="Pathway --&gt; Genes" comment="Added 7May2013: ML">
-  <query name="PathwayGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.dataSets.name Pathway.dataSets.dataSource.name Pathway.genes.primaryIdentifier Pathway.genes.symbol Pathway.genes.organism.shortName" longDescription="For a given pathway show any genes associated with the pathway(s) in a given organism (Data Source: KEGG). [NOTE: Organism is an optional filter which is ON by default but can be turned OFF to show genes from all organisms.] Keywords: Pathway" sortOrder="Pathway.identifier asc" constraintLogic="A and B">
-    <constraint path="Pathway.name" code="A" editable="true" op="=" value="Protein export"/>
-    <constraint path="Pathway.genes.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="E. coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
 <template name="keyProtGene" title="Keyword (UniProt) --&gt; Protein + Gene" comment="Added 7May2013: ML">
   <query name="keyProtGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" longDescription="Find genes and proteins that are annotated with a particular term in the description. Searches UniProt comments. Optional organism filter is ON by default. Turn off to show results for all organisms. [keywords: function, keyword, text]" sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
     <pathDescription pathString="Gene.proteins" description="Protein"/>
@@ -307,7 +301,6 @@
   <tag name="im:aspect:Function" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="DomainProtGene" type="template"/>
-  <tag name="im:aspect:Function" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="keyProtGene" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="EggNOG2Gene" type="template"/>
@@ -347,7 +340,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="pubGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="ChromLocation_Gene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="geneAllProtOrg" type="template"/>
@@ -394,7 +386,6 @@
   <tag name="im:frontpage" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:frontpage" objectIdentifier="OrgGene" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Protein_GOterms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="keyProtGene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="pubGene" type="template"/>
@@ -448,7 +439,6 @@
   <tag name="im:public" objectIdentifier="Organism_GoTerm_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_Protein" type="template"/>
-  <tag name="im:public" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:public" objectIdentifier="Protein_GOtermsSpecificOntology" type="template"/>
   <tag name="im:public" objectIdentifier="Protein_GOterms" type="template"/>
   <tag name="im:public" objectIdentifier="keyProtGene" type="template"/>
