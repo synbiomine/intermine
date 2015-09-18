@@ -6,6 +6,19 @@
   </queries>
 <template-queries>
 
+<template name="Gene_Orth" title="Gene --&gt; Orthologues" comment="Added 09Dec2013: ML">
+  <query 
+    name="Gene_Orth" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" 
+    longDescription="For a given gene in the named organism, return the orthologues in different organisms"
+    sortOrder="Gene.symbol asc" 
+    constraintLogic="A and B">
+    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="Return orthologues only in this organism" switchable="on" op="=" value="G. kaustophilus HTA426"/>
+  </query>
+</template>
+
 <template name="GenePathw" title="Gene (E. coli str. K-12 substr. MG1655) --&gt; Pathways" comment="Added 17Dec2013: ML">
   <query 
     name="GenePathw" 
@@ -38,6 +51,41 @@
     <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
     <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
     <constraint path="Gene.goAnnotation.ontologyTerm.name" editable="true" op="CONTAINS" value="phosphorelay"/>
+  </query>
+</template>
+
+<template name="keyProtGene" title="Keyword (UniProt) --&gt; Protein + Gene" comment="Added 7May2013: ML">
+  <query 
+    name="keyProtGene" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" 
+    longDescription="Find genes and proteins that contain the given search term in the description (description comes from UniProt)" 
+    sortOrder="Gene.primaryIdentifier asc" 
+    constraintLogic="A and B">
+    <pathDescription pathString="Gene.proteins" description="Protein"/>
+    <constraint path="Gene.proteins.comments.description" code="A" editable="true" op="CONTAINS" value="two-component"/>
+    <constraint path="Gene.organism.shortName" code="B" editable="true" description="Return results for this organism only" switchable="off" op="=" value="B. subtilis subsp. subtilis str. 168"/>
+  </query>
+</template>
+
+<template name="OrgGene" title="Organism --&gt; Genes" comment="">
+  <query 
+    name="OrgGene" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" 
+    longDescription="For a given organism, returns a list of all genes and their chromosome locations" 
+    sortOrder="Gene.primaryIdentifier asc">
+    <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
+  </query>
+</template>
+
+<template name="Organism_Protein" title="Organism --&gt; Proteins" comment="Added 7May2013: ML">
+  <query 
+    name="Organism_Protein" 
+    model="genomic" 
+    view="Protein.primaryIdentifier Protein.primaryAccession" 
+    longDescription="For a given organism, show all proteins." sortOrder="Protein.primaryIdentifier asc">
+    <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
   </query>
 </template>
 
@@ -76,54 +124,6 @@
   </query>
 </template>
 -->
-
-<template name="Gene_Orth" title="Gene --&gt; Orthologues" comment="Added 09Dec2013: ML">
-  <query 
-    name="Gene_Orth" 
-    model="genomic" 
-    view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" 
-    longDescription="For a given gene in the named organism, return the orthologues in different organisms"
-    sortOrder="Gene.symbol asc" 
-    constraintLogic="A and B">
-    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="Return orthologues only in this organism" switchable="on" op="=" value="G. kaustophilus HTA426"/>
-  </query>
-</template>
-
-<template name="OrgGene" title="Organism --&gt; Genes" comment="">
-  <query 
-    name="OrgGene" 
-    model="genomic" 
-    view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" 
-    longDescription="For a given organism, returns a list of all genes and their chromosome locations" 
-    sortOrder="Gene.primaryIdentifier asc">
-    <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
-
-<template name="Organism_Protein" title="Organism --&gt; Proteins" comment="Added 7May2013: ML">
-  <query 
-    name="Organism_Protein" 
-    model="genomic" 
-    view="Protein.primaryIdentifier Protein.primaryAccession" 
-    longDescription="For a given organism, show all proteins." sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
-
-<template name="keyProtGene" title="Keyword (UniProt) --&gt; Protein + Gene" comment="Added 7May2013: ML">
-  <query 
-    name="keyProtGene" 
-    model="genomic" 
-    view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" 
-    longDescription="Find genes and proteins that contain the given search term in the description (description comes from UniProt)" 
-    sortOrder="Gene.primaryIdentifier asc" 
-    constraintLogic="A and B">
-    <pathDescription pathString="Gene.proteins" description="Protein"/>
-    <constraint path="Gene.proteins.comments.description" code="A" editable="true" op="CONTAINS" value="two-component"/>
-    <constraint path="Gene.organism.shortName" code="B" editable="true" description="Return results for this organism only" switchable="off" op="=" value="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
 
 <template name="pubGene" title="Publication --&gt; Genes" comment="Added 01May2013: ML">
   <query 
