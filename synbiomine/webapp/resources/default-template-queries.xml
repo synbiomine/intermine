@@ -6,7 +6,7 @@
   </queries>
 <template-queries>
 
-<template name="GenePathw" title="Gene (E. coli str. K-12 substr. MG1655) --&gt; pathway(s)" comment="Added 17Dec2013: ML">
+<template name="GenePathw" title="Gene (E. coli str. K-12 substr. MG1655) --&gt; pathways" comment="Added 17Dec2013: ML">
   <query 
     name="GenePathw" 
     model="genomic" 
