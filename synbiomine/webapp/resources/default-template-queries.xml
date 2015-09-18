@@ -19,16 +19,6 @@
   </query>
 </template>
 
-<template name="All_Proteins_In_Organism_To_Publications" title="All proteins in organism --&gt; Publications." comment="Added 7May2013: ML">
-  <query 
-    name="All_Proteins_In_Organism_To_Publications" 
-    model="genomic" 
-    view="Protein.primaryIdentifier Protein.primaryAccession Protein.organism.name Protein.publications.firstAuthor Protein.publications.title Protein.publications.year Protein.publications.journal Protein.publications.volume Protein.publications.pages Protein.publications.pubMedId" 
-    longDescription="Retrieves publications for all proteins in an organism." sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" description="Organism.name" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
-
 <template name="DomainProtGene" title="Protein Domain --&gt; Protein(s) + Gene(s)" comment="Added 23.04.2013:ML">
   <query 
     name="DomainProtGene" 
@@ -388,7 +378,6 @@
   <tag name="im:aspect:Proteins" objectIdentifier="Protein_GOtermsSpecificOntology" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="DomainProtGene" type="template"/>
-  <tag name="im:aspect:Proteins" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="enz2gene" type="template"/>
@@ -399,7 +388,6 @@
   <tag name="im:converter" objectIdentifier="Gene_To_Protein_Type_Converter" type="template">
   </tag>
 
-  <tag name="im:frontpage" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template"/>
   <tag name="im:frontpage" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_Protein" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene_allGOTerms" type="template"/>
@@ -445,7 +433,6 @@
   <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class">
   </tag>
 
-  <tag name="im:public" objectIdentifier="All_Proteins_In_Organism_To_Publications" type="template"/>
   <tag name="im:public" objectIdentifier="BsubDifferentExpr" type="template"/>
   <tag name="im:public" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:public" objectIdentifier="ChromLocation_Gene" type="template"/>
