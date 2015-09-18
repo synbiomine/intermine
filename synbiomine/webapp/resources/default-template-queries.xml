@@ -112,12 +112,19 @@
 </template>
 
 <template name="keyProtGene" title="Keyword (UniProt) --&gt; Protein + Gene" comment="Added 7May2013: ML">
-  <query name="keyProtGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" longDescription="Find genes and proteins that are annotated with a particular term in the description. Searches UniProt comments. Optional organism filter is ON by default. Turn off to show results for all organisms. [keywords: function, keyword, text]" sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+  <query 
+    name="keyProtGene" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" 
+    longDescription="Find genes and proteins that contain the given search term in the description (description comes from UniProt)" 
+    sortOrder="Gene.primaryIdentifier asc" 
+    constraintLogic="A and B">
     <pathDescription pathString="Gene.proteins" description="Protein"/>
-    <constraint path="Gene.organism.shortName" code="A" editable="true" description="" switchable="on" op="=" value="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.proteins.comments.description" code="B" editable="true" op="CONTAINS" value="two-component"/>
+    <constraint path="Gene.proteins.comments.description" code="A" editable="true" op="CONTAINS" value="two-component"/>
+    <constraint path="Gene.organism.shortName" code="B" editable="true" description="Return results for this organism only" switchable="off" op="=" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
+
 <template name="pubGene" title="Publication --&gt; Gene(s)" comment="Added 01May2013: ML">
   <query name="pubGene" model="genomic" view="Publication.firstAuthor Publication.title Publication.year Publication.journal Publication.volume Publication.pages Publication.pubMedId Publication.bioEntities.primaryIdentifier Publication.bioEntities.symbol Publication.bioEntities.organism.shortName" longDescription="For a given publication term (title word, or first author) returns genes associated with those publications (as curated by PubMed). [Keywords: article, publication, journal, paper, literature, gene, author]" sortOrder="Publication.year asc" constraintLogic="A and B and C">
     <constraint path="Publication.bioEntities" editable="false" type="Gene"/>
