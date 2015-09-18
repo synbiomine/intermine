@@ -6,7 +6,7 @@
   </queries>
 <template-queries>
 
-<template name="GenePathw" title="Gene (E. coli str. K-12 substr. MG1655) --&gt; pathways" comment="Added 17Dec2013: ML">
+<template name="GenePathw" title="Gene (E. coli str. K-12 substr. MG1655) --&gt; Pathways" comment="Added 17Dec2013: ML">
   <query 
     name="GenePathw" 
     model="genomic" 
@@ -18,7 +18,7 @@
   </query>
 </template>
 
-<template name="GeneProtDomain" title="Gene --&gt; protein + domains" comment="Added 23.04.2013:ML">
+<template name="GeneProtDomain" title="Gene --&gt; Protein + Domains" comment="Added 23.04.2013:ML">
   <query 
     name="GeneProtDomain" 
     model="genomic" 
@@ -28,7 +28,7 @@
   </query>
 </template>
 
-<template name="GOgenes" title="GO term --&gt; genes" comment="Added 30Apr2013: ML">
+<template name="GOgenes" title="GO term --&gt; Genes" comment="Added 30Apr2013: ML">
   <query 
     name="GOgenes" 
     model="genomic" 
@@ -41,7 +41,7 @@
   </query>
 </template>
 
-<template name="geneAllProtOrg" title="Organism --&gt; proteins + genes" comment="">
+<template name="geneAllProtOrg" title="Organism --&gt; Proteins + Genes" comment="">
   <query 
     name="geneAllProtOrg" 
     model="genomic" 
@@ -54,7 +54,7 @@
   </query>
 </template>
 
-<template name="DomainProtGene" title="Protein domain --&gt; proteins + genes" comment="Added 23.04.2013:ML">
+<template name="DomainProtGene" title="Protein domain --&gt; Proteins + Genes" comment="Added 23.04.2013:ML">
   <query 
     name="DomainProtGene" 
     model="genomic" 
@@ -77,7 +77,7 @@
 </template>
 -->
 
-<template name="Gene_Orth" title="Gene --&gt; orthologues" comment="Added 09Dec2013: ML">
+<template name="Gene_Orth" title="Gene --&gt; Orthologues" comment="Added 09Dec2013: ML">
   <query 
     name="Gene_Orth" 
     model="genomic" 
