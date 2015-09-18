@@ -269,6 +269,16 @@
   </query>
 </template>
 
+<template name="promoter_sigmaBindingFactors_report" title="Sigma Binding Factors">
+  <query 
+    name="promoter_sigmaBindingFactors_report" 
+    model="genomic" 
+    view="Promoter.sigmaBindingFactors.primaryIdentifier.primaryIdentifier"
+    sortOrder="Promoter.sigmaBindingFactors.primaryIdentifier.primaryIdentifier asc">
+    <constraint path="Promoter.id" editable="true" op="=" value="1"/>
+  </query>
+</template>
+
 </template-queries>
 <tags>
   <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection"/>
@@ -282,6 +292,7 @@
   <tag name="im:aspect:Expression" objectIdentifier="gene2BacilRegNet" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="path2reactGenes" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
+  <tag name="im:aspect:Expression" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
 
   <tag name="im:aspect:Function" objectIdentifier="Gene.eggNogCategories" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene.pathways" type="collection"/>
@@ -466,6 +477,7 @@
   <tag name="im:public" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:public" objectIdentifier="path2reactGenes" type="template"/>
   <tag name="im:public" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
+  <tag name="im:public" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
 
 <!--
   <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
@@ -473,6 +485,7 @@
 -->
 
   <tag name="im:report" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
+  <tag name="im:report" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
 
   <tag name="im:summary" objectIdentifier="MicroarrayOligo.transcript" type="reference"/>
   <tag name="im:summary" objectIdentifier="Protein.publications" type="collection"/>
