@@ -66,6 +66,7 @@
     <constraint path="ProteinDomain.name" code="B" editable="true" description="" switchable="on" op="CONTAINS" value="receiver"/>
   </query>
 </template>
+
 <!-- justincc 2015-07-02
   Commenting out for now since this had been removed from synbiomine.org (without having been removed from this file)
 <template name="Gene_Interactions" title="Gene -\-&gt; Interactions" comment="">
@@ -75,10 +76,17 @@
   </query>
 </template>
 -->
-<template name="Gene_Orth" title="Gene --&gt; Orthologues" comment="Added 09Dec2013: ML">
-  <query name="Gene_Orth" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" longDescription="For a given gene (or list of genes) in the named organism (default: B. sub 168) returns the orthologues in a different organisms (optional constrain is 'ON' by default and set to: B. anth A0248. Can be turned off to return all strains with orthologues). [keywords: homologue, homolog, paralogue, paralogue, ortholog]" sortOrder="Gene.symbol asc" constraintLogic="A and B">
-    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="" switchable="on" op="=" value="G. kaustophilus HTA426"/>
+
+<template name="Gene_Orth" title="Gene --&gt; orthologues" comment="Added 09Dec2013: ML">
+  <query 
+    name="Gene_Orth" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" 
+    longDescription="For a given gene in the named organism, return the orthologues in different organisms"
+    sortOrder="Gene.symbol asc" 
+    constraintLogic="A and B">
+    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="Return orthologues only in this organism" switchable="on" op="=" value="G. kaustophilus HTA426"/>
   </query>
 </template>
 
