@@ -6,6 +6,19 @@
   </queries>
 <template-queries>
 
+<template name="geneAllProtOrg" title="Organism --&gt; All genes and proteins" comment="">
+  <query 
+    name="geneAllProtOrg" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryAccession Gene.proteins.primaryIdentifier Gene.proteins.name Gene.organism.name" 
+    longDescription="For a given organism, return all genes and their proteins." 
+    sortOrder="Gene.primaryIdentifier asc" 
+    constraintLogic="A and B">
+    <constraint path="Gene.chromosome.primaryIdentifier" code="B" editable="false" description="" op="IS NOT NULL"/>
+    <constraint path="Gene.organism.name" code="A" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
+  </query>
+</template>
+
 <template name="All_Proteins_In_Organism_To_Publications" title="All proteins in organism --&gt; Publications." comment="Added 7May2013: ML">
   <query 
     name="All_Proteins_In_Organism_To_Publications" 
@@ -165,12 +178,6 @@
   <query name="Gene2Enz" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.ecNumbers.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) returns the protein if t is an enzyme." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
     <constraint path="Gene.proteins.ecNumbers.identifier" code="A" editable="true" op="IS NOT NULL"/>
     <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="BSU02700" extraValue="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
-<template name="geneAllProtOrg" title="All Genes in organism --&gt; All Proteins in organism" comment="">
-  <query name="geneAllProtOrg" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryAccession Gene.proteins.primaryIdentifier Gene.proteins.name Gene.organism.name" longDescription="For a given organism, returns all protein coding genes and their proteins." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
-    <constraint path="Gene.chromosome.primaryIdentifier" code="B" editable="false" description="" op="IS NOT NULL"/>
-    <constraint path="Gene.organism.name" code="A" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
   </query>
 </template>
 <template name="path2reactGenes" title="Pathway(s) --&gt; Reaction(s) + Modifier(s)" comment="">
