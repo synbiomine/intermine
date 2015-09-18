@@ -89,19 +89,6 @@
   </query>
 </template>
 
-<template name="geneAllProtOrg" title="Organism --&gt; Proteins + Genes" comment="">
-  <query 
-    name="geneAllProtOrg" 
-    model="genomic" 
-    view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryAccession Gene.proteins.primaryIdentifier Gene.proteins.name Gene.organism.name" 
-    longDescription="For a given organism, return all genes and their proteins." 
-    sortOrder="Gene.primaryIdentifier asc" 
-    constraintLogic="A and B">
-    <constraint path="Gene.chromosome.primaryIdentifier" code="B" editable="false" description="" op="IS NOT NULL"/>
-    <constraint path="Gene.organism.name" code="A" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
-
 <template name="DomainProtGene" title="Protein domain --&gt; Proteins + Genes" comment="Added 23.04.2013:ML">
   <query 
     name="DomainProtGene" 
@@ -356,7 +343,6 @@
   <tag name="im:aspect:Genes" objectIdentifier="Gene_Orth" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="ChromLocation_Gene" type="template"/>
-  <tag name="im:aspect:Genes" objectIdentifier="geneAllProtOrg" type="template"/>
   <tag name="im:aspect:Genes" objectIdentifier="go2genesOrg" type="template"/>
   
   <tag name="im:aspect:Homology" objectIdentifier="Gene_OrthologueGO" type="template"/>
@@ -383,7 +369,6 @@
   <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="enz2gene" type="template"/>
-  <tag name="im:aspect:Proteins" objectIdentifier="geneAllProtOrg" type="template"/>
 
   <tag name="im:converter" objectIdentifier="Protein_To_Gene_Type_Converter" type="template">
   </tag>
@@ -460,7 +445,6 @@
   <tag name="im:public" objectIdentifier="enz2gene" type="template"/>
   <tag name="im:public" objectIdentifier="gene2BacilRegNet" type="template"/>
   <tag name="im:public" objectIdentifier="gene2funccat" type="template"/>
-  <tag name="im:public" objectIdentifier="geneAllProtOrg" type="template"/>
   <tag name="im:public" objectIdentifier="geneEggnog2Orth" type="template"/>
   <tag name="im:public" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:public" objectIdentifier="path2reactGenes" type="template"/>
