@@ -90,11 +90,17 @@
   </query>
 </template>
 
-<template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
-  <query name="OrgGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" longDescription="For a given organism, returns a list of all genes and their chromosome locations" sortOrder="Gene.primaryIdentifier asc">
+<template name="OrgGene" title="Organism --&gt; Genes" comment="">
+  <query 
+    name="OrgGene" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" 
+    longDescription="For a given organism, returns a list of all genes and their chromosome locations" 
+    sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
+
 <template name="Organism_Protein" title="Organism --&gt; All proteins." comment="Added 7May2013: ML">
   <query name="Organism_Protein" model="genomic" view="Protein.primaryIdentifier Protein.primaryAccession" longDescription="Show all the proteins from a particular organism." sortOrder="Protein.primaryIdentifier asc">
     <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
