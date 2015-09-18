@@ -90,17 +90,6 @@
   </query>
 </template>
 
-<template name="Gene_Pathway" title="Gene --&gt; Pathway(s)" comment="Added 7May2013: ML">
-  <query 
-    name="Gene_Pathway" 
-    model="genomic" 
-    view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.name Gene.pathways.dataSets.name Gene.pathways.identifier Gene.organism.shortName" 
-    longDescription="For a given gene (or list of genes) show any associated pathway(s) (Data Source: KEGG). Keywords: pathways, reaction, cascade" 
-    sortOrder="Gene.primaryIdentifier asc Gene.primaryIdentifier asc Gene.primaryIdentifier asc">
-    <constraint path="Gene" editable="true" op="LOOKUP" value="EG10056" extraValue="E. coli str. K-12 substr. MG1655"/>
-  </query>
-</template>
-
 <template name="Gene_Protein" title="Gene --&gt; Proteins." comment="06.06.07 updated to work from gene class - Philip">
   <query name="Gene_Protein" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession" longDescription="Show the proteins for a particular gene." sortOrder="Gene.primaryIdentifier asc">
     <pathDescription pathString="Gene.proteins" description="Protein"/>
