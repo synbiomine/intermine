@@ -90,12 +90,6 @@
   </query>
 </template>
 
-<template name="ListPathway" title="Gene A --&gt; Pathways &lt;-- Gene B " comment="Under development for in-list comparisons: ML">
-  <query name="ListPathway" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.name Gene.pathways.genes.primaryIdentifier Gene.pathways.genes.symbol Gene.pathways.genes.name Gene.pathways.name Gene.pathways.identifier Gene.pathways.dataSets.name Gene.pathways.genes.organism.shortName" longDescription="For a given gene A (or list A of genes) show any associated pathway(s) in common with gene B (or list B of genes). Datasource: KEGG. Keywords: pathways, cascade, metabolism, reaction" sortOrder="Gene.symbol asc" constraintLogic="A and B">
-    <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="asd" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.pathways.genes" code="B" editable="true" op="LOOKUP" value="asd1" extraValue="Any"/>
-  </query>
-</template>
 <template name="OrgGene" title="Organism --&gt; Genes (Prot coding)" comment="">
   <query name="OrgGene" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" longDescription="For a given organism, returns a list of all genes and their chromosome locations" sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
@@ -304,7 +298,6 @@
   <tag name="im:aspect:Function" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="PathwayGenes" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="keyProtGene" type="template"/>
-  <tag name="im:aspect:Function" objectIdentifier="ListPathway" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="EggNOG2Gene" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="gene2funccat" type="template"/>
@@ -387,7 +380,6 @@
   <tag name="im:frontpage" objectIdentifier="GenePathw" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GOgenes" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="ListPathway" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:frontpage" objectIdentifier="OrgGene" type="template"/>
@@ -441,7 +433,6 @@
   <tag name="im:public" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:public" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:public" objectIdentifier="GOtermidentifier_name" type="template"/>
-  <tag name="im:public" objectIdentifier="ListPathway" type="template"/>
   <tag name="im:public" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_GoTerm_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
