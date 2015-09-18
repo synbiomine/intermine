@@ -125,14 +125,21 @@
   </query>
 </template>
 
-<template name="pubGene" title="Publication --&gt; Gene(s)" comment="Added 01May2013: ML">
-  <query name="pubGene" model="genomic" view="Publication.firstAuthor Publication.title Publication.year Publication.journal Publication.volume Publication.pages Publication.pubMedId Publication.bioEntities.primaryIdentifier Publication.bioEntities.symbol Publication.bioEntities.organism.shortName" longDescription="For a given publication term (title word, or first author) returns genes associated with those publications (as curated by PubMed). [Keywords: article, publication, journal, paper, literature, gene, author]" sortOrder="Publication.year asc" constraintLogic="A and B and C">
+<template name="pubGene" title="Publication --&gt; Genes" comment="Added 01May2013: ML">
+  <query 
+    name="pubGene" 
+    model="genomic" 
+    view="Publication.firstAuthor Publication.title Publication.year Publication.journal Publication.volume Publication.pages Publication.pubMedId Publication.bioEntities.primaryIdentifier Publication.bioEntities.symbol Publication.bioEntities.organism.shortName" 
+    longDescription="For a given publication term (title word, or first author) returns genes associated with those publications (as curated by PubMed). [Keywords: article, publication, journal, paper, literature, gene, author]" 
+    sortOrder="Publication.year asc" 
+    constraintLogic="A and B and C">
     <constraint path="Publication.bioEntities" editable="false" type="Gene"/>
     <constraint path="Publication.title" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="two-component"/>
     <constraint path="Publication.firstAuthor" code="B" editable="true" description="" switchable="off" op="CONTAINS" value="Katayama"/>
     <constraint path="Publication.pubMedId" code="C" editable="true" description="" switchable="off" op="=" value="16306698"/>
   </query>
 </template>
+
 <!-- justincc 2015-07-02 
   The following templates were adeded after being found in synbiomine.org but not in this file in the github repo.
   Assuming there were added later but this file was not updated
