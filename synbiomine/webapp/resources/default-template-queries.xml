@@ -6,6 +6,19 @@
   </queries>
 <template-queries>
 
+<template name="GOgenes" title="GO Term --&gt; Genes" comment="Added 30Apr2013: ML">
+  <query 
+    name="GOgenes" 
+    model="genomic" 
+    view="Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace Gene.organism.name Gene.primaryIdentifier" 
+    longDescription="For a given GO annotation, returns a list of genes annotated with this GO term" 
+    sortOrder="Gene.symbol asc">
+    <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
+    <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
+    <constraint path="Gene.goAnnotation.ontologyTerm.name" editable="true" op="CONTAINS" value="phosphorelay"/>
+  </query>
+</template>
+
 <template name="geneAllProtOrg" title="Organism --&gt; Proteins + Genes" comment="">
   <query 
     name="geneAllProtOrg" 
@@ -29,19 +42,6 @@
     constraintLogic="A and B">
     <constraint path="ProteinDomain.primaryIdentifier" code="A" editable="true" description="" switchable="off" op="=" value="IPR001789"/>
     <constraint path="ProteinDomain.name" code="B" editable="true" description="" switchable="on" op="CONTAINS" value="receiver"/>
-  </query>
-</template>
-
-<template name="GOgenes" title="GO Term --&gt; Genes" comment="Added 30Apr2013: ML">
-  <query 
-    name="GOgenes" 
-    model="genomic" 
-    view="Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace Gene.organism.name Gene.primaryIdentifier" 
-    longDescription="For a given GO annotation, returns a list of genes annotated with this GO term" 
-    sortOrder="Gene.symbol asc">
-    <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
-    <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
-    <constraint path="Gene.goAnnotation.ontologyTerm.name" editable="true" op="CONTAINS" value="phosphorelay"/>
   </query>
 </template>
 
