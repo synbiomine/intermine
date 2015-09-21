@@ -109,9 +109,9 @@
   <query 
     name="Organism_Protein" 
     model="genomic" 
-    view="Protein.primaryIdentifier Protein.primaryAccession" 
-    longDescription="For a given organism, show all proteins." sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
+    view="Protein.primaryIdentifier Protein.primaryAccession Protein.organism.shortName" 
+    longDescription="For a given organism, show all its proteins." sortOrder="Protein.primaryIdentifier asc">
+    <constraint path="Protein.organism.shortName" editable="true" op="=" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
 
