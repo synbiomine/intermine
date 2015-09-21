@@ -169,13 +169,20 @@
   </query>
 </template>
 
-<template name="path2reactGenes" title="Pathway(s) --&gt; Reaction(s) + Modifier(s)" comment="">
-  <query name="path2reactGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.reactions.identifier Pathway.reactions.name Pathway.reactions.equation Pathway.reactions.modifiers.primaryIdentifier Pathway.reactions.modifiers.symbol Pathway.reactions.modifiers.organism.shortName" longDescription="For a given pathway (or list of pathways), returns a list of the annotated reactions and their modifiers (genes). [Datasource: KEGG]" sortOrder="Pathway.identifier asc" constraintLogic="A and B and C">
+<!--
+<template name="path2reactGenes" title="Pathway --&gt; Reactions + Modifiers" comment="">
+  <query 
+    name="path2reactGenes" 
+    model="genomic" 
+    view="Pathway.identifier Pathway.name Pathway.reactions.identifier Pathway.reactions.name Pathway.reactions.equation Pathway.reactions.modifiers.primaryIdentifier Pathway.reactions.modifiers.symbol Pathway.reactions.modifiers.organism.shortName" 
+    longDescription="For a given pathway, show the annotated reactions and their modifiers (genes). Source is KEGG." sortOrder="Pathway.identifier asc" constraintLogic="A and B and C">
     <constraint path="Pathway.name" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="metabolites"/>
     <constraint path="Pathway.identifier" code="B" editable="true" description="" switchable="off" op="=" value="01110"/>
     <constraint path="Pathway.reactions.modifiers.organism.shortName" code="C" editable="true" description="" switchable="off" op="=" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
+-->
+
 <template name="ChromLocation_Gene" title="Chromosomal location --&gt; All genes." comment="">
   <query name="ChromLocation_Gene" model="genomic" view="Chromosome.locatedFeatures.feature.primaryIdentifier Chromosome.locatedFeatures.feature.symbol Chromosome.primaryIdentifier Chromosome.locatedFeatures.feature.chromosomeLocation.start Chromosome.locatedFeatures.feature.chromosomeLocation.end Chromosome.locatedFeatures.feature.chromosomeLocation.strand" longDescription="Show the genes located between two points on a chromosome. (Data Source: Entrez)." sortOrder="Chromosome.locatedFeatures.feature.primaryIdentifier asc" constraintLogic="B and C and D">
     <pathDescription pathString="Chromosome.locatedFeatures.feature" description="Gene"/>
