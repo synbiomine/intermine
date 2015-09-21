@@ -11,7 +11,7 @@
     name="Gene_Orth" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.organism.shortName Gene.homologues.type Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.homologue.organism.shortName Gene.homologues.evidence.evidenceCode.name" 
-    longDescription="For a given gene in the named organism, return the orthologues in different organisms"
+    longDescription="For a given gene in the named organism, show the orthologues in different organisms."
     sortOrder="Gene.symbol asc" 
     constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
@@ -24,7 +24,7 @@
     name="GenePromoterExpress" 
     model="genomic" 
     view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" 
-    longDescription="For a given Bacillus subtilis gene, return the promoter and expression data for conditions matching the applied filters (see below).  Searches data from Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)." 
+    longDescription="For a given Bacillus subtilis gene, show the promoter and expression data for conditions matching the applied filters. Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)." 
     sortOrder="Promoter.primaryIdentifier asc" 
     constraintLogic="A and B and C and D">
     <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
@@ -39,7 +39,7 @@
     name="Gene2Expression" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.expressionResults.condition.name Gene.expressionResults.log2FoldChange Gene.expressionResults.meanExpr Gene.expressionResults.CV Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.chromosomeLocation.strand Gene.organism.shortName Gene.organism.taxonId Gene.expressionResults.dataSet.name" 
-    longDescription="For a given gene gives location information (Chrm:start..stop, strand) and expression data (Mean expression, log2 fold change, coefficient of variation). NOTE: So far, data are only available for B. subtilis 168 and E. coli K-12 MG1655. Selecting other organisms will return zero results." 
+    longDescription="For a given gene, show location information (Chrm:start..stop, strand) and expression data (Mean expression, log2 fold change, coefficient of variation). NOTE: So far, only B. subtilis 168 and E. coli K-12 MG1655 data is available."
     sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="EG10061" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
@@ -50,7 +50,7 @@
     name="GenePathw" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.pathways.identifier Gene.pathways.name Gene.pathways.dataSets.name Gene.organism.shortName" 
-    longDescription="For a given E. coli str. K-12 substr. MG1655 gene show associated pathways.  Currently, we only have data loaded from Ecocyc." 
+    longDescription="For a given E. coli str. K-12 substr. MG1655 gene, show associated pathways. Source is Ecocyc." 
     sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="EG10383"/>
     <constraint path="Gene.organism.taxonId" op="=" value="511145"/>
@@ -62,7 +62,7 @@
     name="GeneProtDomain" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.secondaryIdentifier Gene.symbol Gene.name Gene.organism.shortName Gene.proteins.primaryAccession Gene.proteins.proteinDomains.name Gene.proteins.proteinDomains.shortName Gene.proteins.proteinDomains.type Gene.proteins.proteinDomains.publications.pubMedId" 
-    longDescription="For a given gene returns the protein and protein domains (from InterPro)." sortOrder="Gene.primaryIdentifier asc">
+    longDescription="For a given gene, show the protein and protein domains. Source is InterPro." sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="arsC" extraValue="E. coli str. K-12 substr. MG1655"/>
   </query>
 </template>
@@ -72,7 +72,7 @@
     name="GOgenes" 
     model="genomic" 
     view="Gene.symbol Gene.goAnnotation.ontologyTerm.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.evidence.code.code Gene.goAnnotation.ontologyTerm.namespace Gene.organism.name Gene.primaryIdentifier" 
-    longDescription="For a given GO annotation, returns a list of genes annotated with this GO term" 
+    longDescription="For a given GO annotation, show the genes annotated with that term." 
     sortOrder="Gene.symbol asc">
     <pathDescription pathString="Gene.goAnnotation" description="GO annotation"/>
     <pathDescription pathString="Gene.goAnnotation.evidence.code" description="GO annotation &gt; evidence"/>
@@ -85,7 +85,7 @@
     name="keyProtGene" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.primaryAccession Gene.proteins.comments.description Gene.organism.shortName" 
-    longDescription="Find genes and proteins that contain the given search term in the description (description comes from UniProt)" 
+    longDescription="For a given search term, show genes and proteins that contain that term in their UniProt description."
     sortOrder="Gene.primaryIdentifier asc" 
     constraintLogic="A and B">
     <pathDescription pathString="Gene.proteins" description="Protein"/>
@@ -99,7 +99,7 @@
     name="OrgGene" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" 
-    longDescription="For a given organism, returns a list of all genes and their chromosome locations" 
+    longDescription="For a given organism, show a list of all genes and their chromosome locations."
     sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
@@ -120,7 +120,7 @@
     name="DomainProtGene" 
     model="genomic" 
     view="ProteinDomain.primaryIdentifier ProteinDomain.shortName ProteinDomain.proteins.primaryIdentifier ProteinDomain.name ProteinDomain.proteins.genes.primaryIdentifier ProteinDomain.proteins.genes.secondaryIdentifier ProteinDomain.proteins.genes.symbol ProteinDomain.proteins.genes.organism.shortName" 
-    longDescription="For a given protein domain (currently InterPro), returns a list of proteins containing the domain and the corresponding gene for the protein." 
+    longDescription="For a given protein domain, show proteins containing that domain and the corresponding gene for the protein. Source is InterPro." 
     sortOrder="ProteinDomain.primaryIdentifier asc" 
     constraintLogic="A and B">
     <constraint path="ProteinDomain.primaryIdentifier" code="A" editable="true" description="" switchable="off" op="=" value="IPR001789"/>
@@ -143,7 +143,7 @@
     name="pubGene" 
     model="genomic" 
     view="Publication.firstAuthor Publication.title Publication.year Publication.journal Publication.volume Publication.pages Publication.pubMedId Publication.bioEntities.primaryIdentifier Publication.bioEntities.symbol Publication.bioEntities.organism.shortName" 
-    longDescription="For a given publication term (title word, or first author) returns genes associated with those publications (as curated by PubMed). [Keywords: article, publication, journal, paper, literature, gene, author]" 
+    longDescription="For a given publication term (title word, or first author), show genes associated with those publications. Source is PubMed."
     sortOrder="Publication.year asc" 
     constraintLogic="A and B and C">
     <constraint path="Publication.bioEntities" editable="false" type="Gene"/>
@@ -158,7 +158,7 @@
     name="EggNOG2Gene" 
     model="genomic" 
     view="EggNogCategory.primaryIdentifier EggNogCategory.description EggNogCategory.functionalCategories.name EggNogCategory.functionalCategories.classifier EggNogCategory.functionalCategories.category EggNogCategory.genes.primaryIdentifier EggNogCategory.genes.symbol EggNogCategory.genes.organism.shortName EggNogCategory.genes.organism.taxonId" 
-    longDescription="For a given EggNOG category, returns a list of genes (from all organisms) annotated with this category. Optional filters on COG function and classifier as well as organism. [Datasource: EggNOG]"
+    longDescription="For a given EggNOG category, show a list of genes (from all organisms) annotated with this category. Can optionally filter on COG function and classifier as well as organism. Source is EggNOG."
     sortOrder="EggNogCategory.primaryIdentifier asc" 
     constraintLogic="A and B and C and D and E">
     <constraint path="EggNogCategory.description" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="AbrB"/>
