@@ -276,7 +276,7 @@
     name="gene2BacilRegNet" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.promoters.transcriptionFactor.primaryIdentifier.symbol Gene.promoters.transcriptionFactor.primaryIdentifier.primaryIdentifier Gene.promoters.transcriptionFactor.primaryIdentifier.eggNogCategories.primaryIdentifier Gene.promoters.transcriptionFactor.primaryIdentifier.eggNogCategories.description Gene.promoters.transcriptionFactor.tfFamily Gene.promoters.transcriptionFactor.regulation Gene.promoters.sigmaBindingFactors.primaryIdentifier.primaryIdentifier Gene.promoters.sigmaBindingFactors.primaryIdentifier.symbol Gene.promoters.sigmaBindingFactors.primaryIdentifier.eggNogCategories.description Gene.promoters.sigmaBindingFactors.primaryIdentifier.eggNogCategories.primaryIdentifier Gene.promoters.evidence.publications.pubMedId Gene.promoters.sequence.residues Gene.promoters.evidence.evidenceCodes.name" 
-    longDescription="For a gene or groups of genes, generates gene regulation information for use by bacillus RegNet" 
+    longDescription="For a given gene, show gene regulation information for use by bacillus RegNet." 
     sortOrder="Gene.primaryIdentifier asc">
     <join path="Gene.promoters.transcriptionFactor" style="OUTER"/>
     <join path="Gene.promoters.evidence" style="OUTER"/>
