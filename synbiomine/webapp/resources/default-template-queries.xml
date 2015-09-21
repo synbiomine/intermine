@@ -170,7 +170,7 @@
 </template>
 
 <!--
-<template name="path2reactGenes" title="Pathway --&gt; Reactions + Modifiers" comment="">
+<template name="path2reactGenes" title="Pathway -&gt; Reactions + Modifiers" comment="">
   <query 
     name="path2reactGenes" 
     model="genomic" 
