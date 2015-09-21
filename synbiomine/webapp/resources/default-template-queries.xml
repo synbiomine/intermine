@@ -183,8 +183,13 @@
 </template>
 -->
 
-<template name="ChromLocation_Gene" title="Chromosomal location --&gt; All genes." comment="">
-  <query name="ChromLocation_Gene" model="genomic" view="Chromosome.locatedFeatures.feature.primaryIdentifier Chromosome.locatedFeatures.feature.symbol Chromosome.primaryIdentifier Chromosome.locatedFeatures.feature.chromosomeLocation.start Chromosome.locatedFeatures.feature.chromosomeLocation.end Chromosome.locatedFeatures.feature.chromosomeLocation.strand" longDescription="Show the genes located between two points on a chromosome. (Data Source: Entrez)." sortOrder="Chromosome.locatedFeatures.feature.primaryIdentifier asc" constraintLogic="B and C and D">
+<template name="ChromLocation_Gene" title="Chromosomal location --&gt; Genes." comment="">
+  <query 
+    name="ChromLocation_Gene" 
+    model="genomic" 
+    view="Chromosome.locatedFeatures.feature.primaryIdentifier Chromosome.locatedFeatures.feature.symbol Chromosome.primaryIdentifier Chromosome.locatedFeatures.feature.chromosomeLocation.start Chromosome.locatedFeatures.feature.chromosomeLocation.end Chromosome.locatedFeatures.feature.chromosomeLocation.strand" 
+    longDescription="For a given chromosomal location, show the genes located between the location's two points. Source is Entrez." 
+    sortOrder="Chromosome.locatedFeatures.feature.primaryIdentifier asc" constraintLogic="B and C and D">
     <pathDescription pathString="Chromosome.locatedFeatures.feature" description="Gene"/>
     <pathDescription pathString="Chromosome.locatedFeatures.feature.chromosomeLocation" description="Chromosome location"/>
     <constraint path="Chromosome.organism" editable="false" type="Organism"/>
@@ -195,8 +200,13 @@
     <constraint path="Chromosome.locatedFeatures.feature.chromosomeLocation.end" code="D" editable="true" description="and:" op="&lt;" value="50000"/>
   </query>
 </template>
+
 <template name="Gene_OrthologueGO" title="Gene --&gt; Orthologues + Orthologue GO terms" comment="">
-  <query name="Gene_OrthologueGO" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.type Gene.homologues.homologue.organism.name Gene.homologues.dataSets.name Gene.homologues.homologue.goAnnotation.ontologyTerm.name Gene.homologues.homologue.goAnnotation.evidence.code.code" longDescription="Show GO terms applied to orthologues of a specific gene. (Data Source: OrthoDB, GO Consortium)." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
+  <query 
+    name="Gene_OrthologueGO" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.homologues.homologue.primaryIdentifier Gene.homologues.homologue.symbol Gene.homologues.type Gene.homologues.homologue.organism.name Gene.homologues.dataSets.name Gene.homologues.homologue.goAnnotation.ontologyTerm.name Gene.homologues.homologue.goAnnotation.evidence.code.code" 
+    longDescription="For a given gene, show GO terms applied to its orthologues. Sources are GO consortium and OrthoDB." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
     <join path="Gene.homologues.homologue.goAnnotation" style="OUTER"/>
     <pathDescription pathString="Gene.homologues" description="Homologue"/>
     <pathDescription pathString="Gene.homologues.dataSets" description="Homologues &gt; dataset"/>
@@ -206,6 +216,7 @@
     <constraint path="Gene" code="B" editable="true" description="" op="LOOKUP" value="DnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
+
 <template name="go2genesOrg" title="GO term [and children] --&gt; Genes [for one organism]" comment="">
   <query name="go2genesOrg" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.goAnnotation.ontologyTerm.parents.name Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.ontologyTerm.identifier" longDescription="Find all genes that are associated with a particular GO term in a specific organism. This template will return genes that have been assigned the given GO term as well as genes that have a more specific GO term." sortOrder="Gene.symbol asc" constraintLogic="A and B">
     <constraint path="Gene.goAnnotation.ontologyTerm" editable="false" type="GOTerm"/>
