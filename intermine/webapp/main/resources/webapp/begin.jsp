@@ -168,7 +168,7 @@
                                                     <c:set var="aspectTitle" value="${row.value}"/>
                                                 </c:when>
                                                 <c:when test="${row.key == 'name'}">
-                                                    <p>Query for <c:out value="${fn:toLowerCase(row.value)}" />:</p>
+                                                    <p>Queries for <c:out value="${fn:toLowerCase(row.value)}" />:</p>
                                                 </c:when>
                                                 <c:when test="${row.key == 'templates'}">
                                                     <ul>
