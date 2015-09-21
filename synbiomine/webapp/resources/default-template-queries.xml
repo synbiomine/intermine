@@ -169,12 +169,6 @@
   </query>
 </template>
 
-<template name="Gene2Enz" title="Gene --&gt; Enzyme" comment="ML: Added 24 Oct 2014">
-  <query name="Gene2Enz" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.proteins.primaryIdentifier Gene.proteins.ecNumbers.identifier Gene.organism.shortName" longDescription="For a given gene (or list of genes) returns the protein if t is an enzyme." sortOrder="Gene.primaryIdentifier asc" constraintLogic="A and B">
-    <constraint path="Gene.proteins.ecNumbers.identifier" code="A" editable="true" op="IS NOT NULL"/>
-    <constraint path="Gene" code="B" editable="true" op="LOOKUP" value="BSU02700" extraValue="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
 <template name="path2reactGenes" title="Pathway(s) --&gt; Reaction(s) + Modifier(s)" comment="">
   <query name="path2reactGenes" model="genomic" view="Pathway.identifier Pathway.name Pathway.reactions.identifier Pathway.reactions.name Pathway.reactions.equation Pathway.reactions.modifiers.primaryIdentifier Pathway.reactions.modifiers.symbol Pathway.reactions.modifiers.organism.shortName" longDescription="For a given pathway (or list of pathways), returns a list of the annotated reactions and their modifiers (genes). [Datasource: KEGG]" sortOrder="Pathway.identifier asc" constraintLogic="A and B and C">
     <constraint path="Pathway.name" code="A" editable="true" description="" switchable="on" op="CONTAINS" value="metabolites"/>
