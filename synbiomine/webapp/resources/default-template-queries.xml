@@ -15,7 +15,7 @@
     sortOrder="Gene.symbol asc" 
     constraintLogic="A and B">
     <constraint path="Gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" description="Return orthologues only in this organism" switchable="on" op="=" value="G. kaustophilus HTA426"/>
+    <constraint path="Gene.homologues.homologue.organism.shortName" code="B" editable="true" switchable="on" op="=" value="G. kaustophilus HTA426"/>
   </query>
 </template>
 
@@ -111,7 +111,7 @@
     model="genomic" 
     view="Protein.primaryIdentifier Protein.primaryAccession" 
     longDescription="For a given organism, show all proteins." sortOrder="Protein.primaryIdentifier asc">
-    <constraint path="Protein.organism.name" editable="true" description="Show all the proteins from the organism:" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
+    <constraint path="Protein.organism.name" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
   </query>
 </template>
 
@@ -123,8 +123,8 @@
     longDescription="For a given protein domain, show proteins containing that domain and the corresponding gene for the protein. Source is InterPro." 
     sortOrder="ProteinDomain.primaryIdentifier asc" 
     constraintLogic="A and B">
-    <constraint path="ProteinDomain.primaryIdentifier" code="A" editable="true" description="" switchable="off" op="=" value="IPR001789"/>
-    <constraint path="ProteinDomain.name" code="B" editable="true" description="" switchable="on" op="CONTAINS" value="receiver"/>
+    <constraint path="ProteinDomain.primaryIdentifier" code="A" editable="true" switchable="off" op="=" value="IPR001789"/>
+    <constraint path="ProteinDomain.name" code="B" editable="true" switchable="on" op="CONTAINS" value="receiver"/>
   </query>
 </template>
 
@@ -153,7 +153,7 @@
   </query>
 </template>
 
-<template name="EggNOG2Gene" title="Ortholog functional category --&gt; Gene(s)" comment="">
+<template name="EggNOG2Gene" title="Ortholog functional category --&gt; Genes" comment="">
   <query 
     name="EggNOG2Gene" 
     model="genomic" 
@@ -183,7 +183,7 @@
 </template>
 -->
 
-<template name="ChromLocation_Gene" title="Chromosomal location --&gt; Genes." comment="">
+<template name="ChromLocation_Gene" title="Chromosomal location --&gt; Genes" comment="">
   <query 
     name="ChromLocation_Gene" 
     model="genomic" 
