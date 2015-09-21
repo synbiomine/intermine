@@ -232,11 +232,6 @@
   </query>
 </template>
 
-<template name="gene2funccat" title="Gene(s) --&gt; Functional Category [EggNOG + COG]" comment="">
-  <query name="gene2funccat" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.eggNogCategories.functionalCategories.category Gene.eggNogCategories.functionalCategories.classifier Gene.eggNogCategories.functionalCategories.name" longDescription="For a given gene (or list of genes) returns the functional classification annotated in EggNOG and COG." sortOrder="Gene.primaryIdentifier asc">
-    <constraint path="Gene" editable="true" op="LOOKUP" value="BSU00370" extraValue="B. subtilis subsp. subtilis str. 168"/>
-  </query>
-</template>
 <template name="BsubDifferentExpr" title="B. subtilis genes with differential expression [Gene(s) --&gt; Promoter(s) + Expression ]" comment="">
   <query name="BsubDifferentExpr" model="genomic" view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" longDescription="Search for B. subtilis genes with differential expression. For a given Bacillus subtilis gene (or list of genes) returns predicted promoters (and expression data) for conditions matching the applied filters (see below).  Searches GEO data from Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219]. Optional filters are log2 mean expression (default: ON) and log2 fold change in expression (default: ON). Promoter sequences are derived from Nicolas et al. (2012; PMID: 22383849) and DBTBS (dbtbs.hgc.jp)" sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and (C or D)">
     <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
