@@ -258,8 +258,14 @@
   </query>
 </template>
 
-<template name="enz2gene" title="Enzyme [EC no] --&gt; Gene(s)" comment="">
-  <query name="enz2gene" model="genomic" view="Protein.ecNumbers.identifier Protein.primaryIdentifier Protein.uniprotAccession Protein.name Protein.genes.primaryIdentifier Protein.organism.name" longDescription="For a given enzyme EC number (default EC 2.7.7.7), returns a list of genes with proteins annotated as enzymes (Data source: UniProt). Optional to filter by organism (Default: OFF)." sortOrder="Protein.primaryIdentifier asc" constraintLogic="A and B">
+<template name="enz2gene" title="Enzyme (EC no) --&gt; Genes" comment="">
+  <query 
+    name="enz2gene" 
+    model="genomic" 
+    view="Protein.ecNumbers.identifier Protein.primaryIdentifier Protein.uniprotAccession Protein.name Protein.genes.primaryIdentifier Protein.organism.name" 
+    longDescription="For a given enzyme EC number, show the genes that have proteins annotated as enzymes for that EC number. Source is UniProt." 
+    sortOrder="Protein.primaryIdentifier asc" 
+    constraintLogic="A and B">
     <constraint path="Protein.ecNumbers.identifier" code="A" editable="true" op="=" value="2.7.7.7"/>
     <constraint path="Protein.organism.name" code="B" editable="true" description="Organism" switchable="off" op="=" value="Geobacillus thermodenitrificans NG80-2"/>
   </query>
