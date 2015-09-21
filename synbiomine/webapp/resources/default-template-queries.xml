@@ -99,9 +99,9 @@
     name="OrgGene" 
     model="genomic" 
     view="Gene.primaryIdentifier Gene.symbol Gene.chromosome.primaryIdentifier Gene.chromosomeLocation.strand Gene.chromosomeLocation.start Gene.chromosomeLocation.end Gene.organism.shortName" 
-    longDescription="For a given organism, show a list of all genes and their chromosome locations."
+    longDescription="For a given organism, show all its genes and their chromosome locations."
     sortOrder="Gene.primaryIdentifier asc">
-    <constraint path="Gene.organism" editable="true" op="LOOKUP" value="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.organism.shortName" editable="true" op="=" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
 
