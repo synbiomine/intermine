@@ -237,7 +237,7 @@
     name="BsubDifferentExpr" 
     model="genomic" 
     view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" 
-    longDescription="For a given B. subtilis gene, show predicted promoters with differential expression. Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)." sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and (C or D)">
+    longDescription="For a given B. subtilis gene, show predicted promoters with differential expression (by default). Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)." sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and (C or D)">
     <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
     <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
     <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" switchable="on" op="&lt;=" value="-1.0"/>
@@ -245,18 +245,23 @@
   </query>
 </template>
 
+<template name="BsubStableExpr" title="Gene (B. subtilis) with stable expression --&gt; Promoters + Expression" comment="">
+  <query 
+    name="BsubStableExpr" 
+    model="genomic" 
+    view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" 
+    longDescription="For a given B. subtilis gene, show predicted promoters with stable expression (by default). Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)" sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and C and D">
+    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaG" extraValue="B. subtilis subsp. subtilis str. 168"/>
+    <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
+    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" switchable="on" op="&lt;=" value="1.0"/>
+    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="D" editable="true" switchable="on" op="&gt;=" value="-1.0"/>
+  </query>
+</template>
+
 <template name="enz2gene" title="Enzyme [EC no] --&gt; Gene(s)" comment="">
   <query name="enz2gene" model="genomic" view="Protein.ecNumbers.identifier Protein.primaryIdentifier Protein.uniprotAccession Protein.name Protein.genes.primaryIdentifier Protein.organism.name" longDescription="For a given enzyme EC number (default EC 2.7.7.7), returns a list of genes with proteins annotated as enzymes (Data source: UniProt). Optional to filter by organism (Default: OFF)." sortOrder="Protein.primaryIdentifier asc" constraintLogic="A and B">
     <constraint path="Protein.ecNumbers.identifier" code="A" editable="true" op="=" value="2.7.7.7"/>
     <constraint path="Protein.organism.name" code="B" editable="true" description="Organism" switchable="off" op="=" value="Geobacillus thermodenitrificans NG80-2"/>
-  </query>
-</template>
-<template name="BsubStableExpr" title="B. subtilis genes with stable expression [Gene(s) --&gt; Promoter(s) + Expression]" comment="">
-  <query name="BsubStableExpr" model="genomic" view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" longDescription="Search for genes B. subtilis genes with stable expression. For a given Bacillus subtilis gene (or list of genes) returns predicted promoters (and expression data) for conditions matching the applied filters (see below).  Searches GEO data from Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219]. Optional filters are log2 mean expression (default: ON) and log2 fold change in expression (default: OFF). Promoter sequences are derived from Nicolas et al. (2012; PMID: 22383849) and DBTBS (dbtbs.hgc.jp)" sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and C and D">
-    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaG" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" description="Log2 fold-change [less than or equal to]" switchable="on" op="&lt;=" value="1.0"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="D" editable="true" description="Log2 fold-change [greater than or equal to]" switchable="on" op="&gt;=" value="-1.0"/>
   </query>
 </template>
 
