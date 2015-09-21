@@ -217,14 +217,21 @@
   </query>
 </template>
 
-<template name="go2genesOrg" title="GO term [and children] --&gt; Genes [for one organism]" comment="">
-  <query name="go2genesOrg" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.goAnnotation.ontologyTerm.parents.name Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.ontologyTerm.identifier" longDescription="Find all genes that are associated with a particular GO term in a specific organism. This template will return genes that have been assigned the given GO term as well as genes that have a more specific GO term." sortOrder="Gene.symbol asc" constraintLogic="A and B">
+<template name="go2genesOrg" title="GO term (and children) --&gt; Genes (for one organism)" comment="">
+  <query 
+    name="go2genesOrg" 
+    model="genomic" 
+    view="Gene.primaryIdentifier Gene.symbol Gene.goAnnotation.ontologyTerm.parents.name Gene.goAnnotation.ontologyTerm.parents.identifier Gene.goAnnotation.ontologyTerm.name Gene.goAnnotation.ontologyTerm.identifier" 
+    longDescription="For a given GO term and its child terms, show all the genes associated with any of those terms." 
+    sortOrder="Gene.symbol asc" 
+    constraintLogic="A and B">
     <constraint path="Gene.goAnnotation.ontologyTerm" editable="false" type="GOTerm"/>
     <constraint path="Gene.goAnnotation.ontologyTerm.parents" editable="false" type="GOTerm"/>
-    <constraint path="Gene.goAnnotation.ontologyTerm.parents.name" code="A" editable="true" description="Show genes annotated with GO term (and any children of this GO term):" op="=" value="DNA binding"/>
-    <constraint path="Gene.organism.name" code="B" editable="true" description="from organism:" op="=" value="Bacillus subtilis subsp. subtilis str. 168"/>
+    <constraint path="Gene.goAnnotation.ontologyTerm.parents.name" code="A" editable="true" op="=" value="DNA binding"/>
+    <constraint path="Gene.organism.name" code="B" editable="true" op="=" value="Bacillus subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
+
 <template name="gene2funccat" title="Gene(s) --&gt; Functional Category [EggNOG + COG]" comment="">
   <query name="gene2funccat" model="genomic" view="Gene.primaryIdentifier Gene.symbol Gene.eggNogCategories.primaryIdentifier Gene.eggNogCategories.description Gene.eggNogCategories.functionalCategories.category Gene.eggNogCategories.functionalCategories.classifier Gene.eggNogCategories.functionalCategories.name" longDescription="For a given gene (or list of genes) returns the functional classification annotated in EggNOG and COG." sortOrder="Gene.primaryIdentifier asc">
     <constraint path="Gene" editable="true" op="LOOKUP" value="BSU00370" extraValue="B. subtilis subsp. subtilis str. 168"/>
