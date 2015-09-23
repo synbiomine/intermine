@@ -147,9 +147,9 @@
   </tr>
   <tr>
     <td>Orthologues</td>
-    <td><a href="http://orthodb.org/orthodb7">OrthoDB</a></td>
+    <td><a href="http://orthodb.org">OrthoDB</a></td>
     <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus pumilus</i> SAFR-032, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2</td>
-    <td>v7 - Aug, 2013</td>
+    <td>v7 (Aug 2013)</td>
   </tr>
   <tr>
     <td>Publications</td>
