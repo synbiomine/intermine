@@ -110,6 +110,12 @@
     <td>2.5 (June 2012)</td>
   </tr>
   <tr>
+    <td>Functional Classification</td>
+    <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
+    <td>All</td>
+    <td>v4.0 - Mar, 2014</td>
+  </tr>
+  <tr>
     <td>Pathways</td>
     <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
     <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
@@ -138,12 +144,6 @@
     <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a> (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
     <td><i>Escherichia coli</i> str. K-12 substr. MG1655</td>
     <td>Jan, 2007</td>
-  </tr>
-  <tr>
-    <td>Functional Classification</td>
-    <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
-    <td>All</td>
-    <td>v4.0 - Mar, 2014</td>
   </tr>
   <tr>
     <td>Orthologues</td>
