@@ -129,21 +129,21 @@
   </tr>
   <tr>
     <td>Regulatory features (promoters, operons)</td>
-    <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>, Science, 2012 Mar 2;335(6072):1103-6, PMID 22383849</td>
+    <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>", Science, 2012 Mar 2;335(6072):1103-6, PMID 22383849</td>
     <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
     <td>DBTBS Release 5 (Sept 2007), Nicolas et al March 2012</td>
   </tr>
   <tr>
     <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
-    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a>, Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>, Science 2012 Mar 2;335(6072):1103-6. PMID: 22383849</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a>, Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>", Science 2012 Mar 2;335(6072):1103-6. PMID: 22383849</td>
     <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
     <td>Apr 2014</td>
   </tr>
   <tr>
     <td>Whole-genome expression - <i>E. coli</i> K-12 MG1655</td>
-    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a> (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a>, Faith et al (2007), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/17214507">Large-scale mapping and validation of Escherichia coli transcriptional regulation from a compendium of expression profiles</a>", PLoS Biol 2007 Jan;5(1):e8. PMID: 17214507 (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
     <td><i>Escherichia coli</i> str. K-12 substr. MG1655</td>
-    <td>Jan, 2007</td>
+    <td>Jan 2015</td>
   </tr>
   <tr>
     <td>Orthologues</td>
