@@ -153,9 +153,9 @@
   </tr>
   <tr>
     <td>Publications</td>
-    <td><a href="ftp://ftp.ncbi.nih.gov/gene/DATA/">NCBI PubMed (gene to PubMed id mappings)</a></td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/pubmed">NCBI PubMed</a></td>
     <td>All</td>
-    <td>Jul, 2015</td>
+    <td>July 2015</td>
   </tr>
 </table>
 
