@@ -80,7 +80,7 @@
     <td>NCBI RefSeq Release 70 (March 2015)</td>
   </tr>
   <tr>
-    <td>Protein sequence and annotation</a></td>
+    <td>Protein sequences and annotations</a></td>
     <td><a href="http://www.uniprot.org/">UniProt</a></td>
     <td>All</td>
     <td>UniProt Release 2015_07 (June 2015)</td>
