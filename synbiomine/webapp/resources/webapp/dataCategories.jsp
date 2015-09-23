@@ -74,6 +74,12 @@
     <th>Version</th>
   </tr>
   <tr>
+    <td>Taxonomy</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy</a></td>
+    <td>All</td>
+    <td>July 2015</td>
+  </tr>
+  <tr>
     <td>Genome sequences</td>
     <td><a href="http://www.ncbi.nlm.nih.gov/refseq/">NCBI Refseq</a></td>
     <td>All</td>
