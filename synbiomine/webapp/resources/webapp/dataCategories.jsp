@@ -113,7 +113,7 @@
     <td>Functional Classification</td>
     <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
     <td>All</td>
-    <td>v4.0 - Mar, 2014</td>
+    <td>v4.0 (Mar 2014)</td>
   </tr>
   <tr>
     <td>Pathways</td>
