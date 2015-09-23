@@ -99,9 +99,9 @@
   </tr>
   <tr>
     <td>Gene Ontology</td>
-    <td><a href="http://www.uniprot.org/">UniProt</a></td>
+    <td><a href="http://geneontology.org/">Gene Ontology Consortium</a></td>
     <td>All</td>
-    <td>UniProt Release 2015_07 (June 2015)</td>
+    <td>Gene Ontology 2015-06-01 (June 2015)</td>
   </tr>
   <tr>
     <td>Pathways</td>
