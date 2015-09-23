@@ -74,14 +74,8 @@
                <th>Version</th>
        </tr>
        <tr>
-               <td>Genome sequence</td>
-               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/">NCBI Genomes</a></td>
-               <td>All</td>
-               <td>NCBI RefSeq Release 70 (March 2015)</td>
-       </tr>
-       <tr>
-               <td>Gene names, symbol and annotation</td>
-               <td><a href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/">RefSeq</a></td>
+               <td>Genome sequences</td>
+               <td><a href="http://www.ncbi.nlm.nih.gov/refseq/">NCBI Refseq</a></td>
                <td>All</td>
                <td>NCBI RefSeq Release 70 (March 2015)</td>
        </tr>
