@@ -135,9 +135,9 @@
   </tr>
   <tr>
     <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
-    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a> (The condition-dependent transcriptome of Bacillus subtilis 168)</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a>, Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>, Science 2012 Mar 2;335(6072):1103-6. PMID: 22383849</td>
     <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
-    <td>Aug, 2014</td>
+    <td>Apr 2014</td>
   </tr>
   <tr>
     <td>Whole-genome expression - <i>E. coli</i> K-12 MG1655</td>
