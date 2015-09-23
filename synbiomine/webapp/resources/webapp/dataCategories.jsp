@@ -67,84 +67,84 @@
 <br/>
 
 <table cellpadding="10" border="1">
-       <tr>
-               <th>Type</th>
-               <th>Source</th>
-               <th>Organisms</th>
-               <th>Version</th>
-       </tr>
-       <tr>
-               <td>Genome sequences</td>
-               <td><a href="http://www.ncbi.nlm.nih.gov/refseq/">NCBI Refseq</a></td>
-               <td>All</td>
-               <td>NCBI RefSeq Release 70 (March 2015)</td>
-       </tr>
-       <tr>
-               <td>Protein sequence and annotation</a></td>
-               <td><a href="http://www.uniprot.org/">UniProt</a></td>
-               <td>All</td>
-               <td>UniProt Release 2015_07 (June 2015)</td>
-       </tr>
-       <tr>
-               <td>Protein domains</td>
-               <td><a href="http://www.ebi.ac.uk/interpro/">InterPro</a></td>
-               <td>All</td>
-               <td>InterPro 52.0 (May 2015)</td>
-       </tr>
-       <tr>
-               <td>Gene Ontology</td>
-               <td><a href="http://www.uniprot.org/">UniProt</a></td>
-               <td>All</td>
-               <td>UniProt Release 2015_07 (June 2015)</td>
-       </tr>
-       <tr>
-               <td>Pathways</td>
-               <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
-               <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
-               <td>Version 19.1 (June 25, 2015)</td>
-       </tr>
-       <tr>
-               <td>Interactions</td>
-               <td><a href="http://thebiogrid.org/">BioGRID</a></td>
-               <td><i>B. subtilis</i> (168)</td>
-               <td>Version 3.4.126 (July 2015)</td>
-       </tr>
-       <tr>
-               <td>Regulatory features (promoters, operons)</td>
-               <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012: PMID: 22383849)</td>
-               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
-               <td>Mar, 2008; 2012</td>
-       </tr>
-       <tr>
-               <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
-               <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a> (The condition-dependent transcriptome of Bacillus subtilis 168)</td>
-               <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
-               <td>Aug, 2014</td>
-       </tr>
-       <tr>
-               <td>Whole-genome expression - <i>E. coli</i> K-12 MG1655</td>
-               <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a> (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
-               <td><i>Escherichia coli</i> str. K-12 substr. MG1655</td>
-               <td>Jan, 2007</td>
-       </tr>
-       <tr>
-               <td>Functional Classification</td>
-               <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
-               <td>All</td>
-               <td>v4.0 - Mar, 2014</td>
-       </tr>
-       <tr>
-               <td>Orthologues</td>
-               <td><a href="http://orthodb.org/orthodb7">OrthoDB</a></td>
-               <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus pumilus</i> SAFR-032, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2</td>
-               <td>v7 - Aug, 2013</td>
-       </tr>
-       <tr>
-               <td>Publications</td>
-               <td><a href="ftp://ftp.ncbi.nih.gov/gene/DATA/">NCBI PubMed (gene to PubMed id mappings)</a></td>
-               <td>All</td>
-               <td>Jul, 2015</td>
-       </tr>
+  <tr>
+    <th>Type</th>
+    <th>Source</th>
+    <th>Organisms</th>
+    <th>Version</th>
+  </tr>
+  <tr>
+    <td>Genome sequences</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/refseq/">NCBI Refseq</a></td>
+    <td>All</td>
+    <td>NCBI RefSeq Release 70 (March 2015)</td>
+  </tr>
+  <tr>
+    <td>Protein sequence and annotation</a></td>
+    <td><a href="http://www.uniprot.org/">UniProt</a></td>
+    <td>All</td>
+    <td>UniProt Release 2015_07 (June 2015)</td>
+  </tr>
+  <tr>
+    <td>Protein domains</td>
+    <td><a href="http://www.ebi.ac.uk/interpro/">InterPro</a></td>
+    <td>All</td>
+    <td>InterPro 52.0 (May 2015)</td>
+  </tr>
+  <tr>
+    <td>Gene Ontology</td>
+    <td><a href="http://www.uniprot.org/">UniProt</a></td>
+    <td>All</td>
+    <td>UniProt Release 2015_07 (June 2015)</td>
+  </tr>
+  <tr>
+    <td>Pathways</td>
+    <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
+    <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
+    <td>Version 19.1 (June 25, 2015)</td>
+  </tr>
+  <tr>
+    <td>Interactions</td>
+    <td><a href="http://thebiogrid.org/">BioGRID</a></td>
+    <td><i>B. subtilis</i> (168)</td>
+    <td>Version 3.4.126 (July 2015)</td>
+  </tr>
+  <tr>
+    <td>Regulatory features (promoters, operons)</td>
+    <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012: PMID: 22383849)</td>
+    <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
+    <td>Mar, 2008; 2012</td>
+  </tr>
+  <tr>
+    <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE27219">GEO series data set GSE27219</a> (The condition-dependent transcriptome of Bacillus subtilis 168)</td>
+    <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
+    <td>Aug, 2014</td>
+  </tr>
+  <tr>
+    <td>Whole-genome expression - <i>E. coli</i> K-12 MG1655</td>
+    <td><a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE6836">GEO series data set GSE6836</a> (Large-Scale Mapping and Validation of E. coli Transcriptional Regulation from a Compendium of Expression Profiles)</td>
+    <td><i>Escherichia coli</i> str. K-12 substr. MG1655</td>
+    <td>Jan, 2007</td>
+  </tr>
+  <tr>
+    <td>Functional Classification</td>
+    <td><a href="http://eggnog.embl.de/">EggNOG</a></td>
+    <td>All</td>
+    <td>v4.0 - Mar, 2014</td>
+  </tr>
+  <tr>
+    <td>Orthologues</td>
+    <td><a href="http://orthodb.org/orthodb7">OrthoDB</a></td>
+    <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus pumilus</i> SAFR-032, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2</td>
+    <td>v7 - Aug, 2013</td>
+  </tr>
+  <tr>
+    <td>Publications</td>
+    <td><a href="ftp://ftp.ncbi.nih.gov/gene/DATA/">NCBI PubMed (gene to PubMed id mappings)</a></td>
+    <td>All</td>
+    <td>Jul, 2015</td>
+  </tr>
 </table>
 
 </div>
