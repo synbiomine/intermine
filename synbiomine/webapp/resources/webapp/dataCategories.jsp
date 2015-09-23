@@ -119,7 +119,7 @@
     <td>Pathways</td>
     <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
     <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
-    <td>Version 19.1 (June 25, 2015)</td>
+    <td>Version 19.1 (June 2015)</td>
   </tr>
   <tr>
     <td>Interactions</td>
