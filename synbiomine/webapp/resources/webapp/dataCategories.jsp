@@ -80,10 +80,16 @@
     <td>NCBI RefSeq Release 70 (March 2015)</td>
   </tr>
   <tr>
-    <td>Protein sequences and annotations</a></td>
+    <td>Protein sequences and annotations</td>
     <td><a href="http://www.uniprot.org/">UniProt</a></td>
     <td>All</td>
     <td>UniProt Release 2015_07 (June 2015)</td>
+  </tr>
+  <tr>
+    <td>Protein Gene Ontology annotations</td>
+    <td><a href="http://www.ebi.ac.uk/GOA">UniProt-GOA</a></td>
+    <td>All</td>
+    <td>UniProt-GOA Release 20150623 (June 2015)
   </tr>
   <tr>
     <td>Protein domains</td>
