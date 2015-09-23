@@ -128,6 +128,12 @@
     <td>Version 19.1 (June 2015)</td>
   </tr>
   <tr>
+    <td>Reactions</td>
+    <td><a href="https://www.ebi.ac.uk/biomodels-main/path2models">Path2Models</a> from Buchel et al. (2013), <a href="http://www.ncbi.nlm.nih.gov/pubmed/24180668">"Path2Models: large-scale generation of computational models from biochemical pathway maps."</a>, BMC Syst Biol. 2013 Nov 1;7:116.</td>
+    <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
+    <td>November 2013</td>
+  </tr>
+  <tr>
     <td>Interactions</td>
     <td><a href="http://thebiogrid.org/">BioGRID</a></td>
     <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
