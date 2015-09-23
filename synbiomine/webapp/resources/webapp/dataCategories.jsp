@@ -104,6 +104,12 @@
     <td>Gene Ontology 2015-06-01 (June 2015)</td>
   </tr>
   <tr>
+    <td>Sequence Ontology</td>
+    <td><a href="http://www.sequenceontology.org/">The Sequence Ontology Project</a></td>
+    <td>All</td>
+    <td>2.5 (June 2012)</td>
+  </tr>
+  <tr>
     <td>Pathways</td>
     <td><a href="http://ecocyc.org/"></a>Ecocyc</a> from Keseler et al. (2013), <a href="http://nar.oxfordjournals.org/content/41/D1/D605">"EcoCyc: fusing model organism databases with systems biology"</a>, Nucleic Acids Research 41: D605-12.</td>
     <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
