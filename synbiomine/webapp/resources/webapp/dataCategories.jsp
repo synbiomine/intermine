@@ -129,9 +129,9 @@
   </tr>
   <tr>
     <td>Regulatory features (promoters, operons)</td>
-    <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012: PMID: 22383849)</td>
+    <td><a href="http://dbtbs.hgc.jp">DBTBS</a>; Nicolas et al. (2012), "<a href="http://www.ncbi.nlm.nih.gov/pubmed/22383849">Condition-dependent transcriptome reveals high-level regulatory architecture in Bacillus subtilis.</a>, Science, 2012 Mar 2;335(6072):1103-6, PMID 22383849</td>
     <td><i>Bacillus subtilis</i> subsp. subtilis str. 168</td>
-    <td>Mar, 2008; 2012</td>
+    <td>DBTBS Release 5 (Sept 2007), Nicolas et al March 2012</td>
   </tr>
   <tr>
     <td>Whole-genome expression - <i>B. subtilis</i> 168</td>
