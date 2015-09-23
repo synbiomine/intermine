@@ -118,7 +118,7 @@
   <tr>
     <td>Interactions</td>
     <td><a href="http://thebiogrid.org/">BioGRID</a></td>
-    <td><i>B. subtilis</i> (168)</td>
+    <td><i>Escherichia coli</i> K-12 substr. MG1655</td>
     <td>Version 3.4.126 (July 2015)</td>
   </tr>
   <tr>
