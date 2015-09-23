@@ -445,6 +445,7 @@
   <tag name="im:hidden" objectIdentifier="BioEntity.subjects" type="collection"/>
   <tag name="im:hidden" objectIdentifier="BioEntity.relations" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Evidence.relations" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Operon.evidence" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Promoter.evidence" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Promoter.predictedSigmaFactors" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Promoter.sigmaBindingFactors" type="collection"/>
