@@ -105,12 +105,24 @@
   </query>
 </template>
 
+<template name="Organism_Pathways" title="Organism (E. coli str. K-12 substr. MG1655) --&gt; Pathways" comment="">
+  <query 
+    name="Organism_Pathways" 
+    model="genomic" 
+    view="Pathway.shortName Pathway.identifier Pathway.curated Pathway.name Pathway.description Pathway.genes.organism.name Pathway.genes.organism.taxonId" 
+    longDescription="For E. coli str. K-12 substr. MG1655, show associated pathways.  This is the only organism for which we have this data loaded.  Source is Ecocyc." 
+    sortOrder="Pathway.shortName asc">
+    <constraint path="Pathway.genes.organism.name" editable="true" op="=" value="Escherichia coli str. K-12 substr. MG1655"/>
+  </query>
+</template>
+
 <template name="Organism_Protein" title="Organism --&gt; Proteins" comment="Added 7May2013: ML">
   <query 
     name="Organism_Protein" 
     model="genomic" 
     view="Protein.primaryIdentifier Protein.primaryAccession Protein.organism.shortName" 
-    longDescription="For a given organism, show all its proteins." sortOrder="Protein.primaryIdentifier asc">
+    longDescription="For a given organism, show all its proteins." 
+    sortOrder="Protein.primaryIdentifier asc">
     <constraint path="Protein.organism.shortName" editable="true" op="=" value="B. subtilis subsp. subtilis str. 168"/>
   </query>
 </template>
@@ -348,6 +360,7 @@
   <tag name="im:aspect:Function" objectIdentifier="gene2funccat" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="go2genesOrg" type="template"/>
+  <tag name="im:aspect:Function" objectIdentifier="Organism_Pathways" type="template"/>
 
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.MRNA" type="class"/>
   <tag name="im:aspect:Genes" objectIdentifier="org.intermine.model.bio.Transcript" type="class"/>
@@ -423,6 +436,7 @@
   <tag name="im:frontpage" objectIdentifier="GOgenes" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Organism_Protein" type="template"/>
+  <tag name="im:frontpage" objectIdentifier="Organism_Pathways" type="template"/>
   <tag name="im:frontpage" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Protein_GOterms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="keyProtGene" type="template"/>
@@ -476,6 +490,7 @@
   <tag name="im:public" objectIdentifier="OrgGene" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_GoTerm_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_GoTerm_GeneWithannotation" type="template"/>
+  <tag name="im:public" objectIdentifier="Organism_Pathways" type="template"/>
   <tag name="im:public" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:public" objectIdentifier="Protein_GOtermsSpecificOntology" type="template"/>
   <tag name="im:public" objectIdentifier="Protein_GOterms" type="template"/>
