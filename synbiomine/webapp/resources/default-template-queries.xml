@@ -463,6 +463,7 @@
   <tag name="im:hidden" objectIdentifier="Promoter.evidence" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Promoter.predictedSigmaFactors" type="collection"/>
   <tag name="im:hidden" objectIdentifier="Promoter.sigmaBindingFactors" type="collection"/>
+  <tag name="im:hidden" objectIdentifier="Reaction.reactionSpecies" type="collection"/>
 
   <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class">
   </tag>
