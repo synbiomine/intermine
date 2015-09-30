@@ -4,51 +4,51 @@
 <classes>
 <!-- add any <class> elements here -->
 <class name="Reaction" is-interface="true">
-        <attribute name="identifier" type="java.lang.String"/>
-        <attribute name="name" type="java.lang.String"/>
-	<attribute name="equation" type="java.lang.String"/>
-        <attribute name="sboterm" type="java.lang.String"/>
-	<attribute name="type" type="java.lang.String"/>
-	<reference name="kineticParameters" referenced-type="KineticParameters"/>
-	<collection name="reactionSpecies" referenced-type="ReactionSpecies"/>
-        <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
-        <collection name="pathways" referenced-type="Pathway" reverse-reference="reactions"/>
-	<collection name="compounds" referenced-type="Compound" reverse-reference="reactions"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="name" type="java.lang.String"/>
+  <attribute name="equation" type="java.lang.String"/>
+  <attribute name="sboterm" type="java.lang.String"/>
+  <attribute name="type" type="java.lang.String"/>
+  <reference name="kineticParameters" referenced-type="KineticParameters"/>
+  <collection name="reactionSpecies" referenced-type="ReactionSpecies"/>
+  <collection name="modifiers" referenced-type="Gene" reverse-reference="reactions"/>
+  <collection name="pathways" referenced-type="Pathway" reverse-reference="reactions"/>
+  <collection name="compounds" referenced-type="Compound" reverse-reference="reactions"/>
+  <collection name="dataSets" referenced-type="DataSet"/>
 </class>
 
 <class name="ReactionSpecies" is-interface="true">
-	<attribute name="stoichiometry" type="java.lang.Double"/>
-	<attribute name="role" type="java.lang.String"/>
-	<reference name="compound" referenced-type="Compound"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
+  <attribute name="stoichiometry" type="java.lang.Double"/>
+  <attribute name="role" type="java.lang.String"/>
+  <reference name="compound" referenced-type="Compound"/>
+  <collection name="dataSets" referenced-type="DataSet"/>
 </class>
 
 <class name="KineticParameters" is-interface="true">
-	<attribute name="type" type="java.lang.String"/>
-	<attribute name="lowerBound" type="java.lang.Double"/>
-	<attribute name="upperBound" type="java.lang.Double"/>
-	<attribute name="fluxValue" type="java.lang.Double"/>
-	<attribute name="objectiveCoefficient" type="java.lang.Double"/>
+  <attribute name="type" type="java.lang.String"/>
+  <attribute name="lowerBound" type="java.lang.Double"/>
+  <attribute name="upperBound" type="java.lang.Double"/>
+  <attribute name="fluxValue" type="java.lang.Double"/>
+  <attribute name="objectiveCoefficient" type="java.lang.Double"/>
 </class>
 
 <class name="Compound" is-interface="true">
-        <attribute name="name" type="java.lang.String"/>
-        <attribute name="identifier" type="java.lang.String"/>
-	<attribute name="kegg" type="java.lang.String"/>
-	<attribute name="sboterm" type="java.lang.String"/>
-	<attribute name="charge" type="java.lang.Double"/>
-	<attribute name="formula" type="java.lang.String"/>
-	<collection name="reactions" referenced-type="Reaction" reverse-reference="compounds"/>
-        <collection name="dataSets" referenced-type="DataSet"/>
+  <attribute name="name" type="java.lang.String"/>
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="kegg" type="java.lang.String"/>
+  <attribute name="sboterm" type="java.lang.String"/>
+  <attribute name="charge" type="java.lang.Double"/>
+  <attribute name="formula" type="java.lang.String"/>
+  <collection name="reactions" referenced-type="Reaction" reverse-reference="compounds"/>
+  <collection name="dataSets" referenced-type="DataSet"/>
 </class>
 
 <class name="Pathway" is-interface="true">
-	 <collection name="reactions" referenced-type="Reaction" reverse-reference="pathways"/>
- </class>
+  <collection name="reactions" referenced-type="Reaction" reverse-reference="pathways"/>
+</class>
 
 <class name="Gene" is-interface="true">
-	 <collection name="reactions" referenced-type="Reaction" reverse-reference="modifiers"/>
- </class>
+  <collection name="reactions" referenced-type="Reaction" reverse-reference="modifiers"/>
+</class>
 
 </classes>
