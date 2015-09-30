@@ -345,11 +345,13 @@
   <tag name="im:aspect:Expression" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
 
+  <tag name="im:aspect:Function" objectIdentifier="BioEntity.ontologyAnnotations" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene.eggNogCategories" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene.pathways" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Gene.reactions" type="collection"/>
   <tag name="im:aspect:Function" objectIdentifier="Protein.ecNumbers" type="collection"/>
-  <tag name="im:aspect:Function" objectIdentifier="BioEntity.ontologyAnnotations" type="collection"/>
+  <tag name="im:aspect:Function" objectIdentifier="Reaction.compounds" type="collection"/>
+  <tag name="im:aspect:Function" objectIdentifier="Reaction.modifiers" type="collection"/>
 
   <tag name="im:aspect:Function" objectIdentifier="GeneProtDomain" type="template"/>
   <tag name="im:aspect:Function" objectIdentifier="GOgenes" type="template"/>
