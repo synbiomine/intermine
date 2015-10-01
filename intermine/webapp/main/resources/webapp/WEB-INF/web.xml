@@ -3145,16 +3145,6 @@ The different token types are:
     <servlet-name>ws-available-widgets</servlet-name>
   </filter-mapping>
 
- <filter>
-  <filter-name>CompressingFilter</filter-name>
-  <filter-class>com.planetj.servlet.filter.compression.CompressingFilter</filter-class>
- </filter>
-
- <filter-mapping>
-  <filter-name>CompressingFilter</filter-name>
-  <url-pattern>/*</url-pattern>
- </filter-mapping>
-
   <error-page>
     <error-code>500</error-code>
     <location>/static/flymine-offline/</location>
