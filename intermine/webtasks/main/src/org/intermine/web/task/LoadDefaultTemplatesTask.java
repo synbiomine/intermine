@@ -137,7 +137,7 @@ public class LoadDefaultTemplatesTask extends Task
                 pm.createProfile(profileDest);
             } else {
                 LOG.info("Profile for " + username + ", clearing template queries");
-                profileDest = pm.getProfile(username, pm.getPassword(username));
+                profileDest = pm.getProfile(username, superuserPassword);
                 Map<String, TemplateQuery> tmpls
                     = new HashMap<String, TemplateQuery>(profileDest.getSavedTemplates());
                 for (String templateName : tmpls.keySet()) {
@@ -162,8 +162,12 @@ public class LoadDefaultTemplatesTask extends Task
                 }
             }
 
-            // Tags not loaded automatically when unmarshalling profile
             TagManager tagManager = new TagManagerFactory(userProfileOS).getTagManager();
+
+            // Just as we delete existing templates when loading to an existing user profile, also delete existing tags before reloading
+            tagManager.deleteTags(null, null, null, profileDest.getUsername());
+
+            // Tags not loaded automatically when unmarshalling profile
             for (Tag tag : tags) {
                 if (tagManager.getTags(tag.getTagName(), tag.getObjectIdentifier(),
                             tag.getType(), profileDest.getUsername()).isEmpty()) {
