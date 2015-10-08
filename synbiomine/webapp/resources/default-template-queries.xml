@@ -244,32 +244,6 @@
   </query>
 </template>
 
-<template name="BsubDifferentExpr" title="Gene (B. subtilis) with differential expression --&gt; Promoters + Expression" comment="">
-  <query 
-    name="BsubDifferentExpr" 
-    model="genomic" 
-    view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" 
-    longDescription="For a given B. subtilis gene, show predicted promoters with differential expression (by default). Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)." sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and (C or D)">
-    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaA" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" switchable="on" op="&lt;=" value="-1.0"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="D" editable="true" switchable="on" op="&gt;=" value="1.0"/>
-  </query>
-</template>
-
-<template name="BsubStableExpr" title="Gene (B. subtilis) with stable expression --&gt; Promoters + Expression" comment="">
-  <query 
-    name="BsubStableExpr" 
-    model="genomic" 
-    view="Promoter.primaryIdentifier Promoter.synonym Promoter.predictedCluster Promoter.sequence.residues Promoter.gene.primaryIdentifier Promoter.gene.symbol Promoter.gene.expressionResults.meanExpr Promoter.gene.expressionResults.log2FoldChange Promoter.gene.expressionResults.CV Promoter.gene.expressionResults.condition.shortName Promoter.dataSets.name Promoter.dataSets.dataSource.name" 
-    longDescription="For a given B. subtilis gene, show predicted promoters with stable expression (by default). Sources are Nicolas et al. (2012) The condition-dependent transcriptome of Bacillus subtilis 168 [PMID: 22383849; GEO: GSE27219] and DBTBS (dbtbs.hgc.jp)" sortOrder="Promoter.primaryIdentifier asc" constraintLogic="A and B and C and D">
-    <constraint path="Promoter.gene" code="A" editable="true" op="LOOKUP" value="dnaG" extraValue="B. subtilis subsp. subtilis str. 168"/>
-    <constraint path="Promoter.gene.expressionResults.meanExpr" code="B" editable="true" description="Mean Expression (Log2)" switchable="on" op="&gt;" value="14"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="C" editable="true" switchable="on" op="&lt;=" value="1.0"/>
-    <constraint path="Promoter.gene.expressionResults.log2FoldChange" code="D" editable="true" switchable="on" op="&gt;=" value="-1.0"/>
-  </query>
-</template>
-
 <template name="enz2gene" title="Enzyme (EC no) --&gt; Genes" comment="">
   <query 
     name="enz2gene" 
@@ -347,8 +321,6 @@
   <tag name="im:aspect:Expression" objectIdentifier="Gene.promoters" type="collection"/>
 
   <tag name="im:aspect:Expression" objectIdentifier="GenePromoterExpress" type="template"/>
-  <tag name="im:aspect:Expression" objectIdentifier="BsubDifferentExpr" type="template"/>
-  <tag name="im:aspect:Expression" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="gene2BacilRegNet" type="template"/>
   <tag name="im:aspect:Expression" objectIdentifier="path2reactGenes" type="template"/>
@@ -454,8 +426,6 @@
   <tag name="im:frontpage" objectIdentifier="Protein_GOterms" type="template"/>
   <tag name="im:frontpage" objectIdentifier="keyProtGene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="pubGene" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="BsubDifferentExpr" type="template"/>
-  <tag name="im:frontpage" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:frontpage" objectIdentifier="EggNOG2Gene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="Gene2Expression" type="template"/>
   <tag name="im:frontpage" objectIdentifier="GenePromoterExpress" type="template"/>
@@ -481,8 +451,6 @@
   <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class">
   </tag>
 
-  <tag name="im:public" objectIdentifier="BsubDifferentExpr" type="template"/>
-  <tag name="im:public" objectIdentifier="BsubStableExpr" type="template"/>
   <tag name="im:public" objectIdentifier="ChromLocation_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="DomainProtGene" type="template"/>
   <tag name="im:public" objectIdentifier="EggNOG2Gene" type="template"/>
