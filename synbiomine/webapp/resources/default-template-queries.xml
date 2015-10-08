@@ -386,10 +386,7 @@
   <tag name="im:aspect:Homology" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:aspect:Homology" objectIdentifier="EggNOG2Gene" type="template"/>
   
-<!--
-  <tag name="im:aspect:Interactions" objectIdentifier="Gene_Interactions" type="template">
-  </tag>
--->
+  <tag name="im:aspect:Interactions" objectIdentifier="Gene.interactions" type="collection"/>
 
   <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.Protein" type="class"/>
   <tag name="im:aspect:Proteins" objectIdentifier="org.intermine.model.bio.ProteinDomain" type="class"/>
