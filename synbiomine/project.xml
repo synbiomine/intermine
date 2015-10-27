@@ -961,7 +961,7 @@
       <property name="creatego" value="true"/>
       <property name="src.data.dir" location="data/current/uniprot"/>
     </source>
-  
+
     <source name="uniprot-fasta" type="fasta">
       <property name="fasta.taxonId" value="1392 66692 83333 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 315750 326423 345219 386585 398511 420246 439292 471223 511145 526972 526988 526998 544556 550542 581103 585056 585057 592022 634956 649639 666686 685038 691437 692420 720555 796606 941639 1052585 1111068 1133852 1246626 1295642 1367477 1529886"/>
       <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
@@ -1040,6 +1040,10 @@
 
     <source name="pathway2model-EcoliMG1655" type="synbio-reaction" dump="true">
       <property name="src.data.dir" location="data/current/path2model/EcoliMG1655/current"/>
+    </source>
+
+    <source name="synbio-igem" type="synbio-igem">
+      <property name="src.data.dir" location="data/current/igem"/>
     </source>
   
     <source name="pubmed-gene" type="pubmed-gene">

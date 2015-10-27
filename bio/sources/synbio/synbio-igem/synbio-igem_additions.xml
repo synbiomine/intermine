@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- This file details any extensions needed to the data model to store data from this source, everything else is automatically generated from the model description so this is all we need to do to add to the model. -->
+
+<classes>
+<!-- add any <class> elements here -->
+<class name="IGEMPart" is-interface="true">
+  <attribute name="identifier" type="java.lang.String"/>
+  <attribute name="description" type="java.lang.String"/>
+  <reference name="protein" referenced-type="Protein" reverse-reference="igemParts"/>
+  <collection name="dataSets" referenced-type="DataSet"/>
+</class>
+
+<class name="Protein" is-interface="true">
+  <collection name="igemParts" referenced-type="IGEMPart" reverse-reference="protein"/>
+</class>
+
+</classes>
