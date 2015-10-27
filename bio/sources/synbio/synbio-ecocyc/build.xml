@@ -1,0 +1,5 @@
+<project name="synbio-ecocyc" default="default" basedir=".">
+  <description>build, test, package synbio-ecocyc</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+</project>
