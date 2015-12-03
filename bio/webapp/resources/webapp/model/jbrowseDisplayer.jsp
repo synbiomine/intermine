@@ -27,9 +27,7 @@
     <c:set var="tracks" value="${WEB_PROPERTIES['project.title']}-${taxon}-${reportObject.type}"/>
     <c:set var="dataURL" value="${WEB_PROPERTIES['webapp.baseurl']}/${WEB_PROPERTIES['webapp.path']}/service/jbrowse/config/${taxon}"/>
 
-
-
-    <c:set var="jbLink" value="${jbrowseURL}?data=${dataURL}&loc=${chr}:${start}..${end}&tracks=${tracks}"/>
+    <c:set var="jbLink" value="${jbrowseURL}?menu=0&data=${dataURL}&loc=${chr}:${start}..${end}&tracks=${tracks}"/>
 
     <p>Click and drag the browser to move the view.  Drag and drop tracks from left menu into the main
      panel to see the data. Clicking on individual features to open a report page for that feature.
