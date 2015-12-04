@@ -29,7 +29,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
 import org.apache.commons.collections.keyvalue.MultiKey;
 import org.apache.log4j.Logger;
 import org.intermine.api.InterMineAPI;
@@ -424,15 +423,6 @@ public class Engine extends CommandRunner
                 feature.put("type", DynamicUtil.getSimpleClassName(fpo));
             } catch (Exception e) {
                 feature.put("type", fpo.getClass().getSimpleName());
-            }
-            FastPathObject sot = null;
-            try {
-                sot = (FastPathObject) fpo.getFieldValue("sequenceOntologyTerm");
-            } catch (IllegalAccessException e) {
-                // Not all BioEntities have SO terms. ignore.
-            }
-            if (sot != null) {
-                feature.put("type", sot.getFieldValue("name"));
             }
 
             String name, symbol, primId;
