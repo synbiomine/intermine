@@ -317,7 +317,7 @@ public class Config extends JSONService
      */
     private Map<String, Object> featureTrack(ClassDescriptor feature) {
         Map<String, Object> ret = new HashMap<String, Object>();
-        ret.put("type", "JBrowse/View/Track/HTMLFeatures");
+        ret.put("type", "JBrowse/View/Track/CanvasFeatures");
         ret.put("storeClass", "JBrowse/Store/SeqFeature/REST");
         ret.put("category", featureCat);
         // In JBrowse "key" means human-readable.
