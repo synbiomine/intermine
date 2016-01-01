@@ -3047,12 +3047,10 @@ The different token types are:
   <filter>
   <filter-name>AllowCORSWebServiceRequests</filter-name>
   <filter-class>org.intermine.web.filters.HeaderFilter</filter-class>
-  <!--
       <init-param>
         <param-name>Access-Control-Allow-Origin</param-name>
         <param-value>*</param-value>
       </init-param>
-      -->
       <init-param>
         <param-name>Access-Control-Allow-Headers</param-name>
         <param-value>Origin, X-Requested-With, Content-Type, Accept, Range, Authorization, Content-Length, Content-Range</param-value>
