@@ -302,7 +302,42 @@ Ambiactive repressor and activator of the transcription of genes expressed durin
 <comment type="similarity">
 <text>To B.subtilis Abh and SpoVT.</text>
 </comment>
-<comment type="caution">
+<comment type="disease"><disease id="DI-01221"><name>Obesity</name><acronym>OBESITY</acronym><description>A condition characterized by an increase of body weight beyond the limitation of skeletal and physical requirements, as the result of excessive accumulation of body fat.</description><dbReference type="MIM" id="601665"/></disease><text>Disease susceptibility may be associated with variations affecting the gene represented in this entry.</text></comment>
+<comment type="alternative products">
+<event type="alternative splicing"/>
+<isoform>
+<id>Q1234-1</id>
+<name>G</name>
+<name>Long</name>
+<name>Ohsako-T</name>
+<sequence type="displayed"/>
+<note>
+C-terminal exons may be joined by a trans-splicing event. The exons are coded by the same DNA strand.
+</note>
+</isoform>
+<isoform>
+<id>Q1234-2</id>
+<name>J</name>
+<name>Ohsako-O</name>
+<sequence type="described" ref="VSP_051809 VSP_051812"/>
+</isoform>
+<isoform>
+<id>Q7KQZ4-2</id>
+<name>A</name>
+<name>Ohsako-D</name>
+<sequence type="external"/>
+</isoform>
+<isoform>
+<id>Q7KQZ4-1</id>
+<name>B</name>
+<name>C</name>
+<name>Ohsako-L</name>
+<sequence type="external"/>
+<note>
+C-terminal exons may be joined by a trans-splicing event. The exons are coded by the same DNA strand.
+</note>
+</isoform>
+
 <text>
 It is uncertain whether Met-1 or Met-3 is the initiator.
 </text>
