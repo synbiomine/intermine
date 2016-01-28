@@ -2,7 +2,7 @@
   <description>build, test, package testmodel-webapp</description>
   <import file="../../../imbuild/application.xml"/>
 
-  <target name="build-test-userprofile-withuser" depends="create-db-userprofile, -load-testuser, -load-default-templates">
+  <target name="build-test-userprofile-withuser" depends="create-db-userprofile, -load-testuser, load-default-templates">
   </target>
   <target name="-load-testuser">
     <read-userprofile-xml fileName="${resources.dir}/userprofile-withuser.xml" osAlias="${objectstore.name}"
