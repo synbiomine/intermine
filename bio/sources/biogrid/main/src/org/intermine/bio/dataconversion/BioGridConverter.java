@@ -30,9 +30,9 @@ import org.intermine.bio.util.OrganismData;
 import org.intermine.bio.util.OrganismRepository;
 import org.intermine.dataconversion.ItemWriter;
 import org.intermine.metadata.Model;
-import org.intermine.metadata.StringUtil;
 import org.intermine.objectstore.ObjectStoreException;
 import org.intermine.util.SAXParser;
+import org.intermine.metadata.StringUtil;
 import org.intermine.xml.full.Item;
 import org.intermine.xml.full.ReferenceList;
 import org.xml.sax.Attributes;
@@ -81,9 +81,6 @@ public class BioGridConverter extends BioFileConverter
     private Map<MultiKey, Item> interactions = new HashMap<MultiKey, Item>();
     private static final String SPOKE_MODEL = "prey";
     private static final String BLANK_EXPERIMENT_NAME = "NAME NOT AVAILABLE";
-    private static final String DEFAULT_IDENTIFIER_FIELD = "primaryIdentifier";
-    // interactions are duplicated across XML files -- don't store dupes
-    private Set<Integer> interactionDetails = new HashSet<Integer>();
 
     protected IdResolver rslv;
 
@@ -333,7 +330,10 @@ public class BioGridConverter extends BioFileConverter
                                 + " not found");
                         }
                     } else {
-                        setGene(taxId, interactorHolder, config);
+                        String identifierField = config.getIdentifierName();
+                        String identifierSource = config.getXref();
+                        setGene(taxId, interactorHolder, identifierField, identifierSource,
+                            config.getPrefix());
                     }
                 }
             /*********************************** INTERACTIONS ***********************************/
@@ -350,17 +350,13 @@ public class BioGridConverter extends BioFileConverter
             //<interactionList><interaction><interactionType><xref><primaryRef>
             } else if ("primaryRef".equals(qName) && "xref".equals(stack.peek())
                             && stack.search("interactionType") == 2) {
-                // TODO a better way to determine if interaction is physical / genetic
                 String termIdentifier = attrs.getValue("id");
+                holder.methodRefId = getTerm(termIdentifier);
                 String interactionType = PSI_TERMS.get(termIdentifier);
                 if (interactionType == null) {
                     throw new RuntimeException("Bad interaction type:" + termIdentifier);
                 }
                 holder.interactionType = interactionType;
-            //<interactionList><interaction><interactionType><names><shortLabel>
-            } else if ("shortLabel".equals(qName) && "names".equals(stack.peek())
-                                && stack.search("interactionType") == 2) {
-                attName = "relationshipType";
             // <participant id="62692"><interactorRef>62692</interactorRef>
             // <experimentalRoleList><experimentalRole><names><shortLabel>
             } else if ("shortLabel".equals(qName) && stack.search("experimentalRole") == 2) {
@@ -425,9 +421,8 @@ public class BioGridConverter extends BioFileConverter
             // <interactorList><interactor id="4"><names><shortLabel>YFL039C</shortLabel>
             } else if (attName != null && "shortLabel".equals(attName)
                             && "shortLabel".equals(qName) && stack.search("interactor") == 2) {
-                String shortLabel = attValue.toString();
 
-                // TODO put this in config
+                String shortLabel = attValue.toString();
                 if (shortLabel.startsWith("Dmel")) {
                     shortLabel = shortLabel.substring(4);
                     shortLabel = shortLabel.trim();
@@ -484,11 +479,6 @@ public class BioGridConverter extends BioFileConverter
                     holder.name = name;
                 }
 
-            //<interactionList><interaction><interactionType><names><shortLabel>
-            } else if (attName != null && "relationshipType".equals(attName)
-                    && "shortLabel".equals(qName) && "names".equals(stack.peek())
-                    && stack.search("interactionType") == 2) {
-                holder.relationshipType = attValue.toString();
             //</interaction>
             } else if ("interaction".equals(qName) && holder != null && holder.validActors) {
                 try {
@@ -505,8 +495,8 @@ public class BioGridConverter extends BioFileConverter
             Item interaction = interactions.get(key);
             if (interaction == null) {
                 interaction = createItem("Interaction");
-                interaction.setReference("participant1", refId);
-                interaction.setReference("participant2", gene2RefId);
+                interaction.setReference("gene1", refId);
+                interaction.setReference("gene2", gene2RefId);
                 interactions.put(key, interaction);
                 store(interaction);
             }
@@ -542,6 +532,7 @@ public class BioGridConverter extends BioFileConverter
                     }
 
                     Item interaction = getInteraction(refId, gene2RefId);
+                    Item detail = createItem("InteractionDetail");
 
                     String role1 = gene1Interactor.role;
                     String role2 = gene2Interactor.role;
@@ -551,11 +542,14 @@ public class BioGridConverter extends BioFileConverter
                         continue;
                     }
 
-                    Item detail = createItem("InteractionDetail");
-                    detail.setAttribute("role1", role1);
-                    detail.setAttribute("role2", role2);
+                    if (gene1Interactor.role != null) {
+                        detail.setAttribute("role1", role1);
+                    }
+                    if (gene2Interactor.role != null) {
+                        detail.setAttribute("role2", role2);
+                    }
                     detail.setAttribute("type", h.interactionType);
-                    detail.setAttribute("relationshipType", h.relationshipType);
+                    detail.setReference("relationshipType", h.methodRefId);
                     detail.setReference("experiment", h.eh.experimentRefId);
                     if (StringUtils.isEmpty(h.name)) {
                         String prettyName = StringUtils.join(h.identifiers, "_");
@@ -565,17 +559,7 @@ public class BioGridConverter extends BioFileConverter
                     }
                     detail.setReference("interaction", interaction);
                     detail.addCollection(allInteractors);
-
-                    DetailHolder detailHolder = new DetailHolder(h.name, role1, role2,
-                            h.interactionType, h.relationshipType, h.eh.experimentRefId,
-                            interaction.getIdentifier());
-
-                    if (interactionDetails.contains(detailHolder.hashCode())) {
-                        continue;
-                    } else {
-                        interactionDetails.add(detailHolder.hashCode());
-                        store(detail);
-                    }
+                    store(detail);
                 }
             }
         }
@@ -613,6 +597,7 @@ public class BioGridConverter extends BioFileConverter
                                 String identifierSource, String prefix) throws SAXException {
 
             String identifier = null;
+            String label = identifierField;
 
             // readConfig() is always lower-casing the identifierSource
             if ("shortlabel".equals(identifierSource)) {
@@ -621,14 +606,13 @@ public class BioGridConverter extends BioFileConverter
                 identifier = ih.xrefs.get(identifierSource);
             }
 
-            String prefix = config.getPrefix();
-
             if (StringUtils.isNotEmpty(prefix)) {
                 identifier = prefix + identifier;
             }
 
             if (rslv.hasTaxon(taxonId)) {
                 identifier = resolveGene(taxonId, identifier);
+                label = "primaryIdentifier";
             }
 
             // no valid identifiers
@@ -637,7 +621,7 @@ public class BioGridConverter extends BioFileConverter
                 return false;
             }
 
-            ih.participant = storeGene(identifierField, identifier, ih, taxonId);
+            ih.participant = storeGene(label, identifier, ih, taxonId);
 
             ih.valid = true;
             return true;
@@ -805,7 +789,7 @@ public class BioGridConverter extends BioFileConverter
             protected Set<String> refIds = new HashSet<String>();
             protected Set<String> identifiers = new HashSet<String>();
             protected boolean validActors = true;
-            protected String relationshipType;
+            protected String methodRefId;
             protected String interactionType = "physical";
             protected String name;
 
@@ -831,8 +815,7 @@ public class BioGridConverter extends BioFileConverter
 
             @Override
             public int hashCode() {
-                return (relationshipType.hashCode() + 3 * eh.hashCode()
-                        + 5 * identifiers.hashCode());
+                return (methodRefId.hashCode() + 3 * eh.hashCode() + 5 * identifiers.hashCode());
             }
         }
 
@@ -941,42 +924,6 @@ public class BioGridConverter extends BioFileConverter
     }
 
     /**
-     * We need to uniqueify the InteractionDetails. These data are stored across XML files.
-     * We can't just use the InterMine items for comparison because the hash function includes
-     * the identifier
-     */
-    private class DetailHolder
-    {
-
-        private String name, role1, role2, type;
-        private String relationshipType, experiment, interaction;
-
-        protected DetailHolder(String name, String role1, String role2, String type,
-                String relationshipType, String experiment, String interaction) {
-            this.name = name;
-            this.role1 = role1;
-            this.role2 = role2;
-            this.type = type;
-            this.relationshipType = relationshipType;
-            this.experiment = experiment;
-            this.interaction = interaction;
-        }
-
-        @Override
-        public String toString() {
-            return name + role1 + role2 + type + relationshipType + experiment + interaction;
-        }
-
-        @Override
-        public int hashCode() {
-            return (name.hashCode() + 3 * role1.hashCode() + 5 * role2.hashCode()
-                    + 7 * type.hashCode() + 11 * relationshipType.hashCode()
-                    + 13 * experiment.hashCode() + 17 * interaction.hashCode());
-        }
-
-    }
-
-    /**
      * Represents configuration for a specific organism
      *
      * @author Julie Sullivan
@@ -986,7 +933,7 @@ public class BioGridConverter extends BioFileConverter
         private String taxonId;
         private String prefix;
         private String xref;
-        private String identifierName = DEFAULT_IDENTIFIER_FIELD;
+        private String identifierName;
         private String nameSource;
 
         /**
@@ -1078,7 +1025,5 @@ public class BioGridConverter extends BioFileConverter
             }
         }
     }
-
-
 }
 
