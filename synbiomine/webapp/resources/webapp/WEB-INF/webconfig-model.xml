@@ -240,11 +240,13 @@
                      parameters="Gene,Protein,InteractionDetail.experiment,GOAnnotation.evidence"
                      types="Publication"/>
 
+    <!--
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.JBrowseDisplayer"
 		     jspName="model/jbrowseDisplayer.jsp"
 		     replacesFields=""
 		     placement="Genes"
 		     types="SequenceFeature"/>
+    -->
 
     <!-- currently only works with classes with publications collection -->
     <reportdisplayer javaClass="org.intermine.bio.web.displayer.PublicationCountsDisplayer"
