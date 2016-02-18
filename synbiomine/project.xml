@@ -998,8 +998,13 @@
       <property name="src.data.dir" location="data/current/promoters/Bsub/DBTBS/current"/>
     </source>
 
-    <source name="interpro" type="interpro">
+    <source name="interpro" type="interpro" dump="true">
       <property name="src.data.dir" location="/micklem/data/interpro/current"/>
+    </source>
+
+    <source name="protein2ipr" type="protein2ipr">
+     <property name="src.data.dir" location="/micklem/data/interpro/match_complete"/>
+     <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
 
     <source name="so" type="so">
