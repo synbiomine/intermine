@@ -95,19 +95,19 @@
     <td>Protein Gene Ontology annotations</td>
     <td><a href="http://www.ebi.ac.uk/GOA">UniProt-GOA</a></td>
     <td>All</td>
-    <td>UniProt-GOA Release 20150623 (June 2015)
+    <td>UniProt-GOA Release 2015-11-11 (November 2015)
   </tr>
   <tr>
     <td>Protein domains</td>
     <td><a href="http://www.ebi.ac.uk/interpro/">InterPro</a></td>
     <td>All</td>
-    <td>InterPro 52.0 (May 2015)</td>
+    <td>InterPro 54.0 (October 2015)</td>
   </tr>
   <tr>
     <td>Gene Ontology</td>
     <td><a href="http://geneontology.org/">Gene Ontology Consortium</a></td>
     <td>All</td>
-    <td>Gene Ontology 2015-06-01 (June 2015)</td>
+    <td>Gene Ontology 2015-11-26 (November 2015)</td>
   </tr>
   <tr>
     <td>Sequence Ontology</td>
@@ -161,13 +161,13 @@
     <td>Orthologues</td>
     <td><a href="http://orthodb.org">OrthoDB</a></td>
     <td><i>Bacillus amyloliquefaciens</i> subsp. plantarum str. FZB42, <i>Bacillus anthracis</i> str. Ames, <i>Bacillus anthracis</i> str. Sterne, <i>Bacillus cereus</i> ATCC 14579, <i>Bacillus clausii</i> KSM-K16, <i>Bacillus cytotoxicus</i> NVH 391-98, <i>Bacillus halodurans</i> C-125, <i>Bacillus licheniformis</i> DSM 13 = ATCC 14580, <i>Bacillus pumilus</i> SAFR-032, <i>Bacillus subtilis</i> subsp. subtilis str. 168, <i>Bacillus thuringiensis</i> serovar konkukian str. 97-27, <i>Bacillus weihenstephanensis</i> KBAB4, <i>Escherichia coli</i> IAI39, <i>Escherichia coli</i> UMN026, <i>Escherichia coli</i> str. K-12 substr. MG1655, <i>Escherichia fergusonii</i> ATCC 35469, <i>Geobacillus kaustophilus</i> HTA426, <i>Geobacillus</i> sp. WCH70, <i>Geobacillus</i> sp. Y412MC61, <i>Geobacillus thermodenitrificans</i> NG80-2</td>
-    <td>v7 (Aug 2013)</td>
+    <td>v8 (Jan 2015)</td>
   </tr>
   <tr>
     <td>Publications</td>
     <td><a href="http://www.ncbi.nlm.nih.gov/pubmed">NCBI PubMed</a></td>
     <td>All</td>
-    <td>July 2015</td>
+    <td>February 2016</td>
   </tr>
 </table>
 
