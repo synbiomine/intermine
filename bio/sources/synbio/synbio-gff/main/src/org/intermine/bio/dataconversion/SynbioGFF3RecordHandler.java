@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.apache.tools.ant.BuildException;
 import org.intermine.bio.io.gff3.GFF3Record;
 import org.intermine.metadata.Model;
@@ -26,6 +27,8 @@ import org.intermine.xml.full.Item;
 
 public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 {
+  private static final Logger LOG = Logger.getLogger(SynbioGFF3RecordHandler.class);
+
 	private Map<String, String> geneIdToPrimaryIdentifier = new HashMap<String, String>();
 	
 	/**
@@ -141,13 +144,18 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 			}
 			
 			List<String> parents = record.getParents();
-			Iterator<String> it = parents.iterator();
-			// gene0
-			String parentId = it.next();
-			// get the ID of the gene that was stored to the database
-			String refId = geneIdToPrimaryIdentifier.get(parentId);
 
-			feature.setReference("gene", refId);
+      if (parents != null) {
+          Iterator<String> it = parents.iterator();
+          // gene0
+          String parentId = it.next();
+          // get the ID of the gene that was stored to the database
+          String refId = geneIdToPrimaryIdentifier.get(parentId);
+
+          feature.setReference("gene", refId);
+      } else {
+          LOG.warn("Couldn't set gene parent feature on CDS (" + record.getId() + "," + feature.getAttribute("primaryIdentifier") + ") since no Parent attribute found");
+      }
 		}
 	}
 }
