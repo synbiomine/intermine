@@ -27,7 +27,7 @@ import org.intermine.xml.full.Item;
 
 public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 {
-  private static final Logger LOG = Logger.getLogger(SynbioGFF3RecordHandler.class);
+    private static final Logger LOG = Logger.getLogger(SynbioGFF3RecordHandler.class);
 
     private Map<String, String> geneIdToPrimaryIdentifier = new HashMap<String, String>();
     
@@ -154,7 +154,10 @@ public class SynbioGFF3RecordHandler extends GFF3RecordHandler
 
           feature.setReference("gene", refId);
       } else {
-          LOG.warn("Couldn't set gene parent feature on CDS (" + record.getId() + "," + feature.getAttribute("primaryIdentifier") + ") since no Parent attribute found");
+          LOG.warn(
+              "Couldn't set gene parent feature on CDS (" 
+              + record.getId() + "," + feature.getAttribute("primaryIdentifier") 
+              + ") since no Parent attribute found");
       }
         }
     }
