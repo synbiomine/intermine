@@ -294,26 +294,6 @@
   </query>
 </template>
 
-<template name="promoter_predictedSigmaFactors_report" title="Predicted Sigma Factors">
-  <query 
-    name="promoter_predictedSigmaFactors_report" 
-    model="genomic" 
-    view="Promoter.predictedSigmaFactors.primaryIdentifier.primaryIdentifier Promoter.predictedSigmaFactors.probability"
-    sortOrder="Promoter.predictedSigmaFactors.probability asc">
-    <constraint path="Promoter.id" editable="true" op="=" value="1"/>
-  </query>
-</template>
-
-<template name="promoter_sigmaBindingFactors_report" title="Sigma Binding Factors">
-  <query 
-    name="promoter_sigmaBindingFactors_report" 
-    model="genomic" 
-    view="Promoter.sigmaBindingFactors.primaryIdentifier.primaryIdentifier"
-    sortOrder="Promoter.sigmaBindingFactors.primaryIdentifier.primaryIdentifier asc">
-    <constraint path="Promoter.id" editable="true" op="=" value="1"/>
-  </query>
-</template>
-
 </template-queries>
 <tags>
   <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection"/>
