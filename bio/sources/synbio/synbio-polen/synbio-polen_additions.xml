@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<classes>
+<class name="Part" is-interface="true">
+  <attribute name="name" type="java.lang.String"/>
+  <attribute name="description" type="java.lang.String"/>
+  <attribute name="uri" type="java.lang.String"/>
+  <collection name="dataSets" referenced-type="DataSet"/> 
+</class>
+</classes>
