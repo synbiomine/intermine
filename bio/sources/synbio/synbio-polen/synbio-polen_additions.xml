@@ -3,7 +3,12 @@
 <class name="Part" is-interface="true">
   <attribute name="name" type="java.lang.String"/>
   <attribute name="description" type="java.lang.String"/>
+  <attribute name="type" type="java.lang.String"/>
   <attribute name="uri" type="java.lang.String"/>
+  <attribute name="organism" type="java.lang.String"/>
+  <attribute name="designMethod" type="java.lang.String"/>
+  <collection name="functions" referenced-type="GOTerm"/>
+  <collection name="participatesIn" referenced-type="GOTerm"/>
   <collection name="dataSets" referenced-type="DataSet"/> 
 </class>
 </classes>
