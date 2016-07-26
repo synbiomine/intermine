@@ -1193,7 +1193,7 @@
       <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
     <source dump="true" name="go" type="go">
-      <property location="/micklem/data/go-annotation/current/gene_ontology.obo" name="src.data.file"/>
+      <property location="data/go/load/go-basic.obo" name="src.data.file"/>
     </source>
     <source dump="true" name="go-annotation" type="go-annotation">
       <property location="data/goa" name="src.data.dir"/>
