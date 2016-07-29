@@ -69,11 +69,11 @@ public class PriorityConfig
         //if (!unseenSources.isEmpty()) {
         //    System.err .println("Sources only present in project.xml: " + unseenSources);
         //}
-        if (!extraSources.isEmpty()) {
-            //System.err .println("Sources only present in priorites: " + extraSources);
-            throw new IllegalArgumentException("Some sources mentioned in the priorities config "
-                    + "file do not exist in project.xml - maybe they are typos: " + extraSources);
-        }
+//        if (!extraSources.isEmpty()) {
+//            //System.err .println("Sources only present in priorites: " + extraSources);
+//            throw new IllegalArgumentException("Some sources mentioned in the priorities config "
+//                    + "file do not exist in project.xml - maybe they are typos: " + extraSources);
+//        }
     }
 
     /**
@@ -101,11 +101,14 @@ public class PriorityConfig
                 String className = key.substring(0, key.indexOf("."));
                 String fieldName = key.substring(key.indexOf(".") + 1);
                 ClassDescriptor cld = model.getClassDescriptorByName(className);
+
                 if (cld == null) {
-                    throw new IllegalArgumentException("Class '" + className + "' not found in "
-                            + "model, check priorities configuration file - bad entry is "
-                            + key + ".");
+//                    throw new IllegalArgumentException("Class '" + className + "' not found in "
+//                            + "model, check priorities configuration file - bad entry is "
+//                            + key + ".");
+                    continue;
                 }
+
                 Class<? extends FastPathObject> clazz = cld.getType();
                 FieldDescriptor field = cld.getFieldDescriptorByName(fieldName);
                 if ((field != null) && (!field.isCollection())) {
