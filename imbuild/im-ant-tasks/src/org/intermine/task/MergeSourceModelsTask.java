@@ -151,6 +151,7 @@ public class MergeSourceModelsTask extends Task
                 mergeTask.getClass().getMethod("setAdditionsFiles", List.class);
             addFileSetMethod.invoke(mergeTask, pathsToMerge);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new BuildException("exception while adding files to "
                                      + MODEL_MERGER_TASK, e);
         }
@@ -159,6 +160,7 @@ public class MergeSourceModelsTask extends Task
             Method method = mergeTask.getClass().getMethod("execute");
             method.invoke(mergeTask);
         } catch (Exception e) {
+            e.printStackTrace();
             throw new BuildException("exception while invoking execute on "
                                      + MODEL_MERGER_TASK, e);
         }
@@ -176,6 +178,7 @@ public class MergeSourceModelsTask extends Task
                 System.err .println("warning: " + canonFile + " not found");
             }
         } catch (IOException e) {
+            e.printStackTrace();
             throw new BuildException("failed to find canonical file for: " + additionsFile, e);
         }
     }
@@ -188,6 +191,7 @@ public class MergeSourceModelsTask extends Task
         try {
             setProperty(mergeTask, "project", getProject());
         } catch (Exception err) {
+            err.printStackTrace();
             throw new BuildException("error setting up PostProcessTask", err);
         }
 
@@ -201,6 +205,7 @@ public class MergeSourceModelsTask extends Task
                                          + property.substring(1), new Class[]{value.getClass()});
             method.invoke(obj, new Object[]{value});
         } catch (Exception e) {
+            e.printStackTrace();
             throw new BuildException("exception while setting property " + property + " to "
                                      + value, e);
         }
