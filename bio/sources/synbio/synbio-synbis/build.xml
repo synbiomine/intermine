@@ -1,0 +1,5 @@
+<project name="synbio-polen" default="default" basedir=".">
+  <description>build, test, package synbio-polen</description>
+  
+  <import file="../../../../imbuild/source.xml"/>
+</project>
