@@ -291,9 +291,15 @@ public class GFF3Converter extends DataConverter
         String fullClassName = tgtModel.getPackageName() + "." + className;
         ClassDescriptor cd = tgtModel.getClassDescriptorByName(fullClassName);
         if (cd == null) {
+            /*
             throw new IllegalArgumentException("no class found in model for: " + className
                     + " (original GFF record type: " + term + ") for "
                     + "record: " + record);
+            */
+            LOG.error("no class found in model for: " + className
+                    + " (original GFF record type: " + term + ") for "
+                    + "record: " + record);
+            return;
         }
 
         Set<Item> synonymsToAdd = new HashSet<Item>();
