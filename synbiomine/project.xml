@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <!-- 
   This template is acted upon by the other scripts in this repository to create a synbiomine project XML.
 -->
@@ -12,1036 +11,6 @@
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
     </source>
-  
-    <source name="Escherichia-coli-O157:H7-str-Sakai-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="386585"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli O157:H7 str. Sakai (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008865.1_ASM886v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000008865.1_ASM886v1_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-O157:H7-str-Sakai-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="386585"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli O157:H7 str. Sakai (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000008865.1_ASM886v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008865.1_ASM886v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-atrophaeus-subsp-globigii-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1529886"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus atrophaeus subsp. globigii (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000742675.1_ASM74267v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000742675.1_ASM74267v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-atrophaeus-subsp-globigii-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1529886"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus atrophaeus subsp. globigii (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000742675.1_ASM74267v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000742675.1_ASM74267v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-weihenstephanensis-KBAB4-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="315730"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus weihenstephanensis KBAB4 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000018825.1_ASM1882v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000018825.1_ASM1882v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-weihenstephanensis-KBAB4-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="315730"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus weihenstephanensis KBAB4 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000018825.1_ASM1882v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000018825.1_ASM1882v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-clausii-KSM-K16-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="66692"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus clausii KSM-K16 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009825.1_ASM982v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000009825.1_ASM982v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-clausii-KSM-K16-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="66692"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus clausii KSM-K16 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000009825.1_ASM982v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009825.1_ASM982v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-coagulans-36D1-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="345219"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus coagulans 36D1 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000169195.2_ASM16919v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000169195.2_ASM16919v2_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-coagulans-36D1-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="345219"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus coagulans 36D1 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000169195.2_ASM16919v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000169195.2_ASM16919v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-methanolicus-MGA3-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="796606"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus methanolicus MGA3 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000724485.1_ASM72448v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000724485.1_ASM72448v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-methanolicus-MGA3-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="796606"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus methanolicus MGA3 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000724485.1_ASM72448v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000724485.1_ASM72448v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-Y412MC61-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="544556"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y412MC61 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000024705.1_ASM2470v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000024705.1_ASM2470v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-Y412MC61-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="544556"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y412MC61 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000024705.1_ASM2470v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000024705.1_ASM2470v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-anthracis-str-Ames-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="198094"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus anthracis str. Ames (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000007845.1_ASM784v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000007845.1_ASM784v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-anthracis-str-Ames-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="198094"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus anthracis str. Ames (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000007845.1_ASM784v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000007845.1_ASM784v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-thermoleovorans-CCB_US3_UF5-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1111068"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus thermoleovorans CCB_US3_UF5 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000236605.1_ASM23660v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000236605.1_ASM23660v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-thermoleovorans-CCB_US3_UF5-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1111068"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus thermoleovorans CCB_US3_UF5 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000236605.1_ASM23660v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000236605.1_ASM23660v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-Y412MC52-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="550542"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y412MC52 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000174795.2_ASM17479v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000174795.2_ASM17479v2_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-Y412MC52-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="550542"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y412MC52 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000174795.2_ASM17479v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000174795.2_ASM17479v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-amyloliquefaciens-DSM-7-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="692420"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus amyloliquefaciens DSM 7 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000196735.1_ASM19673v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000196735.1_ASM19673v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-amyloliquefaciens-DSM-7-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="692420"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus amyloliquefaciens DSM 7 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000196735.1_ASM19673v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000196735.1_ASM19673v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-infantis-NRRL-B-14911-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1367477"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus infantis NRRL B-14911 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000473245.1_ASM47324v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000473245.1_ASM47324v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-infantis-NRRL-B-14911-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1367477"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus infantis NRRL B-14911 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000473245.1_ASM47324v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000473245.1_ASM47324v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-subtilis-subsp-subtilis-str-168-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="224308"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus subtilis subsp. subtilis str. 168 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009045.1_ASM904v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000009045.1_ASM904v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-subtilis-subsp-subtilis-str-168-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="224308"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus subtilis subsp. subtilis str. 168 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000009045.1_ASM904v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009045.1_ASM904v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-sp-X12014-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1565991"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus sp. X1(2014) (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000747345.1_ASM74734v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000747345.1_ASM74734v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-sp-X12014-firmicutes-chromosome-fasta" type="fasta" dump="true">
-      <property name="fasta.taxonId" value="1565991"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus sp. X1(2014) (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000747345.1_ASM74734v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000747345.1_ASM74734v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-amyloliquefaciens-subsp-plantarum-str-FZB42-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="326423"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus amyloliquefaciens subsp. plantarum str. FZB42 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000015785.1_ASM1578v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000015785.1_ASM1578v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-amyloliquefaciens-subsp-plantarum-str-FZB42-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="326423"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus amyloliquefaciens subsp. plantarum str. FZB42 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000015785.1_ASM1578v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000015785.1_ASM1578v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-coagulans-2-6-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="941639"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus coagulans 2-6 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000217835.1_ASM21783v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000217835.1_ASM21783v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-coagulans-2-6-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="941639"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus coagulans 2-6 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000217835.1_ASM21783v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000217835.1_ASM21783v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-Y41MC1-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="581103"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y4.1MC1 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000166075.1_ASM16607v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000166075.1_ASM16607v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-Y41MC1-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="581103"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y4.1MC1 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000166075.1_ASM16607v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000166075.1_ASM16607v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-kaustophilus-HTA426-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="235909"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus kaustophilus HTA426 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009785.1_ASM978v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000009785.1_ASM978v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-kaustophilus-HTA426-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="235909"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus kaustophilus HTA426 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000009785.1_ASM978v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000009785.1_ASM978v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-smithii-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1479"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus smithii (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data//genbank/GCF_001050115.1_ASM105011v1/"/>
-      <property name="src.data.dir.includes" value="GCF_001050115.1_ASM105011v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-smithii-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1479"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus smithii (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_001050115.1_ASM105011v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001050115.1_ASM105011v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Escherichia-coli-O104:H4-str-2011C-3493-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1133852"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli O104:H4 str. 2011C-3493 (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000299455.1_ASM29945v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000299455.1_ASM29945v1_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-O104:H4-str-2011C-3493-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1133852"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli O104:H4 str. 2011C-3493 (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000299455.1_ASM29945v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000299455.1_ASM29945v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-endophyticus-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="135735"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus endophyticus (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000972245.3_ASM97224v3/"/>
-      <property name="src.data.dir.includes" value="GCF_000972245.3_ASM97224v3_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-endophyticus-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="135735"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus endophyticus (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000972245.3_ASM97224v3_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000972245.3_ASM97224v3/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Escherichia-coli-O83:H1-str-NRG-857C-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="685038"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli O83:H1 str. NRG 857C (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data//genbank/GCF_000183345.1_ASM18334v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000183345.1_ASM18334v1_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-O83:H1-str-NRG-857C-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="685038"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli O83:H1 str. NRG 857C (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000183345.1_ASM18334v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000183345.1_ASM18334v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-cellulosilyticus-DSM-2522-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="649639"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus cellulosilyticus DSM 2522 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000177235.2_ASM17723v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000177235.2_ASM17723v2_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-cellulosilyticus-DSM-2522-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="649639"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus cellulosilyticus DSM 2522 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000177235.2_ASM17723v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000177235.2_ASM17723v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="634956"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus thermoglucosidasius C56-YS93 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000178395.2_ASM17839v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000178395.2_ASM17839v2_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-thermoglucosidasius-C56-YS93-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="634956"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus thermoglucosidasius C56-YS93 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000178395.2_ASM17839v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data//genbank/GCF_000178395.2_ASM17839v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Escherichia-coli-str-K-12-substr-MG1655-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="511145"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli str. K-12 substr. MG1655 (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000005845.2_ASM584v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000005845.2_ASM584v2_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-str-K-12-substr-MG1655-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="511145"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli str. K-12 substr. MG1655 (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000005845.2_ASM584v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000005845.2_ASM584v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-C56-T3-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="691437"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. C56-T3 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000092445.1_ASM9244v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000092445.1_ASM9244v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-C56-T3-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="691437"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. C56-T3 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000092445.1_ASM9244v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000092445.1_ASM9244v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-WCH70-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="471223"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. WCH70 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000023385.1_ASM2338v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000023385.1_ASM2338v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-WCH70-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="471223"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. WCH70 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000023385.1_ASM2338v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000023385.1_ASM2338v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-sp-JF8-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1345697"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus sp. JF8 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000445995.2_ASM44599v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000445995.2_ASM44599v2_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-sp-JF8-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1345697"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus sp. JF8 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000445995.2_ASM44599v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000445995.2_ASM44599v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-atrophaeus-1942-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="720555"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus atrophaeus 1942 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000165925.1_ASM16592v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000165925.1_ASM16592v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-atrophaeus-1942-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="720555"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus atrophaeus 1942 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000165925.1_ASM16592v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000165925.1_ASM16592v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-anthracis-str-Sterne-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="260799"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus anthracis str. Sterne (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008165.1_ASM816v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000008165.1_ASM816v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-anthracis-str-Sterne-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="260799"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus anthracis str. Sterne (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000008165.1_ASM816v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008165.1_ASM816v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-gobiensis-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1441095"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus gobiensis (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278705.1_ASM127870v1/"/>
-      <property name="src.data.dir.includes" value="GCF_001278705.1_ASM127870v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-gobiensis-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1441095"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus gobiensis (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_001278705.1_ASM127870v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278705.1_ASM127870v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-subtilis-subsp-spizizenii-TU-B-10-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1052585"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus subtilis subsp. spizizenii TU-B-10 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000227465.1_ASM22746v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000227465.1_ASM22746v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-subtilis-subsp-spizizenii-TU-B-10-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1052585"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus subtilis subsp. spizizenii TU-B-10 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000227465.1_ASM22746v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000227465.1_ASM22746v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-thuringiensis-serovar-konkukian-str-97-27-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="281309"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus thuringiensis serovar konkukian str. 97-27 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008505.1_ASM850v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000008505.1_ASM850v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-thuringiensis-serovar-konkukian-str-97-27-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="281309"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus thuringiensis serovar konkukian str. 97-27 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000008505.1_ASM850v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000008505.1_ASM850v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Escherichia-coli-UMN026-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="585056"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli UMN026 (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000026325.1_ASM2632v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000026325.1_ASM2632v1_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-UMN026-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="585056"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli UMN026 (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000026325.1_ASM2632v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000026325.1_ASM2632v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-pumilus-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1408"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus pumilus (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001431145.1_ASM143114v1/"/>
-      <property name="src.data.dir.includes" value="GCF_001431145.1_ASM143114v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-pumilus-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1408"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus pumilus (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_001431145.1_ASM143114v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001431145.1_ASM143114v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-licheniformis-DSM-13-=-ATCC-14580-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="279010"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus licheniformis DSM 13 = ATCC 14580 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000011645.1_ASM1164v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000011645.1_ASM1164v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-licheniformis-DSM-13-=-ATCC-14580-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="279010"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus licheniformis DSM 13 = ATCC 14580 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000011645.1_ASM1164v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000011645.1_ASM1164v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-sp-FJAT-22090-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1581038"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus sp. FJAT-22090 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278755.1_ASM127875v1/"/>
-      <property name="src.data.dir.includes" value="GCF_001278755.1_ASM127875v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-sp-FJAT-22090-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1581038"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus sp. FJAT-22090 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_001278755.1_ASM127875v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278755.1_ASM127875v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-thuringiensis-YBT-1518-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="529122"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus thuringiensis YBT-1518 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000497525.1_ASM49752v2/"/>
-      <property name="src.data.dir.includes" value="GCF_000497525.1_ASM49752v2_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-thuringiensis-YBT-1518-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="529122"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus thuringiensis YBT-1518 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000497525.1_ASM49752v2_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000497525.1_ASM49752v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Escherichia-coli-IAI39-enterobacteria-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="585057"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Escherichia coli IAI39 (enterobacteria) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000026345.1_ASM2634v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000026345.1_ASM2634v1_genomic.gff"/>
-    </source>
-
-    <source name="Escherichia-coli-IAI39-enterobacteria-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="585057"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Escherichia coli IAI39 (enterobacteria) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000026345.1_ASM2634v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000026345.1_ASM2634v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-sp-1NLA3E-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="666686"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus sp. 1NLA3E (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000242895.2_ASM24289v3/"/>
-      <property name="src.data.dir.includes" value="GCF_000242895.2_ASM24289v3_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-sp-1NLA3E-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="666686"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus sp. 1NLA3E (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000242895.2_ASM24289v3_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000242895.2_ASM24289v3/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-thuringiensis-str-Al-Hakam-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="412694"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus thuringiensis str. Al Hakam (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000832885.1_ASM83288v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000832885.1_ASM83288v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-thuringiensis-str-Al-Hakam-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="412694"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus thuringiensis str. Al Hakam (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000832885.1_ASM83288v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000832885.1_ASM83288v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-cereus-ATCC-14579-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="226900"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus cereus ATCC 14579 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000007825.1_ASM782v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000007825.1_ASM782v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-cereus-ATCC-14579-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="226900"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus cereus ATCC 14579 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000007825.1_ASM782v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000007825.1_ASM782v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-thermodenitrificans-NG80-2-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="420246"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus thermodenitrificans NG80-2 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000015745.1_ASM1574v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000015745.1_ASM1574v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-thermodenitrificans-NG80-2-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="420246"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus thermodenitrificans NG80-2 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000015745.1_ASM1574v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000015745.1_ASM1574v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-selenitireducens-MLS10-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="439292"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus selenitireducens MLS10 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000093085.1_ASM9308v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000093085.1_ASM9308v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-selenitireducens-MLS10-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="439292"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus selenitireducens MLS10 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000093085.1_ASM9308v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000093085.1_ASM9308v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Geobacillus-stearothermophilus-NUB3621-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1295642"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Geobacillus stearothermophilus NUB3621 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000632515.1_NUB3621v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000632515.1_NUB3621v1_genomic.gff"/>
-    </source>
-
-    <source name="Geobacillus-stearothermophilus-NUB3621-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1295642"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Geobacillus stearothermophilus NUB3621 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000632515.1_NUB3621v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000632515.1_NUB3621v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-megaterium-NBRC-15308-=-ATCC-14581-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1348623"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus megaterium NBRC 15308 = ATCC 14581 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000832985.1_ASM83298v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000832985.1_ASM83298v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-megaterium-NBRC-15308-=-ATCC-14581-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1348623"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus megaterium NBRC 15308 = ATCC 14581 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000832985.1_ASM83298v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000832985.1_ASM83298v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-lehensis-G1-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1246626"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus lehensis G1 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000706725.1_ASM70672v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000706725.1_ASM70672v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-lehensis-G1-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1246626"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus lehensis G1 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000706725.1_ASM70672v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000706725.1_ASM70672v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-megaterium-DSM-319-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="592022"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus megaterium DSM 319 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000025805.1_ASM2580v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000025805.1_ASM2580v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-megaterium-DSM-319-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="592022"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus megaterium DSM 319 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000025805.1_ASM2580v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000025805.1_ASM2580v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
-    <source name="Bacillus-sp-OxB-1-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="98228"/>
-      <property name="gff3.seqDataSourceName" value="NCBI"/>
-      <property name="gff3.dataSourceName" value="NCBI"/>
-      <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus sp. OxB-1 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000829195.1_ASM82919v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000829195.1_ASM82919v1_genomic.gff"/>
-    </source>
-
-    <source name="Bacillus-sp-OxB-1-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="98228"/>
-      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
-      <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus sp. OxB-1 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000829195.1_ASM82919v1_genomic.fna"/>
-      <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000829195.1_ASM82919v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
-    </source>
-
     <source name="Bacillus-cytotoxicus-NVH-391-98-firmicutes-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="315749"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -1051,8 +20,7 @@
       <property name="src.data.dir" location="data/genbank/GCF_000017425.1_ASM1742v1/"/>
       <property name="src.data.dir.includes" value="GCF_000017425.1_ASM1742v1_genomic.gff"/>
     </source>
-
-    <source name="Bacillus-cytotoxicus-NVH-391-98-firmicutes-chromosome-fasta" type="fasta">
+    <source name="Bacillus-cytotoxicus-NVH-391-98-firmicutes-chromosome-fasta" type="fasta" dump="true">
       <property name="fasta.taxonId" value="315749"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -1060,30 +28,84 @@
       <property name="fasta.includes" value="GCF_000017425.1_ASM1742v1_genomic.fna"/>
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="data/genbank/GCF_000017425.1_ASM1742v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-
-    <source name="Bacillus-weihenstephanensis-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="86662"/>
+    <source name="Bacillus-coagulans-2-6-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="941639"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
       <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus weihenstephanensis (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000775975.1_ASM77597v1/"/>
-      <property name="src.data.dir.includes" value="GCF_000775975.1_ASM77597v1_genomic.gff"/>
+      <property name="gff3.dataSetTitle" value="Bacillus coagulans 2-6 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000217835.1_ASM21783v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000217835.1_ASM21783v1_genomic.gff"/>
     </source>
-
-    <source name="Bacillus-weihenstephanensis-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="86662"/>
+    <source name="Bacillus-coagulans-2-6-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="941639"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus weihenstephanensis (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_000775975.1_ASM77597v1_genomic.fna"/>
+      <property name="fasta.dataSetTitle" value="Bacillus coagulans 2-6 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000217835.1_ASM21783v1_genomic.fna"/>
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_000775975.1_ASM77597v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+      <property name="src.data.dir" location="data/genbank/GCF_000217835.1_ASM21783v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-
+    <source name="Bacillus-subtilis-subsp-subtilis-str-168-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="224308"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus subtilis subsp. subtilis str. 168 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009045.1_ASM904v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000009045.1_ASM904v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-subtilis-subsp-subtilis-str-168-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="224308"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus subtilis subsp. subtilis str. 168 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000009045.1_ASM904v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009045.1_ASM904v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Escherichia-coli-UMN026-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="585056"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli UMN026 (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000026325.1_ASM2632v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000026325.1_ASM2632v1_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-UMN026-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="585056"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli UMN026 (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000026325.1_ASM2632v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000026325.1_ASM2632v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-cellulosilyticus-DSM-2522-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="649639"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus cellulosilyticus DSM 2522 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000177235.2_ASM17723v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000177235.2_ASM17723v2_genomic.gff"/>
+    </source>
+    <source name="Bacillus-cellulosilyticus-DSM-2522-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="649639"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus cellulosilyticus DSM 2522 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000177235.2_ASM17723v2_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000177235.2_ASM17723v2/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
     <source name="Bacillus-halodurans-C-125-firmicutes-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="272558"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -1093,8 +115,7 @@
       <property name="src.data.dir" location="data/genbank/GCF_000011145.1_ASM1114v1/"/>
       <property name="src.data.dir.includes" value="GCF_000011145.1_ASM1114v1_genomic.gff"/>
     </source>
-
-    <source name="Bacillus-halodurans-C-125-firmicutes-chromosome-fasta" type="fasta">
+    <source name="Bacillus-halodurans-C-125-firmicutes-chromosome-fasta" type="fasta" dump="true">
       <property name="fasta.taxonId" value="272558"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -1102,30 +123,103 @@
       <property name="fasta.includes" value="GCF_000011145.1_ASM1114v1_genomic.fna"/>
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="data/genbank/GCF_000011145.1_ASM1114v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-
-    <source name="Bacillus-sp-FJAT-18017-firmicutes-gff" type="synbio-gff">
-      <property name="gff3.taxonId" value="1705566"/>
+    <source name="Bacillus-thuringiensis-YBT-1518-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="529122"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
       <property name="gff3.dataSourceName" value="NCBI"/>
       <property name="gff3.seqClsName" value="Chromosome"/>
-      <property name="gff3.dataSetTitle" value="Bacillus sp. FJAT-18017 (firmicutes) genomic features"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278805.1_ASM127880v1/"/>
-      <property name="src.data.dir.includes" value="GCF_001278805.1_ASM127880v1_genomic.gff"/>
+      <property name="gff3.dataSetTitle" value="Bacillus thuringiensis YBT-1518 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000497525.1_ASM49752v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000497525.1_ASM49752v2_genomic.gff"/>
     </source>
-
-    <source name="Bacillus-sp-FJAT-18017-firmicutes-chromosome-fasta" type="fasta">
-      <property name="fasta.taxonId" value="1705566"/>
+    <source name="Bacillus-thuringiensis-YBT-1518-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="529122"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
-      <property name="fasta.dataSetTitle" value="Bacillus sp. FJAT-18017 (firmicutes) chromosome, complete genome"/>
-      <property name="fasta.includes" value="GCF_001278805.1_ASM127880v1_genomic.fna"/>
+      <property name="fasta.dataSetTitle" value="Bacillus thuringiensis YBT-1518 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000497525.1_ASM49752v2_genomic.fna"/>
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
-      <property name="src.data.dir" location="data/genbank/GCF_001278805.1_ASM127880v1/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+      <property name="src.data.dir" location="data/genbank/GCF_000497525.1_ASM49752v2/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-
+    <source name="Escherichia-coli-O104:H4-str-2011C-3493-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1133852"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli O104:H4 str. 2011C-3493 (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000299455.1_ASM29945v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000299455.1_ASM29945v1_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-O104:H4-str-2011C-3493-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1133852"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli O104:H4 str. 2011C-3493 (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000299455.1_ASM29945v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000299455.1_ASM29945v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-sp-C56-T3-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="691437"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus sp. C56-T3 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000092445.1_ASM9244v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000092445.1_ASM9244v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-sp-C56-T3-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="691437"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus sp. C56-T3 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000092445.1_ASM9244v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000092445.1_ASM9244v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Escherichia-coli-O83:H1-str-NRG-857C-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="685038"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli O83:H1 str. NRG 857C (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000183345.1_ASM18334v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000183345.1_ASM18334v1_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-O83:H1-str-NRG-857C-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="685038"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli O83:H1 str. NRG 857C (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000183345.1_ASM18334v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000183345.1_ASM18334v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-megaterium-NBRC-15308-=-ATCC-14581-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1348623"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus megaterium NBRC 15308 = ATCC 14581 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832985.1_ASM83298v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000832985.1_ASM83298v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-megaterium-NBRC-15308-=-ATCC-14581-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1348623"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus megaterium NBRC 15308 = ATCC 14581 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000832985.1_ASM83298v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832985.1_ASM83298v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
     <source name="Bacillus-pseudofirmus-OF4-firmicutes-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="398511"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -1135,8 +229,7 @@
       <property name="src.data.dir" location="data/genbank/GCF_000005825.2_ASM582v2/"/>
       <property name="src.data.dir.includes" value="GCF_000005825.2_ASM582v2_genomic.gff"/>
     </source>
-
-    <source name="Bacillus-pseudofirmus-OF4-firmicutes-chromosome-fasta" type="fasta">
+    <source name="Bacillus-pseudofirmus-OF4-firmicutes-chromosome-fasta" type="fasta" dump="true">
       <property name="fasta.taxonId" value="398511"/>
       <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
       <property name="fasta.dataSourceName" value="GenBank"/>
@@ -1144,20 +237,759 @@
       <property name="fasta.includes" value="GCF_000005825.2_ASM582v2_genomic.fna"/>
       <property name="fasta.classAttribute" value="primaryIdentifier"/>
       <property name="src.data.dir" location="data/genbank/GCF_000005825.2_ASM582v2/"/>
-      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>   
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-
-    <source dump="True" name="synbio-ecocyc" type="synbio-ecocyc">
-      <property location="data/ecocyc" name="src.data.dir"/>
+    <source name="Bacillus-atrophaeus-subsp-globigii-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1529886"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus atrophaeus subsp. globigii (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000742675.1_ASM74267v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000742675.1_ASM74267v1_genomic.gff"/>
     </source>
-
-    <source dump="True" name="uniprot" type="uniprot">
-      <property location="data/uniprot" name="src.data.dir"/>
-      <property name="uniprot.organisms" value="1392 1408 1479 66692 83333 86662 98228 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 345219 386585 398511 412694 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 592022 634956 649639 666686 685038 691437 692420 720555 796606 941639 1052585 1111068 1133852 1246626 1295642 1345697 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
+    <source name="Bacillus-atrophaeus-subsp-globigii-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1529886"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus atrophaeus subsp. globigii (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000742675.1_ASM74267v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000742675.1_ASM74267v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
-    <source dump="True" name="uniprot-fasta" type="fasta">
-      <property location="data//uniprot" name="src.data.dir"/>
-      <property name="fasta.taxonId" value="1392 1408 1479 66692 83333 86662 98228 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 345219 386585 398511 412694 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 592022 634956 649639 666686 685038 691437 692420 720555 796606 941639 1052585 1111068 1133852 1246626 1295642 1345697 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
+    <source name="Bacillus-simplex-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1478"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus simplex (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001578185.1_ASM157818v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001578185.1_ASM157818v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-simplex-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1478"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus simplex (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001578185.1_ASM157818v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001578185.1_ASM157818v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-weihenstephanensis-KBAB4-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="315730"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus weihenstephanensis KBAB4 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000018825.1_ASM1882v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000018825.1_ASM1882v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-weihenstephanensis-KBAB4-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="315730"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus weihenstephanensis KBAB4 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000018825.1_ASM1882v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000018825.1_ASM1882v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-smithii-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1479"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus smithii (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001050115.1_ASM105011v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001050115.1_ASM105011v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-smithii-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1479"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus smithii (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001050115.1_ASM105011v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001050115.1_ASM105011v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-kaustophilus-HTA426-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="235909"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus kaustophilus HTA426 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009785.1_ASM978v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000009785.1_ASM978v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-kaustophilus-HTA426-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="235909"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus kaustophilus HTA426 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000009785.1_ASM978v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009785.1_ASM978v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-sp-Y41MC1-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="581103"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y4.1MC1 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000166075.1_ASM16607v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000166075.1_ASM16607v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-sp-Y41MC1-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="581103"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y4.1MC1 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000166075.1_ASM16607v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000166075.1_ASM16607v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-amyloliquefaciens-DSM-7-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="692420"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus amyloliquefaciens DSM 7 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000196735.1_ASM19673v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000196735.1_ASM19673v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-amyloliquefaciens-DSM-7-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="692420"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus amyloliquefaciens DSM 7 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000196735.1_ASM19673v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000196735.1_ASM19673v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-mycoides-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1405"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus mycoides (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832605.1_ASM83260v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000832605.1_ASM83260v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-mycoides-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1405"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus mycoides (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000832605.1_ASM83260v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832605.1_ASM83260v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-clausii-KSM-K16-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="66692"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus clausii KSM-K16 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009825.1_ASM982v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000009825.1_ASM982v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-clausii-KSM-K16-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="66692"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus clausii KSM-K16 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000009825.1_ASM982v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000009825.1_ASM982v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-amyloliquefaciens-subsp-plantarum-str-FZB42-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="326423"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus amyloliquefaciens subsp. plantarum str. FZB42 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000015785.1_ASM1578v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000015785.1_ASM1578v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-amyloliquefaciens-subsp-plantarum-str-FZB42-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="326423"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus amyloliquefaciens subsp. plantarum str. FZB42 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000015785.1_ASM1578v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000015785.1_ASM1578v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-selenitireducens-MLS10-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="439292"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus selenitireducens MLS10 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000093085.1_ASM9308v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000093085.1_ASM9308v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-selenitireducens-MLS10-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="439292"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus selenitireducens MLS10 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000093085.1_ASM9308v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000093085.1_ASM9308v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-sp-1NLA3E-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="666686"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus sp. 1NLA3E (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000242895.2_ASM24289v3/"/>
+      <property name="src.data.dir.includes" value="GCF_000242895.2_ASM24289v3_genomic.gff"/>
+    </source>
+    <source name="Bacillus-sp-1NLA3E-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="666686"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus sp. 1NLA3E (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000242895.2_ASM24289v3_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000242895.2_ASM24289v3/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-anthracis-str-Sterne-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="260799"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus anthracis str. Sterne (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008165.1_ASM816v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000008165.1_ASM816v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-anthracis-str-Sterne-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="260799"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus anthracis str. Sterne (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000008165.1_ASM816v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008165.1_ASM816v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-sp-FJAT-18017-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1705566"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus sp. FJAT-18017 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278805.1_ASM127880v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001278805.1_ASM127880v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-sp-FJAT-18017-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1705566"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus sp. FJAT-18017 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001278805.1_ASM127880v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278805.1_ASM127880v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-sp-Y412MC61-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="544556"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y412MC61 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000024705.1_ASM2470v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000024705.1_ASM2470v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-sp-Y412MC61-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="544556"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y412MC61 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000024705.1_ASM2470v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000024705.1_ASM2470v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-pumilus-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1408"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus pumilus (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001431145.1_ASM143114v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001431145.1_ASM143114v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-pumilus-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1408"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus pumilus (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001431145.1_ASM143114v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001431145.1_ASM143114v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-cereus-ATCC-14579-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="226900"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus cereus ATCC 14579 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000007825.1_ASM782v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000007825.1_ASM782v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-cereus-ATCC-14579-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="226900"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus cereus ATCC 14579 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000007825.1_ASM782v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000007825.1_ASM782v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-lehensis-G1-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1246626"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus lehensis G1 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000706725.1_ASM70672v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000706725.1_ASM70672v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-lehensis-G1-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1246626"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus lehensis G1 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000706725.1_ASM70672v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000706725.1_ASM70672v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-gobiensis-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1441095"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus gobiensis (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278705.1_ASM127870v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001278705.1_ASM127870v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-gobiensis-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1441095"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus gobiensis (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001278705.1_ASM127870v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278705.1_ASM127870v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-sp-WCH70-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="471223"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus sp. WCH70 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000023385.1_ASM2338v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000023385.1_ASM2338v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-sp-WCH70-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="471223"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus sp. WCH70 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000023385.1_ASM2338v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000023385.1_ASM2338v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-infantis-NRRL-B-14911-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1367477"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus infantis NRRL B-14911 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000473245.1_ASM47324v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000473245.1_ASM47324v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-infantis-NRRL-B-14911-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1367477"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus infantis NRRL B-14911 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000473245.1_ASM47324v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000473245.1_ASM47324v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-thermoleovorans-CCB_US3_UF5-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1111068"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus thermoleovorans CCB_US3_UF5 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000236605.1_ASM23660v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000236605.1_ASM23660v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-thermoleovorans-CCB_US3_UF5-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1111068"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus thermoleovorans CCB_US3_UF5 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000236605.1_ASM23660v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000236605.1_ASM23660v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-thermodenitrificans-NG80-2-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="420246"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus thermodenitrificans NG80-2 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000015745.1_ASM1574v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000015745.1_ASM1574v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-thermodenitrificans-NG80-2-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="420246"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus thermodenitrificans NG80-2 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000015745.1_ASM1574v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000015745.1_ASM1574v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-licheniformis-DSM-13-=-ATCC-14580-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="279010"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus licheniformis DSM 13 = ATCC 14580 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000011645.1_ASM1164v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000011645.1_ASM1164v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-licheniformis-DSM-13-=-ATCC-14580-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="279010"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus licheniformis DSM 13 = ATCC 14580 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000011645.1_ASM1164v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000011645.1_ASM1164v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Escherichia-coli-O157:H7-str-Sakai-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="386585"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli O157:H7 str. Sakai (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008865.1_ASM886v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000008865.1_ASM886v1_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-O157:H7-str-Sakai-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="386585"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli O157:H7 str. Sakai (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000008865.1_ASM886v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008865.1_ASM886v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-endophyticus-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="135735"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus endophyticus (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000972245.3_ASM97224v3/"/>
+      <property name="src.data.dir.includes" value="GCF_000972245.3_ASM97224v3_genomic.gff"/>
+    </source>
+    <source name="Bacillus-endophyticus-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="135735"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus endophyticus (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000972245.3_ASM97224v3_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000972245.3_ASM97224v3/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Escherichia-coli-IAI39-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="585057"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli IAI39 (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000026345.1_ASM2634v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000026345.1_ASM2634v1_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-IAI39-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="585057"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli IAI39 (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000026345.1_ASM2634v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000026345.1_ASM2634v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-sp-X12014-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1565991"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus sp. X1(2014) (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000747345.1_ASM74734v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000747345.1_ASM74734v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-sp-X12014-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1565991"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus sp. X1(2014) (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000747345.1_ASM74734v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000747345.1_ASM74734v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-methanolicus-MGA3-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="796606"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus methanolicus MGA3 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000724485.1_ASM72448v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000724485.1_ASM72448v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-methanolicus-MGA3-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="796606"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus methanolicus MGA3 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000724485.1_ASM72448v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000724485.1_ASM72448v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-subterraneus-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="129338"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus subterraneus (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001618685.1_ASM161868v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001618685.1_ASM161868v1_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-subterraneus-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="129338"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus subterraneus (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001618685.1_ASM161868v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001618685.1_ASM161868v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-atrophaeus-1942-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="720555"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus atrophaeus 1942 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000165925.1_ASM16592v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000165925.1_ASM16592v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-atrophaeus-1942-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="720555"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus atrophaeus 1942 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000165925.1_ASM16592v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000165925.1_ASM16592v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-sp-OxB-1-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="98228"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus sp. OxB-1 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000829195.1_ASM82919v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000829195.1_ASM82919v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-sp-OxB-1-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="98228"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus sp. OxB-1 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000829195.1_ASM82919v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000829195.1_ASM82919v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Escherichia-coli-str-K-12-substr-MG1655-E-coli-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="511145"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Escherichia coli str. K-12 substr. MG1655 (E. coli) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000005845.2_ASM584v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000005845.2_ASM584v2_genomic.gff"/>
+    </source>
+    <source name="Escherichia-coli-str-K-12-substr-MG1655-E-coli-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="511145"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Escherichia coli str. K-12 substr. MG1655 (E. coli) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000005845.2_ASM584v2_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000005845.2_ASM584v2/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-sp-FJAT-22090-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1581038"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus sp. FJAT-22090 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278755.1_ASM127875v1/"/>
+      <property name="src.data.dir.includes" value="GCF_001278755.1_ASM127875v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-sp-FJAT-22090-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1581038"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus sp. FJAT-22090 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_001278755.1_ASM127875v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_001278755.1_ASM127875v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-thuringiensis-serovar-konkukian-str-97-27-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="281309"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus thuringiensis serovar konkukian str. 97-27 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008505.1_ASM850v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000008505.1_ASM850v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-thuringiensis-serovar-konkukian-str-97-27-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="281309"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus thuringiensis serovar konkukian str. 97-27 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000008505.1_ASM850v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000008505.1_ASM850v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-oceanisediminis-2691-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1196031"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus oceanisediminis 2691 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000294775.2_ASM29477v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000294775.2_ASM29477v2_genomic.gff"/>
+    </source>
+    <source name="Bacillus-oceanisediminis-2691-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1196031"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus oceanisediminis 2691 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000294775.2_ASM29477v2_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000294775.2_ASM29477v2/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Geobacillus-sp-Y412MC52-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="550542"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Geobacillus sp. Y412MC52 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000174795.2_ASM17479v2/"/>
+      <property name="src.data.dir.includes" value="GCF_000174795.2_ASM17479v2_genomic.gff"/>
+    </source>
+    <source name="Geobacillus-sp-Y412MC52-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="550542"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Geobacillus sp. Y412MC52 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000174795.2_ASM17479v2_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000174795.2_ASM17479v2/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-coagulans-DSM-1-=-ATCC-7050-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="1121088"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus coagulans DSM 1 = ATCC 7050 (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832905.1_ASM83290v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000832905.1_ASM83290v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-coagulans-DSM-1-=-ATCC-7050-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="1121088"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus coagulans DSM 1 = ATCC 7050 (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000832905.1_ASM83290v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000832905.1_ASM83290v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source name="Bacillus-anthracis-str-Ames-firmicutes-gff" type="synbio-gff">
+      <property name="gff3.taxonId" value="198094"/>
+      <property name="gff3.seqDataSourceName" value="NCBI"/>
+      <property name="gff3.dataSourceName" value="NCBI"/>
+      <property name="gff3.seqClsName" value="Chromosome"/>
+      <property name="gff3.dataSetTitle" value="Bacillus anthracis str. Ames (firmicutes) genomic features"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000007845.1_ASM784v1/"/>
+      <property name="src.data.dir.includes" value="GCF_000007845.1_ASM784v1_genomic.gff"/>
+    </source>
+    <source name="Bacillus-anthracis-str-Ames-firmicutes-chromosome-fasta" type="fasta" dump="true">
+      <property name="fasta.taxonId" value="198094"/>
+      <property name="fasta.className" value="org.intermine.model.bio.Chromosome"/>
+      <property name="fasta.dataSourceName" value="GenBank"/>
+      <property name="fasta.dataSetTitle" value="Bacillus anthracis str. Ames (firmicutes) chromosome, complete genome"/>
+      <property name="fasta.includes" value="GCF_000007845.1_ASM784v1_genomic.fna"/>
+      <property name="fasta.classAttribute" value="primaryIdentifier"/>
+      <property name="src.data.dir" location="data/genbank/GCF_000007845.1_ASM784v1/"/>
+      <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
+    </source>
+    <source dump="false" name="synbio-ecocyc" type="synbio-ecocyc">
+      <property location="data/current/ecocyc" name="src.data.dir"/>
+    </source>
+    <source dump="true" name="uniprot" type="uniprot">
+      <property location="data/current/uniprot" name="src.data.dir"/>
+      <property name="uniprot.organisms" value="649639 1133852 1705566 720555 439292 941639 1348623 398511 1529886 1367477 279010 581103 796606 511145 1408 1196031 529122 66692 1405 281309 315730 692420 585057 1246626 1121088 1581038 98228 272558 315749 83333 1479 691437 1392 198094 260799 420246 1565991 235909 326423 129338 1441095 550542 1111068 1478 224308 666686 685038 135735 585056 386585 544556 471223 226900"/>
+    </source>
+    <source dump="true" name="uniprot-fasta" type="fasta">
+      <property location="data/current/uniprot" name="src.data.dir"/>
+      <property name="fasta.taxonId" value="649639 1133852 1705566 720555 439292 941639 1348623 398511 1529886 1367477 279010 581103 796606 511145 1408 1196031 529122 66692 1405 281309 315730 692420 585057 1246626 1121088 1581038 98228 272558 315749 83333 1479 691437 1392 198094 260799 420246 1565991 235909 326423 129338 1441095 550542 1111068 1478 224308 666686 685038 135735 585056 386585 544556 471223 226900"/>
       <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
       <property name="fasta.classAttribute" value="primaryAccession"/>
       <property name="fasta.dataSetTitle" value="UniProt data set"/>
@@ -1167,43 +999,43 @@
       <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
     </source>
     <source dump="true" name="uniprot-keywords" type="uniprot-keywords">
-      <property location="data//uniprot" name="src.data.dir"/>
+      <property location="data/current/uniprot" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
-    <source dump="true" name="eggnog-functional-categories" type="synbio-funccat">
-      <property location="data/eggnog" name="src.data.dir"/>
+    <source dump="false" name="eggnog-functional-categories" type="synbio-funccat">
+      <property location="data/current/eggnog/load" name="src.data.dir"/>
     </source>
-    <source dump="true" name="dbtbs-regulation-Bsub168" type="synbio-regulation">
-      <property location="data/promoters/dbtbs" name="src.data.dir"/>
+    <source dump="false" name="dbtbs-regulation-Bsub168" type="synbio-regulation">
+      <property location="data/current/promoters/load/dbtbs" name="src.data.dir"/>
     </source>
-    <source dump="true" name="nicolas2012-regulation-Bsub168" type="synbio-regulation">
-      <property location="data/promoters/nicolas-2012" name="src.data.dir"/>
+    <source dump="false" name="nicolas2012-regulation-Bsub168" type="synbio-regulation">
+      <property location="data/current/promoters/load/nicolas-2012" name="src.data.dir"/>
     </source>
-    <source dump="true" name="faith-GEOSeries-EcoliK12" type="synbio-GEOSeries">
-      <property location="data/geo/faith-2007" name="src.data.dir"/>
+    <source dump="false" name="faith-GEOSeries-EcoliK12" type="synbio-GEOSeries">
+      <property location="data/current/geo/load/faith-2007" name="src.data.dir"/>
     </source>
-    <source dump="true" name="nicolas2012-GEOSeries-Bsub168" type="synbio-GEOSeries">
-      <property location="data/geo/nicolas-2012" name="src.data.dir"/>
+    <source dump="false" name="nicolas2012-GEOSeries-Bsub168" type="synbio-GEOSeries">
+      <property location="data/current/geo/load/nicolas-2012" name="src.data.dir"/>
     </source>
-    <source dump="true" name="interpro" type="interpro">
+    <source dump="false" name="interpro" type="interpro">
       <property location="/micklem/data/interpro/current" name="src.data.dir"/>
     </source>
-    <source dump="true" name="protein2ipr" type="protein2ipr">
+    <source dump="false" name="protein2ipr" type="protein2ipr">
       <property location="/micklem/data/interpro/match_complete" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
-    <source dump="true" name="go" type="go">
+    <source dump="false" name="go" type="go">
       <property location="data/go/load/go-basic.obo" name="src.data.file"/>
     </source>
-    <source dump="true" name="go-annotation" type="go-annotation">
-      <property location="data/goa" name="src.data.dir"/>
+    <source dump="false" name="go-annotation" type="go-annotation">
+      <property location="data/current/goa" name="src.data.dir"/>
     </source>
-    <source dump="true" name="biogrid" type="biogrid">
-      <property location="data/biogrid" name="src.data.dir"/>
+    <source dump="false" name="biogrid" type="biogrid">
+      <property location="data/current/biogrid/load" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="*psi25.xml"/>
       <property name="biogrid.organisms" value="511145 224308"/>
     </source>
-    <source dump="true" name="reactome" type="reactome">
+    <source dump="false" name="reactome" type="reactome">
       <property location="/micklem/data/reactome/current" name="src.data.dir"/>
       <property name="reactome.organisms" value="511145"/>
       <property name="reactome.datasourcename" value="Reactome"/>
@@ -1211,29 +1043,29 @@
       <property name="reactome.curated" value="false"/>
     </source>
     <source dump="true" name="orthodb" type="orthodb">
-      <property location="/micklem/data/ecolimine/orthodb/current/" name="src.data.dir"/>
-      <property name="orthodb.organisms" value="1392 1408 1479 66692 83333 86662 98228 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 345219 386585 398511 412694 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 592022 634956 649639 666686 685038 691437 692420 720555 796606 941639 1052585 1111068 1133852 1246626 1295642 1345697 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
+      <property location="/micklem/data/orthodb/current" name="src.data.dir"/>
+      <property name="orthodb.organisms" value="66692 98228 1121088 83333 1246626 529122 550542 420246 720555 1441095 1133852 279010 692420 1565991 691437 666686 198094 398511 1111068 439292 511145 135735 1408 226900 260799 224308 1405 315730 235909 386585 326423 581103 272558 649639 941639 544556 1367477 1196031 281309 585057 585056 1348623 1705566 685038 1392 796606 129338 1529886 315749 1581038 1478 1479 471223"/>
     </source>
-    <source dump="true" name="pathway2model-Bsub168" type="synbio-reaction">
-      <property location="data/path2model/Bsub168" name="src.data.dir"/>
+    <source dump="false" name="pathway2model-Bsub168" type="synbio-reaction">
+      <property location="data/current/path2model/load/Bsub168" name="src.data.dir"/>
     </source>
-    <source dump="true" name="pathway2model-EcoliMG1655" type="synbio-reaction">
-      <property location="data/path2model/EcoliMG1655" name="src.data.dir"/>
+    <source dump="false" name="pathway2model-EcoliMG1655" type="synbio-reaction">
+      <property location="data/current/path2model/load/EcoliMG1655" name="src.data.dir"/>
     </source>
-    <source dump="true" name="pubmed-gene" type="pubmed-gene">
-      <property location="/micklem/data/pubmed/current" name="src.data.dir"/>
+    <source dump="false" name="synbio-synbis" type="synbio-synbis">
+      <property location="data/parts/synbis/load" name="src.data.dir"/>
+    </source>
+    <source dump="false" name="pubmed-gene" type="pubmed-gene">
+      <property location="/micklem/data/pubmed" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
-      <property name="pubmed.organisms" value="1392 1408 1479 66692 83333 86662 98228 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 345219 386585 398511 412694 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 592022 634956 649639 666686 685038 691437 692420 720555 796606 941639 1052585 1111068 1133852 1246626 1295642 1345697 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
+      <property name="pubmed.organisms" value="66692 98228 1121088 83333 1246626 529122 550542 420246 720555 1441095 1133852 279010 692420 1565991 691437 666686 198094 398511 1111068 439292 511145 135735 1408 226900 260799 224308 1405 315730 235909 386585 326423 581103 272558 649639 941639 544556 1367477 1196031 281309 585057 585056 1348623 1705566 685038 1392 796606 129338 1529886 315749 1581038 1478 1479 471223"/>
     </source>
-    <source dump="true" name="update-publications" type="update-publications">
+    <source dump="false" name="update-publications" type="update-publications">
       <property location="build/publications.xml" name="src.data.file"/>
       <property name="loadFullRecord" value="true"/>
     </source>
-    <source dump="true" name="entrez-organism" type="entrez-organism">
+    <source dump="false" name="entrez-organism" type="entrez-organism">
       <property location="build/organisms.xml" name="src.data.file"/>
-    </source>
-    <source dump="true" name="synbio-polen" type="synbio-polen">
-      <property location="data/polen/load" name="src.data.dir"/>
     </source>
   </sources>
   <post-processing>
