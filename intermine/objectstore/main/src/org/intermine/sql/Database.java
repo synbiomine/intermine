@@ -210,6 +210,7 @@ public class Database implements Shutdownable
         }
         LOG.info("Database " + getURL() + "(" + toString() + ") has " + totalConnections
                 + " connections, of which " + activeConnections + " are active");*/
+        /*
         if (datasource instanceof com.zaxxer.hikari.HikariDataSource) {
             LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
                     + ") with ClassLoader " + getClass().getClassLoader());
@@ -227,6 +228,7 @@ public class Database implements Shutdownable
                     + toString() + ") with ClassLoader " + getClass().getClassLoader() + " - "
                     + datasource.getClass().toString());
         }
+        */
     }
 
     /**
