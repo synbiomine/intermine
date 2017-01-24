@@ -147,6 +147,7 @@ public class UniprotConverter extends BioDirectoryConverter
             LOG.error("no data files found ");
             return;
         }
+
         for (int i = 0; i <= 1; i++) {
             File file = files[i];
             if (file == null) {
@@ -154,14 +155,16 @@ public class UniprotConverter extends BioDirectoryConverter
             }
             UniprotHandler handler = new UniprotHandler();
             try {
-                System .out.println("Processing file: " + file.getPath());
+                LOG.info("Processing file: " + file.getPath());
                 Reader reader = new FileReader(file);
                 SAXParser.parse(new InputSource(reader), handler);
             } catch (Exception e) {
-                e.printStackTrace();
-                throw new RuntimeException(e);
+                RuntimeException rte = new RuntimeException(new Exception("Failed on " + file.getPath(), e));
+                LOG.error("Failed", rte);
+                throw rte;
             }
         }
+
         // reset all variables here, new organism
         sequences = new HashMap<String, Map<String, String>>();
         genes = new HashMap<String, String>();
@@ -1026,16 +1029,16 @@ public class UniprotConverter extends BioDirectoryConverter
             if (geneRefId == null) {
                 Item gene = createItem("Gene");
                 gene.setAttribute(uniqueIdentifierField, identifier);
-                
+
                 // HACK: This is a temporary hack to always fill in the secondaryIdentifier field so that
                 // we can merge genes with prokaryote GFF files where the identifier has changed
                 // (where the old_locus_tag is stuffed into that gene's secondary identifier).
-                // The alternative would be to explicitly configure the secondaryIdentifier in 
+                // The alternative would be to explicitly configure the secondaryIdentifier in
                 // uniprot_config.properties for each taxon.  However, this would not work for GFF
                 // files where the locus has not changed (and hence the secondaryIdentifier field is not populated).
                 // To save us having to analyze whether this is the case for every taxon, do this hardcode instead.
                 gene.setAttribute("secondaryIdentifier", identifier);
-                
+
                 gene.setReference("organism", getOrganism(taxId));
                 if (creatego) {
                     try {
@@ -1251,7 +1254,7 @@ public class UniprotConverter extends BioDirectoryConverter
     // value is NAS:FlyBase
     private String getGOEvidenceCode(String value)
         throws SAXException {
-        
+
         // XXX: Since December 2014, Uniprot have changed their evidence codes to refer
         // to the evidence ontology with codes of the form ECO:<n> instead of direct
         // codes with a reference to the source of the evidence (e.g. IEA:InterPro)
@@ -1264,9 +1267,9 @@ public class UniprotConverter extends BioDirectoryConverter
             code = bits[0];
         }
         */
-        
+
         String code = value;
-        
+
         String refId = goEvidenceCodes.get(code);
         if (refId == null) {
             Item item = createItem("GOEvidenceCode");
