@@ -981,15 +981,15 @@
       <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
     <source dump="false" name="synbio-ecocyc" type="synbio-ecocyc">
-      <property location="data/current/ecocyc" name="src.data.dir"/>
+      <property location="data/ecocyc" name="src.data.dir"/>
     </source>
     <source dump="true" name="uniprot" type="uniprot">
-      <property location="data/current/uniprot" name="src.data.dir"/>
-      <property name="uniprot.organisms" value="649639 1133852 1705566 720555 439292 941639 1348623 398511 1529886 1367477 279010 581103 796606 511145 1408 1196031 529122 66692 1405 281309 315730 692420 585057 1246626 1121088 1581038 98228 272558 315749 83333 1479 691437 1392 198094 260799 420246 1565991 235909 326423 129338 1441095 550542 1111068 1478 224308 666686 685038 135735 585056 386585 544556 471223 226900"/>
+      <property location="data/uniprot" name="src.data.dir"/>
+      <property name="uniprot.organisms" value="386585 529122 1348623 666686 315730 1478 260799 1133852 66692 135735 581103 685038 281309 544556 511145 83333 315749 471223 98228 1529886 129338 420246 649639 279010 272558 1121088 1367477 585057 796606 226900 1581038 1111068 1196031 1408 550542 1405 1705566 585056 941639 691437 1392 398511 1479 326423 1246626 692420 198094 235909 224308 439292 720555 1441095 1565991"/>
     </source>
     <source dump="true" name="uniprot-fasta" type="fasta">
-      <property location="data/current/uniprot" name="src.data.dir"/>
-      <property name="fasta.taxonId" value="649639 1133852 1705566 720555 439292 941639 1348623 398511 1529886 1367477 279010 581103 796606 511145 1408 1196031 529122 66692 1405 281309 315730 692420 585057 1246626 1121088 1581038 98228 272558 315749 83333 1479 691437 1392 198094 260799 420246 1565991 235909 326423 129338 1441095 550542 1111068 1478 224308 666686 685038 135735 585056 386585 544556 471223 226900"/>
+      <property location="data/uniprot" name="src.data.dir"/>
+      <property name="fasta.taxonId" value="386585 529122 1348623 666686 315730 1478 260799 1133852 66692 135735 581103 685038 281309 544556 511145 83333 315749 471223 98228 1529886 129338 420246 649639 279010 272558 1121088 1367477 585057 796606 226900 1581038 1111068 1196031 1408 550542 1405 1705566 585056 941639 691437 1392 398511 1479 326423 1246626 692420 198094 235909 224308 439292 720555 1441095 1565991"/>
       <property name="fasta.className" value="org.intermine.model.bio.Protein"/>
       <property name="fasta.classAttribute" value="primaryAccession"/>
       <property name="fasta.dataSetTitle" value="UniProt data set"/>
@@ -999,23 +999,23 @@
       <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.UniProtFastaLoaderTask"/>
     </source>
     <source dump="true" name="uniprot-keywords" type="uniprot-keywords">
-      <property location="data/current/uniprot" name="src.data.dir"/>
+      <property location="data/uniprot" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="keywlist.xml"/>
     </source>
     <source dump="false" name="eggnog-functional-categories" type="synbio-funccat">
-      <property location="data/current/eggnog/load" name="src.data.dir"/>
+      <property location="data/eggnog/load" name="src.data.dir"/>
     </source>
     <source dump="false" name="dbtbs-regulation-Bsub168" type="synbio-regulation">
-      <property location="data/current/promoters/load/dbtbs" name="src.data.dir"/>
+      <property location="data/promoters/load/dbtbs" name="src.data.dir"/>
     </source>
     <source dump="false" name="nicolas2012-regulation-Bsub168" type="synbio-regulation">
-      <property location="data/current/promoters/load/nicolas-2012" name="src.data.dir"/>
+      <property location="data/promoters/load/nicolas-2012" name="src.data.dir"/>
     </source>
     <source dump="false" name="faith-GEOSeries-EcoliK12" type="synbio-GEOSeries">
-      <property location="data/current/geo/load/faith-2007" name="src.data.dir"/>
+      <property location="data/geo/load/faith-2007" name="src.data.dir"/>
     </source>
     <source dump="false" name="nicolas2012-GEOSeries-Bsub168" type="synbio-GEOSeries">
-      <property location="data/current/geo/load/nicolas-2012" name="src.data.dir"/>
+      <property location="data/geo/load/nicolas-2012" name="src.data.dir"/>
     </source>
     <source dump="false" name="interpro" type="interpro">
       <property location="/micklem/data/interpro/current" name="src.data.dir"/>
@@ -1028,10 +1028,10 @@
       <property location="data/go/load/go-basic.obo" name="src.data.file"/>
     </source>
     <source dump="false" name="go-annotation" type="go-annotation">
-      <property location="data/current/goa" name="src.data.dir"/>
+      <property location="data/goa" name="src.data.dir"/>
     </source>
     <source dump="false" name="biogrid" type="biogrid">
-      <property location="data/current/biogrid/load" name="src.data.dir"/>
+      <property location="data/biogrid/load" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="*psi25.xml"/>
       <property name="biogrid.organisms" value="511145 224308"/>
     </source>
@@ -1047,10 +1047,10 @@
       <property name="orthodb.organisms" value="66692 98228 1121088 83333 1246626 529122 550542 420246 720555 1441095 1133852 279010 692420 1565991 691437 666686 198094 398511 1111068 439292 511145 135735 1408 226900 260799 224308 1405 315730 235909 386585 326423 581103 272558 649639 941639 544556 1367477 1196031 281309 585057 585056 1348623 1705566 685038 1392 796606 129338 1529886 315749 1581038 1478 1479 471223"/>
     </source>
     <source dump="false" name="pathway2model-Bsub168" type="synbio-reaction">
-      <property location="data/current/path2model/load/Bsub168" name="src.data.dir"/>
+      <property location="data/path2model/load/Bsub168" name="src.data.dir"/>
     </source>
     <source dump="false" name="pathway2model-EcoliMG1655" type="synbio-reaction">
-      <property location="data/current/path2model/load/EcoliMG1655" name="src.data.dir"/>
+      <property location="data/path2model/load/EcoliMG1655" name="src.data.dir"/>
     </source>
     <source dump="false" name="synbio-synbis" type="synbio-synbis">
       <property location="data/parts/synbis/load" name="src.data.dir"/>
