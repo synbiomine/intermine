@@ -1008,7 +1008,7 @@
     <source dump="false" name="dbtbs-regulation-Bsub168" type="synbio-regulation">
       <property location="data/promoters/load/dbtbs" name="src.data.dir"/>
     </source>
-    <source dump="false" name="nicolas2012-regulation-Bsub168" type="synbio-regulation">
+    <source dump="true" name="nicolas2012-regulation-Bsub168" type="synbio-regulation">
       <property location="data/promoters/load/nicolas-2012" name="src.data.dir"/>
     </source>
     <source dump="false" name="faith-GEOSeries-EcoliK12" type="synbio-GEOSeries">
@@ -1017,11 +1017,11 @@
     <source dump="false" name="nicolas2012-GEOSeries-Bsub168" type="synbio-GEOSeries">
       <property location="data/geo/load/nicolas-2012" name="src.data.dir"/>
     </source>
-    <source dump="false" name="interpro" type="interpro">
+    <source dump="true" name="interpro" type="interpro">
       <property location="/micklem/data/interpro/current" name="src.data.dir"/>
     </source>
     <source dump="false" name="protein2ipr" type="protein2ipr">
-      <property location="/micklem/data/interpro/match_complete" name="src.data.dir"/>
+      <property location="/micklem/data/interpro/match_complete/current" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
     <source dump="false" name="go" type="go">
