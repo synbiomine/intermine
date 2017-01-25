@@ -178,6 +178,7 @@ public class GoConverter extends BioFileConverter
         // loop through entire file
         while ((line = br.readLine()) != null) {
             if (line.startsWith("!")) {
+                // Logging this stuff isn't useful
                 continue;
             }
             String[] array = line.split("\t", -1); // keep trailing empty Strings
