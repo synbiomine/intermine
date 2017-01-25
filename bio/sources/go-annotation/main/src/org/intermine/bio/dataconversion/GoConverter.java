@@ -190,8 +190,10 @@ public class GoConverter extends BioFileConverter
             Config config = configs.get(taxonId);
             if (config == null) {
                 config = defaultConfig;
+                /*
                 LOG.warn("No entry for organism with taxonId = '"
                         + taxonId + "' found in go-annotation config file.  Using default");
+                */
             }
 
             int readColumn = config.readColumn();
