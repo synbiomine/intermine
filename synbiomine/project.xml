@@ -1024,7 +1024,7 @@
       <property location="/micklem/data/interpro/match_complete/current" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
-    <source dump="false" name="go" type="go">
+    <source dump="true" name="go" type="go">
       <property location="data/go/load/go-basic.obo" name="src.data.file"/>
     </source>
     <source dump="false" name="go-annotation" type="go-annotation">
