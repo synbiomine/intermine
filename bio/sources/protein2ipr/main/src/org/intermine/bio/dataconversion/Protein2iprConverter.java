@@ -134,7 +134,11 @@ public class Protein2iprConverter extends BioFileConverter
                 Item proteinDomainRegion = createItem("ProteinDomainRegion");
 
                 proteinDomainRegion.setAttribute("identifier", proteinDomainIdentifier);
-                proteinDomainRegion.setAttribute("database", getSource(proteinDomainIdentifier));
+
+                String source = getSource(proteinDomainIdentifier);
+                if (source != null)
+                    proteinDomainRegion.setAttribute("database", source);
+
                 proteinDomainRegion.setAttribute("start", start);
                 proteinDomainRegion.setAttribute("end", end);
                 proteinDomainRegion.setReference("protein", proteinRefId);
@@ -199,7 +203,8 @@ public class Protein2iprConverter extends BioFileConverter
         } else if (dbId.startsWith("MF_")) {
             dbName = "HAMAP";
         } else {
-            throw new RuntimeException("Unknown DB found. ID: " + dbId);
+            //throw new RuntimeException("Unknown DB found. ID: " + dbId);
+            LOG.warn("Ignoring unknown DB. ID: " + dbId);
         }
         return dbName;
     }
