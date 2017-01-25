@@ -28,7 +28,6 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
-
 import javax.sql.DataSource;
 
 import org.apache.commons.lang.StringUtils;
@@ -122,10 +121,10 @@ public class Database implements Shutdownable
             configure(props);
         }
         try {
-            LOG.info("Creating new Database " + getURL() + "(" + toString() + ") with ClassLoader "
-                    + getClass().getClassLoader() + " and parallelism " + parallel);
+//            LOG.info("Creating new Database " + getURL() + "(" + toString() + ") with ClassLoader "
+//                    + getClass().getClassLoader() + " and parallelism " + parallel);
         } catch (Exception e) {
-            LOG.info("Creating new invalid Database with ClassLoader "
+            LOG.error("Creating new invalid Database with ClassLoader "
                     + getClass().getClassLoader(), e);
         }
         ShutdownHook.registerObject(new WeakReference<Database>(this));
