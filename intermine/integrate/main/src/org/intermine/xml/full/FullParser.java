@@ -145,7 +145,7 @@ public final class FullParser
      * Fill in fields of an outline business object which is in the map under item.identifier
      * Note that this modifies the relevant object in the map
      * It also returns the object for convenience
-     * @param item a the Item to read field data from
+     * @param item the Item to read field data from
      * @param objMap a map of item identifiers to outline business objects
      * @param useIdentifier if true, set the id of the new object using the identifier of the Item
      * @param abortOnError if true, throw an exception if there is a problem.  If false, log the
@@ -212,17 +212,16 @@ public final class FullParser
                     }
                 }
 
-
-
                 if (!InterMineObject.class.isAssignableFrom(refClass)) {
+                    String msg = "Looking for a reference for " + refName + ", but found a " + refClass.getName();
                     if (abortOnError) {
-                        throw new IllegalArgumentException("Looking for a reference, but found a "
-                                + refClass.getName());
+                        throw new IllegalArgumentException(msg);
                     } else {
-                        LOG.warn("Looking for a reference, but found a " + refClass.getName());
+                        LOG.warn(msg);
                         continue;
                     }
                 }
+
                 if (refObj == null) {
                     LOG.warn("no field " + ref.getName() + " in object: " + obj);
                 } else {
