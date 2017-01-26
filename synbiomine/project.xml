@@ -1028,7 +1028,7 @@
       <property location="data/go/load/go-basic.obo" name="src.data.file"/>
     </source>
     <source dump="false" name="go-annotation" type="go-annotation">
-      <property location="data/goa" name="src.data.dir"/>
+      <property location="data/goa/load" name="src.data.dir"/>
     </source>
     <source dump="false" name="biogrid" type="biogrid">
       <property location="data/biogrid/load" name="src.data.dir"/>
@@ -1049,7 +1049,7 @@
     <source dump="false" name="pathway2model-Bsub168" type="synbio-reaction">
       <property location="data/path2model/load/Bsub168" name="src.data.dir"/>
     </source>
-    <source dump="false" name="pathway2model-EcoliMG1655" type="synbio-reaction">
+    <source dump="true" name="pathway2model-EcoliMG1655" type="synbio-reaction">
       <property location="data/path2model/load/EcoliMG1655" name="src.data.dir"/>
     </source>
     <source dump="false" name="synbio-synbis" type="synbio-synbis">
