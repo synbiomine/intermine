@@ -169,10 +169,10 @@ public final class FullParser
                             throw new IllegalArgumentException(message);
                         }
                     } catch (IllegalArgumentException e) {
-                        String message = "Field " + attr.getName() + " not found in "
-                            + Util.getFriendlyName(obj.getClass());
-                        throw new IllegalArgumentException(message);
+                        LOG.warn("Field " + attr.getName() + " not found in " + Util.getFriendlyName(obj.getClass()));
+                        continue;
                     }
+
                     if (ClobAccess.class.equals(attrClass)) {
                         obj.setFieldValue(attr.getName(), new PendingClob(attr.getValue()));
                     } else {
