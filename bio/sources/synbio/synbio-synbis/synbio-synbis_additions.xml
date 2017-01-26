@@ -1,203 +1,217 @@
 <classes>
   <class is-interface="true" name="synbisSeries">
+    <attribute name="synbis_dataLocation" type="java.lang.String"/>
+    <attribute name="synbis_variant" type="java.lang.String"/>
     <reference name="synbis_stimulus" referenced-type="synbisStimulus"/>
     <attribute name="synbis_modality_type" type="java.lang.String"/>
-    <attribute name="synbis_dataLocation" type="java.lang.String"/>
     <attribute name="synbis_rep" type="java.lang.String"/>
-    <attribute name="synbis_variant" type="java.lang.String"/>
     <attribute name="synbis_date" type="java.lang.String"/>
     <reference name="synbis_modality" referenced-type="synbisModality"/>
   </class>
-  <class is-interface="true" name="synbisExperiment">
-    <reference name="synbis_transformation" referenced-type="synbisTransformation"/>
-    <reference name="synbis_series" referenced-type="synbisSeries"/>
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <reference name="synbis_experimentalProtocol" referenced-type="synbisExperimentalProtocol"/>
-  </class>
   <class is-interface="true" name="synbisStimulus">
     <attribute name="synbis_timeStamp" type="java.lang.String"/>
-    <attribute name="synbis_amount" type="java.lang.String"/>
     <reference name="synbis_stimulusDefinition" referenced-type="synbisStimulusDefinition"/>
+    <attribute name="synbis_amount" type="java.lang.String"/>
+  </class>
+  <class is-interface="true" name="synbisTransformation">
+    <reference name="synbis_host" referenced-type="synbisHost"/>
+    <reference name="synbis_componentDefinition" referenced-type="sbolsComponentDefinition"/>
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="synbisMetricsTable">
     <reference name="synbis_stimulus" referenced-type="synbisStimulus"/>
+    <attribute name="synbis_fl6" type="java.lang.String"/>
+    <attribute name="synbis_sdFl3" type="java.lang.String"/>
     <reference name="synbis_series" referenced-type="synbisSeries"/>
-    <attribute name="synbis_refLag" type="java.lang.String"/>
+    <attribute name="synbis_references6" type="java.lang.String"/>
+    <reference name="synbis_refSeriesGroup" referenced-type="synbisSeriesGroup"/>
+    <attribute name="synbis_references3" type="java.lang.String"/>
+    <attribute name="synbis_sdRefFl6" type="java.lang.String"/>
+    <attribute name="synbis_repeats3" type="java.lang.String"/>
+    <attribute name="synbis_sdRpu3" type="java.lang.String"/>
+    <attribute name="synbis_sdFl6" type="java.lang.String"/>
+    <attribute name="synbis_controls3" type="java.lang.String"/>
+    <attribute name="synbis_refFl6" type="java.lang.String"/>
+    <attribute name="synbis_controls6" type="java.lang.String"/>
+    <attribute name="synbis_sdRpu6" type="java.lang.String"/>
+    <attribute name="synbis_rpu3" type="java.lang.String"/>
+    <attribute name="synbis_rpu6" type="java.lang.String"/>
+    <attribute name="synbis_refFl3" type="java.lang.String"/>
+    <attribute name="synbis_repeats6" type="java.lang.String"/>
+    <attribute name="synbis_fl3" type="java.lang.String"/>
+    <attribute name="synbis_sdRefFl3" type="java.lang.String"/>
+    <attribute name="synbis_growthRate" type="java.lang.String"/>
+    <attribute name="synbis_flReferences" type="java.lang.String"/>
+    <attribute name="synbis_odControls" type="java.lang.String"/>
+    <attribute name="synbis_carryingCapacity" type="java.lang.String"/>
+    <attribute name="synbis_synRate3" type="java.lang.String"/>
+    <attribute name="synbis_sdRefSynRate3" type="java.lang.String"/>
+    <attribute name="synbis_sdSynRate6" type="java.lang.String"/>
     <attribute name="synbis_refSynRate6" type="java.lang.String"/>
+    <attribute name="synbis_lag" type="java.lang.String"/>
+    <attribute name="synbis_sdRefDoublingTime" type="java.lang.String"/>
+    <attribute name="synbis_refCarryingCapacity" type="java.lang.String"/>
+    <attribute name="synbis_synRate6" type="java.lang.String"/>
+    <attribute name="synbis_flControls" type="java.lang.String"/>
+    <attribute name="synbis_sdRefSynRate6" type="java.lang.String"/>
+    <attribute name="synbis_refDoublingTime" type="java.lang.String"/>
+    <attribute name="synbis_refLag" type="java.lang.String"/>
     <attribute name="synbis_sdSynRate3" type="java.lang.String"/>
     <attribute name="synbis_refGrowthRate" type="java.lang.String"/>
-    <attribute name="synbis_odRepeats" type="java.lang.String"/>
-    <attribute name="synbis_sdRefSynRate6" type="java.lang.String"/>
-    <attribute name="synbis_sdRefDoublingTime" type="java.lang.String"/>
-    <attribute name="synbis_sdRefSynRate3" type="java.lang.String"/>
-    <attribute name="synbis_refSynRate3" type="java.lang.String"/>
-    <attribute name="synbis_odControls" type="java.lang.String"/>
-    <attribute name="synbis_odReferences" type="java.lang.String"/>
     <attribute name="synbis_sdDoublingTime" type="java.lang.String"/>
-    <attribute name="synbis_synRate6" type="java.lang.String"/>
-    <attribute name="synbis_sdRpu3" type="java.lang.String"/>
-    <attribute name="synbis_sdRpu6" type="java.lang.String"/>
-    <attribute name="synbis_flReferences" type="java.lang.String"/>
-    <attribute name="synbis_sdSynRate6" type="java.lang.String"/>
-    <attribute name="synbis_rpu6" type="java.lang.String"/>
-    <attribute name="synbis_flControls" type="java.lang.String"/>
-    <attribute name="synbis_lag" type="java.lang.String"/>
-    <attribute name="synbis_synRate3" type="java.lang.String"/>
-    <attribute name="synbis_refDoublingTime" type="java.lang.String"/>
-    <attribute name="synbis_refCarryingCapacity" type="java.lang.String"/>
-    <attribute name="synbis_carryingCapacity" type="java.lang.String"/>
-    <attribute name="synbis_growthRate" type="java.lang.String"/>
-    <attribute name="synbis_flRepeats" type="java.lang.String"/>
-    <attribute name="synbis_rpu3" type="java.lang.String"/>
+    <attribute name="synbis_refSynRate3" type="java.lang.String"/>
     <attribute name="synbis_doublingTime" type="java.lang.String"/>
-    <attribute name="synbis_repeats3" type="java.lang.String"/>
-    <attribute name="synbis_sdRefFl6" type="java.lang.String"/>
-    <attribute name="synbis_refFl3" type="java.lang.String"/>
-    <reference name="synbis_refSeriesGroup" referenced-type="synbisSeriesGroup"/>
-    <attribute name="synbis_sdRefFl3" type="java.lang.String"/>
-    <attribute name="synbis_references3" type="java.lang.String"/>
-    <attribute name="synbis_fl6" type="java.lang.String"/>
-    <attribute name="synbis_refFl6" type="java.lang.String"/>
-    <attribute name="synbis_repeats6" type="java.lang.String"/>
-    <attribute name="synbis_controls3" type="java.lang.String"/>
-    <attribute name="synbis_sdFl3" type="java.lang.String"/>
-    <attribute name="synbis_controls6" type="java.lang.String"/>
-    <attribute name="synbis_sdFl6" type="java.lang.String"/>
-    <attribute name="synbis_references6" type="java.lang.String"/>
-    <attribute name="synbis_fl3" type="java.lang.String"/>
-  </class>
-  <class is-interface="true" name="synbisTransformation">
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <reference name="synbis_host" referenced-type="synbisHost"/>
-    <reference name="synbis_componentDefinition" referenced-type="sbolsComponentDefinition"/>
-  </class>
-  <class is-interface="true" name="synbisOutgrowth">
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
-    <attribute name="synbis_duration" type="java.lang.String"/>
-    <attribute name="synbis_vesselModel" type="java.lang.String"/>
-    <attribute name="synbis_durationUnits" type="java.lang.String"/>
-    <attribute name="synbis_vesselType" type="java.lang.String"/>
-    <reference name="synbis_medium" referenced-type="synbisMedium"/>
-    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
-    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
-    <attribute name="synbis_dilutionToUnit" type="java.lang.String"/>
-    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
-    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
-    <attribute name="synbis_shaking" type="java.lang.String"/>
-    <attribute name="synbis_dilutionTo" type="java.lang.String"/>
-    <attribute name="synbis_antibiotic" type="java.lang.String"/>
-    <attribute name="synbis_volume" type="java.lang.String"/>
-    <attribute name="synbis_aerobic" type="java.lang.String"/>
-    <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
-    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
-    <attribute name="synbis_temperature" type="java.lang.String"/>
-    <attribute name="synbis_shakingUnit" type="java.lang.String"/>
+    <attribute name="synbis_flRepeats" type="java.lang.String"/>
+    <attribute name="synbis_odRepeats" type="java.lang.String"/>
+    <attribute name="synbis_odReferences" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="sbolsSequence">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="sbols_encoding" type="java.lang.String"/>
     <attribute name="sbols_elements" type="java.lang.String"/>
+    <attribute name="sbols_encoding" type="java.lang.String"/>
+  </class>
+  <class is-interface="true" name="synbisExperiment">
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
+    <reference name="synbis_series" referenced-type="synbisSeries"/>
+    <reference name="synbis_experimentalProtocol" referenced-type="synbisExperimentalProtocol"/>
+    <reference name="synbis_transformation" referenced-type="synbisTransformation"/>
+  </class>
+  <class is-interface="true" name="synbisDatasheet">
+    <reference name="synbis_componentDefinition" referenced-type="sbolsComponentDefinition"/>
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
+    <reference name="synbis_controlExperiment" referenced-type="synbisExperiment"/>
+    <reference name="synbis_experiment" referenced-type="synbisExperiment"/>
+    <attribute name="sbols_version" type="java.lang.String"/>
+    <attribute name="synbis_collector" type="java.lang.String"/>
+    <attribute name="synbis_curationLocation" type="java.lang.String"/>
+    <reference name="synbis_plateReaderMetrics" referenced-type="synbisMetricsTable"/>
+    <attribute name="synbis_curator" type="java.lang.String"/>
+    <attribute name="synbis_collectionLocation" type="java.lang.String"/>
+    <reference name="synbis_flowCytometryMetrics" referenced-type="synbisMetricsTable"/>
+    <reference name="synbis_transferFunction" referenced-type="synbisTransferFunction"/>
+    <collection name="dataSet" referenced-type="DataSet"/>
   </class>
   <class is-interface="true" name="sbolsComponentDefinition">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_nativeFrom" type="java.lang.String"/>
-    <attribute name="synbis_origin" type="java.lang.String"/>
     <attribute name="sbols_role" type="java.lang.String"/>
+    <attribute name="sbols_type" type="java.lang.String"/>
+    <attribute name="synbis_nativeFrom" type="java.lang.String"/>
     <attribute name="synbis_rnapSpecies" type="java.lang.String"/>
     <attribute name="synbis_rnapSigmaFactor" type="java.lang.String"/>
-    <attribute name="sbols_type" type="java.lang.String"/>
     <reference name="sbols_sequence" referenced-type="sbolsSequence"/>
-    <attribute name="synbis_inducer" type="java.lang.String"/>
+    <attribute name="synbis_origin" type="java.lang.String"/>
     <attribute name="synbis_regulatoryElement" type="java.lang.String"/>
+    <attribute name="synbis_inducer" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="synbisTransferFunction">
+  <class is-interface="true" name="synbisExperimentalProtocol">
     <reference name="synbis_modality" referenced-type="synbisModality"/>
-    <attribute name="synbis_maxValue" type="java.lang.String"/>
-    <attribute name="synbis_time" type="java.lang.String"/>
-    <attribute name="synbis_timeWindowEnd" type="java.lang.String"/>
-    <attribute name="synbis_activity" type="java.lang.String"/>
-    <attribute name="synbis_timeWindowStart" type="java.lang.String"/>
-    <attribute name="synbis_Km" type="java.lang.String"/>
-    <attribute name="synbis_hillExponent" type="java.lang.String"/>
-    <attribute name="synbis_basalValue" type="java.lang.String"/>
-  </class>
-  <class is-interface="true" name="synbisDatasheet">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <reference name="synbis_componentDefinition" referenced-type="sbolsComponentDefinition"/>
-    <attribute name="synbis_curator" type="java.lang.String"/>
-    <reference name="synbis_controlExperiment" referenced-type="synbisExperiment"/>
-    <attribute name="sbols_version" type="java.lang.String"/>
-    <reference name="synbis_experiment" referenced-type="synbisExperiment"/>
-    <reference name="synbis_flowCytometryMetrics" referenced-type="synbisMetricsTable"/>
-    <attribute name="synbis_collectionLocation" type="java.lang.String"/>
-    <attribute name="synbis_curationLocation" type="java.lang.String"/>
-    <attribute name="synbis_collector" type="java.lang.String"/>
-    <reference name="synbis_plateReaderMetrics" referenced-type="synbisMetricsTable"/>
-    <reference name="synbis_transferFunction" referenced-type="synbisTransferFunction"/>
-    <collection name="dataSet" referenced-type="DataSet"/>
+    <attribute name="synbis_backgroundComplement" type="java.lang.String"/>
+    <attribute name="synbis_ownership" type="java.lang.String"/>
+    <attribute name="synbis_reporterVariant" type="java.lang.String"/>
+    <reference name="synbis_subprotocol" referenced-type="synbisProtocol"/>
+    <attribute name="synbis_backgroundPromoter" type="java.lang.String"/>
+    <attribute name="synbis_refPromoter" type="java.lang.String"/>
+    <attribute name="synbis_mainPromoter" type="java.lang.String"/>
+    <attribute name="synbis_mainComplement" type="java.lang.String"/>
+    <attribute name="synbis_name" type="java.lang.String"/>
+    <attribute name="synbis_reporter" type="java.lang.String"/>
+    <attribute name="synbis_refComplement" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="synbisModality">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_vesselModel" type="java.lang.String"/>
-    <attribute name="synbis_vesselType" type="java.lang.String"/>
-    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
+    <attribute name="synbis_odWaveLength" type="java.lang.String"/>
     <attribute name="synbis_shaking" type="java.lang.String"/>
+    <attribute name="synbis_vesselType" type="java.lang.String"/>
     <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
     <attribute name="synbis_temperature" type="java.lang.String"/>
-    <attribute name="synbis_fscVoltageUnit" type="java.lang.String"/>
-    <attribute name="synbis_fscRange" type="java.lang.String"/>
-    <attribute name="synbis_flh1VoltageUnit" type="java.lang.String"/>
-    <attribute name="synbis_collectionStopTimeUnit" type="java.lang.String"/>
+    <attribute name="synbis_opticOrientation" type="java.lang.String"/>
+    <attribute name="synbis_shakingInt" type="java.lang.String"/>
+    <attribute name="synbis_emissionWaveLength" type="java.lang.String"/>
     <attribute name="synbis_brand" type="java.lang.String"/>
-    <attribute name="synbis_flh2Voltage" type="java.lang.String"/>
-    <attribute name="synbis_sscRange" type="java.lang.String"/>
-    <attribute name="synbis_flh2VoltageUnit" type="java.lang.String"/>
+    <attribute name="synbis_vesselModel" type="java.lang.String"/>
+    <attribute name="synbis_model" type="java.lang.String"/>
+    <attribute name="synbis_odWaveLengthUnit" type="java.lang.String"/>
+    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
+    <attribute name="synbis_excitationMargin" type="java.lang.String"/>
+    <attribute name="synbis_channels" type="java.lang.String"/>
+    <attribute name="synbis_shakingIntUnit" type="java.lang.String"/>
+    <attribute name="synbis_type" type="java.lang.String"/>
+    <attribute name="synbis_excitationWaveLength" type="java.lang.String"/>
+    <attribute name="synbis_excitationWaveLengthUnit" type="java.lang.String"/>
+    <attribute name="synbis_emissionWavelengthUnit" type="java.lang.String"/>
+    <attribute name="synbis_shakingDurationUnit" type="java.lang.String"/>
+    <attribute name="synbis_emissionMargin" type="java.lang.String"/>
+    <attribute name="synbis_flSensitivity" type="java.lang.String"/>
+    <attribute name="synbis_shakingDuration" type="java.lang.String"/>
+    <attribute name="synbis_excitationLaser" type="java.lang.String"/>
+    <attribute name="synbis_fscVoltage" type="java.lang.String"/>
     <attribute name="synbis_sscVoltage" type="java.lang.String"/>
     <attribute name="synbis_flh1Voltage" type="java.lang.String"/>
-    <attribute name="synbis_type" type="java.lang.String"/>
-    <attribute name="synbis_channels" type="java.lang.String"/>
-    <attribute name="synbis_gated" type="java.lang.String"/>
+    <attribute name="synbis_collectionStopTimeUnit" type="java.lang.String"/>
+    <attribute name="synbis_flh1VoltageUnit" type="java.lang.String"/>
+    <attribute name="synbis_fscVoltageUnit" type="java.lang.String"/>
+    <attribute name="synbis_flh2Voltage" type="java.lang.String"/>
     <attribute name="synbis_collectionStopTime" type="java.lang.String"/>
     <attribute name="synbis_sscVoltageUnit" type="java.lang.String"/>
-    <attribute name="synbis_excitationLaser" type="java.lang.String"/>
     <attribute name="synbis_eventNrThreshold" type="java.lang.String"/>
-    <attribute name="synbis_fscVoltage" type="java.lang.String"/>
-    <attribute name="synbis_model" type="java.lang.String"/>
-    <attribute name="synbis_excitationWaveLength" type="java.lang.String"/>
-    <attribute name="synbis_shakingDuration" type="java.lang.String"/>
-    <attribute name="synbis_emissionWavelengthUnit" type="java.lang.String"/>
-    <attribute name="synbis_odWaveLength" type="java.lang.String"/>
-    <attribute name="synbis_shakingInt" type="java.lang.String"/>
-    <attribute name="synbis_excitationMargin" type="java.lang.String"/>
-    <attribute name="synbis_emissionMargin" type="java.lang.String"/>
-    <attribute name="synbis_emissionWaveLength" type="java.lang.String"/>
-    <attribute name="synbis_shakingIntUnit" type="java.lang.String"/>
-    <attribute name="synbis_odWaveLengthUnit" type="java.lang.String"/>
-    <attribute name="synbis_excitationWaveLengthUnit" type="java.lang.String"/>
-    <attribute name="synbis_opticOrientation" type="java.lang.String"/>
-    <attribute name="synbis_flSensitivity" type="java.lang.String"/>
-    <attribute name="synbis_shakingDurationUnit" type="java.lang.String"/>
+    <attribute name="synbis_gated" type="java.lang.String"/>
+    <attribute name="synbis_fscRange" type="java.lang.String"/>
+    <attribute name="synbis_flh2VoltageUnit" type="java.lang.String"/>
+    <attribute name="synbis_sscRange" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="synbisStimulusDefinition">
+  <class is-interface="true" name="synbisSeriesGroup">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_amountType" type="java.lang.String"/>
-    <attribute name="synbis_amountUnit" type="java.lang.String"/>
-    <attribute name="synbis_timeUnit" type="java.lang.String"/>
-    <attribute name="synbis_name" type="java.lang.String"/>
+    <reference name="synbis_series" referenced-type="synbisSeries"/>
   </class>
   <class is-interface="true" name="synbisProtocol">
     <attribute name="synbis_stepNr" type="java.lang.String"/>
+  </class>
+  <class is-interface="true" name="synbisAssay">
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
+    <attribute name="synbis_shaking" type="java.lang.String"/>
+    <attribute name="synbis_vesselType" type="java.lang.String"/>
+    <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
+    <attribute name="synbis_temperature" type="java.lang.String"/>
+    <attribute name="synbis_vesselModel" type="java.lang.String"/>
+    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
+    <attribute name="synbis_repeatsPlate" type="java.lang.String"/>
+    <attribute name="synbis_measTimeIntervals" type="java.lang.String"/>
+    <attribute name="synbis_dilutionToUnit" type="java.lang.String"/>
+    <attribute name="synbis_dilutionTo" type="java.lang.String"/>
+    <attribute name="synbis_duration" type="java.lang.String"/>
+    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
+    <attribute name="synbis_aerobic" type="java.lang.String"/>
+    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
+    <reference name="synbis_medium" referenced-type="synbisMedium"/>
+    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
+    <attribute name="synbis_dayRepeats" type="java.lang.String"/>
+    <attribute name="synbis_shakingUnit" type="java.lang.String"/>
+    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
+    <attribute name="synbis_volume" type="java.lang.String"/>
+    <attribute name="synbis_durationUnits" type="java.lang.String"/>
+    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
+    <attribute name="synbis_measTimeIntervalsUnit" type="java.lang.String"/>
+    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
+    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
+    <attribute name="synbis_antibiotic" type="java.lang.String"/>
+  </class>
+  <class is-interface="true" name="synbisHost">
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
+    <attribute name="synbis_origin" type="java.lang.String"/>
+    <attribute name="synbis_name" type="java.lang.String"/>
+    <attribute name="synbis_species" type="java.lang.String"/>
+    <attribute name="synbis_strain" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="synbisIngredient">
     <attribute name="sbols_displayId" type="java.lang.String"/>
@@ -206,97 +220,82 @@
     <attribute name="synbis_concentration" type="java.lang.String"/>
     <attribute name="synbis_unit" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="synbisSeriesGroup">
-    <reference name="synbis_series" referenced-type="synbisSeries"/>
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-  </class>
-  <class is-interface="true" name="synbisCulture">
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
-    <attribute name="synbis_duration" type="java.lang.String"/>
-    <attribute name="synbis_vesselModel" type="java.lang.String"/>
-    <attribute name="synbis_vesselType" type="java.lang.String"/>
-    <reference name="synbis_medium" referenced-type="synbisMedium"/>
-    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
-    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
-    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
-    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
-    <attribute name="synbis_shaking" type="java.lang.String"/>
-    <attribute name="synbis_antibiotic" type="java.lang.String"/>
-    <attribute name="synbis_volume" type="java.lang.String"/>
-    <attribute name="synbis_aerobic" type="java.lang.String"/>
-    <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
-    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
-    <attribute name="synbis_temperature" type="java.lang.String"/>
-    <attribute name="synbis_shakingUnit" type="java.lang.String"/>
-    <attribute name="synbis_durationUnit" type="java.lang.String"/>
-    <attribute name="synbis_source" type="java.lang.String"/>
+  <class is-interface="true" name="synbisTransferFunction">
+    <attribute name="synbis_Km" type="java.lang.String"/>
+    <attribute name="synbis_timeWindowEnd" type="java.lang.String"/>
+    <attribute name="synbis_maxValue" type="java.lang.String"/>
+    <attribute name="synbis_time" type="java.lang.String"/>
+    <attribute name="synbis_basalValue" type="java.lang.String"/>
+    <attribute name="synbis_timeWindowStart" type="java.lang.String"/>
+    <attribute name="synbis_activity" type="java.lang.String"/>
+    <attribute name="synbis_hillExponent" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="synbisMedium">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
     <attribute name="synbis_name" type="java.lang.String"/>
-    <attribute name="synbis_preparation" type="java.lang.String"/>
-    <attribute name="synbis_reference" type="java.lang.String"/>
-    <attribute name="synbis_supplier" type="java.lang.String"/>
     <reference name="synbis_ingredient" referenced-type="synbisIngredient"/>
+    <attribute name="synbis_reference" type="java.lang.String"/>
+    <attribute name="synbis_preparation" type="java.lang.String"/>
+    <attribute name="synbis_supplier" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="synbisExperimentalProtocol">
-    <reference name="synbis_modality" referenced-type="synbisModality"/>
+  <class is-interface="true" name="synbisCulture">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_name" type="java.lang.String"/>
-    <attribute name="synbis_reporter" type="java.lang.String"/>
-    <reference name="synbis_subprotocol" referenced-type="synbisProtocol"/>
-    <attribute name="synbis_mainPromoter" type="java.lang.String"/>
-    <attribute name="synbis_ownership" type="java.lang.String"/>
-    <attribute name="synbis_refPromoter" type="java.lang.String"/>
-    <attribute name="synbis_refComplement" type="java.lang.String"/>
-    <attribute name="synbis_backgroundPromoter" type="java.lang.String"/>
-    <attribute name="synbis_backgroundComplement" type="java.lang.String"/>
-    <attribute name="synbis_reporterVariant" type="java.lang.String"/>
-    <attribute name="synbis_mainComplement" type="java.lang.String"/>
-  </class>
-  <class is-interface="true" name="synbisAssay">
-    <attribute name="sbols_displayId" type="java.lang.String"/>
-    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
-    <attribute name="synbis_duration" type="java.lang.String"/>
-    <attribute name="synbis_vesselModel" type="java.lang.String"/>
-    <attribute name="synbis_durationUnits" type="java.lang.String"/>
-    <attribute name="synbis_vesselType" type="java.lang.String"/>
-    <reference name="synbis_medium" referenced-type="synbisMedium"/>
-    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
-    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
-    <attribute name="synbis_dilutionToUnit" type="java.lang.String"/>
-    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
-    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
     <attribute name="synbis_shaking" type="java.lang.String"/>
-    <attribute name="synbis_dilutionTo" type="java.lang.String"/>
-    <attribute name="synbis_antibiotic" type="java.lang.String"/>
-    <attribute name="synbis_volume" type="java.lang.String"/>
-    <attribute name="synbis_aerobic" type="java.lang.String"/>
+    <attribute name="synbis_vesselType" type="java.lang.String"/>
     <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
-    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
-    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
     <attribute name="synbis_temperature" type="java.lang.String"/>
+    <attribute name="synbis_vesselModel" type="java.lang.String"/>
+    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
+    <attribute name="synbis_duration" type="java.lang.String"/>
+    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
+    <attribute name="synbis_aerobic" type="java.lang.String"/>
+    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
+    <reference name="synbis_medium" referenced-type="synbisMedium"/>
+    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
     <attribute name="synbis_shakingUnit" type="java.lang.String"/>
-    <attribute name="synbis_dayRepeats" type="java.lang.String"/>
-    <attribute name="synbis_measTimeIntervals" type="java.lang.String"/>
-    <attribute name="synbis_measTimeIntervalsUnit" type="java.lang.String"/>
-    <attribute name="synbis_repeatsPlate" type="java.lang.String"/>
+    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
+    <attribute name="synbis_volume" type="java.lang.String"/>
+    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
+    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
+    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
+    <attribute name="synbis_antibiotic" type="java.lang.String"/>
+    <attribute name="synbis_source" type="java.lang.String"/>
+    <attribute name="synbis_durationUnit" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="synbisHost">
+  <class is-interface="true" name="synbisOutgrowth">
     <attribute name="sbols_displayId" type="java.lang.String"/>
     <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
-    <attribute name="synbis_origin" type="java.lang.String"/>
+    <attribute name="synbis_shaking" type="java.lang.String"/>
+    <attribute name="synbis_vesselType" type="java.lang.String"/>
+    <attribute name="synbis_temperatureUnit" type="java.lang.String"/>
+    <attribute name="synbis_temperature" type="java.lang.String"/>
+    <attribute name="synbis_vesselModel" type="java.lang.String"/>
+    <attribute name="synbis_vesselBrand" type="java.lang.String"/>
+    <attribute name="synbis_dilutionToUnit" type="java.lang.String"/>
+    <attribute name="synbis_dilutionTo" type="java.lang.String"/>
+    <attribute name="synbis_duration" type="java.lang.String"/>
+    <attribute name="synbis_incubatorModel" type="java.lang.String"/>
+    <attribute name="synbis_aerobic" type="java.lang.String"/>
+    <attribute name="synbis_incubatorBrand" type="java.lang.String"/>
+    <reference name="synbis_medium" referenced-type="synbisMedium"/>
+    <attribute name="synbis_antibioticConcentration" type="java.lang.String"/>
+    <attribute name="synbis_shakingUnit" type="java.lang.String"/>
+    <attribute name="synbis_volumeUnit" type="java.lang.String"/>
+    <attribute name="synbis_volume" type="java.lang.String"/>
+    <attribute name="synbis_durationUnits" type="java.lang.String"/>
+    <attribute name="synbis_vesselSeal" type="java.lang.String"/>
+    <attribute name="synbis_antibioticConcentrationUnit" type="java.lang.String"/>
+    <attribute name="synbis_shakingSpeed" type="java.lang.String"/>
+    <attribute name="synbis_antibiotic" type="java.lang.String"/>
+  </class>
+  <class is-interface="true" name="synbisStimulusDefinition">
+    <attribute name="sbols_displayId" type="java.lang.String"/>
+    <attribute name="sbols_persistentIdentity" type="java.lang.String"/>
     <attribute name="synbis_name" type="java.lang.String"/>
-    <attribute name="synbis_strain" type="java.lang.String"/>
-    <attribute name="synbis_species" type="java.lang.String"/>
+    <attribute name="synbis_amountUnit" type="java.lang.String"/>
+    <attribute name="synbis_amountType" type="java.lang.String"/>
+    <attribute name="synbis_timeUnit" type="java.lang.String"/>
   </class>
 </classes>
