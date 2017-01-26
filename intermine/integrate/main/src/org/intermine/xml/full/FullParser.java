@@ -212,6 +212,11 @@ public final class FullParser
                     }
                 }
 
+                if (refClass == null) {
+                    LOG.warn("Skipping " + refName + " since it doesn't exist in model XML");
+                    continue;
+                }
+
                 if (!InterMineObject.class.isAssignableFrom(refClass)) {
                     String msg = "Looking for a reference for " + refName + ", but found a " + refClass.getName();
                     if (abortOnError) {
