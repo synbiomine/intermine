@@ -1056,7 +1056,7 @@
       <property location="data/parts/synbis/load" name="src.data.dir"/>
     </source>
     <source dump="false" name="pubmed-gene" type="pubmed-gene">
-      <property location="/micklem/data/pubmed" name="src.data.dir"/>
+      <property location="/micklem/data/pubmed/current" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
       <property name="pubmed.organisms" value="1392 1405 1408 1478 1479 66692 83333 98228 129338 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 386585 398511 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 649639 666686 685038 691437 692420 720555 796606 941639 1111068 1121088 1133852 1196031 1246626 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
     </source>
