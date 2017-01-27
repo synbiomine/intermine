@@ -171,7 +171,7 @@ public class EntrezOrganismRetriever extends Task
      */
     protected Reader getReader(Set<Integer> ids) throws Exception {
         URL url = new URL(ESUMMARY_URL + StringUtil.join(ids, ","));
-        LOG.info("Retreiving entrez organism from " + url);
+        LOG.info("Retreiving entrez organisms from " + url);
         return new BufferedReader(new InputStreamReader(url.openStream()));
     }
 
@@ -183,6 +183,7 @@ public class EntrezOrganismRetriever extends Task
      */
     protected static Reader getReader(Integer id) throws Exception {
         URL url = new URL(ESUMMARY_URL + id);
+        LOG.info("Retreiving entrez organism from " + url);
         return new BufferedReader(new InputStreamReader(url.openStream()));
     }
 
