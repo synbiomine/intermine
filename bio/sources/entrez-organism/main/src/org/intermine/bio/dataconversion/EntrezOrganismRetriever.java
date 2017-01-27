@@ -124,7 +124,9 @@ public class EntrezOrganismRetriever extends Task
             }
             writer.write(FullRenderer.getFooter() + "\n");
         } catch (Exception e) {
-            throw new BuildException("exception while retrieving organisms", e);
+            BuildException buildException = new BuildException("exception while retrieving organisms", e);
+            LOG.error("Error", buildException);
+            throw buildException;
         } finally {
             Thread.currentThread().setContextClassLoader(cl);
             if (writer != null) {
@@ -169,6 +171,7 @@ public class EntrezOrganismRetriever extends Task
      */
     protected Reader getReader(Set<Integer> ids) throws Exception {
         URL url = new URL(ESUMMARY_URL + StringUtil.join(ids, ","));
+        LOG.info("Retreiving entrez organism from " + url);
         return new BufferedReader(new InputStreamReader(url.openStream()));
     }
 
