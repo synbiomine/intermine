@@ -1060,7 +1060,7 @@
       <property name="src.data.dir.includes" value="gene2pubmed"/>
       <property name="pubmed.organisms" value="1392 1405 1408 1478 1479 66692 83333 98228 129338 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 386585 398511 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 649639 666686 685038 691437 692420 720555 796606 941639 1111068 1121088 1133852 1196031 1246626 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
     </source>
-    <source dump="false" name="update-publications" type="update-publications">
+    <source dump="true" name="update-publications" type="update-publications">
       <property location="build/publications.xml" name="src.data.file"/>
       <property name="loadFullRecord" value="true"/>
     </source>
