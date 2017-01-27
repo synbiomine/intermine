@@ -237,16 +237,13 @@ public class Database implements Shutdownable
     public void finalize() throws Throwable {
         super.finalize();
         if (datasource instanceof com.zaxxer.hikari.HikariDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((com.zaxxer.hikari.HikariDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.ds.PGPoolingDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((org.postgresql.ds.PGPoolingDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.jdbc2.optional.PoolingDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((org.postgresql.jdbc2.optional.PoolingDataSource) datasource).close();
         } else {
             LOG.warn("Finalise - Could not close datasource for Database " + getURL() + "("
