@@ -218,23 +218,26 @@ public class AutoCompleter
         for (Map.Entry<Object, Object> entry: prob.entrySet()) {
             String key = (String) entry.getKey();
             String value = (String) entry.getValue();
+
             if (!key.endsWith(".autocomplete")) {
                 continue;
             }
+
             String className = key.substring(0, key.lastIndexOf("."));
             ClassDescriptor cld = os.getModel().getClassDescriptorByName(className);
             if (cld == null) {
-                throw new RuntimeException("a class mentioned in ObjectStore summary properties "
-                                           + "file (" + className + ") is not in the model");
+//                throw new RuntimeException("A class mentioned in ObjectStore summary properties "
+//                                           + "file (" + className + ") is not in the model");
+                LOG.warn("A class mentioned in ObjectStore summary properties file (" + className + ") is not in the model");
+                continue;
             }
+
             List<String> fieldNames = Arrays.asList(value.split(" "));
             for (Iterator<String> i = fieldNames.iterator(); i.hasNext();) {
-
                 String fieldName = i.next();
                 String classAndField = cld.getUnqualifiedName() + "." + fieldName;
                 System.out .println("Indexing " + classAndField);
                 fieldIndexMap.put(classAndField, classAndField);
-
 
                 Query q = new Query();
                 q.setDistinct(true);
