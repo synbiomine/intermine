@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.intermine.util.PropertiesUtil;
 
 /**
@@ -23,8 +24,7 @@ import org.intermine.util.PropertiesUtil;
  */
 public final class ObjectStoreFactory
 {
-    private ObjectStoreFactory() {
-    }
+    protected static final Logger LOG = Logger.getLogger(ObjectStoreFactory.class);
 
     /**
      * Return an ObjectStore configured using properties
@@ -33,40 +33,55 @@ public final class ObjectStoreFactory
      * @throws Exception if an error occurs in instantiating the ObjectStore
      */
     public static ObjectStore getObjectStore(String alias) throws Exception {
-        if (alias == null) {
-            throw new NullPointerException("ObjectStore alias cannot be null");
-        }
-        if ("".equals(alias)) {
-            throw new IllegalArgumentException("ObjectStore alias cannot be empty");
-        }
-        Properties props = PropertiesUtil.getPropertiesStartingWith(alias);
-        if (0 == props.size()) {
-            throw new ObjectStoreException("No ObjectStore properties were found for alias '"
-                                           + alias + "'");
-        }
-        props = PropertiesUtil.stripStart(alias, props);
-        String clsName = props.getProperty("class");
-        if (clsName == null) {
-            throw new ObjectStoreException(alias + " does not have an ObjectStore class specified"
-                                           + " (check properties file)");
-        }
-        Class<?> cls = null;
+        LOG.info("Getting ObjectStore properties with alias [" + alias + "]");
+
         try {
-            cls = Class.forName(clsName);
-        } catch (ClassNotFoundException e) {
-            throw new ObjectStoreException("Cannot find specified ObjectStore class '" + clsName
-                                           + "' for " + alias + " (check properties file)", e);
-        }
-        Class<?>[] parameterTypes = new Class[] {String.class, Properties.class};
-        Method m = cls.getDeclaredMethod("getInstance", parameterTypes);
-        try {
-            return (ObjectStore) m.invoke(null, new Object[] {alias, props});
-        } catch (InvocationTargetException e) {
-            if (e.getCause() instanceof ObjectStoreException) {
-                throw (ObjectStoreException) e.getCause();
-            } else {
-                throw e;
+            if (alias == null) {
+                throw new NullPointerException("ObjectStore alias cannot be null");
             }
+
+            if ("".equals(alias)) {
+                throw new IllegalArgumentException("ObjectStore alias cannot be empty");
+            }
+
+            Properties props = PropertiesUtil.getPropertiesStartingWith(alias);
+            if (0 == props.size()) {
+                throw new ObjectStoreException("No ObjectStore properties were found for alias '"
+                                               + alias + "'");
+            }
+
+            props = PropertiesUtil.stripStart(alias, props);
+            String clsName = props.getProperty("class");
+            if (clsName == null) {
+                throw new ObjectStoreException(alias + " does not have an ObjectStore class specified"
+                                               + " (check properties file)");
+            }
+
+            LOG.info("Getting ObjectStore class [" + clsName + "]");
+
+            Class<?> cls = null;
+            try {
+                cls = Class.forName(clsName);
+            } catch (ClassNotFoundException e) {
+                throw new ObjectStoreException("Cannot find specified ObjectStore class '" + clsName
+                                               + "' for " + alias + " (check properties file)", e);
+            }
+
+            Class<?>[] parameterTypes = new Class[] {String.class, Properties.class};
+            Method m = cls.getDeclaredMethod("getInstance", parameterTypes);
+
+            try {
+                return (ObjectStore) m.invoke(null, new Object[] {alias, props});
+            } catch (InvocationTargetException e) {
+                if (e.getCause() instanceof ObjectStoreException) {
+                    throw (ObjectStoreException) e.getCause();
+                } else {
+                    throw e;
+                }
+            }
+        } catch (Exception e) {
+            LOG.error("Failed to get object store with exception ", e);
+            throw e;
         }
     }
 }
