@@ -230,9 +230,7 @@ public class Database implements Shutdownable
         */
     }
 
-    /**
-     * {@inheritDoc}
-     */
+    /*
     @Override
     public void finalize() throws Throwable {
         super.finalize();
@@ -251,6 +249,7 @@ public class Database implements Shutdownable
                     + datasource.getClass().toString());
         }
     }
+    */
 
     /**
      * Gets the platform of this Database
