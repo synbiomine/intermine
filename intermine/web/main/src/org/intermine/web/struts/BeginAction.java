@@ -81,7 +81,7 @@ public class BeginAction extends InterMineAction
             for (String errorKey : errorKeys.keySet()) {
                 recordError(new ActionMessage(errorKey, errorKeys.get(errorKey)), request);
             }
-            return mapping.findForward("blockingError");
+            //return mapping.findForward("blockingError");
         }
 
         final InterMineAPI im = SessionMethods.getInterMineAPI(session);
