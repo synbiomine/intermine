@@ -211,7 +211,7 @@
     <attribute name="SynBIS_antibiotic" type="java.lang.String"/>
     <attribute name="SynBIS_dilutionTo" type="java.lang.Double"/>
     <attribute name="SynBIS_shaking" type="java.lang.String"/>
-    <attribute name="SynBIS_duration" type="java.lang.Double"/>
+    <attribute name="SynBIS_duration" type="java.lang.String"/>
     <attribute name="SynBIS_incubatorModel" type="java.lang.String"/>
     <reference name="SynBIS_medium" referenced-type="SynBISMedium"/>
   </class>
@@ -244,7 +244,7 @@
     <attribute name="SynBIS_aerobic" type="java.lang.String"/>
     <attribute name="SynBIS_antibiotic" type="java.lang.String"/>
     <attribute name="SynBIS_shaking" type="java.lang.String"/>
-    <attribute name="SynBIS_duration" type="java.lang.Double"/>
+    <attribute name="SynBIS_duration" type="java.lang.String"/>
     <attribute name="SynBIS_incubatorModel" type="java.lang.String"/>
     <reference name="SynBIS_medium" referenced-type="SynBISMedium"/>
     <attribute name="SynBIS_source" type="java.lang.String"/>
@@ -281,7 +281,7 @@
     <attribute name="SynBIS_antibiotic" type="java.lang.String"/>
     <attribute name="SynBIS_dilutionTo" type="java.lang.Double"/>
     <attribute name="SynBIS_shaking" type="java.lang.String"/>
-    <attribute name="SynBIS_duration" type="java.lang.Double"/>
+    <attribute name="SynBIS_duration" type="java.lang.String"/>
     <attribute name="SynBIS_incubatorModel" type="java.lang.String"/>
     <reference name="SynBIS_medium" referenced-type="SynBISMedium"/>
     <attribute name="SynBIS_measTimeIntervals" type="java.lang.Double"/>
