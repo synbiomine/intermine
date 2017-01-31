@@ -158,34 +158,38 @@ public final class FullParser
         try {
             // Set the data for every given attribute except id
             for (Attribute attr : item.getAttributes()) {
-                String attrName = attr.getName();
-                if (!("id".equals(attrName))) {
-                    Class<?> attrClass;
-                    try {
-                        attrClass = obj.getFieldType(attrName);
-                        if (attrClass == null) {
-                            String message = "Class '" + attrClass + "' not found for "
-                                + Util.getFriendlyName(obj.getClass());
-                            throw new IllegalArgumentException(message);
+                try {
+                    String attrName = attr.getName();
+                    if (!("id".equals(attrName))) {
+                        Class<?> attrClass;
+                        try {
+                            attrClass = obj.getFieldType(attrName);
+                            if (attrClass == null) {
+                                String message = "Class '" + attrClass + "' not found for "
+                                    + Util.getFriendlyName(obj.getClass());
+                                throw new IllegalArgumentException(message);
+                            }
+                        } catch (IllegalArgumentException e) {
+                            LOG.warn("Field " + attr.getName() + " not found in " + Util.getFriendlyName(obj.getClass()));
+                            continue;
                         }
-                    } catch (IllegalArgumentException e) {
-                        LOG.warn("Field " + attr.getName() + " not found in " + Util.getFriendlyName(obj.getClass()));
-                        continue;
-                    }
 
-                    if (ClobAccess.class.equals(attrClass)) {
-                        obj.setFieldValue(attr.getName(), new PendingClob(attr.getValue()));
-                    } else {
-                        String value = attr.getValue();
-                        if (value != null) {
-                            obj.setFieldValue(attr.getName(), TypeUtil.stringToObject(attrClass,
-                                    value));
+                        if (ClobAccess.class.equals(attrClass)) {
+                            obj.setFieldValue(attr.getName(), new PendingClob(attr.getValue()));
                         } else {
-                            String message = "Field '" + attr.getName() + "' has NULL value in "
-                                + Util.getFriendlyName(obj.getClass());
-                            throw new IllegalArgumentException(message);
+                            String value = attr.getValue();
+                            if (value != null) {
+                                obj.setFieldValue(attr.getName(), TypeUtil.stringToObject(attrClass,
+                                        value));
+                            } else {
+                                String message = "Field '" + attr.getName() + "' has NULL value in "
+                                    + Util.getFriendlyName(obj.getClass());
+                                throw new IllegalArgumentException(message);
+                            }
                         }
                     }
+                } catch (Exception e) {
+                    throw new RuntimeException("Failed whilst processing attribute " + attr.getName() + ", value " + attr.getValue(), e);
                 }
             }
 
