@@ -60,7 +60,7 @@ public class Database implements Shutdownable
     protected Properties settings;
     protected String version = null;
 
-    // protected Map createSituations = new HashMap();
+//    protected Map createSituations = new HashMap();
 
     /**
      * No argument constructor for testing purposes
@@ -209,47 +209,45 @@ public class Database implements Shutdownable
         }
         LOG.info("Database " + getURL() + "(" + toString() + ") has " + totalConnections
                 + " connections, of which " + activeConnections + " are active");*/
-        /*
+
         if (datasource instanceof com.zaxxer.hikari.HikariDataSource) {
-            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+//            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
+//                    + ") with ClassLoader " + getClass().getClassLoader());
             ((com.zaxxer.hikari.HikariDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.ds.PGPoolingDataSource) {
-            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+//            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
+//                    + ") with ClassLoader " + getClass().getClassLoader());
             ((org.postgresql.ds.PGPoolingDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.jdbc2.optional.PoolingDataSource) {
-            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
-                    + ") with ClassLoader " + getClass().getClassLoader());
+//            LOG.info("Shutdown - Closing datasource for Database " + getURL() + "(" + toString()
+//                    + ") with ClassLoader " + getClass().getClassLoader());
             ((org.postgresql.jdbc2.optional.PoolingDataSource) datasource).close();
-        } else {
-            LOG.warn("Shutdown - Could not close datasource for Database " + getURL() + "("
-                    + toString() + ") with ClassLoader " + getClass().getClassLoader() + " - "
-                    + datasource.getClass().toString());
         }
-        */
+//        } else {
+//            LOG.warn("Shutdown - Could not close datasource for Database " + getURL() + "("
+//                    + toString() + ") with ClassLoader " + getClass().getClassLoader() + " - "
+//                    + datasource.getClass().toString());
+//        }
     }
 
-    /*
     @Override
     public void finalize() throws Throwable {
         super.finalize();
         if (datasource instanceof com.zaxxer.hikari.HikariDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL());
+//            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((com.zaxxer.hikari.HikariDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.ds.PGPoolingDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL());
+//            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((org.postgresql.ds.PGPoolingDataSource) datasource).close();
         } else if (datasource instanceof org.postgresql.jdbc2.optional.PoolingDataSource) {
-            LOG.info("Finalise - Closing datasource for Database " + getURL());
+//            LOG.info("Finalise - Closing datasource for Database " + getURL());
             ((org.postgresql.jdbc2.optional.PoolingDataSource) datasource).close();
         } else {
-            LOG.warn("Finalise - Could not close datasource for Database " + getURL() + "("
-                    + toString() + ") with ClassLoader " + getClass().getClassLoader() + " - "
-                    + datasource.getClass().toString());
+//            LOG.warn("Finalise - Could not close datasource for Database " + getURL() + "("
+//                    + toString() + ") with ClassLoader " + getClass().getClassLoader() + " - "
+//                    + datasource.getClass().toString());
         }
     }
-    */
 
     /**
      * Gets the platform of this Database
