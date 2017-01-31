@@ -173,7 +173,7 @@
     <attribute name="SynBIS_eventNrThreshold" type="java.lang.Double"/>
     <attribute name="SynBIS_temperature" type="java.lang.Double"/>
     <attribute name="SynBIS_temperatureUnit" type="java.lang.String"/>
-    <attribute name="SynBIS_shaking" type="java.lang.Boolean"/>
+    <attribute name="SynBIS_shaking" type="java.lang.String"/>
     <attribute name="SynBIS_shakingDurationUnit" type="java.lang.String"/>
     <attribute name="SynBIS_excitationMargin" type="java.lang.Double"/>
     <attribute name="SynBIS_odWaveLengthUnit" type="java.lang.String"/>
@@ -243,7 +243,7 @@
     <attribute name="SynBIS_incubatorBrand" type="java.lang.String"/>
     <attribute name="SynBIS_aerobic" type="java.lang.String"/>
     <attribute name="SynBIS_antibiotic" type="java.lang.String"/>
-    <attribute name="SynBIS_shaking" type="java.lang.Boolean"/>
+    <attribute name="SynBIS_shaking" type="java.lang.String"/>
     <attribute name="SynBIS_duration" type="java.lang.Double"/>
     <attribute name="SynBIS_incubatorModel" type="java.lang.String"/>
     <reference name="SynBIS_medium" referenced-type="SynBISMedium"/>
@@ -280,7 +280,7 @@
     <attribute name="SynBIS_aerobic" type="java.lang.String"/>
     <attribute name="SynBIS_antibiotic" type="java.lang.String"/>
     <attribute name="SynBIS_dilutionTo" type="java.lang.Double"/>
-    <attribute name="SynBIS_shaking" type="java.lang.Double"/>
+    <attribute name="SynBIS_shaking" type="java.lang.String"/>
     <attribute name="SynBIS_duration" type="java.lang.Double"/>
     <attribute name="SynBIS_incubatorModel" type="java.lang.String"/>
     <reference name="SynBIS_medium" referenced-type="SynBISMedium"/>
