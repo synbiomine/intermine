@@ -135,15 +135,15 @@ public class ObjectStoreWriterInterMineImpl extends ObjectStoreInterMineImpl
         }
         this.os.writers.add(this);
         ShutdownHook.registerObject(new WeakReference<Object>(this));
-        Exception e = new Exception();
-        e.fillInStackTrace();
-        StringWriter message = new StringWriter();
-        PrintWriter pw = new PrintWriter(message);
-        e.printStackTrace(pw);
-        pw.close();
-        createSituation = message.toString();
-        int index = createSituation.indexOf("at junit.framework.TestCase.runBare");
-        createSituation = (index < 0 ? createSituation : createSituation.substring(0, index));
+//        Exception e = new Exception();
+//        e.fillInStackTrace();
+//        StringWriter message = new StringWriter();
+//        PrintWriter pw = new PrintWriter(message);
+//        e.printStackTrace(pw);
+//        pw.close();
+//        createSituation = message.toString();
+//        int index = createSituation.indexOf("at junit.framework.TestCase.runBare");
+//        createSituation = (index < 0 ? createSituation : createSituation.substring(0, index));
         recentSequences = Collections.synchronizedMap(new WeakHashMap<Integer, Boolean>());
         batch = new Batch(new BatchWriterPostgresCopyImpl());
         tableToInfo = new HashMap<String, TableInfo>();
