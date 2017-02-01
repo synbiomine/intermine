@@ -53,14 +53,4 @@
     <tile-name>model/expression.jsp</tile-name>
     <aspect-source name="GEO" url="www.ncbi.nlm.nih.gov/geo/"/>
   </aspect>
-
-  <aspect name="Interactions">
-    <subtitle></subtitle>
-    <intro-text>
-      Protein and genetic interactions from BioGRID.
-    </intro-text>
-    <tile-name>model/interactions.jsp</tile-name>
-    <aspect-source name="BioGRID" url="http://www.thebiogrid.org/"/>
-  </aspect>
-
 </aspects>
