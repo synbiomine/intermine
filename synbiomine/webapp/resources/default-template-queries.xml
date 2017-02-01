@@ -294,6 +294,21 @@
   </query>
 </template>
 
+<template name="synbis_datasheets" title="Get SynBIS datasheets">
+  <query 
+    name="" 
+    model="genomic" 
+    longDescription="Get the SynBIS datasheets matching a given set of criteria"
+    view="SYNBISDatasheet.SBOL_displayId SYNBISDatasheet.SYNBIS_collectionLocation SYNBISDatasheet.SYNBIS_curator SYNBISDatasheet.SYNBIS_curationLocation SYNBISDatasheet.SBOL_version SYNBISDatasheet.SBOL_persistentIdentity SYNBISDatasheet.SYNBIS_collector" 
+    sortOrder="SYNBISDatasheet.SBOL_displayId asc" 
+    constraintLogic="A and B and C and D">
+    <constraint path="SYNBISDatasheet.SYNBIS_collectionLocation" code="A" op="=" value="Imperial College London" editable="true" switchable="off"/>
+    <constraint path="SYNBISDatasheet.SYNBIS_collector" code="B" op="=" value="Christopher Hirst" editable="true" switchable="off"/>
+    <constraint path="SYNBISDatasheet.SYNBIS_curationLocation" code="C" op="=" value="Imperial College London" editable="true" switchable="off"/>
+    <constraint path="SYNBISDatasheet.SYNBIS_curator" code="D" op="=" value="Catherine Ainsworth" editable="true" switchable="off"/>
+  </query>
+</template>
+
 </template-queries>
 <tags>
   <tag name="im:aspect:Expression" objectIdentifier="Gene.expressionResults" type="collection"/>
@@ -382,6 +397,8 @@
   <tag name="im:aspect:Proteins" objectIdentifier="Organism_Protein" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="enz2gene" type="template"/>
+  
+  <tag name="im:aspect:Genes" objectIdentifier="synbis_datasheets" type="template"/>
 
   <tag name="im:converter" objectIdentifier="Protein_To_Gene_Type_Converter" type="template">
   </tag>
@@ -408,6 +425,7 @@
   <tag name="im:frontpage" objectIdentifier="Gene_OrthologueGO" type="template"/>
   <tag name="im:frontpage" objectIdentifier="enz2gene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="go2genesOrg" type="template"/>
+  <tag name="im:frontpage" objectIdentifier="synbis_datasheets" type="template"/>
 
 <!--
   <tag name="im:frontpage" objectIdentifier="Gene_Interactions" type="template">
@@ -460,6 +478,7 @@
   <tag name="im:public" objectIdentifier="gene_expressionResults_report" type="template"/>
   <tag name="im:public" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
   <tag name="im:public" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
+  <tag name="im:public" objectIdentifier="synbis_datasheets" type="template"/>
 
 <!--
   <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
