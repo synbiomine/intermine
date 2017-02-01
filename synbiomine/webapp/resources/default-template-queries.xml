@@ -398,7 +398,7 @@
   <tag name="im:aspect:Proteins" objectIdentifier="Gene2Enz" type="template"/>
   <tag name="im:aspect:Proteins" objectIdentifier="enz2gene" type="template"/>
   
-  <tag name="im:aspect:Genes" objectIdentifier="synbis_datasheets" type="template"/>
+  <tag name="im:aspect:Parts" objectIdentifier="synbis_datasheets" type="template"/>
 
   <tag name="im:converter" objectIdentifier="Protein_To_Gene_Type_Converter" type="template">
   </tag>

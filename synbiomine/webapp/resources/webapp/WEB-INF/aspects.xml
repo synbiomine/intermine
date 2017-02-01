@@ -1,8 +1,15 @@
 <aspects>
+  <aspect name="Parts">
+    <subtitle></subtitle>
+    <intro-text>
+      Synthetic biology parts
+    </intro-text>
+  </aspect>
+
   <aspect name="Function">
     <subtitle>GO, Pathways, Domains</subtitle>
     <intro-text>
-        Annotations that me be used to infer function include GO, Pathways, Protein Domains
+      Annotations that me be used to infer function include GO, Pathways, Protein Domains
     </intro-text>
     <tile-name>model/genes.jsp</tile-name>
     <aspect-source name="GO" url="http://www.geneontology.org/"/>
