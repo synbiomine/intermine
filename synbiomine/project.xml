@@ -8,6 +8,7 @@
   <property name="intermine.properties.file" value="synbiomine.properties"/>
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
   <sources>
+<!--
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
     </source>
@@ -1052,9 +1053,6 @@
     <source dump="true" name="pathway2model-EcoliMG1655" type="synbio-reaction">
       <property location="data/path2model/load/EcoliMG1655" name="src.data.dir"/>
     </source>
-    <source dump="false" name="synbio-synbis" type="synbio-synbis">
-      <property location="data/parts/synbis/load" name="src.data.dir"/>
-    </source>
     <source dump="false" name="pubmed-gene" type="pubmed-gene">
       <property location="/micklem/data/pubmed/current" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
@@ -1067,12 +1065,18 @@
     <source dump="false" name="entrez-organism" type="entrez-organism">
       <property location="build/organisms.xml" name="src.data.file"/>
     </source>
+-->
+    <source dump="false" name="synbio-synbis" type="synbio-synbis">
+      <property location="data/parts/synbis/load" name="src.data.dir"/>
+    </source>
   </sources>
   <post-processing>
     <post-process name="create-references"/>
+<!--
     <post-process name="transfer-sequences"/>
     <post-process name="create-gene-flanking-features"/>
     <post-process name="do-sources"/>
+-->
     <post-process name="summarise-objectstore"/>
     <post-process name="create-autocomplete-index"/>
     <post-process name="create-search-index"/>
