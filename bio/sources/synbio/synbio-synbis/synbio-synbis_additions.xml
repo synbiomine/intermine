@@ -18,6 +18,7 @@
     <attribute name="SYNBIS_sdRefDoublingTime" type="java.lang.Double"/>
     <attribute name="SYNBIS_sdRefSynRate3" type="java.lang.Double"/>
     <reference name="SYNBIS_series" referenced-type="SYNBISSeries"/>
+    <collection name="SYNBIS_series" referenced-type="SYNBISSeries"/>
     <attribute name="SYNBIS_sdRpu3" type="java.lang.Double"/>
     <attribute name="SYNBIS_sdSynRate3" type="java.lang.Double"/>
     <attribute name="SYNBIS_odRepeats" type="java.lang.Integer"/>
@@ -82,7 +83,7 @@
     <attribute name="SYNBIS_strain" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="SYNBISExperiment">
-    <reference name="SYNBIS_series" referenced-type="SYNBISSeries"/>
+    <collection name="SYNBIS_series" referenced-type="SYNBISSeries"/>
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
     <reference name="SYNBIS_transformation" referenced-type="SYNBISTransformation"/>
@@ -95,13 +96,13 @@
     <attribute name="SBOL_version" type="java.lang.String"/>
     <attribute name="SYNBIS_collector" type="java.lang.String"/>
     <attribute name="SYNBIS_curationLocation" type="java.lang.String"/>
-    <reference name="SYNBIS_plateReaderMetrics" referenced-type="SYNBISMetricsTable"/>
+    <collection name="SYNBIS_plateReaderMetrics" referenced-type="SYNBISMetricsTable"/>
     <reference name="SYNBIS_experiment" referenced-type="SYNBISExperiment"/>
     <attribute name="SYNBIS_collectionLocation" type="java.lang.String"/>
-    <reference name="SYNBIS_controlExperiment" referenced-type="SYNBISExperiment"/>
+    <collection name="SYNBIS_controlExperiment" referenced-type="SYNBISExperiment"/>
     <attribute name="SYNBIS_curator" type="java.lang.String"/>
-    <reference name="SYNBIS_flowCytometryMetrics" referenced-type="SYNBISMetricsTable"/>
-    <reference name="SYNBIS_transferFunction" referenced-type="SYNBISTransferFunction"/>
+    <collection name="SYNBIS_flowCytometryMetrics" referenced-type="SYNBISMetricsTable"/>
+    <collection name="SYNBIS_transferFunction" referenced-type="SYNBISTransferFunction"/>
   </class>
   <class is-interface="true" name="SBOLSequence">
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
@@ -116,7 +117,7 @@
     <reference name="SYNBIS_host" referenced-type="SYNBISHost"/>
   </class>
   <class is-interface="true" name="SYNBISExperimentalProtocol">
-    <reference name="SYNBIS_modality" referenced-type="SYNBISModality"/>
+    <collection name="SYNBIS_modality" referenced-type="SYNBISModality"/>
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
     <attribute name="SYNBIS_name" type="java.lang.String"/>
@@ -124,7 +125,7 @@
     <attribute name="SYNBIS_mainComplement" type="java.lang.String"/>
     <attribute name="SYNBIS_backgroundComplement" type="java.lang.String"/>
     <attribute name="SYNBIS_mainPromoter" type="java.lang.String"/>
-    <reference name="SYNBIS_subprotocol" referenced-type="SYNBISProtocol"/>
+    <collection name="SYNBIS_subprotocol" referenced-type="SYNBISProtocol"/>
     <attribute name="SYNBIS_backgroundPromoter" type="java.lang.String"/>
     <attribute name="SYNBIS_reporterVariant" type="java.lang.String"/>
     <attribute name="SYNBIS_reporter" type="java.lang.String"/>
@@ -132,7 +133,7 @@
     <attribute name="SYNBIS_ownership" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="SYNBISSeriesGroup">
-    <reference name="SYNBIS_series" referenced-type="SYNBISSeries"/>
+    <collection name="SYNBIS_series" referenced-type="SYNBISSeries"/>
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
   </class>
@@ -256,7 +257,7 @@
     <attribute name="SYNBIS_name" type="java.lang.String"/>
     <attribute name="SYNBIS_preparation" type="java.lang.String"/>
     <attribute name="SYNBIS_reference" type="java.lang.String"/>
-    <reference name="SYNBIS_ingredient" referenced-type="SYNBISIngredient"/>
+    <collection name="SYNBIS_ingredient" referenced-type="SYNBISIngredient"/>
     <attribute name="SYNBIS_supplier" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="SYNBISAssay">
