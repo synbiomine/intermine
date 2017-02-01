@@ -298,7 +298,7 @@
   <query 
     name="" 
     model="genomic" 
-    longDescription="Get the SynBIS datasheets matching a given set of criteria"
+    longDescription="Get SynBIS datasheets by location or person"
     view="SYNBISDatasheet.SBOL_displayId SYNBISDatasheet.SYNBIS_collectionLocation SYNBISDatasheet.SYNBIS_curator SYNBISDatasheet.SYNBIS_curationLocation SYNBISDatasheet.SBOL_version SYNBISDatasheet.SBOL_persistentIdentity SYNBISDatasheet.SYNBIS_collector" 
     sortOrder="SYNBISDatasheet.SBOL_displayId asc" 
     constraintLogic="A and B and C and D">
@@ -306,6 +306,17 @@
     <constraint path="SYNBISDatasheet.SYNBIS_collector" code="B" op="=" value="Christopher Hirst" editable="true" switchable="off"/>
     <constraint path="SYNBISDatasheet.SYNBIS_curationLocation" code="C" op="=" value="Imperial College London" editable="true" switchable="off"/>
     <constraint path="SYNBISDatasheet.SYNBIS_curator" code="D" op="=" value="Catherine Ainsworth" editable="true" switchable="off"/>
+  </query>
+</template>
+
+<template name="synbis_datasheets_promoter_role" title="Get SynBIS datasheets by promoter type">
+  <query 
+    name="" 
+    model="genomic" 
+    longDescription="Get SynBIS datasheets by promoter type"
+    view="SYNBISDatasheet.SBOL_displayId SYNBISDatasheet.SYNBIS_collectionLocation SYNBISDatasheet.SYNBIS_curator SYNBISDatasheet.SYNBIS_curationLocation SYNBISDatasheet.SBOL_version SYNBISDatasheet.SBOL_persistentIdentity SYNBISDatasheet.SYNBIS_collector" 
+    sortOrder="SYNBISDatasheet.SBOL_displayId asc">
+    <constraint path="SYNBISDatasheet.SYNBIS_componentDefinition.SBOL_role" op="=" value="http://identifiers.org/so/SO:0002050" editable="true" switchable="on"/>
   </query>
 </template>
 
@@ -399,6 +410,7 @@
   <tag name="im:aspect:Proteins" objectIdentifier="enz2gene" type="template"/>
   
   <tag name="im:aspect:Parts" objectIdentifier="synbis_datasheets_location_person" type="template"/>
+  <tag name="im:aspect:Parts" objectIdentifier="synbis_datasheets_promoter_role" type="template"/>
 
   <tag name="im:converter" objectIdentifier="Protein_To_Gene_Type_Converter" type="template">
   </tag>
@@ -426,6 +438,7 @@
   <tag name="im:frontpage" objectIdentifier="enz2gene" type="template"/>
   <tag name="im:frontpage" objectIdentifier="go2genesOrg" type="template"/>
   <tag name="im:frontpage" objectIdentifier="synbis_datasheets_location_person" type="template"/>
+  <tag name="im:frontpage" objectIdentifier="synbis_datasheets_promoter_role" type="template"/>
 
 <!--
   <tag name="im:frontpage" objectIdentifier="Gene_Interactions" type="template">
@@ -479,6 +492,7 @@
   <tag name="im:public" objectIdentifier="promoter_predictedSigmaFactors_report" type="template"/>
   <tag name="im:public" objectIdentifier="promoter_sigmaBindingFactors_report" type="template"/>
   <tag name="im:public" objectIdentifier="synbis_datasheets_location_person" type="template"/>
+  <tag name="im:public" objectIdentifier="synbis_datasheets_promoter_role" type="template"/>
 
 <!--
   <tag name="im:public" objectIdentifier="Gene_Interactions" type="template">
