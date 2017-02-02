@@ -1,4 +1,5 @@
 <classes>
+  <class is-interface="true" name="SYNBISEntity"/>
   <class is-interface="true" name="SYNBISSeries">
     <reference name="SYNBIS_modality" referenced-type="SYNBISModality"/>
     <attribute name="SYNBIS_rep" type="java.lang.Integer"/>
@@ -146,6 +147,7 @@
   </class>
   <class is-interface="true" name="SYNBISProtocol">
     <attribute name="SYNBIS_stepNr" type="java.lang.Integer"/>
+    <reference name="SYNBIS_definition" referenced-type="SYNBISEntity"/>
   </class>
   <class is-interface="true" name="SYNBISModality">
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
@@ -190,7 +192,7 @@
     <attribute name="SYNBIS_emissionWavelengthUnit" type="java.lang.String"/>
     <attribute name="SYNBIS_opticOrientation" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="SYNBISOutgrowth">
+  <class is-interface="true" name="SYNBISOutgrowth" extends="SYNBISEntity">
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
     <attribute name="SYNBIS_vesselModel" type="java.lang.String"/>
@@ -226,7 +228,7 @@
     <attribute name="SYNBIS_timeWindowStart" type="java.lang.Double"/>
     <attribute name="SYNBIS_Km" type="java.lang.Double"/>
   </class>
-  <class is-interface="true" name="SYNBISCulture">
+  <class is-interface="true" name="SYNBISCulture" extends="SYNBISEntity">
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
     <attribute name="SYNBIS_vesselModel" type="java.lang.String"/>
@@ -260,7 +262,7 @@
     <collection name="SYNBIS_ingredient" referenced-type="SYNBISIngredient"/>
     <attribute name="SYNBIS_supplier" type="java.lang.String"/>
   </class>
-  <class is-interface="true" name="SYNBISAssay">
+  <class is-interface="true" name="SYNBISAssay" extends="SYNBISEntity">
     <attribute name="SBOL_persistentIdentity" type="java.lang.String"/>
     <attribute name="SBOL_displayId" type="java.lang.String"/>
     <attribute name="SYNBIS_vesselModel" type="java.lang.String"/>
