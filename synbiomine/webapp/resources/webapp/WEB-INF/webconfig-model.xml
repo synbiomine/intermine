@@ -1,4 +1,12 @@
 <webconfig>
+
+  <class className="org.intermine.model.bio.SYNBISProtocol">
+    <fields>
+      <fieldconfig fieldExpr="SYNBIS_stepNr" label="Step"/>
+      <fieldconfig fieldExpr="SYNBIS_definition.id" label="Definition"/>
+    </fields>
+  </class>
+
   <class className="org.intermine.model.bio.Author">
     <fields>
       <fieldconfig fieldExpr="name"/>
