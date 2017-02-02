@@ -208,6 +208,7 @@
     <attribute name="SYNBIS_maxValue" type="java.lang.Double"/>
     <attribute name="SYNBIS_timeWindowStart" type="java.lang.Double"/>
     <attribute name="SYNBIS_Km" type="java.lang.Double"/>
+    <attribute name="SYNBIS_modality" type="java.lang.String"/>
   </class>
   <class is-interface="true" name="SYNBISCulture" extends="SBOLEntity">
     <attribute name="SYNBIS_vesselModel" type="java.lang.String"/>
