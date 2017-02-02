@@ -248,10 +248,16 @@ public final class FullParser
 
             // Set objects for every collection
             for (ReferenceList refList : item.getCollections()) {
-                @SuppressWarnings("unchecked") Collection<Object> col
-                    = (Collection<Object>) obj.getFieldValue(refList.getName());
-                for (String refId : refList.getRefIds()) {
-                    col.add(objMap.get(refId));
+                try {
+	                @SuppressWarnings("unchecked") Collection<Object> col = (Collection<Object>) obj.getFieldValue(refList.getName());
+	                for (String refId : refList.getRefIds())
+	                    col.add(objMap.get(refId));
+                }
+                catch (IllegalAccessException e) { throw e; }
+                catch (Exception e) {
+                    String msg = "Failed whilst processing reference " + refList.getName() + " in " + item.getClassName() + ", " + item.getIdentifier();
+                    LOG.error(msg, e);
+                    throw new RuntimeException(msg, e);
                 }
             }
 
