@@ -13,6 +13,8 @@ package org.intermine.metadata;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.apache.log4j.Logger;
+
 /**
  * A class that loads a model given a name.
  * @author Alex Kalderimis
@@ -20,7 +22,8 @@ import java.io.InputStreamReader;
  */
 public final class ModelFactory
 {
-
+    private static final Logger LOG = Logger.getLogger(ModelFactory.class);
+    
     private ModelFactory() {
         // Hidden.
     }
@@ -36,6 +39,7 @@ public final class ModelFactory
      */
     public static Model loadModel(String name) {
         String filename = Util.getFilename(MODEL, name);
+        LOG.error("Loading model from " + filename);
         InputStream is = Model.class.getClassLoader().getResourceAsStream(filename);
         if (is == null) {
             throw new IllegalArgumentException("Model definition file '" + filename
@@ -47,6 +51,9 @@ public final class ModelFactory
         } catch (Exception e) {
             throw new RuntimeException("Error parsing model definition file '" + filename + "'", e);
         }
+        
+        LOG.error("Loaded model [" + model + "]");
+        
         return model;
     }
 
