@@ -1119,6 +1119,7 @@ public final class KeywordSearch
             writer.close();
         } catch (IOException e) {
             LOG.error("IOException while optimizing and closing IndexWriter", e);
+            throw e;
         }
 
         time = System.currentTimeMillis() - time;
