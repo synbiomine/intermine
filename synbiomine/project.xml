@@ -8,7 +8,6 @@
   <property name="intermine.properties.file" value="synbiomine.properties"/>
   <property name="default.intermine.properties.file" location="../default.intermine.integrate.properties"/>
   <sources>
-<!--
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
     </source>
@@ -1019,10 +1018,10 @@
       <property location="data/geo/load/nicolas-2012" name="src.data.dir"/>
     </source>
     <source dump="true" name="interpro" type="interpro">
-      <property location="/micklem/data/interpro/current" name="src.data.dir"/>
+      <property location="data/interpro/load" name="src.data.dir"/>
     </source>
     <source dump="false" name="protein2ipr" type="protein2ipr">
-      <property location="/micklem/data/interpro/match_complete/current" name="src.data.dir"/>
+      <property location="data/interpro/match_complete/load" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="protein2ipr.dat"/>
     </source>
     <source dump="true" name="go" type="go">
@@ -1037,14 +1036,14 @@
       <property name="biogrid.organisms" value="511145 224308"/>
     </source>
     <source dump="false" name="reactome" type="reactome">
-      <property location="/micklem/data/reactome/current" name="src.data.dir"/>
+      <property location="data/reactome/load" name="src.data.dir"/>
       <property name="reactome.organisms" value="511145"/>
       <property name="reactome.datasourcename" value="Reactome"/>
       <property name="reactome.datasetname" value="Reactome data set"/>
       <property name="reactome.curated" value="false"/>
     </source>
     <source dump="true" name="orthodb" type="orthodb">
-      <property location="/micklem/data/orthodb/current" name="src.data.dir"/>
+      <property location="data/orthodb/load" name="src.data.dir"/>
       <property name="orthodb.organisms" value="1392 1405 1408 1478 1479 66692 83333 98228 129338 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 386585 398511 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 649639 666686 685038 691437 692420 720555 796606 941639 1111068 1121088 1133852 1196031 1246626 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
     </source>
     <source dump="false" name="pathway2model-Bsub168" type="synbio-reaction">
@@ -1053,8 +1052,11 @@
     <source dump="true" name="pathway2model-EcoliMG1655" type="synbio-reaction">
       <property location="data/path2model/load/EcoliMG1655" name="src.data.dir"/>
     </source>
+    <source dump="false" name="synbio-synbis" type="synbio-synbis">
+      <property location="data/parts/synbis/load" name="src.data.dir"/>
+    </source>
     <source dump="false" name="pubmed-gene" type="pubmed-gene">
-      <property location="/micklem/data/pubmed/current" name="src.data.dir"/>
+      <property location="data/pubmed/load" name="src.data.dir"/>
       <property name="src.data.dir.includes" value="gene2pubmed"/>
       <property name="pubmed.organisms" value="1392 1405 1408 1478 1479 66692 83333 98228 129338 135735 198094 224308 226900 235909 260799 272558 279010 281309 315730 315749 326423 386585 398511 420246 439292 471223 511145 529122 544556 550542 581103 585056 585057 649639 666686 685038 691437 692420 720555 796606 941639 1111068 1121088 1133852 1196031 1246626 1348623 1367477 1441095 1529886 1565991 1581038 1705566"/>
     </source>
@@ -1065,18 +1067,12 @@
     <source dump="false" name="entrez-organism" type="entrez-organism">
       <property location="build/organisms.xml" name="src.data.file"/>
     </source>
--->
-    <source dump="false" name="synbio-synbis" type="synbio-synbis">
-      <property location="data/parts/synbis/load" name="src.data.dir"/>
-    </source>
   </sources>
   <post-processing>
     <post-process name="create-references"/>
-<!--
     <post-process name="transfer-sequences"/>
     <post-process name="create-gene-flanking-features"/>
     <post-process name="do-sources"/>
--->
     <post-process name="summarise-objectstore"/>
     <post-process name="create-autocomplete-index"/>
     <post-process name="create-search-index"/>
