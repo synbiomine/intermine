@@ -70,6 +70,7 @@ public class ClassChooserController extends TilesAction
         for (Tag tag : preferredBagTypeTags) {
             preferedTypeList.add(TypeUtil.unqualifiedName(tag.getObjectIdentifier()));
         }
+        
         for (String className : qualifiedTypes) {
             String unqualifiedName = TypeUtil.unqualifiedName(className);
             if (oss.getClassCount(className) > 0
@@ -83,13 +84,16 @@ public class ClassChooserController extends TilesAction
                 typeList.add(unqualifiedName);
             }
         }
+        
         Collections.sort(preferedTypeList);
         Collections.sort(typeList);
         request.setAttribute("typeList", typeList);
         request.setAttribute("preferredTypeList", preferedTypeList);
+        
         if (sb.length() >= 2) {
             sb.deleteCharAt(sb.length() - 2);
         }
+        
         request.setAttribute("helpMap", sb);
         return null;
     }
