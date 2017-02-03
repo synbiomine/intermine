@@ -453,10 +453,9 @@
   <tag name="im:hidden" objectIdentifier="Reaction.kineticParameters" type="reference"/>
   <tag name="im:hidden" objectIdentifier="Reaction.reactionSpecies" type="collection"/>
 
-  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class">
-  </tag>
-  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class">
-  </tag>
+  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.SYNBISDatasheet" type="class"/>
+  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Protein" type="class"/>
+  <tag name="im:preferredBagType" objectIdentifier="org.intermine.model.bio.Gene" type="class"/>
 
   <tag name="im:public" objectIdentifier="ChromLocation_Gene" type="template"/>
   <tag name="im:public" objectIdentifier="DomainProtGene" type="template"/>
