@@ -354,6 +354,10 @@ public class ReportObject
         lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\",");
         lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\",");
         lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\",");
+        lines.add("  \"includedInDataCatalog\":{");
+        lines.add("    \"@type\":\"DataCatalog\",");
+        lines.add("    \"url\":\"http://beta.synbiomine.org/synbiomine\"");
+        lines.add("  },");
 
         String sql = "select name, url from datasource;";
         Connection c = null;
