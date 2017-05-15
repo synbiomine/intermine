@@ -354,7 +354,6 @@ public class ReportObject
         lines.add("  \"name\":\"" + getHtmlHeadTitle() + "\"");
         lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\"");
         lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\"");
-
         lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\"");
 
         String sql = "select name, url from datasource;";

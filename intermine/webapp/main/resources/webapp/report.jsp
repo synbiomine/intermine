@@ -11,6 +11,8 @@
 <!-- report.jsp -->
 <html:xhtml/>
 
+${object.semanticMarkup}
+
 <script type="text/javascript">
   <%-- apply white background as report page loads slowly and body bg will show through --%>
   var pageBackgroundColor = jQuery('body').css('background-color');
