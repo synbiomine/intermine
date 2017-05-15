@@ -445,6 +445,7 @@ public class ReportObject
         lines.add("  },");
         lines.add("  \"version\":\"6\"");
         lines.add("}");
+        lines.add("</script>");        
 
         StringBuilder sb = new StringBuilder();
         for (String line: lines) {
