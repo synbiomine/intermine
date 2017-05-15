@@ -68,6 +68,7 @@ public class BeginAction extends InterMineAction
      * @return an ActionForward object defining where control goes next
      * @exception Exception if the application business logic throws an exception
      */
+    @Override
     public ActionForward execute(ActionMapping mapping,
             ActionForm form,
             HttpServletRequest request,
@@ -91,6 +92,8 @@ public class BeginAction extends InterMineAction
         session.removeAttribute(Constants.NEW_TEMPLATE);
 
         rememberThisGalaxy(request, session, properties);
+
+        populateSchemaDotOrgMarkupAttribute(im, request);
 
         List<ApiTemplate> templates = null;
 
@@ -177,6 +180,49 @@ public class BeginAction extends InterMineAction
         }
 
         return mapping.findForward("begin");
+    }
+
+    private void populateSchemaDotOrgMarkupAttribute(InterMineAPI im, HttpServletRequest request) {
+        List<String> lines = new ArrayList<String>();
+
+        lines.add("<script type=\"application/ld+json\">");
+        lines.add("{");
+        lines.add("  \"@context\":\"http://schema.org\",");
+        lines.add("  \"@type\":\"DataCatalog\",");
+        lines.add("  \"name\":\"SynBioMine Beta\",");
+        lines.add("  \"description\":\"Data warehouse for synthetic biology\",");
+        lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine\",");
+        lines.add("  \"about\":\"Data warehouse for synthetic biology\",");
+        lines.add("  \"includedInDataCatalog\":{");
+        lines.add("    \"@type\":\"DataCatalog\",");
+        lines.add("    \"url\":\"http://beta.synbiomine.org/synbiomine\"");
+        lines.add("  },");
+        lines.add("  \"dateCreated\":\"2017-02-06\",");
+        lines.add("  \"dateModified\":\"2017-02-06\",");
+        lines.add("  \"datePublished\":\"2017-02-06\",");
+        lines.add(   "\"funder\":{");
+        lines.add(     "\"@type\":\"Organization\",");
+        lines.add(     "\"name\":\"Engineering and Physical Sciences Research Council\",");
+        lines.add(     "\"url\":\"https://www.epsrc.ac.uk/\",");
+        lines.add("  },");
+        lines.add("  \"inLanguage\":\"en\",");
+        lines.add("  \"isAccessibleForFree\":\"True\",");
+        lines.add("  \"keywords\":\"data warehouse, synthetic biology\",");
+        lines.add("  \"sourceOrganization\":{");
+        lines.add(     "\"@type\":\"Organization\",");
+        lines.add(     "\"name\":\"Micklem Lab\",");
+        lines.add(     "\"url\":\"http://www.micklemlab.org/\",");
+        lines.add("  },");
+        lines.add("  \"version\":\"6\"");
+        lines.add("}");
+        lines.add("</script>");
+
+        StringBuilder sb = new StringBuilder();
+        for (String line: lines) {
+            sb.append(line + "\n");
+        }
+
+        request.setAttribute("schemaDotOrgMarkup", sb.toString());
     }
 
     private void rememberThisGalaxy(HttpServletRequest request,

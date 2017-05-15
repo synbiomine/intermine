@@ -10,32 +10,7 @@
 <!-- begin.jsp -->
 <html:xhtml/>
 
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "@type":"DataCatalog",
-  "name":"SynBioMine Beta",
-  "url":"http://beta.synbiomine.org",
-  "description":"Data warehouse for synthetic biology",
-
-  "dateModified":"2017-02-06",
-  "datePublished":"2017-02-06",
-  "funder":{
-    "@type":"Organization",
-    "name":"Engineering and Physical Sciences Research Council",
-    "url":"https://www.epsrc.ac.uk/"
-  },
-  "inLanguage":"en",
-  "isAccessibleForFree":"True",
-  "keywords":"data warehouse, synthetic biology",
-  "sourceOrganization":{
-    "@type":"Organization",
-    "name":"Micklem Lab",
-    "url":"http://www.micklemlab.org/"
-  },
-  "version":"6"
-}
-</script>
+${schemaDotOrgMarkup}
 
 <div id="content-wrap">
         <div id="boxes">
