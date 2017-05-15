@@ -1,5 +1,10 @@
 package org.intermine.web.logic.results;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /*
  * Copyright (C) 2002-2015 FlyMine
  *
@@ -34,6 +39,7 @@ import org.intermine.metadata.CollectionDescriptor;
 import org.intermine.metadata.FieldDescriptor;
 import org.intermine.metadata.ReferenceDescriptor;
 import org.intermine.model.InterMineObject;
+import org.intermine.objectstore.intermine.ObjectStoreInterMineImpl;
 import org.intermine.objectstore.proxy.ProxyReference;
 import org.intermine.objectstore.query.ClobAccess;
 import org.intermine.pathquery.Path;
@@ -335,6 +341,115 @@ public class ReportObject
         }
         // return a field value for a field expression (name)
         return fieldValues.get(fieldExpression);
+    }
+
+    public String getSemanticMarkup() {
+        List<String> lines = new ArrayList<String>();
+
+        lines.add("<script type=\"application/ld+json\">\n");
+
+        lines.add("{");
+        lines.add("  \"@context\":\"http://schema.org\"");
+        lines.add("  \"@type\":\"DataSet\",");
+        lines.add("  \"name\":\"" + getHtmlHeadTitle() + "\"");
+        lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\"");
+        lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\"");
+
+        lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\"");
+
+        String sql = "select name, url from datasource;";
+        Connection c = null;
+        Statement s = null;
+        ResultSet rs = null;
+
+        try {
+            try {
+                c = ((ObjectStoreInterMineImpl)im.getObjectStore()).getConnection();
+                s = c.createStatement();
+                rs = s.executeQuery(sql);
+                while (rs.next()) {
+                    lines.add("  \"citation\";{");
+                    lines.add("    \"@type\":\"CreativeWork\"");
+                    lines.add("    \"name\":\"" + rs.getString("name") + "\"");
+                    lines.add("    \"url\":\"" + rs.getString("url") + "\"");
+                    lines.add("  }");
+                }
+            }
+            finally {
+                if (rs != null)
+                    rs.close();
+
+                if (s != null)
+                    s.close();
+
+                if (c != null)
+                    c.close();
+            }
+        }
+        catch (SQLException e) { throw new RuntimeException(e); }
+
+            /*
+            Query q = new Query();
+            ConstraintSet constraints = new ConstraintSet(ConstraintOp.AND);
+            q.setConstraint(constraints);
+            QueryClass reportQc = new QueryClass(object.getClass());
+            q.addFrom(reportQc);
+            QueryClass datasetQc = new QueryClass(DataSet.class);
+            q.addFrom(datasetQc);
+            q.addToSelect(datasetQc);
+
+            QueryField reportClassIdQf = new QueryField(reportQc, "id");
+            constraints.addConstraint(new SimpleConstraint(reportClassIdQf, ConstraintOp.CONTAINS, new QueryValue(getId())));
+
+            QueryCollectionReference dataSetsQcref = new QueryCollectionReference(reportQc, "dataSets");
+            constraints.addConstraint(new ContainsConstraint(dataSetsQcref, ConstraintOp.CONTAINS, datasetQc));
+
+            Results r = im.getObjectStore().execute(q);
+            */
+
+            /*
+            Model model = im.getModel();
+            PathQuery query = new PathQuery(model);
+
+            query.addViews(
+                objectType + ".dataSets.url",
+                objectType + ".dataSets.name",
+                objectType + ".dataSets.version",
+                objectType + ".dataSets.description");
+            query.addOrderBy(objectType + ".dataSets.url", OrderDirection.ASC);
+            query.addConstraint(Constraints.eq(objectType + ".id", String.valueOf(getId())));
+            //im.getObjectStore().executeSingleton(query);
+
+            Profile profile = SessionMethods.getProfile(session);
+            PathQueryExecutor executor = im.getPathQueryExecutor(profile);
+            ExportResultsIterator values;
+            */
+
+        lines.add("  \"dateCreated\":\"2017-02-06\"");
+        lines.add("  \"dateModified\":\"2017-02-06\"");
+        lines.add("  \"datePublished\":\"2017-02-06\"");
+        lines.add("  \"funder\":{");
+        lines.add("    \"@type\":\"Organization\"");
+        lines.add("    \"name\":\"Engineering and Physical Sciences Research Council\"");
+        lines.add("    \"url\":\"https://www.epsrc.ac.uk/\"");
+        lines.add("  }");
+        lines.add("  \"inLanguage\":\"en\"");
+        lines.add("  \"isAccessibleForFree\":\"True\"");
+        lines.add("  \"keywords\":\"data integration, synthetic biology, " + objectType + "\"");
+        lines.add("  \"sourceOrganization\":{");
+        lines.add("    \"@type\":\"Organization\"");
+        lines.add("    \"name\":\"Micklem Lab\"");
+        lines.add("    \"url\":\"http://www.micklemlab.org/\"");
+        lines.add("  }");
+        lines.add("  \"version\":\"6\"");
+        lines.add("}");
+
+        StringBuilder sb = new StringBuilder();
+        for (String line: lines) {
+            sb.append(line + "\n");
+        }
+
+        return sb.toString();
     }
 
     private boolean isAttribute(String fieldName) {
