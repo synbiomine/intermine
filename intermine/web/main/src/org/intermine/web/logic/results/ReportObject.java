@@ -346,15 +346,14 @@ public class ReportObject
     public String getSemanticMarkup() {
         List<String> lines = new ArrayList<String>();
 
-        lines.add("<script type=\"application/ld+json\">\n");
-
+        lines.add("<script type=\"application/ld+json\">");
         lines.add("{");
-        lines.add("  \"@context\":\"http://schema.org\"");
+        lines.add("  \"@context\":\"http://schema.org\",");
         lines.add("  \"@type\":\"DataSet\",");
-        lines.add("  \"name\":\"" + getHtmlHeadTitle() + "\"");
-        lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\"");
-        lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\"");
-        lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\"");
+        lines.add("  \"name\":\"" + getHtmlHeadTitle() + "\",");
+        lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\",");
+        lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\",");
+        lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\",");
 
         String sql = "select name, url from datasource;";
         Connection c = null;
@@ -367,11 +366,11 @@ public class ReportObject
                 s = c.createStatement();
                 rs = s.executeQuery(sql);
                 while (rs.next()) {
-                    lines.add("  \"citation\";{");
-                    lines.add("    \"@type\":\"CreativeWork\"");
-                    lines.add("    \"name\":\"" + rs.getString("name") + "\"");
+                    lines.add("  \"citation\":{");
+                    lines.add("    \"@type\":\"CreativeWork\",");
+                    lines.add("    \"name\":\"" + rs.getString("name") + "\",");
                     lines.add("    \"url\":\"" + rs.getString("url") + "\"");
-                    lines.add("  }");
+                    lines.add("  },");
                 }
             }
             finally {
@@ -424,22 +423,22 @@ public class ReportObject
             ExportResultsIterator values;
             */
 
-        lines.add("  \"dateCreated\":\"2017-02-06\"");
-        lines.add("  \"dateModified\":\"2017-02-06\"");
-        lines.add("  \"datePublished\":\"2017-02-06\"");
+        lines.add("  \"dateCreated\":\"2017-02-06\",");
+        lines.add("  \"dateModified\":\"2017-02-06\",");
+        lines.add("  \"datePublished\":\"2017-02-06\",");
         lines.add("  \"funder\":{");
-        lines.add("    \"@type\":\"Organization\"");
-        lines.add("    \"name\":\"Engineering and Physical Sciences Research Council\"");
+        lines.add("    \"@type\":\"Organization\",");
+        lines.add("    \"name\":\"Engineering and Physical Sciences Research Council\",");
         lines.add("    \"url\":\"https://www.epsrc.ac.uk/\"");
-        lines.add("  }");
-        lines.add("  \"inLanguage\":\"en\"");
-        lines.add("  \"isAccessibleForFree\":\"True\"");
-        lines.add("  \"keywords\":\"data integration, synthetic biology, " + objectType + "\"");
+        lines.add("  },");
+        lines.add("  \"inLanguage\":\"en\",");
+        lines.add("  \"isAccessibleForFree\":\"True\",");
+        lines.add("  \"keywords\":\"data integration, synthetic biology, " + objectType + "\",");
         lines.add("  \"sourceOrganization\":{");
-        lines.add("    \"@type\":\"Organization\"");
-        lines.add("    \"name\":\"Micklem Lab\"");
+        lines.add("    \"@type\":\"Organization\",");
+        lines.add("    \"name\":\"Micklem Lab\",");
         lines.add("    \"url\":\"http://www.micklemlab.org/\"");
-        lines.add("  }");
+        lines.add("  },");
         lines.add("  \"version\":\"6\"");
         lines.add("}");
 
