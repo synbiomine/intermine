@@ -1,5 +1,10 @@
 package org.intermine.web.struts;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /*
  * Copyright (C) 2002-2015 FlyMine
  *
@@ -37,6 +42,7 @@ import org.intermine.api.tag.TagNames;
 import org.intermine.api.template.ApiTemplate;
 import org.intermine.api.template.TemplateManager;
 import org.intermine.model.userprofile.Tag;
+import org.intermine.objectstore.intermine.ObjectStoreInterMineImpl;
 import org.intermine.util.PropertiesUtil;
 import org.intermine.metadata.TypeUtil;
 import org.intermine.web.logic.Constants;
@@ -193,27 +199,54 @@ public class BeginAction extends InterMineAction
         lines.add("  \"description\":\"Data warehouse for synthetic biology\",");
         lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine\",");
         lines.add("  \"about\":\"Data warehouse for synthetic biology\",");
-        lines.add("  \"includedInDataCatalog\":{");
-        lines.add("    \"@type\":\"DataCatalog\",");
-        lines.add("    \"url\":\"http://beta.synbiomine.org/synbiomine\"");
-        lines.add("  },");
         lines.add("  \"dateCreated\":\"2017-02-06\",");
         lines.add("  \"dateModified\":\"2017-02-06\",");
         lines.add("  \"datePublished\":\"2017-02-06\",");
-        lines.add(   "\"funder\":{");
-        lines.add(     "\"@type\":\"Organization\",");
-        lines.add(     "\"name\":\"Engineering and Physical Sciences Research Council\",");
-        lines.add(     "\"url\":\"https://www.epsrc.ac.uk/\",");
+        lines.add("  \"funder\":{");
+        lines.add("    \"@type\":\"Organization\",");
+        lines.add("    \"name\":\"Engineering and Physical Sciences Research Council\",");
+        lines.add("    \"url\":\"https://www.epsrc.ac.uk/\"");
         lines.add("  },");
         lines.add("  \"inLanguage\":\"en\",");
         lines.add("  \"isAccessibleForFree\":\"True\",");
         lines.add("  \"keywords\":\"data warehouse, synthetic biology\",");
         lines.add("  \"sourceOrganization\":{");
-        lines.add(     "\"@type\":\"Organization\",");
-        lines.add(     "\"name\":\"Micklem Lab\",");
-        lines.add(     "\"url\":\"http://www.micklemlab.org/\",");
+        lines.add("    \"@type\":\"Organization\",");
+        lines.add("    \"name\":\"Micklem Lab\",");
+        lines.add("    \"url\":\"http://www.micklemlab.org/\"");
         lines.add("  },");
-        lines.add("  \"version\":\"6\"");
+        
+        String sql = "select id from protein limit 500;";
+        Connection c = null;
+        Statement s = null;
+        ResultSet rs = null;    
+        
+        try {
+            try {
+                c = ((ObjectStoreInterMineImpl)im.getObjectStore()).getConnection();
+                s = c.createStatement();
+                rs = s.executeQuery(sql);
+                while (rs.next()) {
+                    lines.add("  \"dataset\":{");
+                    lines.add("    \"@type\":\"Dataset\",");
+                    lines.add("    \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + rs.getInt("id") + "\"");
+                    lines.add("  },");
+                }
+            }
+            finally {
+                if (rs != null)
+                    rs.close();
+
+                if (s != null)
+                    s.close();
+
+                if (c != null)
+                    c.close();
+            }
+        }
+        catch (SQLException e) { throw new RuntimeException(e); }   
+        
+        lines.add("  \"version\":\"6\"");        
         lines.add("}");
         lines.add("</script>");
 
