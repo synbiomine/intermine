@@ -56,6 +56,7 @@ import org.intermine.web.logic.config.InlineListConfig;
 import org.intermine.web.logic.config.Type;
 import org.intermine.web.logic.config.WebConfig;
 import org.intermine.web.logic.pathqueryresult.PathQueryResultHelper;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -344,7 +345,7 @@ public class ReportObject
         return fieldValues.get(fieldExpression);
     }
 
-    public String getSemanticMarkup() {
+    public String getSemanticMarkup() throws JSONException {
         List<String> lines = new ArrayList<String>();
 
         lines.add("<script type=\"application/ld+json\">");
@@ -412,7 +413,7 @@ public class ReportObject
         bioschemasMap.put("sourceOrganization", sourceOrgMap);
         bioschemasMap.put("version", 6);
 
-        return "<script type=\"application/ld+json\">" + new JSONObject(bioschemasMap).toString() + "</script>";
+        return "<script type=\"application/ld+json\">\n" + new JSONObject(bioschemasMap).toString(2) + "\n</script>\n";
     }
 
     private boolean isAttribute(String fieldName) {
