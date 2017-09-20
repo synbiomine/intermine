@@ -35,6 +35,7 @@ public class ClassDescriptor implements Comparable<ClassDescriptor>
     protected static final String ENDL = System.getProperty("line.separator");
     private final String className;        // name of this class
     private Class<FastPathObject> type;
+    private String term;
 
     // the supers string passed to the constructor
     private String origSuperNames;
@@ -68,7 +69,7 @@ public class ClassDescriptor implements Comparable<ClassDescriptor>
      * @param cols a Collection of CollectionDescriptors
      * @throws IllegalArgumentException if fields are null
      */
-    public ClassDescriptor(String name, String supers,
+    public ClassDescriptor(String name, String supers, String term,
             boolean isInterface,
             Collection<AttributeDescriptor> atts,
             Collection<ReferenceDescriptor> refs,
@@ -110,6 +111,7 @@ public class ClassDescriptor implements Comparable<ClassDescriptor>
         }
 
         this.isInterface = isInterface;
+        this.term = term;
 
         // build maps of names to FieldDescriptors
 
@@ -530,6 +532,10 @@ public class ClassDescriptor implements Comparable<ClassDescriptor>
         return superDescriptors;
     }
 
+    public String getTerm() {
+        return term;
+    }
+
     /**
      * True if this class is an interface.
      *
@@ -792,6 +798,11 @@ public class ClassDescriptor implements Comparable<ClassDescriptor>
             }
             sb.append("\"");
         }
+
+        if (term != null) {
+            sb.append(" term=\"" + term + "\"");
+        }
+
         sb.append(" is-interface=\"" + isInterface + "\">");
         Set<FieldDescriptor> l = new LinkedHashSet<FieldDescriptor>();
         l.addAll(getAttributeDescriptors());

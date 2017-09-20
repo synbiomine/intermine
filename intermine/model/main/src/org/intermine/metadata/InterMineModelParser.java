@@ -109,9 +109,9 @@ public class InterMineModelParser implements ModelParser
             } else if ("class".equals(qName)) {
                 String name = attrs.getValue("name");
                 String supers = attrs.getValue("extends");
-                boolean isInterface = Boolean.valueOf(attrs.getValue("is-interface"))
-                    .booleanValue();
-                cls = new SkeletonClass(packageName, name, supers, isInterface);
+                String term = attrs.getValue("term");
+                boolean isInterface = Boolean.valueOf(attrs.getValue("is-interface")).booleanValue();
+                cls = new SkeletonClass(packageName, name, supers, term, isInterface);
             } else if ("attribute".equals(qName)) {
                 String name = attrs.getValue("name");
                 String type = attrs.getValue("type");
@@ -189,7 +189,7 @@ public class InterMineModelParser implements ModelParser
         @Override
         public void endElement(String uri, String localName, String qName) {
             if ("class".equals(qName)) {
-                classes.add(new ClassDescriptor(cls.name, cls.supers,
+                classes.add(new ClassDescriptor(cls.name, cls.supers, cls.term,
                                                 cls.isInterface, cls.attributes, cls.references,
                                                 cls.collections));
             }
@@ -201,7 +201,7 @@ public class InterMineModelParser implements ModelParser
      */
     static class SkeletonClass
     {
-        String name, supers;
+        String name, supers, term;
         boolean isInterface;
         Set<AttributeDescriptor> attributes = new LinkedHashSet<AttributeDescriptor>();
         Set<ReferenceDescriptor> references = new LinkedHashSet<ReferenceDescriptor>();
@@ -215,7 +215,7 @@ public class InterMineModelParser implements ModelParser
          * @param supers a space string of fully qualified class names
          * @param isInterface true if describing an interface
          */
-        SkeletonClass(String packageName, String name, String supers, boolean isInterface) {
+        SkeletonClass(String packageName, String name, String supers, String term, boolean isInterface) {
             this.name = name;
             if (this.name.startsWith(packageName + ".")) {
                 this.name = this.name.substring(packageName.length() + 1);
@@ -256,9 +256,9 @@ public class InterMineModelParser implements ModelParser
             } else {
                 this.supers = null;
             }
+
+            this.term = term;
             this.isInterface = isInterface;
         }
     }
-
-
 }
