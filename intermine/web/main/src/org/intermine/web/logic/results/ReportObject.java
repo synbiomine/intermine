@@ -56,6 +56,7 @@ import org.intermine.web.logic.config.InlineListConfig;
 import org.intermine.web.logic.config.Type;
 import org.intermine.web.logic.config.WebConfig;
 import org.intermine.web.logic.pathqueryresult.PathQueryResultHelper;
+import org.json.JSONObject;
 
 /**
  * Object to be displayed on report.do
@@ -347,17 +348,19 @@ public class ReportObject
         List<String> lines = new ArrayList<String>();
 
         lines.add("<script type=\"application/ld+json\">");
-        lines.add("{");
-        lines.add("  \"@context\":\"http://schema.org\",");
-        lines.add("  \"@type\":\"DataSet\",");
-        lines.add("  \"name\":\"" + getHtmlHeadTitle() + "\",");
-        lines.add("  \"description\":\"" + getHtmlHeadTitle() + "\",");
-        lines.add("  \"url\":\"http://beta.synbiomine.org/synbiomine/report.do?id=" + getId() + "\",");
-        lines.add("  \"about\":\"Integrated dataset for " + getHtmlHeadTitle() + "\",");
-        lines.add("  \"includedInDataCatalog\":{");
-        lines.add("    \"@type\":\"DataCatalog\",");
-        lines.add("    \"url\":\"http://beta.synbiomine.org/synbiomine\"");
-        lines.add("  },");
+
+        Map bioschemasMap = new HashMap();
+        bioschemasMap.put("@context", "http://schema.org");
+        bioschemasMap.put("@type", "DataSet");
+        bioschemasMap.put("name", getHtmlHeadTitle());
+        bioschemasMap.put("description", getHtmlHeadTitle());
+        bioschemasMap.put("url", "http://beta.synbiomine.org/synbiomine/report.do?id=" + getId());
+        bioschemasMap.put("about", "Integrated dataset for " + getHtmlHeadTitle());
+        Map dataCatalogMap = new HashMap();
+        dataCatalogMap.put("@type", "DataCatalog");
+        dataCatalogMap.put("url", "http://beta.synbiomine.org/synbiomine");
+        bioschemasMap.put("includedInDataCatalog", dataCatalogMap);
+        List citations = new ArrayList();
 
         String sql = "select name, url from datasource;";
         Connection c = null;
@@ -370,11 +373,11 @@ public class ReportObject
                 s = c.createStatement();
                 rs = s.executeQuery(sql);
                 while (rs.next()) {
-                    lines.add("  \"citation\":{");
-                    lines.add("    \"@type\":\"CreativeWork\",");
-                    lines.add("    \"name\":\"" + rs.getString("name") + "\",");
-                    lines.add("    \"url\":\"" + rs.getString("url") + "\"");
-                    lines.add("  },");
+                    Map citationMap = new HashMap();
+                    citationMap.put("@type", "CreativeWork");
+                    citationMap.put("name", rs.getString("name"));
+                    citationMap.put("url", rs.getString("url"));
+                    citations.add(citationMap);
                 }
             }
             finally {
@@ -390,69 +393,26 @@ public class ReportObject
         }
         catch (SQLException e) { throw new RuntimeException(e); }
 
-            /*
-            Query q = new Query();
-            ConstraintSet constraints = new ConstraintSet(ConstraintOp.AND);
-            q.setConstraint(constraints);
-            QueryClass reportQc = new QueryClass(object.getClass());
-            q.addFrom(reportQc);
-            QueryClass datasetQc = new QueryClass(DataSet.class);
-            q.addFrom(datasetQc);
-            q.addToSelect(datasetQc);
+        bioschemasMap.put("citation", citations);
+        bioschemasMap.put("dateCreated", "2017-02-06");
+        bioschemasMap.put("dateModified", "2017-02-06");
+        bioschemasMap.put("datePublished", "2017-02-06");
+        Map funderMap = new HashMap();
+        funderMap.put("@type", "Organization");
+        funderMap.put("name", "Engineering and Physical Sciences Research Council");
+        funderMap.put("url", "https://www.epsrc.ac.uk/");
+        bioschemasMap.put("funder", funderMap);
+        bioschemasMap.put("inLanguage", "en");
+        bioschemasMap.put("isAccessibleForFree", true);
+        bioschemasMap.put("keywords", "data integration, synthetic biology, " + objectType);
+        Map sourceOrgMap = new HashMap();
+        sourceOrgMap.put("@type", "Organization");
+        sourceOrgMap.put("name", "Micklem Lab");
+        sourceOrgMap.put("url", "http://www.micklemlab.org/");
+        bioschemasMap.put("sourceOrganization", sourceOrgMap);
+        bioschemasMap.put("version", 6);
 
-            QueryField reportClassIdQf = new QueryField(reportQc, "id");
-            constraints.addConstraint(new SimpleConstraint(reportClassIdQf, ConstraintOp.CONTAINS, new QueryValue(getId())));
-
-            QueryCollectionReference dataSetsQcref = new QueryCollectionReference(reportQc, "dataSets");
-            constraints.addConstraint(new ContainsConstraint(dataSetsQcref, ConstraintOp.CONTAINS, datasetQc));
-
-            Results r = im.getObjectStore().execute(q);
-            */
-
-            /*
-            Model model = im.getModel();
-            PathQuery query = new PathQuery(model);
-
-            query.addViews(
-                objectType + ".dataSets.url",
-                objectType + ".dataSets.name",
-                objectType + ".dataSets.version",
-                objectType + ".dataSets.description");
-            query.addOrderBy(objectType + ".dataSets.url", OrderDirection.ASC);
-            query.addConstraint(Constraints.eq(objectType + ".id", String.valueOf(getId())));
-            //im.getObjectStore().executeSingleton(query);
-
-            Profile profile = SessionMethods.getProfile(session);
-            PathQueryExecutor executor = im.getPathQueryExecutor(profile);
-            ExportResultsIterator values;
-            */
-
-        lines.add("  \"dateCreated\":\"2017-02-06\",");
-        lines.add("  \"dateModified\":\"2017-02-06\",");
-        lines.add("  \"datePublished\":\"2017-02-06\",");
-        lines.add("  \"funder\":{");
-        lines.add("    \"@type\":\"Organization\",");
-        lines.add("    \"name\":\"Engineering and Physical Sciences Research Council\",");
-        lines.add("    \"url\":\"https://www.epsrc.ac.uk/\"");
-        lines.add("  },");
-        lines.add("  \"inLanguage\":\"en\",");
-        lines.add("  \"isAccessibleForFree\":\"True\",");
-        lines.add("  \"keywords\":\"data integration, synthetic biology, " + objectType + "\",");
-        lines.add("  \"sourceOrganization\":{");
-        lines.add("    \"@type\":\"Organization\",");
-        lines.add("    \"name\":\"Micklem Lab\",");
-        lines.add("    \"url\":\"http://www.micklemlab.org/\"");
-        lines.add("  },");
-        lines.add("  \"version\":\"6\"");
-        lines.add("}");
-        lines.add("</script>");        
-
-        StringBuilder sb = new StringBuilder();
-        for (String line: lines) {
-            sb.append(line + "\n");
-        }
-
-        return sb.toString();
+        return "<script type=\"application/ld+json\">" + new JSONObject(bioschemasMap).toString() + "</script>";
     }
 
     private boolean isAttribute(String fieldName) {
