@@ -35,7 +35,7 @@
       <collection name="genes" referenced-type="Gene" reverse-reference="introns"/>
     </class>
 
-    <class name="Protein" is-interface="true">
+    <class name="Protein" is-interface="true" term="http://semanticscience.org/resource/SIO_010043.rdf">
       <collection name="CDSs" referenced-type="CDS" reverse-reference="protein"/>
       <collection name="transcripts" referenced-type="Transcript" reverse-reference="protein"/>
     </class>
