@@ -11,6 +11,7 @@
     <source name="so" type="so">
       <property name="src.data.file" location="../../bio/sources/so/so.obo"/>
     </source>
+<!--
     <source name="Bacillus-cytotoxicus-NVH-391-98-firmicutes-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="315749"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -847,6 +848,7 @@
       <property name="src.data.dir" location="data/genbank/GCF_000829195.1_ASM82919v1/"/>
       <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
+-->
     <source name="Escherichia-coli-str-K-12-substr-MG1655-E-coli-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="511145"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -866,6 +868,7 @@
       <property name="src.data.dir" location="data/genbank/GCF_000005845.2_ASM584v2/"/>
       <property name="fasta.loaderClassName" value="org.intermine.bio.dataconversion.NCBIFastaLoaderTask"/>
     </source>
+<!--
     <source name="Bacillus-sp-FJAT-22090-firmicutes-gff" type="synbio-gff">
       <property name="gff3.taxonId" value="1581038"/>
       <property name="gff3.seqDataSourceName" value="NCBI"/>
@@ -1067,6 +1070,7 @@
     <source dump="false" name="entrez-organism" type="entrez-organism">
       <property location="build/organisms.xml" name="src.data.file"/>
     </source>
+-->
   </sources>
   <post-processing>
     <post-process name="create-references"/>
