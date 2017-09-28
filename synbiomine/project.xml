@@ -1067,10 +1067,10 @@
       <property location="build/publications.xml" name="src.data.file"/>
       <property name="loadFullRecord" value="true"/>
     </source>
+-->
     <source dump="false" name="entrez-organism" type="entrez-organism">
       <property location="build/organisms.xml" name="src.data.file"/>
     </source>
--->
   </sources>
   <post-processing>
     <post-process name="create-references"/>
