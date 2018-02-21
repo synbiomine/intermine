@@ -352,7 +352,7 @@ public class ReportObject
         lines.add("<script type=\"application/ld+json\">");
 
         Map bioschemasMap = new HashMap();
-        bioschemasMap.put("@context", "http://bioschemas.org");
+        bioschemasMap.put("@context", "http://schema.org");
         bioschemasMap.put("@type", "PhysicalEntity");
         bioschemasMap.put("identifier", attributes.get("primaryIdentifier"));
         String name = getHtmlHeadTitle() + " " + attributes.get("primaryIdentifier");
